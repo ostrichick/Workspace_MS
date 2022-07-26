@@ -16,7 +16,7 @@ section {
   <%@include file="/include/header.jsp"%>
   <section>
     <form action="insert_action.jsp" method="post">
-      <table border="1" width="500">
+      <table border="1" >
         <tr>
           <th align="right">제목</th>
           <td>

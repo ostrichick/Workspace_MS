@@ -2,6 +2,8 @@
 
 int main()
 {
+    printf("Hello, world!?\n");
+    printf("Hello, world!\n");
     int age = 12;
     printf("%d\n",age);
     age = 15;
