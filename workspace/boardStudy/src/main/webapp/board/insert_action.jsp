@@ -28,16 +28,18 @@ try {
 %>
 <script>
   alert("업로드 완료"); // 작동안됨
-</script>
+  location.href = "list.jsp";
+  </script>
 <%
 } else {
 %>
 <script>
   alert("업로드 실패"); // 작동안됨
+  location.href = "list.jsp";
 </script>
 <%
 }
-response.sendRedirect("list.jsp"); // 목록으로 리다리엑트
+//response.sendRedirect("list.jsp"); // 목록으로 리다리엑트
 } catch (Exception e) {
 e.printStackTrace(); // 예외처리
 } finally {
