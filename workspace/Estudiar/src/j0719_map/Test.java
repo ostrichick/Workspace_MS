@@ -1,6 +1,8 @@
 package j0719_map;
 
 public class Test {
+	String name;
+
 	public static void main(String[] args) {
 		Parent pa = new Parent(); // 허용
 		System.out.println(pa.a);
