@@ -35,3 +35,7 @@ CREATE TABLE boardtb(
 );
 
 CREATE SEQUENCE bidx_seq START WITH 1 INCREMENT BY 1;
+
+TRUNCATE TABLE boardtb;
+
+select * from boardtb b inner join usertb u on b.uidx = u.uidx;
