@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입폼</title>
+    <link rel="stylesheet" href="" />
+    <style>
+      #box {
+        padding: 40px;
+        background: beige;
+        border: 10px solid #cff;
+        border-radius: 40px;
+        width: 400px;
+        margin: auto;
+        color: #666;
+      }
+      input {
+        margin: 5px;
+        border-radius: 5px;
+        background: yellow;
+      }
+    </style>
+    <script></script>
+  </head>
+  <body>
+    <div id="box">
+      <h2>회원가입</h2>
+      <fieldset>
+        <!-- fieldset 폼 요소를 그룹화 할 때 -->
+        <legend>기본정보</legend>
+        <form action="데이터를 전송받을 주소" method="전송방식">
+          <label for="identity">아이디<input type="text" id="identity" placeholder="아이디" /></label><input type="button" value="중복확인" /><br />
+          <label for="passcord">비밀번호<input id="passcord" type="password" placeholder="비밀번호" /></label><br />
+          <label for="passcord_re">비밀번호확인<input id="passcord_re" type="password" placeholder="비밀번호확인" /></label><br />
+          <input type="email" placeholder="email@email.email" />
+          <!-- <input type="submit" /> -->
+        </form>
+      </fieldset>
+      <fieldset>
+        <legend>추가정보</legend>
+        <form action="">
+          <p>성별</p>
+          <label><input name="gender" type="radio" value="1" />남자</label>
+          <label><input name="gender" type="radio" value="2" />여자</label>
+          <p>관심분야</p>
+          <label><input type="checkbox" />운동</label>
+          <label><input type="checkbox" checked />잠자기</label>
+          <label><input type="checkbox" />누워있기</label>
+          <label><input type="checkbox" />앉아있기</label>
+          <label><input type="checkbox" />서있기</label>
+          <label><input type="checkbox" />생각하기</label>
+        </form>
+      </fieldset>
+      <p style="text-align: center">
+        <input type="submit" value="회원가입" />
+        <input style="color: red" type="reset" value="초기화" />
+      </p>
+    </div>
+  </body>
+</html>

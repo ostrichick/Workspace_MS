@@ -1,0 +1,23 @@
+<!DOCTYPE>
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <script src="../jquery-3.6.0.min.js"></script>
+  <script>
+	function checkBtn(){
+		$("input[name=check]").filter(":checked").each(function(){
+			var value = $(this).val();
+			console.log(value+"번");
+		});
+	}
+  </script>
+ </HEAD>
+ <BODY>
+	<input type="checkbox" name="check" value="1"> 1번
+	<input type="checkbox" name="check" value="2"> 2번
+	<input type="checkbox" name="check" value="3"> 3번
+	<input type="checkbox" name="check" value="4"> 4번
+	<br>
+	<input type="button" value="체크 버튼 확인" onclick="checkBtn()">
+ </BODY>
+</HTML>

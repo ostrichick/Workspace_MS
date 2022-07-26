@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습7_3~4</title>
+    <link rel="stylesheet" href="" />
+    <style>
+      div {
+        border: red dashed 3px;
+        height: 300px;
+        width: 300px;
+        /* display: inline-block; */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>조건에 따라 배경색 바꾸기</h1>
+    <div id="e31">오전 lightblue<br />오후 orange</div>
+    <div id="e32">일요일 pink<br />다른 요일 gold</div>
+    <!-- <div id="e41">123</div>
+    <div id="e42">123</div> -->
+    <script>
+      let allDiv = document.getElementsByTagName("div");
+      // document.getElementsByTagName("div")[0].style.background = "red";
+      // document.getElementsByName("e31").style.color = "red";
+      // allDiv[1].style.background = "red";
+
+      let now = new Date();
+      if (now.getHours() < 12) {
+        allDiv[0].style.background = "lightblue";
+      } else {
+        allDiv[0].style.background = "orange";
+      }
+      if (now.getDay() === 0) {
+        allDiv[1].style.background = "pink";
+      } else {
+        allDiv[1].style.background = "gold";
+      }
+    </script>
+  </body>
+</html>

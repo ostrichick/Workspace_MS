@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연습!</title>
+    <link rel="stylesheet" href="" />
+    <style></style>
+  </head>
+  <body>
+    <h4>연습5번</h4>
+    <script>
+      let values = [1, 2, 3];
+      let money = new Array(3);
+      money[0] = 5;
+      money[1] = 7;
+      money[2] = -3;
+      let sum = 0;
+      for (let i = 0; i < money.length; i++) sum += money[i];
+      document.write(sum / money.length);
+    </script>
+    <hr />
+    <h4>연습6번</h4>
+    <script>
+      let d = new Date();
+      document.write(d);
+    </script>
+    <hr />
+    <script>
+      let text = "Web Programming";
+      let x1 = text.length;
+      let x2 = text[2];
+      let x3 = text.split(" ").length;
+      let x4 = text.replace("Web", "HTML5");
+      let x5 = text.charAt(4);
+      document.write(`${x1}, ${x2}, ${x3}, ${x4}, ${x5}`);
+    </script>
+    <hr />
+    <script>
+      let x = Math.random() * 10 + 1;
+      document.write(x);
+    </script>
+    <script>
+      let student = { id: 1, name: "kitae", grade: 3.9 };
+    </script>
+    <hr />
+    <h4>연습10번</h4>
+    <script>
+      let box = new Object();
+      box.color = "red";
+      box.size = 10;
+      box.amount = 0;
+      box.fill = function () {
+        this.amount += 2;
+      };
+      box.consume = function () {
+        this.amount -= 2;
+      };
+      box.fill();
+      document.write(box.amount + "<br>");
+      box.consume();
+      document.write(box.amount);
+    </script>
+    <hr />
+ 
+  </body>
+</html>

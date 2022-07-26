@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>조 건 문</title>
+    <link rel="stylesheet" href="" />
+    <style></style>
+    <script>
+      // 프로그램은 문장단위로 실행되면 순차적으로 호출된다.
+
+      /*조건문(if문) 조건을 만족하면true 실행시킴 p286*/
+
+      let a = 10;
+      if (true) console.log("실행문1"); // T
+      if (false) console.log("실행문2"); // F
+      if (a > 10) console.log("실행문3"); // F
+      console.log("실행문4");
+      if (a >= 10) {
+        // 블록block 여러개의 실행문을 묶어서 제어할 수 있다
+        console.log("실행문5"); // 블록 안에 있는 경우 들여쓰기를 한다
+        console.log("실행문6");
+        console.log("실행문7");
+        console.log("실행문8");
+      }
+      console.log("실행문9");
+
+      /*
+      조건분기문(if ~ else ~) 조건의 결과에 따라 두가지의 경우 중 하나만 실행
+      */
+      if (true) console.log("참");
+      else console.log("거짓");
+
+      var num = 10;
+
+      if (num % 2 == 0) console.log("num \= 짝수 ");
+      else console.log("num \= 홀수 ");
+
+      let hour = 13;
+      if (hour <= 12) {
+        console.log("오전 " + hour + "시 입니다.");
+      } else {
+        hour -= 12;
+        console.log(`오후 ${hour}시 입니다.`);
+      }
+
+      /*
+      다중if문 : if문을 중첩하여 사용
+      */
+      if (false) console.log("첫번째 조건이 참");
+      else if (true) console.log("두번째 조건이 참");
+      else console.log("모든 조건이 거짓");
+    </script>
+  </head>
+  <body>
+    <header></header>
+    <!-- header end -->
+    <main></main>
+    <!-- main end -->
+    <footer></footer>
+    <!-- footer end -->
+    <script src=""></script>
+  </body>
+</html>

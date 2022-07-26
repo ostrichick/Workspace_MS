@@ -1,0 +1,11 @@
+@charset "UTF-8";/*문서의 인코딩 지정*/
+
+h1{font-size:50px; color:red;}
+div{width:400px; height:100px; background:gray; border:10px solid #090; margin-bottom:10px;}
+/*ID 셀렉터는 중복 불가. 해당 ID 앞에 # 붙일 것*/
+#a{width:200px; background:#987;} 
+#b{background:#567;}
+#c{background:#234;}
+/*클래스 셀렉터*/
+.abc{border-color:#876; color:#333; font-weight:bold; font-size:25px;}
+.def{font-size:35px; text-align:center;}

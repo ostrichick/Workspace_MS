@@ -1,0 +1,1053 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<?fr-application created="Antwiz"?>
+<?fr-application homesite="http://www.fast-report.com"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+<DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+<Title>SQLGate Report</Title>
+<Author></Author>
+<Created>2022/07/08T오전 11:14:19Z</Created>
+<Version>12.13..</Version>
+</DocumentProperties>
+<ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+<ProtectStructure>False</ProtectStructure>
+<ProtectWindows>False</ProtectWindows>
+</ExcelWorkbook>
+<Styles>
+<Style ss:ID="s0">
+<Font ss:FontName="留묒? 怨좊뵓" ss:Size="8" ss:Color="#000000"/>
+<Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+<Alignment ss:Horizontal="Left" ss:Vertical="Center" ss:WrapText="1" />
+<Borders>
+<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000" />
+<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000" />
+<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000" />
+</Borders>
+</Style>
+<Style ss:ID="s1">
+<Font ss:FontName="留묒? 怨좊뵓" ss:Size="8" ss:Color="#000000"/>
+<Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+<Alignment ss:Horizontal="Left" ss:Vertical="Center" ss:WrapText="1" />
+<Borders>
+<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000" />
+<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000" />
+<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000" />
+<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000" />
+</Borders>
+</Style>
+<Style ss:ID="s2">
+<Font ss:FontName="留묒? 怨좊뵓" ss:Size="8" ss:Color="#000000" ss:Bold="1"/>
+<Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+<Alignment ss:Horizontal="Left" ss:Vertical="Center" ss:WrapText="1" />
+<Borders>
+<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000" />
+<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000" />
+<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000" />
+</Borders>
+</Style>
+<Style ss:ID="s3">
+<Font ss:FontName="留묒? 怨좊뵓" ss:Size="8" ss:Color="#000000" ss:Bold="1"/>
+<Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+<Alignment ss:Horizontal="Left" ss:Vertical="Center" ss:WrapText="1" />
+<Borders>
+<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000" />
+</Borders>
+</Style>
+<Style ss:ID="s4">
+<Font ss:FontName="留묒? 怨좊뵓" ss:Size="8" ss:Color="#000000" ss:Bold="1"/>
+<Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+<Alignment ss:Horizontal="Left" ss:Vertical="Center" ss:WrapText="1" />
+<Borders>
+<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000" />
+<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000" />
+</Borders>
+</Style>
+<Style ss:ID="s5">
+<Font ss:FontName="留묒? 怨좊뵓" ss:Size="8" ss:Color="#000000"/>
+<Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+<Alignment ss:Horizontal="Left" ss:Vertical="Center" ss:WrapText="1" />
+<Borders>
+<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000" />
+<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000" />
+<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000" />
+</Borders>
+</Style>
+<Style ss:ID="s6">
+<Font ss:FontName="留묒? 怨좊뵓" ss:Size="10" ss:Color="#000000"/>
+<Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1" />
+<Borders>
+<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000" />
+<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000" />
+<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000" />
+<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000" />
+</Borders>
+</Style>
+<Style ss:ID="s7">
+<Font ss:FontName="留묒? 怨좊뵓" ss:Size="8" ss:Color="#000000"/>
+<Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+<Alignment ss:Horizontal="Left" ss:Vertical="Center" ss:WrapText="1" />
+<Borders>
+<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000" />
+<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000" />
+</Borders>
+</Style>
+<Style ss:ID="s8">
+<Font ss:FontName="留묒? 怨좊뵓" ss:Size="10" ss:Color="#000000" ss:Bold="1"/>
+<Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+<Alignment ss:Horizontal="Left" ss:Vertical="Center" ss:WrapText="1" />
+<Borders>
+<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000" />
+<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000" />
+</Borders>
+</Style>
+<Style ss:ID="s9">
+<Font ss:FontName="留묒? 怨좊뵓" ss:Size="8" ss:Color="#000000" ss:Bold="1"/>
+<Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+<Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1" />
+<Borders>
+<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000" />
+<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000" />
+<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000" />
+</Borders>
+</Style>
+<Style ss:ID="s10">
+<Font ss:FontName="留묒? 怨좊뵓" ss:Size="8" ss:Color="#000000" ss:Bold="1"/>
+<Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+<Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1" />
+<Borders>
+<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000" />
+<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000" />
+<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000" />
+<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000" />
+</Borders>
+</Style>
+<Style ss:ID="s11">
+<Font ss:FontName="留묒? 怨좊뵓" ss:Size="8" ss:Color="#000000"/>
+<Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+<Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1" />
+<Borders>
+<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000" />
+<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000" />
+</Borders>
+</Style>
+<Style ss:ID="s12">
+<Font ss:FontName="留묒? 怨좊뵓" ss:Size="8" ss:Color="#000000"/>
+<Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+<Alignment ss:Horizontal="Left" ss:Vertical="Center" ss:WrapText="1" />
+<Borders>
+<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000" />
+<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000" />
+</Borders>
+</Style>
+<Style ss:ID="s13">
+<Font ss:FontName="留묒? 怨좊뵓" ss:Size="8" ss:Color="#000000"/>
+<Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+<Alignment ss:Horizontal="Left" ss:Vertical="Center" ss:WrapText="1" />
+<Borders>
+<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000" />
+<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000" />
+<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000" />
+</Borders>
+</Style>
+<Style ss:ID="s14">
+<Font ss:FontName="留묒? 怨좊뵓" ss:Size="8" ss:Color="#000000"/>
+<Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+<Alignment ss:Horizontal="Right" ss:Vertical="Top" ss:WrapText="1" />
+<Borders>
+<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="3" ss:Color="#000000" />
+</Borders>
+</Style>
+</Styles>
+<Worksheet ss:Name="Page 1">
+<Table ss:ExpandedColumnCount="8" ss:ExpandedRowCount="56" x:FullColumns="1" x:FullRows="1">
+<Column ss:AutoFitWidth="0" ss:Width="27.47"/>
+<Column ss:AutoFitWidth="0" ss:Width="137.34"/>
+<Column ss:AutoFitWidth="0" ss:Width="82.40"/>
+<Column ss:AutoFitWidth="0" ss:Width="41.20"/>
+<Column ss:AutoFitWidth="0" ss:Width="54.93"/>
+<Column ss:AutoFitWidth="0" ss:Width="82.40"/>
+<Column ss:AutoFitWidth="0" ss:Width="123.60"/>
+<Row ss:Height="19.23">
+<Cell ss:Index="1" ss:MergeAcross="1" ss:MergeDown="1" ss:StyleID="s2" >
+<Data ss:Type="String">테이블 정보</Data>
+</Cell>
+<Cell ss:Index="3" ss:StyleID="s4" >
+<Data ss:Type="String">소유자</Data>
+</Cell>
+<Cell ss:Index="4" ss:MergeAcross="1" ss:StyleID="s7" >
+<Data ss:Type="String">HR</Data>
+</Cell>
+<Cell ss:Index="6" ss:StyleID="s4" >
+<Data ss:Type="String">만든 날짜</Data>
+</Cell>
+<Cell ss:Index="7" ss:StyleID="s5" >
+<Data ss:Type="String">2022/07/08 오전 11:07:08</Data>
+</Cell>
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="19.15">
+<Cell ss:Index="3" ss:StyleID="s2" >
+<Data ss:Type="String">테이블스페이스</Data>
+</Cell>
+<Cell ss:Index="4" ss:MergeAcross="1" ss:StyleID="s0" >
+<Data ss:Type="String">USERS</Data>
+</Cell>
+<Cell ss:Index="6" ss:StyleID="s2" >
+<Data ss:Type="String">수정한 날짜</Data>
+</Cell>
+<Cell ss:Index="7" ss:StyleID="s1" >
+<Data ss:Type="String">2022/07/08 오전 11:07:08</Data>
+</Cell>
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="38.45">
+<Cell ss:Index="1" ss:MergeAcross="1" ss:StyleID="s3" >
+<Data ss:Type="String">테이블 이름</Data>
+</Cell>
+<Cell ss:Index="3" ss:MergeAcross="4" ss:StyleID="s8" >
+<Data ss:Type="String">CUSTOMER</Data>
+</Cell>
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="38.38">
+<Cell ss:Index="1" ss:MergeAcross="1" ss:StyleID="s2" >
+<Data ss:Type="String">주석</Data>
+</Cell>
+<Cell ss:Index="3" ss:MergeAcross="4" ss:StyleID="s6" >
+<Data ss:Type="String">고객</Data>
+</Cell>
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="16.55">
+<Cell ss:Index="1" />
+<Cell ss:Index="2" />
+<Cell ss:Index="3" />
+<Cell ss:Index="4" />
+<Cell ss:Index="5" />
+<Cell ss:Index="6" />
+<Cell ss:Index="7" />
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="19.23">
+<Cell ss:Index="1" ss:StyleID="s9" >
+<Data ss:Type="String">#</Data>
+</Cell>
+<Cell ss:Index="2" ss:StyleID="s9" >
+<Data ss:Type="String">열 이름</Data>
+</Cell>
+<Cell ss:Index="3" ss:StyleID="s9" >
+<Data ss:Type="String">데이터 유형</Data>
+</Cell>
+<Cell ss:Index="4" ss:StyleID="s9" >
+<Data ss:Type="String">키</Data>
+</Cell>
+<Cell ss:Index="5" ss:StyleID="s9" >
+<Data ss:Type="String">Null?</Data>
+</Cell>
+<Cell ss:Index="6" ss:StyleID="s9" >
+<Data ss:Type="String">기본값</Data>
+</Cell>
+<Cell ss:Index="7" ss:StyleID="s10" >
+<Data ss:Type="String">주석</Data>
+</Cell>
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="19.15">
+<Cell ss:Index="1" ss:StyleID="s11" >
+<Data ss:Type="String">1</Data>
+</Cell>
+<Cell ss:Index="2" ss:StyleID="s12" >
+<Data ss:Type="String">CUSTOMER_ID</Data>
+</Cell>
+<Cell ss:Index="3" ss:StyleID="s12" >
+<Data ss:Type="String">CHAR(20)</Data>
+</Cell>
+<Cell ss:Index="4" ss:StyleID="s12" >
+<Data ss:Type="String">PK</Data>
+</Cell>
+<Cell ss:Index="5" ss:StyleID="s12" >
+<Data ss:Type="String">NOT NULL</Data>
+</Cell>
+<Cell ss:Index="6" ss:StyleID="s12" >
+<Data ss:Type="String"></Data>
+</Cell>
+<Cell ss:Index="7" ss:StyleID="s13" >
+<Data ss:Type="String">고객번호</Data>
+</Cell>
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="19.23">
+<Cell ss:Index="1" ss:StyleID="s11" >
+<Data ss:Type="String">2</Data>
+</Cell>
+<Cell ss:Index="2" ss:StyleID="s12" >
+<Data ss:Type="String">NAME</Data>
+</Cell>
+<Cell ss:Index="3" ss:StyleID="s12" >
+<Data ss:Type="String">VARCHAR2(20)</Data>
+</Cell>
+<Cell ss:Index="4" ss:StyleID="s12" >
+<Data ss:Type="String"></Data>
+</Cell>
+<Cell ss:Index="5" ss:StyleID="s12" >
+<Data ss:Type="String">NOT NULL</Data>
+</Cell>
+<Cell ss:Index="6" ss:StyleID="s12" >
+<Data ss:Type="String"></Data>
+</Cell>
+<Cell ss:Index="7" ss:StyleID="s13" >
+<Data ss:Type="String">고객명</Data>
+</Cell>
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="19.23">
+<Cell ss:Index="1" ss:StyleID="s11" >
+<Data ss:Type="String">3</Data>
+</Cell>
+<Cell ss:Index="2" ss:StyleID="s12" >
+<Data ss:Type="String">ADDR</Data>
+</Cell>
+<Cell ss:Index="3" ss:StyleID="s12" >
+<Data ss:Type="String">VARCHAR2(100)</Data>
+</Cell>
+<Cell ss:Index="4" ss:StyleID="s12" >
+<Data ss:Type="String"></Data>
+</Cell>
+<Cell ss:Index="5" ss:StyleID="s12" >
+<Data ss:Type="String"></Data>
+</Cell>
+<Cell ss:Index="6" ss:StyleID="s12" >
+<Data ss:Type="String"></Data>
+</Cell>
+<Cell ss:Index="7" ss:StyleID="s13" >
+<Data ss:Type="String">주소</Data>
+</Cell>
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="19.23">
+<Cell ss:Index="1" ss:StyleID="s11" >
+<Data ss:Type="String">4</Data>
+</Cell>
+<Cell ss:Index="2" ss:StyleID="s12" >
+<Data ss:Type="String">PHONE</Data>
+</Cell>
+<Cell ss:Index="3" ss:StyleID="s12" >
+<Data ss:Type="String">CHAR(20)</Data>
+</Cell>
+<Cell ss:Index="4" ss:StyleID="s12" >
+<Data ss:Type="String"></Data>
+</Cell>
+<Cell ss:Index="5" ss:StyleID="s12" >
+<Data ss:Type="String"></Data>
+</Cell>
+<Cell ss:Index="6" ss:StyleID="s12" >
+<Data ss:Type="String"></Data>
+</Cell>
+<Cell ss:Index="7" ss:StyleID="s13" >
+<Data ss:Type="String">전화번호</Data>
+</Cell>
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="409.00">
+<Cell ss:Index="1" />
+<Cell ss:Index="2" />
+<Cell ss:Index="3" />
+<Cell ss:Index="4" />
+<Cell ss:Index="5" />
+<Cell ss:Index="6" />
+<Cell ss:Index="7" />
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="123.87">
+<Cell ss:Index="1" />
+<Cell ss:Index="2" />
+<Cell ss:Index="3" />
+<Cell ss:Index="4" />
+<Cell ss:Index="5" />
+<Cell ss:Index="6" />
+<Cell ss:Index="7" />
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="10.99">
+<Cell ss:Index="1" ss:MergeAcross="6" ss:StyleID="s14" >
+<Data ss:Type="String">1 / 4 페이지</Data>
+</Cell>
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="14.25">
+<Cell ss:Index="1" />
+<Cell ss:Index="2" />
+<Cell ss:Index="3" />
+<Cell ss:Index="4" />
+<Cell ss:Index="5" />
+<Cell ss:Index="6" />
+<Cell ss:Index="7" />
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="19.23">
+<Cell ss:Index="1" ss:MergeAcross="1" ss:MergeDown="1" ss:StyleID="s2" >
+<Data ss:Type="String">테이블 정보</Data>
+</Cell>
+<Cell ss:Index="3" ss:StyleID="s4" >
+<Data ss:Type="String">소유자</Data>
+</Cell>
+<Cell ss:Index="4" ss:MergeAcross="1" ss:StyleID="s7" >
+<Data ss:Type="String">HR</Data>
+</Cell>
+<Cell ss:Index="6" ss:StyleID="s4" >
+<Data ss:Type="String">만든 날짜</Data>
+</Cell>
+<Cell ss:Index="7" ss:StyleID="s5" >
+<Data ss:Type="String">2022/07/08 오전 11:07:08</Data>
+</Cell>
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="19.15">
+<Cell ss:Index="3" ss:StyleID="s2" >
+<Data ss:Type="String">테이블스페이스</Data>
+</Cell>
+<Cell ss:Index="4" ss:MergeAcross="1" ss:StyleID="s0" >
+<Data ss:Type="String">USERS</Data>
+</Cell>
+<Cell ss:Index="6" ss:StyleID="s2" >
+<Data ss:Type="String">수정한 날짜</Data>
+</Cell>
+<Cell ss:Index="7" ss:StyleID="s1" >
+<Data ss:Type="String">2022/07/08 오전 11:07:08</Data>
+</Cell>
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="38.45">
+<Cell ss:Index="1" ss:MergeAcross="1" ss:StyleID="s3" >
+<Data ss:Type="String">테이블 이름</Data>
+</Cell>
+<Cell ss:Index="3" ss:MergeAcross="4" ss:StyleID="s8" >
+<Data ss:Type="String">DELIVERY</Data>
+</Cell>
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="38.38">
+<Cell ss:Index="1" ss:MergeAcross="1" ss:StyleID="s2" >
+<Data ss:Type="String">주석</Data>
+</Cell>
+<Cell ss:Index="3" ss:MergeAcross="4" ss:StyleID="s6" >
+<Data ss:Type="String">배송</Data>
+</Cell>
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="16.55">
+<Cell ss:Index="1" />
+<Cell ss:Index="2" />
+<Cell ss:Index="3" />
+<Cell ss:Index="4" />
+<Cell ss:Index="5" />
+<Cell ss:Index="6" />
+<Cell ss:Index="7" />
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="19.23">
+<Cell ss:Index="1" ss:StyleID="s9" >
+<Data ss:Type="String">#</Data>
+</Cell>
+<Cell ss:Index="2" ss:StyleID="s9" >
+<Data ss:Type="String">열 이름</Data>
+</Cell>
+<Cell ss:Index="3" ss:StyleID="s9" >
+<Data ss:Type="String">데이터 유형</Data>
+</Cell>
+<Cell ss:Index="4" ss:StyleID="s9" >
+<Data ss:Type="String">키</Data>
+</Cell>
+<Cell ss:Index="5" ss:StyleID="s9" >
+<Data ss:Type="String">Null?</Data>
+</Cell>
+<Cell ss:Index="6" ss:StyleID="s9" >
+<Data ss:Type="String">기본값</Data>
+</Cell>
+<Cell ss:Index="7" ss:StyleID="s10" >
+<Data ss:Type="String">주석</Data>
+</Cell>
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="19.15">
+<Cell ss:Index="1" ss:StyleID="s11" >
+<Data ss:Type="String">1</Data>
+</Cell>
+<Cell ss:Index="2" ss:StyleID="s12" >
+<Data ss:Type="String">DELIVERY_ID</Data>
+</Cell>
+<Cell ss:Index="3" ss:StyleID="s12" >
+<Data ss:Type="String">CHAR(10)</Data>
+</Cell>
+<Cell ss:Index="4" ss:StyleID="s12" >
+<Data ss:Type="String">PK</Data>
+</Cell>
+<Cell ss:Index="5" ss:StyleID="s12" >
+<Data ss:Type="String">NOT NULL</Data>
+</Cell>
+<Cell ss:Index="6" ss:StyleID="s12" >
+<Data ss:Type="String"></Data>
+</Cell>
+<Cell ss:Index="7" ss:StyleID="s13" >
+<Data ss:Type="String">배송번호</Data>
+</Cell>
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="19.23">
+<Cell ss:Index="1" ss:StyleID="s11" >
+<Data ss:Type="String">2</Data>
+</Cell>
+<Cell ss:Index="2" ss:StyleID="s12" >
+<Data ss:Type="String">ORDER_ID</Data>
+</Cell>
+<Cell ss:Index="3" ss:StyleID="s12" >
+<Data ss:Type="String">CHAR(10)</Data>
+</Cell>
+<Cell ss:Index="4" ss:StyleID="s12" >
+<Data ss:Type="String"></Data>
+</Cell>
+<Cell ss:Index="5" ss:StyleID="s12" >
+<Data ss:Type="String">NOT NULL</Data>
+</Cell>
+<Cell ss:Index="6" ss:StyleID="s12" >
+<Data ss:Type="String"></Data>
+</Cell>
+<Cell ss:Index="7" ss:StyleID="s13" >
+<Data ss:Type="String">주문번호</Data>
+</Cell>
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="19.23">
+<Cell ss:Index="1" ss:StyleID="s11" >
+<Data ss:Type="String">3</Data>
+</Cell>
+<Cell ss:Index="2" ss:StyleID="s12" >
+<Data ss:Type="String">PRODUCT_ID</Data>
+</Cell>
+<Cell ss:Index="3" ss:StyleID="s12" >
+<Data ss:Type="String">CHAR(10)</Data>
+</Cell>
+<Cell ss:Index="4" ss:StyleID="s12" >
+<Data ss:Type="String"></Data>
+</Cell>
+<Cell ss:Index="5" ss:StyleID="s12" >
+<Data ss:Type="String">NOT NULL</Data>
+</Cell>
+<Cell ss:Index="6" ss:StyleID="s12" >
+<Data ss:Type="String"></Data>
+</Cell>
+<Cell ss:Index="7" ss:StyleID="s13" >
+<Data ss:Type="String">제품번호</Data>
+</Cell>
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="19.23">
+<Cell ss:Index="1" ss:StyleID="s11" >
+<Data ss:Type="String">4</Data>
+</Cell>
+<Cell ss:Index="2" ss:StyleID="s12" >
+<Data ss:Type="String">DELIVERY_METHOD</Data>
+</Cell>
+<Cell ss:Index="3" ss:StyleID="s12" >
+<Data ss:Type="String">VARCHAR2(20)</Data>
+</Cell>
+<Cell ss:Index="4" ss:StyleID="s12" >
+<Data ss:Type="String"></Data>
+</Cell>
+<Cell ss:Index="5" ss:StyleID="s12" >
+<Data ss:Type="String">NOT NULL</Data>
+</Cell>
+<Cell ss:Index="6" ss:StyleID="s12" >
+<Data ss:Type="String"></Data>
+</Cell>
+<Cell ss:Index="7" ss:StyleID="s13" >
+<Data ss:Type="String">배송방법</Data>
+</Cell>
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="19.23">
+<Cell ss:Index="1" ss:StyleID="s11" >
+<Data ss:Type="String">5</Data>
+</Cell>
+<Cell ss:Index="2" ss:StyleID="s12" >
+<Data ss:Type="String">DELIVERY_DATE</Data>
+</Cell>
+<Cell ss:Index="3" ss:StyleID="s12" >
+<Data ss:Type="String">DATE</Data>
+</Cell>
+<Cell ss:Index="4" ss:StyleID="s12" >
+<Data ss:Type="String"></Data>
+</Cell>
+<Cell ss:Index="5" ss:StyleID="s12" >
+<Data ss:Type="String">NOT NULL</Data>
+</Cell>
+<Cell ss:Index="6" ss:StyleID="s12" >
+<Data ss:Type="String"></Data>
+</Cell>
+<Cell ss:Index="7" ss:StyleID="s13" >
+<Data ss:Type="String">배송일시</Data>
+</Cell>
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="19.23">
+<Cell ss:Index="1" ss:StyleID="s11" >
+<Data ss:Type="String">6</Data>
+</Cell>
+<Cell ss:Index="2" ss:StyleID="s12" >
+<Data ss:Type="String">CUSTOMER_ID</Data>
+</Cell>
+<Cell ss:Index="3" ss:StyleID="s12" >
+<Data ss:Type="String">CHAR(20)</Data>
+</Cell>
+<Cell ss:Index="4" ss:StyleID="s12" >
+<Data ss:Type="String"></Data>
+</Cell>
+<Cell ss:Index="5" ss:StyleID="s12" >
+<Data ss:Type="String">NOT NULL</Data>
+</Cell>
+<Cell ss:Index="6" ss:StyleID="s12" >
+<Data ss:Type="String"></Data>
+</Cell>
+<Cell ss:Index="7" ss:StyleID="s13" >
+<Data ss:Type="String">고객번호</Data>
+</Cell>
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="409.00">
+<Cell ss:Index="1" />
+<Cell ss:Index="2" />
+<Cell ss:Index="3" />
+<Cell ss:Index="4" />
+<Cell ss:Index="5" />
+<Cell ss:Index="6" />
+<Cell ss:Index="7" />
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="85.42">
+<Cell ss:Index="1" />
+<Cell ss:Index="2" />
+<Cell ss:Index="3" />
+<Cell ss:Index="4" />
+<Cell ss:Index="5" />
+<Cell ss:Index="6" />
+<Cell ss:Index="7" />
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="10.99">
+<Cell ss:Index="1" ss:MergeAcross="6" ss:StyleID="s14" >
+<Data ss:Type="String">2 / 4 페이지</Data>
+</Cell>
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="14.25">
+<Cell ss:Index="1" />
+<Cell ss:Index="2" />
+<Cell ss:Index="3" />
+<Cell ss:Index="4" />
+<Cell ss:Index="5" />
+<Cell ss:Index="6" />
+<Cell ss:Index="7" />
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="19.23">
+<Cell ss:Index="1" ss:MergeAcross="1" ss:MergeDown="1" ss:StyleID="s2" >
+<Data ss:Type="String">테이블 정보</Data>
+</Cell>
+<Cell ss:Index="3" ss:StyleID="s4" >
+<Data ss:Type="String">소유자</Data>
+</Cell>
+<Cell ss:Index="4" ss:MergeAcross="1" ss:StyleID="s7" >
+<Data ss:Type="String">HR</Data>
+</Cell>
+<Cell ss:Index="6" ss:StyleID="s4" >
+<Data ss:Type="String">만든 날짜</Data>
+</Cell>
+<Cell ss:Index="7" ss:StyleID="s5" >
+<Data ss:Type="String">2022/07/08 오전 11:07:08</Data>
+</Cell>
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="19.15">
+<Cell ss:Index="3" ss:StyleID="s2" >
+<Data ss:Type="String">테이블스페이스</Data>
+</Cell>
+<Cell ss:Index="4" ss:MergeAcross="1" ss:StyleID="s0" >
+<Data ss:Type="String">USERS</Data>
+</Cell>
+<Cell ss:Index="6" ss:StyleID="s2" >
+<Data ss:Type="String">수정한 날짜</Data>
+</Cell>
+<Cell ss:Index="7" ss:StyleID="s1" >
+<Data ss:Type="String">2022/07/08 오전 11:07:08</Data>
+</Cell>
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="38.45">
+<Cell ss:Index="1" ss:MergeAcross="1" ss:StyleID="s3" >
+<Data ss:Type="String">테이블 이름</Data>
+</Cell>
+<Cell ss:Index="3" ss:MergeAcross="4" ss:StyleID="s8" >
+<Data ss:Type="String">ORDER_LIST</Data>
+</Cell>
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="38.38">
+<Cell ss:Index="1" ss:MergeAcross="1" ss:StyleID="s2" >
+<Data ss:Type="String">주석</Data>
+</Cell>
+<Cell ss:Index="3" ss:MergeAcross="4" ss:StyleID="s6" >
+<Data ss:Type="String">주문목록</Data>
+</Cell>
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="16.55">
+<Cell ss:Index="1" />
+<Cell ss:Index="2" />
+<Cell ss:Index="3" />
+<Cell ss:Index="4" />
+<Cell ss:Index="5" />
+<Cell ss:Index="6" />
+<Cell ss:Index="7" />
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="19.23">
+<Cell ss:Index="1" ss:StyleID="s9" >
+<Data ss:Type="String">#</Data>
+</Cell>
+<Cell ss:Index="2" ss:StyleID="s9" >
+<Data ss:Type="String">열 이름</Data>
+</Cell>
+<Cell ss:Index="3" ss:StyleID="s9" >
+<Data ss:Type="String">데이터 유형</Data>
+</Cell>
+<Cell ss:Index="4" ss:StyleID="s9" >
+<Data ss:Type="String">키</Data>
+</Cell>
+<Cell ss:Index="5" ss:StyleID="s9" >
+<Data ss:Type="String">Null?</Data>
+</Cell>
+<Cell ss:Index="6" ss:StyleID="s9" >
+<Data ss:Type="String">기본값</Data>
+</Cell>
+<Cell ss:Index="7" ss:StyleID="s10" >
+<Data ss:Type="String">주석</Data>
+</Cell>
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="19.15">
+<Cell ss:Index="1" ss:StyleID="s11" >
+<Data ss:Type="String">1</Data>
+</Cell>
+<Cell ss:Index="2" ss:StyleID="s12" >
+<Data ss:Type="String">ORDER_ID</Data>
+</Cell>
+<Cell ss:Index="3" ss:StyleID="s12" >
+<Data ss:Type="String">CHAR(10)</Data>
+</Cell>
+<Cell ss:Index="4" ss:StyleID="s12" >
+<Data ss:Type="String">PK</Data>
+</Cell>
+<Cell ss:Index="5" ss:StyleID="s12" >
+<Data ss:Type="String">NOT NULL</Data>
+</Cell>
+<Cell ss:Index="6" ss:StyleID="s12" >
+<Data ss:Type="String"></Data>
+</Cell>
+<Cell ss:Index="7" ss:StyleID="s13" >
+<Data ss:Type="String">주문번호</Data>
+</Cell>
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="19.23">
+<Cell ss:Index="1" ss:StyleID="s11" >
+<Data ss:Type="String">2</Data>
+</Cell>
+<Cell ss:Index="2" ss:StyleID="s12" >
+<Data ss:Type="String">PRODUCT_ID</Data>
+</Cell>
+<Cell ss:Index="3" ss:StyleID="s12" >
+<Data ss:Type="String">CHAR(10)</Data>
+</Cell>
+<Cell ss:Index="4" ss:StyleID="s12" >
+<Data ss:Type="String">PK</Data>
+</Cell>
+<Cell ss:Index="5" ss:StyleID="s12" >
+<Data ss:Type="String">NOT NULL</Data>
+</Cell>
+<Cell ss:Index="6" ss:StyleID="s12" >
+<Data ss:Type="String"></Data>
+</Cell>
+<Cell ss:Index="7" ss:StyleID="s13" >
+<Data ss:Type="String">제품번호</Data>
+</Cell>
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="19.23">
+<Cell ss:Index="1" ss:StyleID="s11" >
+<Data ss:Type="String">3</Data>
+</Cell>
+<Cell ss:Index="2" ss:StyleID="s12" >
+<Data ss:Type="String">ORDERLIST_NUM</Data>
+</Cell>
+<Cell ss:Index="3" ss:StyleID="s12" >
+<Data ss:Type="String">CHAR(10)</Data>
+</Cell>
+<Cell ss:Index="4" ss:StyleID="s12" >
+<Data ss:Type="String"></Data>
+</Cell>
+<Cell ss:Index="5" ss:StyleID="s12" >
+<Data ss:Type="String">NOT NULL</Data>
+</Cell>
+<Cell ss:Index="6" ss:StyleID="s12" >
+<Data ss:Type="String"></Data>
+</Cell>
+<Cell ss:Index="7" ss:StyleID="s13" >
+<Data ss:Type="String">주문목록수량 </Data>
+</Cell>
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="409.00">
+<Cell ss:Index="1" />
+<Cell ss:Index="2" />
+<Cell ss:Index="3" />
+<Cell ss:Index="4" />
+<Cell ss:Index="5" />
+<Cell ss:Index="6" />
+<Cell ss:Index="7" />
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="143.10">
+<Cell ss:Index="1" />
+<Cell ss:Index="2" />
+<Cell ss:Index="3" />
+<Cell ss:Index="4" />
+<Cell ss:Index="5" />
+<Cell ss:Index="6" />
+<Cell ss:Index="7" />
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="10.99">
+<Cell ss:Index="1" ss:MergeAcross="6" ss:StyleID="s14" >
+<Data ss:Type="String">3 / 4 페이지</Data>
+</Cell>
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="14.25">
+<Cell ss:Index="1" />
+<Cell ss:Index="2" />
+<Cell ss:Index="3" />
+<Cell ss:Index="4" />
+<Cell ss:Index="5" />
+<Cell ss:Index="6" />
+<Cell ss:Index="7" />
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="19.23">
+<Cell ss:Index="1" ss:MergeAcross="1" ss:MergeDown="1" ss:StyleID="s2" >
+<Data ss:Type="String">테이블 정보</Data>
+</Cell>
+<Cell ss:Index="3" ss:StyleID="s4" >
+<Data ss:Type="String">소유자</Data>
+</Cell>
+<Cell ss:Index="4" ss:MergeAcross="1" ss:StyleID="s7" >
+<Data ss:Type="String">HR</Data>
+</Cell>
+<Cell ss:Index="6" ss:StyleID="s4" >
+<Data ss:Type="String">만든 날짜</Data>
+</Cell>
+<Cell ss:Index="7" ss:StyleID="s5" >
+<Data ss:Type="String">2022/07/08 오전 11:07:08</Data>
+</Cell>
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="19.15">
+<Cell ss:Index="3" ss:StyleID="s2" >
+<Data ss:Type="String">테이블스페이스</Data>
+</Cell>
+<Cell ss:Index="4" ss:MergeAcross="1" ss:StyleID="s0" >
+<Data ss:Type="String">USERS</Data>
+</Cell>
+<Cell ss:Index="6" ss:StyleID="s2" >
+<Data ss:Type="String">수정한 날짜</Data>
+</Cell>
+<Cell ss:Index="7" ss:StyleID="s1" >
+<Data ss:Type="String">2022/07/08 오전 11:07:08</Data>
+</Cell>
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="38.45">
+<Cell ss:Index="1" ss:MergeAcross="1" ss:StyleID="s3" >
+<Data ss:Type="String">테이블 이름</Data>
+</Cell>
+<Cell ss:Index="3" ss:MergeAcross="4" ss:StyleID="s8" >
+<Data ss:Type="String">PLACE_ORDER</Data>
+</Cell>
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="38.38">
+<Cell ss:Index="1" ss:MergeAcross="1" ss:StyleID="s2" >
+<Data ss:Type="String">주석</Data>
+</Cell>
+<Cell ss:Index="3" ss:MergeAcross="4" ss:StyleID="s6" >
+<Data ss:Type="String">주문</Data>
+</Cell>
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="16.55">
+<Cell ss:Index="1" />
+<Cell ss:Index="2" />
+<Cell ss:Index="3" />
+<Cell ss:Index="4" />
+<Cell ss:Index="5" />
+<Cell ss:Index="6" />
+<Cell ss:Index="7" />
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="19.23">
+<Cell ss:Index="1" ss:StyleID="s9" >
+<Data ss:Type="String">#</Data>
+</Cell>
+<Cell ss:Index="2" ss:StyleID="s9" >
+<Data ss:Type="String">열 이름</Data>
+</Cell>
+<Cell ss:Index="3" ss:StyleID="s9" >
+<Data ss:Type="String">데이터 유형</Data>
+</Cell>
+<Cell ss:Index="4" ss:StyleID="s9" >
+<Data ss:Type="String">키</Data>
+</Cell>
+<Cell ss:Index="5" ss:StyleID="s9" >
+<Data ss:Type="String">Null?</Data>
+</Cell>
+<Cell ss:Index="6" ss:StyleID="s9" >
+<Data ss:Type="String">기본값</Data>
+</Cell>
+<Cell ss:Index="7" ss:StyleID="s10" >
+<Data ss:Type="String">주석</Data>
+</Cell>
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="19.15">
+<Cell ss:Index="1" ss:StyleID="s11" >
+<Data ss:Type="String">1</Data>
+</Cell>
+<Cell ss:Index="2" ss:StyleID="s12" >
+<Data ss:Type="String">ORDER_ID</Data>
+</Cell>
+<Cell ss:Index="3" ss:StyleID="s12" >
+<Data ss:Type="String">CHAR(10)</Data>
+</Cell>
+<Cell ss:Index="4" ss:StyleID="s12" >
+<Data ss:Type="String">PK</Data>
+</Cell>
+<Cell ss:Index="5" ss:StyleID="s12" >
+<Data ss:Type="String">NOT NULL</Data>
+</Cell>
+<Cell ss:Index="6" ss:StyleID="s12" >
+<Data ss:Type="String"></Data>
+</Cell>
+<Cell ss:Index="7" ss:StyleID="s13" >
+<Data ss:Type="String">주문번호</Data>
+</Cell>
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="19.23">
+<Cell ss:Index="1" ss:StyleID="s11" >
+<Data ss:Type="String">2</Data>
+</Cell>
+<Cell ss:Index="2" ss:StyleID="s12" >
+<Data ss:Type="String">CUSTOMER_ID</Data>
+</Cell>
+<Cell ss:Index="3" ss:StyleID="s12" >
+<Data ss:Type="String">CHAR(20)</Data>
+</Cell>
+<Cell ss:Index="4" ss:StyleID="s12" >
+<Data ss:Type="String"></Data>
+</Cell>
+<Cell ss:Index="5" ss:StyleID="s12" >
+<Data ss:Type="String">NOT NULL</Data>
+</Cell>
+<Cell ss:Index="6" ss:StyleID="s12" >
+<Data ss:Type="String"></Data>
+</Cell>
+<Cell ss:Index="7" ss:StyleID="s13" >
+<Data ss:Type="String">고객번호</Data>
+</Cell>
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="19.23">
+<Cell ss:Index="1" ss:StyleID="s11" >
+<Data ss:Type="String">3</Data>
+</Cell>
+<Cell ss:Index="2" ss:StyleID="s12" >
+<Data ss:Type="String">ORDER_NUM</Data>
+</Cell>
+<Cell ss:Index="3" ss:StyleID="s12" >
+<Data ss:Type="String">CHAR(10)</Data>
+</Cell>
+<Cell ss:Index="4" ss:StyleID="s12" >
+<Data ss:Type="String"></Data>
+</Cell>
+<Cell ss:Index="5" ss:StyleID="s12" >
+<Data ss:Type="String">NOT NULL</Data>
+</Cell>
+<Cell ss:Index="6" ss:StyleID="s12" >
+<Data ss:Type="String"></Data>
+</Cell>
+<Cell ss:Index="7" ss:StyleID="s13" >
+<Data ss:Type="String">주문수량</Data>
+</Cell>
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="409.00">
+<Cell ss:Index="1" />
+<Cell ss:Index="2" />
+<Cell ss:Index="3" />
+<Cell ss:Index="4" />
+<Cell ss:Index="5" />
+<Cell ss:Index="6" />
+<Cell ss:Index="7" />
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="143.10">
+<Cell ss:Index="1" />
+<Cell ss:Index="2" />
+<Cell ss:Index="3" />
+<Cell ss:Index="4" />
+<Cell ss:Index="5" />
+<Cell ss:Index="6" />
+<Cell ss:Index="7" />
+<Cell ss:Index="8" />
+</Row>
+<Row ss:Height="10.99">
+<Cell ss:Index="1" ss:MergeAcross="6" ss:StyleID="s14" >
+<Data ss:Type="String">4 / 4 페이지</Data>
+</Cell>
+<Cell ss:Index="8" />
+</Row>
+</Table>
+<WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+<PageSetup>
+<PageMargins x:Bottom="0.19" x:Left="0.19" x:Right="0.19" x:Top="0.19"/>
+</PageSetup>
+</WorksheetOptions>
+<PageBreaks xmlns="urn:schemas-microsoft-com:office:excel">
+<RowBreaks>
+<RowBreak>
+<Row>14</Row>
+</RowBreak>
+<RowBreak>
+<Row>30</Row>
+</RowBreak>
+<RowBreak>
+<Row>43</Row>
+</RowBreak>
+</RowBreaks>
+</PageBreaks>
+</Worksheet>
+</Workbook>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3-2</title>
+    <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- 
+ <script>
+      function addFile() {
+        //코드작성
+        $("div").append("<br /><input type='file'/>");
+      }
+      function delFile() {
+        //코드작성
+        if ($("input[type=file]").length > 1) $("input[type=file]").last().remove();
+        if ($("br").length > 1) $("br").last().remove();
+      }
+    </script>
+     -->
+    <script>
+      //복습
+      function addFile() {
+        var html = "<input type='file'>";
+        $("div").append("<br>" + html);
+      }
+      function delFile() {
+        $("input:file").last().remove();
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <input type="file" />
+      <input type="button" value="추가" onclick="addFile()" />
+      <input type="button" value="삭제" onclick="delFile()" />
+    </div>
+  </body>
+</html>

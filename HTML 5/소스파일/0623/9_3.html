@@ -1,0 +1,39 @@
+<!DOCTYPE>
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <script>
+	function focusFn(obj){
+		obj.style.background = "yellow";
+	}
+	function blurFn(obj){
+		obj.style.background = "white";
+	}
+  </script>
+ </HEAD>
+ <BODY>
+	<input type="text" id="t1" onfocus="focusFn(this)" onblur="blurFn(this)">
+	<input type="text" id="t2" onfocus="focusFn(this)" onblur="blurFn(this)">
+	<input type="text" id="t3" onfocus="focusFn(this)" onblur="blurFn(this)">
+
+
+	<!-- 각 비밀번호 입력 양식에 포커스를 잃는 경우 입력한 값이 없다면 옆에 있는 각 span에 *필수
+		라는 텍스트를 출력해주세요
+	-->
+	<input type="password" onblur="passwordCheck(this)"><span></span>
+	<input type="password" onblur="passwordCheck(this)"><span></span>
+	<input type="password" onblur="passwordCheck(this)"><span></span>
+
+	<script>
+		function passwordCheck(obj){
+			var value = obj.value; //포커스가 벗어난 입력 요소의 입력값
+			if(value == ""){
+				obj.nextElementSibling.innerHTML = "*필수";
+			}else{
+				obj.nextElementSibling.innerHTML = "";
+			}
+		}
+	</script>
+	
+ </BODY>
+</HTML>

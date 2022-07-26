@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM트리</title>
+    <link rel="stylesheet" href="" />
+    <style>
+      a {
+        text-decoration: none;
+      }
+    </style>
+    <script></script>
+  </head>
+  <body>
+    <h2>DOM트리</h2>
+    <ul>
+      <li><a href="#">버튼1</a></li>
+      <li><a href="#">버튼2</a></li>
+      <li><a href="#">버튼3</a></li>
+      <li><a href="#">버튼4</a></li>
+      <li><a href="#">버튼5</a></li>
+    </ul>
+    <script>
+      let ul = document.querySelector("ul");
+      let li_count = ul.childElementCount; // 자식의 갯수
+      console.log(li_count);
+
+      let liAll = ul.children; // 자식을 배열로 가져옴
+      console.log(liAll);
+
+      //   ul.style.listStyle = "none";
+      liAll[2].style.backgroundColor = "red";
+
+      let fec = ul.firstElementChild;
+      fec.style.background = "#fcc";
+
+      let lec = ul.lastElementChild;
+      lec.style.background = "#cfc";
+      /*
+        let nes = fec.nextElementSibling;
+        nes.style.background = "#ccf"; 를 간소화
+      */
+      fec.nextElementSibling.style.background = "#ccf"; // 첫번째 element의 형제 (다음 것?)
+
+      ul.previousElementSibling.style.background = "#cf4";
+      // ul element의 이전 형제 (이전 것)
+
+      liAll[1].innerHTML = "<a>새로운버튼</a>";
+
+      ul.removeChild(liAll[3]); // 4번째 자식 제거
+    </script>
+  </body>
+</html>

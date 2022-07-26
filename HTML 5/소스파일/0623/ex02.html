@@ -1,0 +1,25 @@
+<!DOCTYPE>
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <script>
+	function borderChg(){
+		var myspan = document.getElementById("mySpan");
+		myspan.style.border = "2px dotted violet";
+	}
+	function countP(){
+		var lengthP = document.getElementsByTagName("p").length;
+		alert("<p> 태그의 개수는 "+lengthP);
+	}
+  </script>
+ </HEAD>
+ <BODY>
+	<h3>자바스크립트란?
+		<button onclick="borderChg()">border</button>
+		<button onclick="countP()">p</button>
+	</h3>
+	<p>자바스크립트는 웹 프로그래밍 언어로서 웹 페이지를 동적 변경시킬 수 있다.</p>
+	<p><span id="mySpan">C 언어</span>를 아는 사용자는 빠르게 학습할 수 있다.</p>
+	<p>이벤트 등 GUI 프로그래밍에 필요한 요소들이 있어 학습에 약간의 어려움이 있다.</p>
+ </BODY>
+</HTML>

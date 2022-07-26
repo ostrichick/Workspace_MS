@@ -1,0 +1,173 @@
+<!DOCTYPE>
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+ </HEAD>
+ <BODY>
+	<div id="div01">
+		<span>안녕하세요, 반가워요</span>
+	</div>
+	<script>
+		document.write("<h2>document.write()를 이용한 태그 추가</h2>");
+		var div01 = document.getElementById("div01");
+		
+		console.log(div01.id);
+		console.log(div01.tagName);
+		console.log(div01.innerHTML);
+
+		div01.innerHTML = "<h2>새로써집니다</h2>";
+		div01.textContent =  "<h2>새로써집니다</h2>";
+
+		
+	
+		div01.addEventListener("click",function(){alert("클릭했습니다.");});
+
+		var clickFn = div01.click() // 클릭했을때 적용되어 있는 함수를 얻어오는 메소드 실제 클릭효과를 발생함.
+
+
+	</script>
+
+	<button onclick="changeBox()">클릭!</button>
+	<div id="box"></div>
+	
+	<script>
+		function changeBox(){
+			var box = document.getElementById("box");
+			box.style.width = "100px";
+			box.style.height="100px";
+			box.style.backgroundColor = "yellow";
+		}
+	</script>
+
+	<!-- 각 체크 박스가 클릭 됐을 때 옆에 있는 span 태그의 텍스트 빨간색 변경되도록 해보세요 -->
+	<input type="checkbox" id="check01" onclick="clickChk('check01')"><span>1</span>
+	<input type="checkbox" id="check02" onclick="clickChk('check02')"><span>2</span>
+	<script>
+		function clickChk(id){
+			var checkBox = document.getElementById(id);
+			var span = checkBox.nextElementSibling;
+			span.style.color = "red";
+		}
+	</script>
+
+
+	<input type="checkbox" id="check03" onclick="isCheckFn(this)"><span>1</span>
+	<input type="checkbox" id="check04" onclick="isCheckFn(this)"><span>2</span>
+	<script>
+		function isCheckFn(obj){
+			//var checkBox = document.getElementById(id);
+			var span = obj.nextElementSibling;
+
+			if(obj.checked){
+				span.style.color = "red";
+			}else{
+				span.style.color = "black";
+			}
+
+		}
+	</script>
+	<hr>
+	<div>
+		<ins onclick="hereClick(this,'yellow','blue')">여기</ins>를 클릭하면 클릭한 '여기' 폰트 색상이 노란색, 배경이 파란색으로 변경됩니다.<br>
+		<ins onclick="hereClick(this,'red','yellow')">여기</ins>를 클릭하면 클릭한 '여기' 폰트 색상이 빨간색, 배경이 노란색으로 변경됩니다.<br>
+		this 키워드를 사용하여 구현하세요.
+	</div>
+	<script>
+		//1.'여기' 텍스트에 클릭 이벤트를 건다.
+		//2.클릭한 요소를 함수로 넘긴다.
+		//3.요소에 적용할 css 속성 값을 함수로 넘긴다.
+		function hereClick(obj,font,back){
+			//4.클릭한 요소에 글자색상을 입힌다.
+			obj.style.color = font;
+			//5.클릭한 요소에 배경색상을 입힌다.
+			obj.style.backgroundColor = back;
+		}
+		
+	</script>
+	<hr>
+	<p>1</p>
+	<p>2</p>
+	<p>3</p>
+	
+	<script>
+		//tagName으로 요소를 찾을 때에는 일치하는 태그 요소하 한개이더라도 무조건 배열로 반환된다.
+		//원하는 요소에 접근할 때는 인덱스를 사용하여 접근한다.
+		var p2 = document.getElementsByTagName("p")[1];
+		console.log(p2.innerHTML);
+
+		var allP = document.getElementsByTagName("p");
+		//tagName으로 찾은 모든 요소에 접근하는 방법은 반복문을 사용하여 모든 인덱스에 접근하면 된다.
+		for(var i=0;i<allP.length;i++){
+			allP[i].style.color = "red";
+		}
+
+
+
+	</script>
+	<hr>
+	<div class="d1">1 /class d1</div>
+	<div>2</div>
+	<div class="d1">3 /class d1</div>
+	<script>
+		var d1 = document.getElementsByClassName("d1");
+		console.log(d1[1].innerHTML);
+
+		//클래스 d1을 가지는 요소들의 배경색 노란색으로 입혀주세요.
+		for(var i=0; i<d1.length;i++){
+			d1[i].style.backgroundColor = "yellow";
+		}
+		//자바스크립트를 사용하여 호출된 정적 위치에 html을 새로 쓰는 역할을 한다.
+		document.write("<h2>document.write()를 이용한 태그 추가</h2>");
+
+		document.writeln("writeln()은 개행문자가 포함되어 있지만 html에서 개행은 한칸의 공백으로 인식된다.");
+		document.writeln("때문에 이 텍스트는 줄바꿈 되지 않는다.");
+	</script>
+	<button onclick="clickFn()">클릭해보세요</button>
+	<script>
+		function clickFn(){
+			//화면이 로드 된 후에 동작하게 되면 기존 html을 전부 지우고 새로 쓴다.
+			document.write("html 새로 써집니다.");
+		}
+	</script>
+
+	<button onclick="openPop()">팝업 열기</button>
+	<textarea id="textA"></textarea>
+	<script>
+		var win = null;
+		function openPop(){
+			//팝업 역할을 할 새로운 창 생성
+			if(win == null || win.closed){
+				win = window.open("","outwin","width=300,height=200");
+			}
+			
+			var text = document.getElementById("textA").value;
+
+			//팝업이 될 윈도우 창에 웹문서 쓸 준비
+			win.document.open();
+			//해당 창에 웹문서 쓰기
+			win.document.write(text);
+			//웹문서 닫기
+			win.document.close();
+
+
+		}
+	</script>
+	<hr>
+	<div id="parent"></div>
+	<button onclick="addP()">p태그 추가</button>
+	<script>
+		var cnt = 1;
+		function addP(){
+			var p = document.createElement("p");
+			p.innerHTML = "추가된 html p 태그입니다._"+cnt;
+			p.onclick = function(){
+				var parent = this.parentElement;
+				parent.removeChild(this);
+			}
+
+			document.getElementById("parent").appendChild(p);
+			cnt++;
+		}
+	</script>
+ </BODY>
+</HTML>

@@ -1,0 +1,35 @@
+<!DOCTYPE>
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <script src="../jquery-3.6.0.min.js"></script>
+  <script>
+	function add(){
+		var title = $("input[name=title]").val();
+		var content = $("input[name=content]").val();
+		var owner = $("input[name=owner]").val();
+
+		var tr = "<tr><td>"+title+"</td><td>"+content+"</td><td>"+owner+"</td></tr>";
+
+		$("table").append(tr);
+
+		$("input[name=title]").val("");
+		$("input[name=content]").val("");
+		$("input[name=owner]").val("");
+	}
+  </script>
+ </HEAD>
+ <BODY>
+	제목 : <input type="text" name="title"><br>
+	내용 : <input type="text" name="content"><br>
+	작성자 : <input type="text" name="owner"><br>
+	<input type="button" value="테이블에 추가" onclick="add()">
+	<table border="1">
+		<tr>
+			<td>제목</td>
+			<td>내용</td>
+			<td>작성자</td>
+		</tr>
+	</table>
+ </BODY>
+</HTML>

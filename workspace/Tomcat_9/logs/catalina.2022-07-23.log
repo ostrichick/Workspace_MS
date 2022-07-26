@@ -1,0 +1,794 @@
+23-Jul-2022 16:32:24.247 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.64
+23-Jul-2022 16:32:24.249 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jun 2 2022 19:08:46 UTC
+23-Jul-2022 16:32:24.250 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.64.0
+23-Jul-2022 16:32:24.250 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+23-Jul-2022 16:32:24.250 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+23-Jul-2022 16:32:24.250 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+23-Jul-2022 16:32:24.250 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-18.0.2
+23-Jul-2022 16:32:24.250 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           18.0.2+9-61
+23-Jul-2022 16:32:24.250 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+23-Jul-2022 16:32:24.250 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9
+23-Jul-2022 16:32:24.250 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9
+23-Jul-2022 16:32:24.264 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+23-Jul-2022 16:32:24.264 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+23-Jul-2022 16:32:24.264 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+23-Jul-2022 16:32:24.264 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+23-Jul-2022 16:32:24.264 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+23-Jul-2022 16:32:24.265 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\conf\logging.properties
+23-Jul-2022 16:32:24.265 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+23-Jul-2022 16:32:24.265 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+23-Jul-2022 16:32:24.265 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+23-Jul-2022 16:32:24.266 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+23-Jul-2022 16:32:24.266 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9
+23-Jul-2022 16:32:24.266 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9
+23-Jul-2022 16:32:24.266 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\temp
+23-Jul-2022 16:32:24.272 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\jdk-18.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:\app\MYCOM\product\18.0.0\dbhomeXE\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Users\MYCOM\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\MYCOM\AppData\Local\Programs\Python\Python39\;C:\Users\MYCOM\AppData\Local\Microsoft\WindowsApps;;c:\Users\MYCOM\AppData\Local\Programs\Microsoft VS Code\bin;.]
+23-Jul-2022 16:32:24.495 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+23-Jul-2022 16:32:24.515 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [419] milliseconds
+23-Jul-2022 16:32:24.548 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+23-Jul-2022 16:32:24.548 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.64]
+23-Jul-2022 16:32:24.556 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\docs]
+23-Jul-2022 16:32:24.779 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\docs] has finished in [223] ms
+23-Jul-2022 16:32:24.780 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\examples]
+23-Jul-2022 16:32:25.168 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\examples] has finished in [388] ms
+23-Jul-2022 16:32:25.169 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\host-manager]
+23-Jul-2022 16:32:25.209 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\host-manager] has finished in [40] ms
+23-Jul-2022 16:32:25.209 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\manager]
+23-Jul-2022 16:32:25.248 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\manager] has finished in [39] ms
+23-Jul-2022 16:32:25.248 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\ROOT]
+23-Jul-2022 16:32:25.270 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\ROOT] has finished in [22] ms
+23-Jul-2022 16:32:25.273 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+23-Jul-2022 16:32:25.295 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [778] milliseconds
+23-Jul-2022 17:05:41.826 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.64
+23-Jul-2022 17:05:41.829 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jun 2 2022 19:08:46 UTC
+23-Jul-2022 17:05:41.829 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.64.0
+23-Jul-2022 17:05:41.829 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+23-Jul-2022 17:05:41.829 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+23-Jul-2022 17:05:41.829 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+23-Jul-2022 17:05:41.829 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-18.0.2
+23-Jul-2022 17:05:41.830 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           18.0.2+9-61
+23-Jul-2022 17:05:41.830 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+23-Jul-2022 17:05:41.830 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9
+23-Jul-2022 17:05:41.830 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9
+23-Jul-2022 17:05:41.836 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+23-Jul-2022 17:05:41.836 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+23-Jul-2022 17:05:41.836 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+23-Jul-2022 17:05:41.837 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+23-Jul-2022 17:05:41.837 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+23-Jul-2022 17:05:41.837 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\conf\logging.properties
+23-Jul-2022 17:05:41.837 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+23-Jul-2022 17:05:41.838 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+23-Jul-2022 17:05:41.838 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+23-Jul-2022 17:05:41.838 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+23-Jul-2022 17:05:41.838 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9
+23-Jul-2022 17:05:41.839 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9
+23-Jul-2022 17:05:41.841 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\temp
+23-Jul-2022 17:05:41.847 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\jdk-18.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:\app\MYCOM\product\18.0.0\dbhomeXE\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Users\MYCOM\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\MYCOM\AppData\Local\Programs\Python\Python39\;C:\Users\MYCOM\AppData\Local\Microsoft\WindowsApps;;c:\Users\MYCOM\AppData\Local\Programs\Microsoft VS Code\bin;.]
+23-Jul-2022 17:05:42.046 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+23-Jul-2022 17:05:42.060 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [362] milliseconds
+23-Jul-2022 17:05:42.085 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+23-Jul-2022 17:05:42.085 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.64]
+23-Jul-2022 17:05:42.091 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\docs]
+23-Jul-2022 17:05:42.286 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\docs] has finished in [195] ms
+23-Jul-2022 17:05:42.286 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\examples]
+23-Jul-2022 17:05:42.638 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\examples] has finished in [352] ms
+23-Jul-2022 17:05:42.638 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\host-manager]
+23-Jul-2022 17:05:42.678 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\host-manager] has finished in [40] ms
+23-Jul-2022 17:05:42.678 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\manager]
+23-Jul-2022 17:05:42.720 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\manager] has finished in [42] ms
+23-Jul-2022 17:05:42.721 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\ROOT]
+23-Jul-2022 17:05:42.748 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\ROOT] has finished in [27] ms
+23-Jul-2022 17:05:42.751 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+23-Jul-2022 17:05:42.771 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [709] milliseconds
+23-Jul-2022 17:28:29.885 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.64
+23-Jul-2022 17:28:29.888 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jun 2 2022 19:08:46 UTC
+23-Jul-2022 17:28:29.888 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.64.0
+23-Jul-2022 17:28:29.888 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+23-Jul-2022 17:28:29.888 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+23-Jul-2022 17:28:29.888 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+23-Jul-2022 17:28:29.888 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-18.0.2
+23-Jul-2022 17:28:29.888 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           18.0.2+9-61
+23-Jul-2022 17:28:29.889 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+23-Jul-2022 17:28:29.889 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9
+23-Jul-2022 17:28:29.889 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9
+23-Jul-2022 17:28:29.895 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+23-Jul-2022 17:28:29.895 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+23-Jul-2022 17:28:29.895 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+23-Jul-2022 17:28:29.895 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+23-Jul-2022 17:28:29.895 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+23-Jul-2022 17:28:29.895 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\conf\logging.properties
+23-Jul-2022 17:28:29.895 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+23-Jul-2022 17:28:29.895 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+23-Jul-2022 17:28:29.895 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+23-Jul-2022 17:28:29.895 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+23-Jul-2022 17:28:29.895 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9
+23-Jul-2022 17:28:29.895 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9
+23-Jul-2022 17:28:29.895 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\temp
+23-Jul-2022 17:28:29.901 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\jdk-18.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:\app\MYCOM\product\18.0.0\dbhomeXE\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Users\MYCOM\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\MYCOM\AppData\Local\Programs\Python\Python39\;C:\Users\MYCOM\AppData\Local\Microsoft\WindowsApps;;c:\Users\MYCOM\AppData\Local\Programs\Microsoft VS Code\bin;.]
+23-Jul-2022 17:28:30.093 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+23-Jul-2022 17:28:30.109 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [347] milliseconds
+23-Jul-2022 17:28:30.137 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+23-Jul-2022 17:28:30.137 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.64]
+23-Jul-2022 17:28:30.141 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\docs]
+23-Jul-2022 17:28:30.329 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\docs] has finished in [188] ms
+23-Jul-2022 17:28:30.329 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\examples]
+23-Jul-2022 17:28:30.642 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\examples] has finished in [313] ms
+23-Jul-2022 17:28:30.646 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\host-manager]
+23-Jul-2022 17:28:30.678 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\host-manager] has finished in [32] ms
+23-Jul-2022 17:28:30.678 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\manager]
+23-Jul-2022 17:28:30.713 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\manager] has finished in [35] ms
+23-Jul-2022 17:28:30.713 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\ROOT]
+23-Jul-2022 17:28:30.737 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\ROOT] has finished in [24] ms
+23-Jul-2022 17:28:30.739 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+23-Jul-2022 17:28:30.763 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [653] milliseconds
+23-Jul-2022 17:35:51.420 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.reload Reloading context []
+23-Jul-2022 17:35:51.420 INFO [Catalina-utility-1] org.apache.catalina.core.StandardContext.reload Reloading Context with name [] has started
+23-Jul-2022 17:35:51.440 SEVERE [Catalina-utility-1] org.apache.tomcat.util.digester.Digester.fatalError Parse fatal error at line [35] column [3]
+	org.xml.sax.SAXParseException; systemId: file:/C:/Users/MYCOM/Dropbox/PC/Music/221025/workspace/Tomcat_9/webapps/ROOT/WEB-INF/web.xml; lineNumber: 35; columnNumber: 3; The end-tag for element type "servlet-mapping" must end with a '>' delimiter.
+		at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+		at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:178)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1465)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanEndElement(XMLDocumentFragmentScannerImpl.java:1701)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2899)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:542)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:889)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:825)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1224)
+		at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:637)
+		at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1535)
+		at org.apache.tomcat.util.descriptor.web.WebXmlParser.parseWebXml(WebXmlParser.java:119)
+		at org.apache.catalina.startup.ContextConfig.webConfig(ContextConfig.java:1277)
+		at org.apache.catalina.startup.ContextConfig.configureStart(ContextConfig.java:986)
+		at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:303)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5135)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3818)
+		at org.apache.catalina.startup.HostConfig.reload(HostConfig.java:1443)
+		at org.apache.catalina.startup.HostConfig.checkResources(HostConfig.java:1415)
+		at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1654)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:315)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1162)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1365)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1369)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1347)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+		at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+23-Jul-2022 17:35:51.444 SEVERE [Catalina-utility-1] org.apache.tomcat.util.descriptor.web.WebXmlParser.parseWebXml Parse error in application web.xml file at [file:/C:/Users/MYCOM/Dropbox/PC/Music/221025/workspace/Tomcat_9/webapps/ROOT/WEB-INF/web.xml]
+	org.xml.sax.SAXParseException; systemId: file:/C:/Users/MYCOM/Dropbox/PC/Music/221025/workspace/Tomcat_9/webapps/ROOT/WEB-INF/web.xml; lineNumber: 35; columnNumber: 3; The end-tag for element type "servlet-mapping" must end with a '>' delimiter.
+		at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+		at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:178)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1465)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanEndElement(XMLDocumentFragmentScannerImpl.java:1701)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2899)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:542)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:889)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:825)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1224)
+		at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:637)
+		at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1535)
+		at org.apache.tomcat.util.descriptor.web.WebXmlParser.parseWebXml(WebXmlParser.java:119)
+		at org.apache.catalina.startup.ContextConfig.webConfig(ContextConfig.java:1277)
+		at org.apache.catalina.startup.ContextConfig.configureStart(ContextConfig.java:986)
+		at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:303)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5135)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3818)
+		at org.apache.catalina.startup.HostConfig.reload(HostConfig.java:1443)
+		at org.apache.catalina.startup.HostConfig.checkResources(HostConfig.java:1415)
+		at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1654)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:315)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1162)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1365)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1369)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1347)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+		at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+23-Jul-2022 17:35:51.444 SEVERE [Catalina-utility-1] org.apache.tomcat.util.descriptor.web.WebXmlParser.parseWebXml Occurred at line [35] column [3]
+23-Jul-2022 17:35:51.444 SEVERE [Catalina-utility-1] org.apache.catalina.startup.ContextConfig.configureStart Marking this application unavailable due to previous error(s)
+23-Jul-2022 17:35:51.444 SEVERE [Catalina-utility-1] org.apache.catalina.core.StandardContext.startInternal One or more components marked the context as not correctly configured
+23-Jul-2022 17:35:51.444 SEVERE [Catalina-utility-1] org.apache.catalina.core.StandardContext.startInternal Context [] startup failed due to previous errors
+23-Jul-2022 17:35:51.451 INFO [Catalina-utility-1] org.apache.catalina.core.StandardContext.reload Reloading Context with name [] is completed
+23-Jul-2022 17:36:17.360 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.64
+23-Jul-2022 17:36:17.365 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jun 2 2022 19:08:46 UTC
+23-Jul-2022 17:36:17.365 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.64.0
+23-Jul-2022 17:36:17.365 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+23-Jul-2022 17:36:17.365 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+23-Jul-2022 17:36:17.365 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+23-Jul-2022 17:36:17.365 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-18.0.2
+23-Jul-2022 17:36:17.365 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           18.0.2+9-61
+23-Jul-2022 17:36:17.365 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+23-Jul-2022 17:36:17.365 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9
+23-Jul-2022 17:36:17.365 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9
+23-Jul-2022 17:36:17.373 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+23-Jul-2022 17:36:17.373 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+23-Jul-2022 17:36:17.373 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+23-Jul-2022 17:36:17.373 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+23-Jul-2022 17:36:17.373 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+23-Jul-2022 17:36:17.373 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\conf\logging.properties
+23-Jul-2022 17:36:17.373 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+23-Jul-2022 17:36:17.373 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+23-Jul-2022 17:36:17.373 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+23-Jul-2022 17:36:17.373 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+23-Jul-2022 17:36:17.373 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9
+23-Jul-2022 17:36:17.373 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9
+23-Jul-2022 17:36:17.373 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\temp
+23-Jul-2022 17:36:17.379 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\jdk-18.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:\app\MYCOM\product\18.0.0\dbhomeXE\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Users\MYCOM\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\MYCOM\AppData\Local\Programs\Python\Python39\;C:\Users\MYCOM\AppData\Local\Microsoft\WindowsApps;;c:\Users\MYCOM\AppData\Local\Programs\Microsoft VS Code\bin;.]
+23-Jul-2022 17:36:17.569 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+23-Jul-2022 17:36:17.589 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [356] milliseconds
+23-Jul-2022 17:36:17.619 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+23-Jul-2022 17:36:17.619 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.64]
+23-Jul-2022 17:36:17.619 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\docs]
+23-Jul-2022 17:36:17.830 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\docs] has finished in [211] ms
+23-Jul-2022 17:36:17.830 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\examples]
+23-Jul-2022 17:36:18.190 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\examples] has finished in [360] ms
+23-Jul-2022 17:36:18.190 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\host-manager]
+23-Jul-2022 17:36:18.230 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\host-manager] has finished in [40] ms
+23-Jul-2022 17:36:18.230 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\manager]
+23-Jul-2022 17:36:18.270 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\manager] has finished in [40] ms
+23-Jul-2022 17:36:18.270 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\ROOT]
+23-Jul-2022 17:36:18.279 SEVERE [main] org.apache.tomcat.util.digester.Digester.fatalError Parse fatal error at line [35] column [3]
+	org.xml.sax.SAXParseException; systemId: file:/C:/Users/MYCOM/Dropbox/PC/Music/221025/workspace/Tomcat_9/webapps/ROOT/WEB-INF/web.xml; lineNumber: 35; columnNumber: 3; The end-tag for element type "servlet-mapping" must end with a '>' delimiter.
+		at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+		at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:178)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1465)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanEndElement(XMLDocumentFragmentScannerImpl.java:1701)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2899)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:542)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:889)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:825)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1224)
+		at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:637)
+		at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1535)
+		at org.apache.tomcat.util.descriptor.web.WebXmlParser.parseWebXml(WebXmlParser.java:119)
+		at org.apache.catalina.startup.ContextConfig.webConfig(ContextConfig.java:1277)
+		at org.apache.catalina.startup.ContextConfig.configureStart(ContextConfig.java:986)
+		at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:303)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5135)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:726)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:698)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:696)
+		at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1185)
+		at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1933)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployDirectories(HostConfig.java:1095)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:477)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1618)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:319)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:423)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:366)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:946)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:835)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:263)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:432)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:772)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:476)
+23-Jul-2022 17:36:18.284 SEVERE [main] org.apache.tomcat.util.descriptor.web.WebXmlParser.parseWebXml Parse error in application web.xml file at [file:/C:/Users/MYCOM/Dropbox/PC/Music/221025/workspace/Tomcat_9/webapps/ROOT/WEB-INF/web.xml]
+	org.xml.sax.SAXParseException; systemId: file:/C:/Users/MYCOM/Dropbox/PC/Music/221025/workspace/Tomcat_9/webapps/ROOT/WEB-INF/web.xml; lineNumber: 35; columnNumber: 3; The end-tag for element type "servlet-mapping" must end with a '>' delimiter.
+		at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+		at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:178)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1465)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanEndElement(XMLDocumentFragmentScannerImpl.java:1701)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2899)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:542)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:889)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:825)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1224)
+		at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:637)
+		at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1535)
+		at org.apache.tomcat.util.descriptor.web.WebXmlParser.parseWebXml(WebXmlParser.java:119)
+		at org.apache.catalina.startup.ContextConfig.webConfig(ContextConfig.java:1277)
+		at org.apache.catalina.startup.ContextConfig.configureStart(ContextConfig.java:986)
+		at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:303)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5135)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:726)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:698)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:696)
+		at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1185)
+		at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1933)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployDirectories(HostConfig.java:1095)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:477)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1618)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:319)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:423)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:366)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:946)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:835)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:263)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:432)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:772)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:476)
+23-Jul-2022 17:36:18.284 SEVERE [main] org.apache.tomcat.util.descriptor.web.WebXmlParser.parseWebXml Occurred at line [35] column [3]
+23-Jul-2022 17:36:18.290 SEVERE [main] org.apache.catalina.startup.ContextConfig.configureStart Marking this application unavailable due to previous error(s)
+23-Jul-2022 17:36:18.290 SEVERE [main] org.apache.catalina.core.StandardContext.startInternal One or more components marked the context as not correctly configured
+23-Jul-2022 17:36:18.290 SEVERE [main] org.apache.catalina.core.StandardContext.startInternal Context [] startup failed due to previous errors
+23-Jul-2022 17:36:18.299 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\ROOT] has finished in [29] ms
+23-Jul-2022 17:36:18.299 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+23-Jul-2022 17:36:18.319 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [726] milliseconds
+23-Jul-2022 17:37:09.966 SEVERE [main] org.apache.catalina.startup.Catalina.stopServer Could not contact [localhost:8005] (base port [8005] and offset [0]). Tomcat may not be running.
+23-Jul-2022 17:37:23.442 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.64
+23-Jul-2022 17:37:23.448 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jun 2 2022 19:08:46 UTC
+23-Jul-2022 17:37:23.448 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.64.0
+23-Jul-2022 17:37:23.448 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+23-Jul-2022 17:37:23.448 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+23-Jul-2022 17:37:23.448 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+23-Jul-2022 17:37:23.448 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-18.0.2
+23-Jul-2022 17:37:23.448 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           18.0.2+9-61
+23-Jul-2022 17:37:23.448 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+23-Jul-2022 17:37:23.448 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9
+23-Jul-2022 17:37:23.448 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9
+23-Jul-2022 17:37:23.456 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+23-Jul-2022 17:37:23.456 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+23-Jul-2022 17:37:23.456 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+23-Jul-2022 17:37:23.456 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+23-Jul-2022 17:37:23.456 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+23-Jul-2022 17:37:23.456 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\conf\logging.properties
+23-Jul-2022 17:37:23.456 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+23-Jul-2022 17:37:23.456 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+23-Jul-2022 17:37:23.456 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+23-Jul-2022 17:37:23.456 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+23-Jul-2022 17:37:23.456 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9
+23-Jul-2022 17:37:23.456 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9
+23-Jul-2022 17:37:23.456 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\temp
+23-Jul-2022 17:37:23.456 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\jdk-18.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:\app\MYCOM\product\18.0.0\dbhomeXE\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Users\MYCOM\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\MYCOM\AppData\Local\Programs\Python\Python39\;C:\Users\MYCOM\AppData\Local\Microsoft\WindowsApps;;c:\Users\MYCOM\AppData\Local\Programs\Microsoft VS Code\bin;.]
+23-Jul-2022 17:37:23.642 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+23-Jul-2022 17:37:23.657 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [347] milliseconds
+23-Jul-2022 17:37:23.695 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+23-Jul-2022 17:37:23.695 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.64]
+23-Jul-2022 17:37:23.695 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\docs]
+23-Jul-2022 17:37:23.880 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\docs] has finished in [185] ms
+23-Jul-2022 17:37:23.880 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\examples]
+23-Jul-2022 17:37:24.212 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\examples] has finished in [332] ms
+23-Jul-2022 17:37:24.212 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\host-manager]
+23-Jul-2022 17:37:24.243 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\host-manager] has finished in [31] ms
+23-Jul-2022 17:37:24.243 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\manager]
+23-Jul-2022 17:37:24.281 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\manager] has finished in [38] ms
+23-Jul-2022 17:37:24.281 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\ROOT]
+23-Jul-2022 17:37:24.297 SEVERE [main] org.apache.tomcat.util.digester.Digester.fatalError Parse fatal error at line [35] column [3]
+	org.xml.sax.SAXParseException; systemId: file:/C:/Users/MYCOM/Dropbox/PC/Music/221025/workspace/Tomcat_9/webapps/ROOT/WEB-INF/web.xml; lineNumber: 35; columnNumber: 3; The end-tag for element type "servlet-mapping" must end with a '>' delimiter.
+		at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+		at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:178)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1465)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanEndElement(XMLDocumentFragmentScannerImpl.java:1701)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2899)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:542)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:889)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:825)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1224)
+		at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:637)
+		at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1535)
+		at org.apache.tomcat.util.descriptor.web.WebXmlParser.parseWebXml(WebXmlParser.java:119)
+		at org.apache.catalina.startup.ContextConfig.webConfig(ContextConfig.java:1277)
+		at org.apache.catalina.startup.ContextConfig.configureStart(ContextConfig.java:986)
+		at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:303)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5135)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:726)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:698)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:696)
+		at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1185)
+		at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1933)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployDirectories(HostConfig.java:1095)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:477)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1618)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:319)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:423)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:366)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:946)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:835)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:263)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:432)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:772)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:476)
+23-Jul-2022 17:37:24.306 SEVERE [main] org.apache.tomcat.util.descriptor.web.WebXmlParser.parseWebXml Parse error in application web.xml file at [file:/C:/Users/MYCOM/Dropbox/PC/Music/221025/workspace/Tomcat_9/webapps/ROOT/WEB-INF/web.xml]
+	org.xml.sax.SAXParseException; systemId: file:/C:/Users/MYCOM/Dropbox/PC/Music/221025/workspace/Tomcat_9/webapps/ROOT/WEB-INF/web.xml; lineNumber: 35; columnNumber: 3; The end-tag for element type "servlet-mapping" must end with a '>' delimiter.
+		at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+		at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:178)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1465)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanEndElement(XMLDocumentFragmentScannerImpl.java:1701)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2899)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:542)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:889)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:825)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1224)
+		at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:637)
+		at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1535)
+		at org.apache.tomcat.util.descriptor.web.WebXmlParser.parseWebXml(WebXmlParser.java:119)
+		at org.apache.catalina.startup.ContextConfig.webConfig(ContextConfig.java:1277)
+		at org.apache.catalina.startup.ContextConfig.configureStart(ContextConfig.java:986)
+		at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:303)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5135)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:726)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:698)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:696)
+		at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1185)
+		at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1933)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployDirectories(HostConfig.java:1095)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:477)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1618)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:319)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:423)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:366)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:946)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:835)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:263)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:432)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:772)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:476)
+23-Jul-2022 17:37:24.306 SEVERE [main] org.apache.tomcat.util.descriptor.web.WebXmlParser.parseWebXml Occurred at line [35] column [3]
+23-Jul-2022 17:37:24.306 SEVERE [main] org.apache.catalina.startup.ContextConfig.configureStart Marking this application unavailable due to previous error(s)
+23-Jul-2022 17:37:24.306 SEVERE [main] org.apache.catalina.core.StandardContext.startInternal One or more components marked the context as not correctly configured
+23-Jul-2022 17:37:24.306 SEVERE [main] org.apache.catalina.core.StandardContext.startInternal Context [] startup failed due to previous errors
+23-Jul-2022 17:37:24.306 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\ROOT] has finished in [25] ms
+23-Jul-2022 17:37:24.306 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+23-Jul-2022 17:37:24.337 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [667] milliseconds
+23-Jul-2022 17:38:04.363 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.reload Reloading context []
+23-Jul-2022 20:47:58.121 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.64
+23-Jul-2022 20:47:58.125 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jun 2 2022 19:08:46 UTC
+23-Jul-2022 20:47:58.125 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.64.0
+23-Jul-2022 20:47:58.125 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+23-Jul-2022 20:47:58.126 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+23-Jul-2022 20:47:58.126 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+23-Jul-2022 20:47:58.127 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-18.0.2
+23-Jul-2022 20:47:58.127 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           18.0.2+9-61
+23-Jul-2022 20:47:58.128 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+23-Jul-2022 20:47:58.128 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9
+23-Jul-2022 20:47:58.128 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9
+23-Jul-2022 20:47:58.134 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+23-Jul-2022 20:47:58.134 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+23-Jul-2022 20:47:58.134 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+23-Jul-2022 20:47:58.135 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+23-Jul-2022 20:47:58.135 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+23-Jul-2022 20:47:58.135 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\conf\logging.properties
+23-Jul-2022 20:47:58.136 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+23-Jul-2022 20:47:58.136 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+23-Jul-2022 20:47:58.136 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+23-Jul-2022 20:47:58.137 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+23-Jul-2022 20:47:58.137 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9
+23-Jul-2022 20:47:58.137 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9
+23-Jul-2022 20:47:58.138 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\temp
+23-Jul-2022 20:47:58.143 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\jdk-18.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:\app\MYCOM\product\18.0.0\dbhomeXE\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Users\MYCOM\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\MYCOM\AppData\Local\Programs\Python\Python39\;C:\Users\MYCOM\AppData\Local\Microsoft\WindowsApps;;c:\Users\MYCOM\AppData\Local\Programs\Microsoft VS Code\bin;.]
+23-Jul-2022 20:47:58.361 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+23-Jul-2022 20:47:58.371 SEVERE [main] org.apache.catalina.util.LifecycleBase.handleSubClassException Failed to initialize component [Connector[HTTP/1.1-8080]]
+	org.apache.catalina.LifecycleException: Protocol handler initialization failed
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1051)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardService.initInternal(StandardService.java:556)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:1045)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:724)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:746)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:305)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:475)
+	Caused by: java.net.BindException: Address already in use: bind
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:555)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:337)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:294)
+		at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:274)
+		at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:229)
+		at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1227)
+		at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1240)
+		at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:603)
+		at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:80)
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1048)
+		... 11 more
+23-Jul-2022 20:47:58.372 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [388] milliseconds
+23-Jul-2022 20:47:58.410 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+23-Jul-2022 20:47:58.410 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.64]
+23-Jul-2022 20:47:58.417 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\docs]
+23-Jul-2022 20:47:58.632 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\docs] has finished in [215] ms
+23-Jul-2022 20:47:58.633 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\examples]
+23-Jul-2022 20:47:59.011 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\examples] has finished in [378] ms
+23-Jul-2022 20:47:59.011 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\host-manager]
+23-Jul-2022 20:47:59.051 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\host-manager] has finished in [39] ms
+23-Jul-2022 20:47:59.051 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\manager]
+23-Jul-2022 20:47:59.092 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\manager] has finished in [40] ms
+23-Jul-2022 20:47:59.094 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\ROOT]
+23-Jul-2022 20:47:59.122 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\ROOT] has finished in [28] ms
+23-Jul-2022 20:47:59.126 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [753] milliseconds
+23-Jul-2022 20:47:59.131 SEVERE [main] org.apache.catalina.core.StandardServer.await Failed to create server shutdown socket on address [localhost] and port [8005] (base port [8005] and offset [0])
+	java.net.BindException: Address already in use: bind
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:555)
+		at java.base/sun.nio.ch.Net.bind(Net.java:544)
+		at java.base/sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:640)
+		at java.base/java.net.ServerSocket.bind(ServerSocket.java:392)
+		at java.base/java.net.ServerSocket.<init>(ServerSocket.java:274)
+		at org.apache.catalina.core.StandardServer.await(StandardServer.java:580)
+		at org.apache.catalina.startup.Catalina.await(Catalina.java:864)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:810)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:476)
+23-Jul-2022 20:47:59.132 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+23-Jul-2022 20:47:59.132 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+23-Jul-2022 20:47:59.146 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+23-Jul-2022 20:47:59.147 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+23-Jul-2022 21:18:28.511 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.64
+23-Jul-2022 21:18:28.514 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jun 2 2022 19:08:46 UTC
+23-Jul-2022 21:18:28.514 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.64.0
+23-Jul-2022 21:18:28.514 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+23-Jul-2022 21:18:28.514 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+23-Jul-2022 21:18:28.514 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+23-Jul-2022 21:18:28.514 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-18.0.2
+23-Jul-2022 21:18:28.515 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           18.0.2+9-61
+23-Jul-2022 21:18:28.515 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+23-Jul-2022 21:18:28.515 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9
+23-Jul-2022 21:18:28.515 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9
+23-Jul-2022 21:18:28.521 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+23-Jul-2022 21:18:28.521 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+23-Jul-2022 21:18:28.521 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+23-Jul-2022 21:18:28.521 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+23-Jul-2022 21:18:28.522 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+23-Jul-2022 21:18:28.522 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\conf\logging.properties
+23-Jul-2022 21:18:28.522 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+23-Jul-2022 21:18:28.522 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+23-Jul-2022 21:18:28.523 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+23-Jul-2022 21:18:28.523 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+23-Jul-2022 21:18:28.523 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9
+23-Jul-2022 21:18:28.524 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9
+23-Jul-2022 21:18:28.524 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\temp
+23-Jul-2022 21:18:28.529 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\jdk-18.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:\app\MYCOM\product\18.0.0\dbhomeXE\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Users\MYCOM\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\MYCOM\AppData\Local\Programs\Python\Python39\;C:\Users\MYCOM\AppData\Local\Microsoft\WindowsApps;;c:\Users\MYCOM\AppData\Local\Programs\Microsoft VS Code\bin;.]
+23-Jul-2022 21:18:28.723 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+23-Jul-2022 21:18:28.738 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [351] milliseconds
+23-Jul-2022 21:18:28.763 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+23-Jul-2022 21:18:28.763 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.64]
+23-Jul-2022 21:18:28.769 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\docs]
+23-Jul-2022 21:18:28.957 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\docs] has finished in [187] ms
+23-Jul-2022 21:18:28.957 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\examples]
+23-Jul-2022 21:18:29.298 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\examples] has finished in [341] ms
+23-Jul-2022 21:18:29.298 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\host-manager]
+23-Jul-2022 21:18:29.335 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\host-manager] has finished in [36] ms
+23-Jul-2022 21:18:29.335 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\manager]
+23-Jul-2022 21:18:29.372 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\manager] has finished in [37] ms
+23-Jul-2022 21:18:29.372 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\ROOT]
+23-Jul-2022 21:18:29.401 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\ROOT] has finished in [28] ms
+23-Jul-2022 21:18:29.403 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+23-Jul-2022 21:18:29.422 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [683] milliseconds
+23-Jul-2022 21:19:31.256 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.64
+23-Jul-2022 21:19:31.259 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jun 2 2022 19:08:46 UTC
+23-Jul-2022 21:19:31.259 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.64.0
+23-Jul-2022 21:19:31.259 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+23-Jul-2022 21:19:31.260 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+23-Jul-2022 21:19:31.260 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+23-Jul-2022 21:19:31.260 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-18.0.2
+23-Jul-2022 21:19:31.260 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           18.0.2+9-61
+23-Jul-2022 21:19:31.260 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+23-Jul-2022 21:19:31.260 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9
+23-Jul-2022 21:19:31.260 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9
+23-Jul-2022 21:19:31.266 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+23-Jul-2022 21:19:31.266 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+23-Jul-2022 21:19:31.267 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+23-Jul-2022 21:19:31.267 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+23-Jul-2022 21:19:31.267 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+23-Jul-2022 21:19:31.267 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\conf\logging.properties
+23-Jul-2022 21:19:31.267 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+23-Jul-2022 21:19:31.268 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+23-Jul-2022 21:19:31.268 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+23-Jul-2022 21:19:31.268 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+23-Jul-2022 21:19:31.269 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9
+23-Jul-2022 21:19:31.269 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9
+23-Jul-2022 21:19:31.269 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\temp
+23-Jul-2022 21:19:31.274 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\jdk-18.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:\app\MYCOM\product\18.0.0\dbhomeXE\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Users\MYCOM\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\MYCOM\AppData\Local\Programs\Python\Python39\;C:\Users\MYCOM\AppData\Local\Microsoft\WindowsApps;;c:\Users\MYCOM\AppData\Local\Programs\Microsoft VS Code\bin;.]
+23-Jul-2022 21:19:31.469 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+23-Jul-2022 21:19:31.484 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [350] milliseconds
+23-Jul-2022 21:19:31.508 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+23-Jul-2022 21:19:31.508 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.64]
+23-Jul-2022 21:19:31.514 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\docs]
+23-Jul-2022 21:19:31.702 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\docs] has finished in [187] ms
+23-Jul-2022 21:19:31.702 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\examples]
+23-Jul-2022 21:19:32.034 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\examples] has finished in [332] ms
+23-Jul-2022 21:19:32.034 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\host-manager]
+23-Jul-2022 21:19:32.070 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\host-manager] has finished in [35] ms
+23-Jul-2022 21:19:32.070 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\manager]
+23-Jul-2022 21:19:32.106 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\manager] has finished in [35] ms
+23-Jul-2022 21:19:32.106 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\ROOT]
+23-Jul-2022 21:19:32.134 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\ROOT] has finished in [28] ms
+23-Jul-2022 21:19:32.137 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+23-Jul-2022 21:19:32.158 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [673] milliseconds
+23-Jul-2022 21:19:59.675 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.64
+23-Jul-2022 21:19:59.678 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jun 2 2022 19:08:46 UTC
+23-Jul-2022 21:19:59.678 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.64.0
+23-Jul-2022 21:19:59.679 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+23-Jul-2022 21:19:59.679 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+23-Jul-2022 21:19:59.679 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+23-Jul-2022 21:19:59.679 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-18.0.2
+23-Jul-2022 21:19:59.679 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           18.0.2+9-61
+23-Jul-2022 21:19:59.679 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+23-Jul-2022 21:19:59.679 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9
+23-Jul-2022 21:19:59.679 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9
+23-Jul-2022 21:19:59.686 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+23-Jul-2022 21:19:59.686 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+23-Jul-2022 21:19:59.686 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+23-Jul-2022 21:19:59.686 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+23-Jul-2022 21:19:59.686 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+23-Jul-2022 21:19:59.686 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\conf\logging.properties
+23-Jul-2022 21:19:59.687 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+23-Jul-2022 21:19:59.687 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+23-Jul-2022 21:19:59.687 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+23-Jul-2022 21:19:59.688 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+23-Jul-2022 21:19:59.688 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9
+23-Jul-2022 21:19:59.688 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9
+23-Jul-2022 21:19:59.688 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\temp
+23-Jul-2022 21:19:59.693 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\jdk-18.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:\app\MYCOM\product\18.0.0\dbhomeXE\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Users\MYCOM\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\MYCOM\AppData\Local\Programs\Python\Python39\;C:\Users\MYCOM\AppData\Local\Microsoft\WindowsApps;;c:\Users\MYCOM\AppData\Local\Programs\Microsoft VS Code\bin;.]
+23-Jul-2022 21:19:59.888 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+23-Jul-2022 21:19:59.902 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [349] milliseconds
+23-Jul-2022 21:19:59.928 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+23-Jul-2022 21:19:59.928 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.64]
+23-Jul-2022 21:19:59.934 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\docs]
+23-Jul-2022 21:20:00.130 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\docs] has finished in [197] ms
+23-Jul-2022 21:20:00.131 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\examples]
+23-Jul-2022 21:20:00.470 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\examples] has finished in [339] ms
+23-Jul-2022 21:20:00.470 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\host-manager]
+23-Jul-2022 21:20:00.506 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\host-manager] has finished in [35] ms
+23-Jul-2022 21:20:00.506 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\manager]
+23-Jul-2022 21:20:00.543 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\manager] has finished in [37] ms
+23-Jul-2022 21:20:00.543 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\ROOT]
+23-Jul-2022 21:20:00.570 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\ROOT] has finished in [27] ms
+23-Jul-2022 21:20:00.573 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+23-Jul-2022 21:20:00.594 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [690] milliseconds
+23-Jul-2022 21:21:28.682 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.64
+23-Jul-2022 21:21:28.684 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jun 2 2022 19:08:46 UTC
+23-Jul-2022 21:21:28.684 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.64.0
+23-Jul-2022 21:21:28.685 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+23-Jul-2022 21:21:28.685 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+23-Jul-2022 21:21:28.685 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+23-Jul-2022 21:21:28.685 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-18.0.2
+23-Jul-2022 21:21:28.685 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           18.0.2+9-61
+23-Jul-2022 21:21:28.685 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+23-Jul-2022 21:21:28.685 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9
+23-Jul-2022 21:21:28.685 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9
+23-Jul-2022 21:21:28.692 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+23-Jul-2022 21:21:28.692 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+23-Jul-2022 21:21:28.692 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+23-Jul-2022 21:21:28.692 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+23-Jul-2022 21:21:28.692 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+23-Jul-2022 21:21:28.693 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\conf\logging.properties
+23-Jul-2022 21:21:28.693 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+23-Jul-2022 21:21:28.693 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+23-Jul-2022 21:21:28.694 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+23-Jul-2022 21:21:28.694 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+23-Jul-2022 21:21:28.694 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9
+23-Jul-2022 21:21:28.694 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9
+23-Jul-2022 21:21:28.695 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\temp
+23-Jul-2022 21:21:28.700 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\jdk-18.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:\app\MYCOM\product\18.0.0\dbhomeXE\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Users\MYCOM\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\MYCOM\AppData\Local\Programs\Python\Python39\;C:\Users\MYCOM\AppData\Local\Microsoft\WindowsApps;;c:\Users\MYCOM\AppData\Local\Programs\Microsoft VS Code\bin;.]
+23-Jul-2022 21:21:28.896 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+23-Jul-2022 21:21:28.911 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [351] milliseconds
+23-Jul-2022 21:21:28.936 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+23-Jul-2022 21:21:28.936 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.64]
+23-Jul-2022 21:21:28.943 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\docs]
+23-Jul-2022 21:21:29.131 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\docs] has finished in [188] ms
+23-Jul-2022 21:21:29.132 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\examples]
+23-Jul-2022 21:21:29.466 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\examples] has finished in [335] ms
+23-Jul-2022 21:21:29.466 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\host-manager]
+23-Jul-2022 21:21:29.502 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\host-manager] has finished in [36] ms
+23-Jul-2022 21:21:29.502 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\manager]
+23-Jul-2022 21:21:29.541 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\manager] has finished in [38] ms
+23-Jul-2022 21:21:29.541 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\ROOT]
+23-Jul-2022 21:21:29.569 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\MYCOM\Dropbox\PC\Music\221025\workspace\Tomcat_9\webapps\ROOT] has finished in [28] ms
+23-Jul-2022 21:21:29.571 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+23-Jul-2022 21:21:29.593 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [681] milliseconds

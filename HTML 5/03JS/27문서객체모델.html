@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문서객체모델</title>
+    <style>
+      div li {
+        list-style: square;
+      }
+    </style>
+    <script></script>
+  </head>
+  <body>
+    <script>
+      // element node h1객체 생성
+      var header = document.createElement("h1"); // element는 보통 태그임
+      // 텍스트 노드 생성
+      var text = document.createTextNode("텍스트노드");
+
+      //생성된 노드들은 메모리에만 존재함. (보이기 위해서는 실제로 불러와야함)
+
+      document.body.appendChild(header);
+      header.appendChild(text);
+
+      // 객체.apprendChild(노드) = 객체 안에 노드 연결
+
+      // 태그의 속성은 DOM 객체의 속성(변수)로 정의되어있다
+      var img = document.createElement("img");
+      img.src = "name.jpg"; //하위 속성 추가
+      img.width = 250;
+      document.body.appendChild(img);
+
+      var img_width = img.width;
+      console.log(img_width);
+
+      // 정의되지 않은 속성을 넣는 경우
+      img.setAttribute("data-dname", "hello");
+      img.setAttribute("module", "apple");
+      document.body.appendChild(img);
+
+      // 정의되지 않은 속성을 가져오는 경우
+      var img_m = img.getAttribute("module");
+      console.log(img_m);
+
+      var p = document.createElement("p");
+      p.innerHTML = "p태그 안에 들어가는 <em>내용</em>(태그+텍스트) ";
+      document.body.appendChild(p);
+
+      var div = document.createElement("div");
+      var output = "";
+      output += "<ul>";
+      output += "<li>족발</li>";
+      output += "<li>보쌈</li>";
+      output += "</ul>";
+      div.innerHTML = output;
+
+      div.style.border = "3px solid brown";
+      div.style.backgroundColor = "yellow";
+      div.style.fontSize = "2em";
+      div.style.borderRadius = "30px";
+      div.style.width = "40%";
+      //   자바스크립트에서 -를 사용하면 연산자로 인식하므로 스타일 속성에서는 대문자를 사용한다
+
+      div.style["font-weight"] = "bold";
+      //   자바스크립트 속성으로 없는 html값은 이렇게 넣음
+
+      document.body.appendChild(div);
+    </script>
+  </body>
+</html>

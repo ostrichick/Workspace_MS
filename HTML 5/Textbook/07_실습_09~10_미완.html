@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습 9, 10</title>
+    <link rel="stylesheet" href="" />
+    <style></style>
+  </head>
+  <body>
+    <h1>book 객체 만들기</h1>
+    <hr />
+    <script>
+      let book = new Object();
+      book.title = "HTML5 - new Object";
+      book.author = "황기태 - new Object";
+      book.price = 20000;
+      document.write(`제목: ${book.title}, 저자: ${book.author}, 가격: ${book.price}<br>`);
+
+      let book2 = {
+        title: "HTML5 - literal",
+        author: "황기태2 - literal",
+        price: 20002,
+      };
+      document.write(`제목: ${book2.title}, 저자: ${book2.author}, 가격: ${book2.price}<br>`);
+
+      function Book3(title, author, price) {
+        this.title = title;
+        this.author = author;
+        this.price = price;
+        // this.title = "HTML5 - prototype";
+        // this.author = "황기태 - prototype";
+        // this.price = 20003;
+      }
+      let book3 = new Book3("HTML5 prototype", "황기태 프로토타입", 20003);
+      document.write(`제목: ${book3.title}, 저자: ${book3.author}, 가격: ${book3.price}<br>`);
+    </script>
+    <hr />
+    <script>
+      // insertedbook = new Array(3);
+      for (i = 0; i < 5; i++) {
+        // insertedbook = new Array(prompt("콤마(,)로 분리하면서 책제목 저자 가격 순으로 입력").split(","));
+
+        insertedbook = prompt("콤마(,)로 분리하면서 책제목 저자 가격 순으로 입력").split(",");
+        console.log(insertedbook);
+        let library = new Book3(insertedbook[0], insertedbook[1], insertedbook[2]);
+        document.write(`제목: ${library.title}, 저자: ${library.author}, 가격: ${library.price}<br>`);
+
+        // new Book3(insertedbook[0], insertedbook[1], insertedbook[2]);
+      }
+    </script>
+  </body>
+</html>

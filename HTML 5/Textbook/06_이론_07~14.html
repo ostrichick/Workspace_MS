@@ -1,0 +1,99 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 7번
+      (x = 1), (y = 2), (z = 3), (w = 4);
+      y = x++;
+      z += x;
+      w = w > 3 ? w - 3 : 3 - w;
+      console.log(`x=${x},y=${y},z=${z},w=${w}`);
+
+      (a = 1), (b = 2), (c = 3), (d = 4);
+      x = a > 1 || c != 3;
+      y = a != b && c != d;
+      z = b << c;
+      w = a == 1;
+      console.log(`x=${x},y=${y},z=${z},w=${w}`);
+
+      //   8번
+      s = 1 + 2 + "hello" + 3;
+      t = 1 + "hello" + 2 + 3;
+      s1 = "hello" > "javascript";
+      t1 = "아버지" > "어머니";
+      console.log(s, t, s1, t1);
+
+      //   10번
+      let sum = 0;
+      function acc() {
+        let sum = 0;
+        for (let i = 0; i < 10; i++) sum += i;
+      }
+      acc();
+      document.write("합 = " + sum);
+
+      var sum2 = 0;
+      function acc2() {
+        var sum2 = 0;
+        for (let i = 0; i < 10; i++) this.sum2 += i;
+      }
+      acc2();
+      document.write("합 = " + sum);
+
+      //   12번
+      function print() {
+        document.write("Welcome<br>");
+      } // 함수를 선언만 했으므로 아무것도 출력하지 않음
+
+      //   13번
+      let a13 = 20,
+        b13 = 2;
+
+      a13 += b13;
+      console.log(`a=${a13}, b=${b13}`);
+      a13 = 20;
+      b13 = 2;
+
+      a13 = a13 << b13;
+      console.log(`a=${a13}, b=${b13}`);
+      a13 = 20;
+      b13 = 2;
+
+      a13 = a13 > 100 ? a13 : b13;
+      console.log(`a=${a13}, b=${b13}`);
+      a13 = 20;
+      b13 = 2;
+
+      b13 = a13 > 10 && a13 < 30;
+      console.log(`a=${a13}, b=${b13}`);
+
+      //   14번
+      let a14 = "123",
+        b14 = "45";
+
+      a14 += b14;
+      console.log(`a=${a14}, b=${b14}`);
+      (a14 = "123"), (b14 = "45");
+
+      a14 = parseInt(a14) + parseInt(b14);
+      console.log(`a=${a14}, b=${b14}`);
+      (a14 = "123"), (b14 = "45");
+
+      a14 = 10 + a14 + b14;
+      console.log(`a=${a14}, b=${b14}`);
+      (a14 = "123"), (b14 = "45");
+
+      b14 = 10 + parseInt(a14) + "ab";
+      console.log(`a=${a14}, b=${b14}`);
+      (a14 = "123"), (b14 = "45");
+    </script>
+  </body>
+</html>

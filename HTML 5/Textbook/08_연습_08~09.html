@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="" />
+    <script>
+      let elem = document.getElementById("myBody");
+      //   if (elem == null) alert("body is not made yet");
+    </script>
+  </head>
+  <body id="myBody">
+    <p id="first">Hello</p>
+    <div id="myDiv"></div>
+    <script>
+      let div = document.getElementById("myDiv");
+      let span = document.createElement("span");
+      span.innerHTML = "span hello";
+      div.appendChild(span);
+    </script>
+  </body>
+</html>

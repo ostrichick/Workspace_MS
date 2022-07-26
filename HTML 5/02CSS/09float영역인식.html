@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Float 영역 인식하기</title>
+    <style>
+      #a,
+      #b,
+      #c {
+        width: 100px;
+        height: 100px;
+        background: #ccc;
+        border: 1px solid #000;
+        float: left;
+      }
+      #parent {
+        border: 10px solid red;
+        background-color: yellow;
+        clear: both;
+        height: 85px;
+      }
+      /*대상에 위치적 조건 부여 가능()*/
+      #parent div {
+        width: 80px;
+        height: 80px;
+        float: left;
+      }
+      #child1 {
+        background: #0f0;
+      }
+      #child2 {
+        background: #f0f;
+      }
+      #child3 {
+        background: #00f;
+      }
+      /*
+      과제
+      */
+    </style>
+  </head>
+  <body>
+    <div id="a">A</div>
+    <div id="b">B</div>
+    <div id="c">C</div>
+    <div id="parent">
+      <div id="child1">1</div>
+      <div id="child2">2</div>
+      <div id="child3">3</div>
+    </div>
+  </body>
+</html>

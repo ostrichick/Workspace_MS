@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="" />
+    <style></style>
+    <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(function () {
+        $("tr:not(:eq(0))").click(function () {
+          $("#s1").html($(this).children().eq(0).text());
+          $("#s2").html($(this).children().eq(1).text());
+          $("#s3").html($(this).children().eq(2).text());
+          $("#s4").html($(this).children().eq(3).text());
+          $("tr").removeAttr("style");
+          $(this).css("background", "red");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <table border="1">
+      <tr>
+        <th>번호</th>
+        <th>제목</th>
+        <th>조회수</th>
+        <th>작성자</th>
+      </tr>
+      <tr onclick="span(this)">
+        <td>3</td>
+        <td>3번제목</td>
+        <td>0</td>
+        <td>11-07-13</td>
+      </tr>
+      <tr onclick="span(this)">
+        <td>2</td>
+        <td>2번제목</td>
+        <td>0</td>
+        <td>11-07-12</td>
+      </tr>
+      <tr onclick="span(this)">
+        <td>1</td>
+        <td>1번제목</td>
+        <td>0</td>
+        <td>11-07-11</td>
+      </tr>
+    </table>
+    <style></style>
+    선택된 행:
+    <span id="s1"></span>/ <span id="s2"></span>/ <span id="s3"></span>/ <span id="s4"></span>/
+    <script>
+      function span(obj) {
+        $("tr").css("background", "");
+        $(obj).css("background", "red");
+        var num = $(obj).children("td:first").text();
+        $("#s1").text(num);
+        var num = $(obj).children("td:nth-child(2)").text();
+        $("#s2").text(num);
+        var num = $(obj).children("td:nth-child(3)").text();
+        $("#s3").text(num);
+        var num = $(obj).children("td:last").text();
+        $("#s4").text(num);
+      }
+    </script>
+    <script></script>
+  </body>
+</html>

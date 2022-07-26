@@ -1,0 +1,135 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+hr.clear_line {
+  clear: both;
+  border: 0;
+}
+body {
+  font-family: "Noto Sans KR";
+  width: 1400px;
+  margin: 0 auto;
+}
+/**/
+
+.header .header01 {
+  padding-top: 12px;
+  border-bottom: 1px solid rgb(220, 220, 220);
+  height: 45px;
+}
+.header .header01 h1 {
+  float: left;
+}
+.header .sitemap {
+  padding-top: 8px;
+  float: right;
+}
+.header .sitemap li {
+  float: left;
+}
+.header .header02 {
+  padding-top: 30px;
+  height: 85px;
+  clear: both;
+}
+.header .header02 h2 {
+  margin-right: 50px;
+  float: left;
+}
+.header .menu li {
+  float: left;
+}
+.header .search {
+  float: right;
+}
+.main .main01 {
+  float: left;
+
+  clear: both;
+  margin-bottom: 100px;
+}
+.main .main02 {
+  clear: both;
+  margin-bottom: 150px;
+}
+.main .main02 h3 {
+  margin-bottom: 50px;
+  font-size: 40px;
+  color: rgb(153, 132, 101);
+}
+.main .main02 ul li dt,
+.main .main04 ul li dt {
+  color: rgb(99, 95, 95);
+  margin-top: 20px;
+}
+.main .main02 ul li dd,
+.main .main04 ul li dd {
+  margin: 20px 0 25px 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+.main .main02 ul li p,
+.main .main04 ul li p {
+  margin-bottom: 20px;
+  color: rgb(153, 132, 101);
+}
+.main .main02 ul li,
+.main .main04 ul li {
+  display: inline-block;
+  margin: 0 8px;
+}
+
+.main .main03 {
+  margin: 150px 0 150px;
+  height: 400px;
+  clear: both;
+  background: url(images/pc_shop.jpg) center center no-repeat;
+  color: #fff;
+}
+.main .main03 div {
+  padding-top: 150px;
+  padding-left: 15px;
+}
+.main .main03 h3 {
+  margin-bottom: 20px;
+  font-size: 40px;
+  font-weight: bold;
+}
+.main .main04 {
+  margin-bottom: 100px;
+}
+.footer {
+  height: 500px;
+  background-color: rgb(17, 17, 17);
+  color: rgb(190, 184, 184);
+}
+.footer .footer01 {
+  padding: 50px 25px 25px 5px;
+}
+.footer #footerleft {
+  float: left;
+}
+.footer #footerright {
+  height: 300px;
+  float: right;
+}
+.footer #footerright div {
+  float: left;
+  padding: 20px;
+}
+
+.footer #footerright div:nth-child(2) {
+  border-right: 1px solid rgb(190, 184, 184);
+  border-left: 1px solid rgb(190, 184, 184);
+}
+.footer .footer02 {
+  clear: both;
+}

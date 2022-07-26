@@ -1,0 +1,50 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습</title>
+  </head>
+  <body>
+    <script>
+      // big 함수 작성
+      function big(n1, n2) {
+        if (n1 - n2 > 0) {
+          return n1;
+        } else {
+          return n2;
+        }
+      }
+    </script>
+    <script>
+      let b = big("625", "555");
+      document.write("큰수=" + b);
+    </script>
+    <hr />
+    <script>
+      //  pr 함수 작성
+      function pr(a, b) {
+        for (time = 0; time < b; time++) document.write(a);
+      }
+    </script>
+
+    <script>
+      pr("%", 5);
+    </script>
+    <hr />
+    <script>
+      numero = prompt("숫자 입력");
+      lth = numero.length;
+      biggest = Math.floor(numero / 10 ** (lth - 1)); // 첫번째 자리 수 구하기
+      smallest = numero.substring(numero.length - 1); // 마지막 자리 수 구하기
+      if (biggest == smallest) {
+        document.write(`입력한 숫자:${numero}<br>가장 큰 자리 수${biggest}<br>가장 작은 자리 수${smallest}<br>같음`);
+      } else {
+        document.write(`입력한 숫자:${numero}<br>가장 큰 자리 수${biggest}<br>가장 작은 자리 수${smallest}<br>다름`);
+      }
+    </script>
+  </body>
+</html>

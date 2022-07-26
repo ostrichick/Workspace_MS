@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2-2</title>
+    <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      function selectBtn(value) {
+        console.log($("select option:selected").val() + "번");
+      }
+    </script>
+    <script>
+      //복습
+      function select_Btn() {
+        console.log($("option").filter(":selected").val() + "번");
+      }
+    </script>
+  </head>
+  <body>
+    <select name="" id="">
+      <option value="1" selected="selected">1번</option>
+      <option value="2">2번</option>
+      <option value="3">3번</option>
+    </select>
+    <br /><input type="button" value="Select 버튼 확인" onclick="select_Btn()" />
+    <script></script>
+  </body>
+</html>

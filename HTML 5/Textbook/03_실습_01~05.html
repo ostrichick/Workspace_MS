@@ -1,0 +1,114 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습</title>
+    <style>
+      h1:hover {
+        color: blue;
+      }
+      .qqq {
+        color: rgb(55, 225, 128);
+      }
+      .www {
+        color: #7f3b55;
+      }
+      .eee {
+        color: #000000;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>버튼을 만들가</h1>
+    <button>1</button><br />
+    <input type="button" value="1" />
+    <input type="button" value="2" />
+    <input type="button" value="3" /><br />
+    <input type="button" value="4" />
+    <input type="button" value="5" />
+    <input type="button" value="6" />
+    <br />
+    <input type="button" value="7" />
+    <input type="button" value="8" />
+    <input type="button" value="0" /><br />
+    <hr />
+    <h1>웹브라우저 소개</h1>
+    <hr />
+    <table>
+      <tr>
+        <figure>
+          <td>이것은 엘비스요 이것은 엘비스요 </td>
+          <td>
+            <figcaption class="f1_2"><img src="ElvisPresley.png" alt="" /></figcaption>
+          </td>
+        </figure>
+      </tr>
+      <tr>
+        <figure>
+          <td>이것은 코드요</td>
+          <td>
+            <figcaption class="f1_3">
+              <code>
+                &lt;!DOCTYPE html&gt;<br />
+                &lt;html lang="ko"&gt;<br />
+                ... <br />
+                &lt;/html&gt;<br />
+              </code>
+            </figcaption>
+          </td>
+        </figure>
+      </tr>
+    </table>
+    <hr />
+    <h1>로그인폼</h1>
+    <hr />
+    <fieldset>
+      <legend>Login</legend>
+      <label> Username : <input type="id" /></label>
+      <label for="pass"> Password : <input id="pass" type="password" /></label>
+    </fieldset>
+    <hr />
+    <h1>웹 프로그래밍 개요</h1>
+    <hr />
+    <details>
+      <summary>소스의 목적</summary>
+      <p class="qqq">음식에 뿌려먹기 위해</p>
+    </details>
+    <details>
+      <summary>소스의 맛 종류</summary>
+      <p class="www">매운맛 단맛 신맛 짠맛</p>
+    </details>
+    <details>
+      <summary>향신료 사는법</summary>
+      <p class="eee">마트에 가거나 인터넷으로 산다</p>
+    </details>
+    <hr />
+    <h1>도형 서식 폼 만들기</h1>
+    <hr />
+    <fieldset>
+      <legend>도형 서식 입력</legend>
+      <label for=""
+        >선종류 <input type="text" list="line" />
+        <datalist id="line">
+          <option value="선없음"></option>
+          <option value="실선"></option>
+          <option value="점선"></option>
+        </datalist> </label
+      ><br />
+      <label for="">선두께 <input type="number" /></label>
+      <label for="">선색<input type="color" value="#00bfff" /></label><br />
+      <label for=""
+        >투명도: 0<input type="range" min="0" max="100" list="opa" />100
+        <datalist id="opa">
+          <option value="10" label="low"></option>
+          <option value="50" label="middle"></option>
+          <option value="90" label="high"></option>
+        </datalist>
+      </label>
+    </fieldset>
+  </body>
+</html>

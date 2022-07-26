@@ -1,0 +1,33 @@
+<!DOCTYPE>
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <script>
+	window.onmouseover = function(e){
+		var target = e.target;
+		if(target.tagName.toUpperCase() == "SPAN"){
+			
+			console.log(this);
+			target.style.textDecoration  = "underline";
+		}
+	}
+	window.onmouseout = function(e){
+		var target = e.target;
+		if(target.tagName.toUpperCase() == "SPAN"){
+			
+			console.log(this);
+			target.style.textDecoration  = "none";
+		}
+	}
+  </script>
+ </HEAD>
+ <BODY>
+	<h3>span 태그에만 onmouseover/onmouseout</h3>
+	<hr>
+	<p>
+		span 태그에 대해서만 <span>마우스</span>가 올라올 때 밑줄이 그어지고 
+		<span>마우스</span>가 내려갈 때 밑줄이 사라지도록 <span>자바스크립트</span>
+		를 작성한다.
+	</p>
+ </BODY>
+</HTML>

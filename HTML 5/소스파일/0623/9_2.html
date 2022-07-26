@@ -1,0 +1,72 @@
+<!DOCTYPE>
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <style>
+	#box1{
+		border:1px solid black;
+		width:100px;
+		height:100px;
+		background:yellow;
+		margin:5px;
+	}
+	#parent,#parent2{
+		height:100px;
+		border:1px solid black;
+		background:yellow;
+	}
+	#parent div,#parent2 div{
+		height:50px;
+		width:100px;
+		margin:30px 30px;
+		border:1px solid black;
+		background:orange;
+	}
+  </style>
+ </HEAD>
+ <BODY>
+	<div id="box1"></div>
+	<script>
+		var box1 = document.getElementById("box1");
+		box1.onmouseover = function(e){
+			this.innerHTML = e.x + ","+e.y;
+		}
+	</script>
+
+	<div id="parent">
+		<div></div>
+	</div>
+	<div id="result"></div>
+	<script>
+		var cnt = 1;
+		//mouseover 이벤트는 자식요소에게도 영향을 주기 때문에
+		//자식요소에 마우스가 들어왔을 경우에도 부모의 mouseover 이벤트가 발생한다.
+		document.getElementById("parent").onmouseover = function(){
+			document.getElementById("result").innerHTML = cnt;
+			cnt++;
+		}
+	</script>
+
+	<div id="parent2">
+		<div></div>
+	</div>
+	<div id="result2"></div>
+	<script>
+		var cnt = 1;
+		//mouseover 이벤트는 자식요소에게도 영향을 주지 않기 때문에
+		//자식요소에 마우스가 들어왔을 경우에도 부모의 mouseover 이벤트가 발생하지 않는다.
+		document.getElementById("parent2").onmouseenter = function(){
+			document.getElementById("result2").innerHTML = cnt;
+			cnt++;
+		}
+	</script>
+
+	<div style="height:150px; border:1px solid black;" onwheel="whellFn(event,this)">
+	</div>
+	<script>
+		function whellFn(e,obj){
+			obj.innerHTML = e.wheelDelta;
+		}
+	</script>
+ </BODY>
+</HTML>

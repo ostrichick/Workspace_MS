@@ -1,0 +1,244 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습</title>
+    <style>
+      hr {
+        margin: 2px;
+      }
+      .s01 div {
+        border: 2px green solid;
+        display: inline-block;
+        width: 200px;
+      }
+      .s01 article {
+        border: 2px green solid;
+        display: inline;
+      }
+      .s01 p {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background: purple;
+      }
+      .s03 {
+        width: 350px;
+      }
+      .s03 ol {
+        list-style: decimal-leading-zero;
+      }
+      .s03 li {
+        margin: 5px 0;
+      }
+      .s03 input {
+        float: right;
+      }
+      .s03 input:hover {
+        color: magenta;
+      }
+      .s04 ul {
+        list-style: square;
+        background: aliceblue;
+        padding-right: 10px;
+        background: url("worldmap.png") center/cover no-repeat;
+        width: 500px;
+      }
+      .s04 li:hover {
+        background: yellowgreen;
+      }
+      .s05 {
+        width: 500px;
+      }
+      .s05 div {
+        padding: 5px;
+        margin: 10px;
+        border: yellowgreen 1px solid;
+        float: left;
+      }
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spin2 {
+        from {
+          transform: rotate(-90deg);
+        }
+        25% {
+          transform: rotate(0deg);
+        }
+        50% {
+          transform: rotate(90deg);
+        }
+        75% {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(-90deg);
+        }
+      }
+      .s06 .img01 {
+        animation: spin 1s infinite linear;
+      }
+      .s06 .img02 {
+        transform: rotate(-90deg);
+        animation: spin2 2s infinite linear;
+      }
+      .s07 img {
+        transition: width 2s;
+      }
+      .s07 img:hover {
+        width: 100%;
+        height: 150px;
+      }
+      /* style end */
+      /* 예제 5-9 */
+      #menubar {
+        background: olive;
+        width: 150px;
+      }
+      #menubar ul {
+        /* 여백과 패딩 모두 0 */
+        margin: 0;
+        padding: 0;
+        /* width: 567px; 모든 아이템(<li>)을 한 줄에 품을 수 있는 폭 */
+      }
+      #menubar ul li {
+        display: block; /* 새 줄로 넘어가지 않게 */
+        list-style-type: none; /* 마커 삭제 */
+        padding: 0px 15px; /* top=bottom=0, left=right=15px */
+      }
+      #menubar ul li a {
+        color: white;
+        text-decoration: none; /* 링크 보이지 않게 */
+      }
+      #menubar ul li a:hover {
+        color: violet; /* 마우스 올라 갈 때 색 */
+      }
+      /* 예제5-9 end */
+      .s09 article {
+        padding: 10px;
+        border: green 2px solid;
+        width: 250px;
+      }
+      .s09 ol {
+        list-style: none;
+        padding: 0;
+      }
+      .s09 span {
+        font-weight: bold;
+        font-style: italic;
+        font-size: 1.5em;
+        color: yellowgreen;
+      }
+      .s10 {
+        width: 250px;
+        border: 1px solid black;
+      }
+      .s10 p {
+        margin-left: 80%;
+        transition: margin 3s;
+      }
+      .s10 p:hover {margin-left:0%;}
+    </style>
+  </head>
+  <body>
+    <section class="s01">
+      <h1>3개의 div 활용</h1>
+      <hr />
+      <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eaque!</div>
+      <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eaque!</div>
+      <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, eaque!</div>
+      <br /><br />
+      <article>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut, in.</article>
+      <article>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut, in.</article>
+      <article>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut, in.</article>
+      <p>공연은 없어유</p>
+      <hr />
+    </section>
+    <section class="s03">
+      <h1>오디오 재생 리스트</h1>
+      <hr />
+      <ol>
+        <li>애국가 <input type="button" value="재생" /><input type="button" value="중지" /></li>
+        <li>포켓몬스터 오프닝 <input type="button" value="재생" /><input type="button" value="중지" /></li>
+        <li>전국노래자랑 <input type="button" value="재생" /><input type="button" value="중지" /></li>
+      </ol>
+      <hr />
+    </section>
+    <section class="s04">
+      <h1>가보고 싶은 나라</h1>
+      <hr />
+      <ul>
+        <li>엘살바도르</li>
+        <li>스리랑카</li>
+        <li>콩고민주공화국</li>
+        <li>키르기스스탄</li>
+      </ul>
+      <hr />
+    </section>
+    <section class="s05">
+      <h1>헬로키티</h1>
+      <hr />
+      <div><img src="kitty.jpg" width="200" alt="" /></div>
+      <span>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, esse ipsum. Quidem molestiae, eius dolorem commodi itaque facilis impedit minima eos cupiditate rem tenetur vitae quae Lorem
+        ipsum dolor sit amet consectetur adipisicing elit. Rem qui laborum sint nemo iure, placeat animi possimus dolore perferendis cupiditate? exercitationem rerum. Itaque, repellat! Lorem ipsum
+        dolor sit amet consectetur, adipisicing elit. Nemo nisi provident totam nam tempore, suscipit reprehenderit nobis inventore cum. Dignissimos.
+        <hr />
+      </span>
+    </section>
+    <section class="s06">
+      <h1>어지러워요</h1>
+      <hr />
+      <img class="img01" src="pinkkitty.png" width="150" alt="" />
+      <img class="img02" src="pinkkitty.png" width="150" alt="" />
+      <hr />
+    </section>
+    <section class="s07">
+      <h1>마우스를 올려봐요</h1>
+      <hr />
+      <img src="pinkkitty.png" width="150" alt="" />
+      <hr />
+    </section>
+    <section class="s08">
+      <nav id="menubar">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Espresso</a></li>
+          <li><a href="#">Cappuccino</a></li>
+          <li><a href="#">Cafe Latte</a></li>
+          <li><a href="#">F.A.Q</a></li>
+        </ul>
+      </nav>
+    </section>
+    <hr />
+    <section class="s09">
+      <h1>카푸치노 만들기</h1>
+      <hr />
+      <h2>카푸치노 만드는 순서</h2>
+      <article>
+        <ol>
+          <li><span>1.</span>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</li>
+          <li><span>2.</span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+          <li><span>3.</span>Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+          <li><span>4.</span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias.</li>
+        </ol>
+      </article>
+    </section>
+    <hr />
+    <section class="s10">
+      <h1>애니메이션 응용</h1>
+      <hr />
+      <p><img src="question.png" width="25" alt="" /> 질문 있습니다.</p>
+    </section>
+  </body>
+</html>

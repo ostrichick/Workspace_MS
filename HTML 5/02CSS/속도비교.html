@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0067)https://arof03.cafe24.com/%EC%86%8D%EB%8F%84%EB%B9%84%EA%B5%90.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><script id="allow-copy_script">(function agent() {
+    let unlock = false
+    document.addEventListener('allow_copy', (event) => {
+      unlock = event.detail.unlock
+    })
+
+    const copyEvents = [
+      'copy',
+      'cut',
+      'contextmenu',
+      'selectstart',
+      'mousedown',
+      'mouseup',
+      'mousemove',
+      'keydown',
+      'keypress',
+      'keyup',
+    ]
+    const rejectOtherHandlers = (e) => {
+      if (unlock) {
+        e.stopPropagation()
+        if (e.stopImmediatePropagation) e.stopImmediatePropagation()
+      }
+    }
+    copyEvents.forEach((evt) => {
+      document.documentElement.addEventListener(evt, rejectOtherHandlers, {
+        capture: true,
+      })
+    })
+  })()</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>속도비교</title>
+
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1062.0" data-gr-ext-installed="">
+<style>
+body{margin:0; padding:0;}
+div{width:96%; border:5px solid #000; margin:20px 2% 0; position:relative;}
+@keyframes vol{
+	0{margin-left:0%;}
+	100%{margin-left:85%;}
+}
+p{width:15%;  height:50px; line-height:50px; font-weight:bold; 
+	color:#fff; font-size:20px; text-align:center; margin:15px 0;
+	text-shadow:0px 0px 7px rgba(0,0,0,0.8);}
+#a p{animation:vol 4s ease infinite  both;	}
+#b p{animation:vol 4s ease 1s forwards;	}
+</style>
+<div id="a">
+	<p style="background:#C00; animation-timing-function:ease;">ease</p>
+    <p style="background:#CC0; animation-timing-function:linear;">linear</p>
+    <p style="background:#C0C; animation-timing-function:ease-in;">ease-in</p>
+    <p style="background:#0CC; animation-timing-function:ease-out;">ease-out</p>
+    <p style="background:#00C; animation-timing-function:ease-in-out;">ease-in-out</p>
+</div>    
+
+<div id="b">
+	<p style="background:#f00; animation-timing-function:step-start;">step-start</p>	
+    <p style="background:#f33; animation-timing-function:steps(2,start);">steps(2,start)</p>
+    <p style="background:#f77; animation-timing-function:steps(3,start);">steps(3,start)</p>
+	<p style="background:#faa; animation-timing-function:steps(4,start);">steps(4,start)</p>
+	<p style="background:#00f; animation-timing-function:step-end;">step-end</p>
+    <p style="background:#33f; animation-timing-function:steps(2,end);">steps(2,end)</p>
+    <p style="background:#77f; animation-timing-function:steps(3,end);">steps(3,end)</p>
+	<p style="background:#aaf; animation-timing-function:steps(4,end);">steps(4,end)</p>
+</div> 
+
+
+
+
+<div id="naptha_container0932014_0707"></div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

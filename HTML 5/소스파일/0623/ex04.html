@@ -1,0 +1,21 @@
+<!DOCTYPE>
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+ </HEAD>
+ <BODY>
+  <h3>라면을 끓이는 순서</h3>
+  <hr>
+  <ol type="A" style="background-color:yellowgreen;">
+	<li>물을 끓인다.</li>
+  </ol>
+  <script>
+	document.getElementsByTagName("ol")[0].onclick = function(){
+		var text = prompt("라면 끓이는 순서를 입력하세요.");
+		var li = document.createElement("li");
+		li.innerHTML = text;
+		this.appendChild(li);
+	}
+  </script>
+ </BODY>
+</HTML>

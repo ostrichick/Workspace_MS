@@ -1,0 +1,153 @@
+<!DOCTYPE>
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <script src="../jquery-3.6.0.min.js"></script>
+  <script>
+	$(function(){
+		$(".clickDiv").bind("click",function(){
+			var text = $(this).text();
+			alert(text);
+		});
+	});
+  </script>
+ </HEAD>
+ <BODY>
+	<div class="clickDiv">1</div>
+	<div class="clickDiv">2</div>
+
+	<hr>
+	<div class="mouseBox" style="width:100px; height:100px; border:1px solid black;" onclick="changeColor(this)"></div>
+	<div class="mouseBox" style="width:100px; height:100px; border:1px solid black;" onclick="changeColor(this)"></div>
+	<div class="mouseBox" style="width:100px; height:100px; border:1px solid black;" onclick="changeColor(this)"></div>
+	
+	<script>
+		$(".mouseBox").mousedown(function(event){
+			var btn = event.button;
+			$(this).html(btn+"버튼 눌러짐!");
+		});
+
+		$(".mouseBox").click(function(){
+			var array = ["red", "orange", "yellow","green","blue","navy","purple"];
+			var randomIndex = Math.floor(Math.random()*7); 
+			$(this).css("background",array[randomIndex]);
+		});
+
+		function changeColor(obj){
+			var array = ["red", "orange", "yellow","green","blue","navy","purple"];
+			var randomIndex = Math.floor(Math.random()*7); 
+
+			obj.style.background = array[randomIndex];
+		}
+	</script>
+
+	<hr>
+
+	<form>
+		제목 : <input type="text" name="title"><br>
+		작성자 : <input type="text" name="owner"><br>
+		내용 : <textarea name="content"></textarea><br>
+		<input type="submit" value="전송">
+	</form>
+	<script>
+		$("input:text").focus(function(){
+			$(this).css("background","gray");
+		});
+
+		$("input:text").blur(function(){
+			$(this).css("background","white");
+			if($(this).val() == ""){
+				$(this).after("<span>*필수</span>");
+			}else{
+				$(this).next("span").remove();
+			}
+		});
+
+		$("form").submit(function(){
+			//return false;
+			var flag = true;
+
+			if($("input[name=title]").val() == ""){
+				flag=false;
+				var next = $("input[name=title]").next("span");
+				if(next.length == 0){
+					$("input[name=title]").after("<span>*필수</span>");
+				}
+			}
+			if($("input[name=owner]").val() == ""){
+				flag=false;
+				var next = $("input[name=owner]").next("span");
+				if(next.length == 0){
+					$("input[name=owner]").after("<span>*필수</span>");
+				}
+			}
+
+			return flag;
+		});
+	</script>
+	
+	<!--
+		버튼 클릭시 boxDiv 막내 자식으로 div 요소를 추가해주세요 이때 내용은 div_cnt가 됩니다
+		예)div_2 , div_3, div_4
+	-->
+	<div id="boxDiv" style="border:1px solid black;">
+		<div>div_1</div>
+	</div>
+	<button onclick="add()">add</button>
+	<script>
+		var cnt = 2;
+		function add(){
+			var html = "<div>div_"+cnt+"</div>";
+			$("#boxDiv").append(html);
+			cnt++;
+		}
+		/*$("#boxDiv>div").click(function(){
+			alert($(this).text());
+		});*/
+		
+		$(document).on("click","#boxDiv>div",function(){
+			alert($(this).text());
+		});
+
+	</script>
+
+	<hr>
+	<table id="board" border="1">
+		<tr>
+			<td>첫번째 제목입니다</td>
+			<td>첫번째 작성자</td>
+			<td><button><!--onclick="info(this)"-->정보 이동</button></td>
+		</tr>
+		<tr>
+			<td>두번째 제목입니다</td>
+			<td>두번째 작성자</td>
+			<td><button><!--onclick="info(this)"-->정보 이동</button></td>
+		</tr>
+		<tr>
+			<td>세번째 제목입니다</td>
+			<td>세번째 작성자</td>
+			<td><button><!--onclick="info(this)"-->정보 이동</button></td>
+		</tr>
+	</table>
+	<div id="info">
+	첫번째 제목입니다/첫번째 작성자
+	</div>
+	<script>
+		$("#board button").click(function(){
+			//next():바로 아래 동생 요소 ,prev():바로 위에 형 요소,parent():부모요소를 찾을때 사용
+
+			var title = $(this).parent().prev().prev().text();
+			var owner = $(this).parent().prev().text();
+
+			$("#info").html(title+"/"+owner);
+		});
+
+		function info(obj){
+			var owner = obj.parentElement.previousElementSibling.textContent;
+			var title = obj.parentElement.previousElementSibling.previousElementSibling.textContent;
+
+			document.getElementById("info").innerHTML = title + "/"+owner;
+		}
+	</script>
+ </BODY>
+</HTML>

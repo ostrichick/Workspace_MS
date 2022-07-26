@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="" />
+    <style></style>
+  </head>
+  <body>
+    <div id="div01"><h3>안녕하세오, 반가워요</h3></div>
+    <script>
+      let div01 = document.getElementById("div01");
+      console.log(div01.id);
+      console.log(div01.tagName);
+      console.log(div01.innerHTML);
+      // div01.innerHTML = "<h4>시러요 너무 배불러</h4>";
+      div01.textContent = "<strong><br>이이잉</strong>";
+      //태그 적용 안시키는 법
+
+      div01.addEventListener("click", function (e) {
+        alert("악!");
+      });
+      // let clickFn = div01.click(); // 클릭했을 때 적용되어 있는 함수를 얻어오는 메소드
+    </script>
+    <button onclick="changeBox()">클릭!</button>
+    <hr />
+    <div id="box"></div>
+    <script>
+      function changeBox() {
+        let box = document.querySelector("#box");
+        box.style.width = "150px";
+        box.style.height = "100px";
+        box.style.background = "brown";
+        box.style.border = "3px dotted blue";
+      }
+    </script>
+    <hr />
+    <input type="checkbox" id="check01" onclick="turn(this)" /><span>01</span> <input type="checkbox" id="check02" onclick="turn(this)" /><span>02</span>
+    <!--  onclick="turn(check01)", onclick="turn(check02)" 로 인자를 넣을 수도 있음 -->
+    <style>
+      body {
+        color: navy;
+        /* font-size: 20px; */
+        font-weight: 600;
+      }
+    </style>
+    <script>
+      function turn(obj) {
+        if (obj.checked) {
+          obj.nextElementSibling.style.color = "red";
+        } else {
+          obj.nextElementSibling.style.color = "";
+        }
+      }
+      // function turnBack(obj) {
+      //   obj.nextElementSibling.style.color = "black";
+      // }
+    </script>
+    <input type="checkbox" id="check03" onclick="isCheckFn('check03')" /><span>03</span> <input type="checkbox" id="check04" onclick="isCheckFn('check04')" /><span>04</span>
+    <script>
+      function isCheckFn(tagId) {
+        var checkBox = document.getElementById(tagId);
+        if (checkBox.checked) {
+          checkBox.nextElementSibling.style.color = "red";
+        } else {
+          checkBox.nextElementSibling.style.color = "";
+        }
+      }
+    </script>
+    <hr />
+    <div>
+      <ins onclick="changeColor(this,'yellow','blue')">여기</ins>를 클릭하면 '여기' 폰트 색상이 노란색, 배경이 파란색으로<br />
+      <ins onclick="changeColor(this,'red','yellow')">여기</ins>를 클릭하면 '여기' 폰트 색상이 빨간색, 배경이 노란색으로<br />
+    </div>
+    <script>
+      // function change(obj) {
+      //   if (this == document.querySelectorAll("ins")[0]) {
+      //     obj.style.color = "yellow";
+      //     obj.style.background = "blue";
+      //   } else {
+      //     obj.style.color = "red";
+      //     obj.style.background = "yellow";
+      //   }
+      // }
+      //1. '여기'에 온클릭 이벤트 지정
+      //2. 클릭한 요소를 함수로 넘기기 (인자 포함)
+      //3. 요소에 적용할 css 속성값 함수로
+
+      function changeColor(obj, fontColor, backColor) {
+        //4. 요소에 글자 색상을 입힌다
+        obj.style.color = fontColor;
+        //5. 요소에 배경 색상을 입힌다
+        obj.style.background = backColor;
+      }
+    </script>
+    <hr />
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+    <script>
+      // tagName으로 요소를 찾을 때에는 일치하는 태스 요소가 한개이더라도 무조건 배열로 변환
+      //원하는 요소에 인덱스를 사용하여 접근
+      let pTags = document.getElementsByTagName("p");
+      let p2 = pTags[1];
+      console.log(p2);
+      console.log(p2.innerHTML);
+
+      //tagName으로 찾은 모든 요소에 하나씩 접근할 때는 for문을 사용해 인덱스에 하나씩 접근
+      for (i = 0; i < pTags.length; i++) {
+        pTags[i].style.background = "red";
+      }
+    </script>
+    <hr />
+    <div class="ddd">1</div>
+    <div class="dtdt">2</div>
+    <div class="ddd">3</div>
+    <script>
+      let findClass = document.getElementsByClassName("ddd");
+      console.log(findClass[1]);
+      console.log(findClass[1].innerHTML);
+
+      for ([t] in findClass) {
+        // findClass[t].style.background = "yellow";
+      }
+
+      document.write("<h3>document.write()를 이용한 태그 추가</h3>");
+      document.write("<h3>document.write()를 이용한 태그 추가</h3>");
+      document.writeln("writeln()은 공백이있음");
+      document.writeln("writeln()은 공백이있음");
+    </script>
+    <hr />
+    <button onclick="clickFn()">클릭해봐</button>
+    <script>
+      function clickFn() {
+        // 화면이 로드 된 후에 동작하면 기존 HTML을 완전히 지워버린다
+        document.write("html 새로 쓰기");
+        document.write("html 새로 쓰기");
+        document.write("html 새로 쓰기");
+      }
+    </script>
+    <hr />
+    <button onclick="openPop()">팝업 열기</button>
+    <textarea name="" id="textArea" cols="30" rows="10"></textarea>
+    <script>
+      let win = null;
+
+      function openPop() {
+        //팝업 역할을 할 새로운 창 생성
+        if (win == null || win.closed) {
+          win = window.open("", "outwin", "width=300,height=200");
+        }
+        var text = document.getElementById("textArea").value;
+        //팝업이 될 윈도우 창에 웹문서 쓸 준비
+        win.document.open();
+        //해당 창에 웹문서 쓰기
+        win.document.write(text);
+        //웹문서 닫기
+        win.document.close();
+      }
+    </script>
+    <hr />
+    <div id="parent"></div>
+    <button onclick="appP()"><p>p태그 추가</p></button>
+    <script>
+      var cnt = 1;
+      function appP() {
+        var p = document.createElement("p");
+
+        p.innerHTML = "추가된 html p 태 ㅐ그" + cnt;
+        cnt++;
+        p.onclick = function () {
+          var parent = this.parentElement;
+          parent.removeChild(this);
+        };
+
+        document.getElementById("parent").appendChild(p);
+      }
+    </script>
+  </body>
+</html>

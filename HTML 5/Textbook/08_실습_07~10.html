@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>돌아라</title>
+    <link rel="stylesheet" href="" />
+    <style>
+      img {
+        transition: all 0.3s ease-in-out;
+      }
+      h3,
+      hr {
+        margin: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>클릭하면 90도 회전</h3>
+    <hr />
+    <img src="gary.webp" width="200" alt="" onclick="spin(this)" />
+    <hr />
+    <img src="pinkkitty.png" width="200" alt="" onclick="jaba(this)" />
+    <script>
+      let bangh = 0;
+      // function spin(obj) {
+      //   switch (bangh) {
+      //     case 0:
+      //     case 360:
+      //       obj.style.transform = "rotate(90deg)";
+      //       bangh = 90;
+      //       break;
+      //     case 90:
+      //       obj.style.transform = "rotate(180deg)";
+      //       bangh = 180;
+      //       break;
+      //     case 180:
+      //       obj.style.transform = "rotate(270deg)";
+      //       bangh = 270;
+      //       break;
+      //     case 270:
+      //       obj.style.transform = "rotate(360deg)";
+      //       bangh = 360;
+      //       break;
+      //   }
+      // }
+      function spin(obj) {
+        bangh += 90;
+        obj.style.transform = "rotate(" + bangh + "deg)";
+      }
+    </script>
+    <script>
+      let scaleX = 1;
+      function jaba(obj) {
+        console.log(scaleX);
+        scaleX = scaleX * 2;
+        obj.style.transform = "scale(" + scaleX + ",1)";
+      }
+    </script>
+    <hr />
+    <h3>라면을 끓이는 순서</h3>
+    <hr />
+    <ol type="A" style="background-color: yellowgreen; list-style: decimal" onclick="addrecipe(this)">
+      <li>물을 끓인다</li>
+    </ol>
+    <script>
+      recipe = document.querySelector("ol[type=A]");
+      function addrecipe(obj) {
+        newLi = document.createElement("li");
+        newLi.innerHTML = prompt("라면을 끓이는 순서를 입력하라");
+        obj.appendChild(newLi);
+      }
+    </script>
+    <hr />
+    <h3>DOM 객체 동적 삽입</h3>
+    <script></script>
+    <hr />
+    <div>
+      <p>Q. 거울아 거울아 세상에서 누가 제일 예쁘니?</p>
+      <button onclick="addAnswer(this, '백설공주')">답보기</button>
+    </div>
+    <div>
+      <p>Q. 죽느냐 사느냐 어떤 것이 문제인가?</p>
+      <button onclick="addAnswer(this, '둘다')">답보기</button>
+    </div>
+    <script>
+      function addAnswer(obj, responder) {
+        // 이곳을 완성하라
+        answer = document.createElement("p");
+        answer.innerHTML = responder;
+        if (obj.parentElement.childElementCount < 3) {
+          obj.parentElement.appendChild(answer);
+          answer.addEventListener("click", function () {
+            obj.parentElement.removeChild(this);
+          });
+        }
+      } // answer.onclick = jiwo;
+      // function(jiwo){obj.parentElement.removeChild(this);}
+      //  대입 = 함수명(); 함수 실행값을 넣음
+      //  대입 = 함수명; 함수를 실행함
+    </script>
+    <br />
+    <hr />
+  </body>
+</html>

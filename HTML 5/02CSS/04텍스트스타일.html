@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>텍스트스타일</title>
+    <style>
+      h1 {
+        color: #f00;
+        width: 400px;
+        background: #ccf;
+        text-align: center; /*left(기본값), right, center, justify(양쪽)*/
+        text-shadow: 3px -3px 10px #000000; /*수평위치, 수직위치, [블러], 색상*/
+        box-shadow: 10px -15px 5px purple inset; /*수평위치, 수직위치, [블러], [크기], 색상, inset-내부그림자*/
+      }
+      div {
+        width: 450px; /*너비*/
+        border: 1px solid rgb(65, 28, 28); /*테두리*/
+        margin: 100px; /*내부여백*/
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 25px;
+        font-weight: 200;
+        color: blueviolet;
+        line-height: 45px; /*행 높이 줄 간격*/
+        text-indent: 40px; /*들여쓰기*/
+        text-align: justify;
+      }
+      em {
+        font-weight: bold;
+        text-decoration: underline; /*underline, overline 윗줄, line-through 취소선*/
+      }
+      strong {
+        font-weight: normal;
+        font-style: italic;
+        color: red;
+        text-decoration: overline;
+        text-transform: uppercase; /*uppercase 대문자화, lowercase 소문자화, capitalize 첫글자 대문자*/
+      }
+    </style>
+  </head>
+  <body>
+    <h1>텍 스 트 스 타 일</h1>
+    <div>
+      <p>HTML 태그만으로 기존의 워드 프로세서와 같이 들여쓰기, 정렬, 공백 간격 등과 세밀한 <em>텍스트 제어</em>를 할 수 없다.</p>
+      <p>그러나, <strong>스타일 시트 Stylesheet</strong>는 이를 가능하게 한다. 들여쓰기 정렬에 대해서 알아본다.</p>
+    </div>
+  </body>
+</html>

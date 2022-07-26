@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>시계만들기</title>
+    <link rel="stylesheet" href="" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600;700;800&family=Nanum+Gothic:wght@400;700;800&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @font-face {
+        font-family: "PyeongChangPeace-Light";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Light.woff2") format("woff2");
+        font-weight: 300;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "OKCHAN";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/OKCHAN.woff2") format("woff2");
+        font-weight: normal;
+        font-style: normal;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        /* font-family: "Nanum Pen Script", cursive; */
+        font-family: "OKCHAN", "PyeongChangPeace-Light", "Nanum Pen Script", cursive;
+      }
+      body {
+        /* position: relative; */
+        height: 100vh;
+        background: #0f3854;
+        background: radial-gradient(#0a3e38, black 55%);
+        text-align: center;
+      }
+      #wrap {
+        position: absolute;
+        min-width: 700px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 4em;
+        color: #daf6ff;
+        border: 5px dashed grey;
+        border-radius: 30px;
+        padding: 30px;
+      }
+      /*
+      길이의 단위
+      px : 픽셀
+      % : 비율 (100%) : 부모나 상위포지션을 기준으로함
+      em : 글자크기에 비례한 값 (font-soze:10px 인 경우, 2em=20px)
+      rem : 루트 요소의 글자크기에 비례한 값
+      vw : 화면의 너비에 비례한 값
+      vh : 화면의 높이에 비례한 값
+      vmin : 너비와 높이 중 작은 값을 기준으로
+      vmax : 너비와 높이 중 큰 값을 기준으로
+      */
+    </style>
+    <script></script>
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="daytext">오늘날자</div>
+      <p id="time">
+        시계 자리
+        <!-- <span id="h">00</span> : <span id="m">00</span> : <span id="s">00</span> -->
+      </p>
+    </div>
+    <script>
+      var i = 0;
+      updateTime();
+      function updateTime() {
+        var now = new Date(); //날자와 시간과 관련된 객체
+        var h = zero(now.getHours());
+        var m = zero(now.getMinutes());
+        // if(now.getMinutes() < 10){return m = "0"+now.getMinutes()} else {return now.getMinutes()}
+        var s = zero(now.getSeconds());
+        var time = document.getElementById("time");
+        time.innerHTML = `${h} : ${m} : ${s}`;
+      }
+      setInterval(updateTime, 500); // 지정한 시간마다 함수를 호출함. (단위 밀리세컨드)
+      //   document.getElementById("time").innerHTML =
+
+      function zero(n) {
+        // 0~9사이 숫자일경우 앞에 0을 추가해서 두자리 숫자로 만들어줌
+        if (n < 10) return "0" + n;
+        else return n;
+      }
+      var week = ["일", "월", "화", "수", "목", "금", "토"]; //배열
+      updateDay();
+      function updateDay() {
+        var today = new Date();
+        var yy = zero(today.getFullYear());
+        var mm = zero(today.getMonth());
+        var dd = zero(today.getDate());
+        var yo = today.getDay();
+        var day = document.getElementById("day");
+        daytext.innerHTML = `${mm}월 ${dd}일 ${week[yo]}요일`;
+      }
+      var yo = today.getDay();
+      setInterval(updateDay, 60000);
+    </script>
+  </body>
+</html>

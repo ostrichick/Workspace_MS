@@ -1,0 +1,165 @@
+@charset "UTF-8";
+/*리셋코드 태그가 가지는 기본값을들 0이나 none으로 없앰*/
+* {
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+}
+/* 레이아웃 테스트용
+div {
+  outline: 3px green dotted;
+}
+
+section,
+footer,
+header {
+  outline: 3px blue solid;
+}
+*/
+li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+.header {
+  border-top: 2.5px red solid;
+  background: rgb(240, 240, 240);
+  height: 50px;
+  width: 1200px;
+  margin: 0 auto; /*블럭인 요소를 가운데 정렬하려면 양옆 마진을 오토로*/
+}
+/*가로 1200*/
+header,
+.main-top,
+.main-2nd,
+.main-3rd,
+.main-4th,
+.footer,
+section {
+  width: 1200px;
+  margin: 0 auto 30px;
+  clear: both;
+}
+.header-left-sns {
+  font-size: 0; /*부모에게 폰트사이즈 0을 주면 자식요소 공백을 없앨 수 있음*/
+  float: left;
+}
+.header-left-sns li {
+  display: inline-block;
+}
+.header-right-login {
+  float: right;
+  font-size: 0;
+}
+.header-right-login li {
+  display: inline-block;
+}
+.logo {
+  /*clear: both;*/
+  float: left;
+  margin: 65px 0 0 0;
+}
+.banner {
+  float: right;
+  margin: 10px 0 14px 0;
+}
+.mainmenu {
+  float: right;
+}
+.mainmenu li {
+  float: right;
+}
+.main-top {
+  clear: both;
+  padding-top: 1px;
+}
+.scrollbar {
+  clear: both;
+  margin: 30px 0 60px;
+  /*outline: 3px solid green;*/
+  /*outline: 크기에 영향을 주지 않고
+  border 영역 바깥으로 생성*/
+  /*border: 10px solid #f0f;*/
+}
+.main-2nd {
+  text-align: center;
+}
+.main-2nd .notice {
+  float: left;
+}
+.main-2nd .movieclip {
+  display: inline-block;
+}
+iframe {
+  border: 0;
+  vertical-align: top;
+}
+.main-2nd .contact {
+  float: right;
+  margin: 45px 0 0 0;
+}
+.main-3rd .event {
+  clear: both;
+  width: 1200px;
+  height: 450px;
+  background-image: url(images/event_wide_bg.jpg);
+  background-size: 1200px 450px;
+  background-repeat: no-repeat;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 45px 0 0;
+  padding: 30px 0 0;
+  font-family: "나눔고딕", "맑은 고딕", "돋움";
+}
+.main-3rd .event .event-detail {
+  height: 350px;
+}
+/*.justify-image{ text-align: justify;}
+.justify-image img{display:inline-block;}
+.justify-image:after{content:""; display: inline-block; width: 100%; height: 0;}*/
+.main-3rd .event .event-detail li {
+  float: left;
+  width: 18%;
+  /*height: 240px;*/
+  font-size: 20px;
+  font-weight: bold;
+  margin: 30px 1% 0;
+  text-align: center;
+}
+.event-detail img {
+  width: 100%;
+  /*object-fit: contain;*/
+  border-radius: 50%;
+  margin-bottom: 25px;
+}
+.main-4th {
+  width: 1200px;
+  height: auto;
+  overflow: hidden;
+  margin: 30px auto;
+}
+.main-4th h3 {
+  margin-bottom: 30px;
+}
+.main-4th .dongsi {
+  float: left;
+}
+.main-4th .advert {
+  float: right;
+}
+.footer {
+  text-align: center; /*
+  width: 1200px;
+  height: auto;
+  margin: 0 auto;*/
+}
+.footer .coop {
+  width: 1200px;
+  margin: 60px 0 0 0;
+}
+.footer .companies img {
+  margin: 30px 1%;
+  width: 22%;
+}

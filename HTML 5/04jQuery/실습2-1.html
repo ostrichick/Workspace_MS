@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2-1</title>
+    <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      function checkBtn() {
+        $("input").each(function (value) {
+          if ($(this).is(":checked")) {
+            // console.log(value + 1 + "번");
+            console.log($(this).val() + "번");
+          }
+        });
+      }
+    </script>
+    <script>
+      // 복습
+      function check_Btn() {
+        $("input[name=check]:checked").each(function () {
+          // 아니면 이것도 가능 .filter(:checked)...
+          var value = $(this).val();
+          console.log(value + "번");
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <input type="checkbox" name="check" value="1" />1번 <input type="checkbox" name="check" value="2" />2번 <input type="checkbox" name="check" value="3" />3번
+    <input type="checkbox" name="check" value="4" />4번
+    <br />
+    <input type="button" value="체크 버튼 확인" onclick="check_Btn()" />
+    <script></script>
+  </body>
+</html>

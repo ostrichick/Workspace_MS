@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS 정의하기</title>
+    <style>
+      @import url("스타일.css"); /*외부CSS문서연결*/
+      li {
+        font-size: 20px;
+        color: green;
+      }
+      h1 {
+        color: red;
+        border: 12px solid #ffaa90;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS의 다양한 정의방법</h1>
+    <ol>
+      <li>CSS파일에 정의하기 : 여러문서를 한개의 스타일로 공유, 통일</li>
+      <li>&lt;style&gt;태그에 정의하기 : 해당 문서안에 있는 여러 요소가 스타일을 공유</li>
+      <li style="font-weight: bold; color: red; text-decoration: underline">속성으로 정의하기(인라인스타일)</li>
+    </ol>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>객 체</title>
+    <link rel="stylesheet" href="" />
+    <style></style>
+    <script>
+      /*
+          객체 p312
+
+          여러개의 변수(속성)와 여러개의 함수(메쏘드)를 가질 수 있는 것
+          (파이썬 딕셔너리랑 비슷??)
+
+          */
+
+      // function sum() {}
+
+      var a = 10; //변수선언 (변수: 하나의 값을 저장)
+      var f = function () {}; //함수선언 (함수: 여러개의 실행문을 저장)
+      var o = {}; //객체선언
+      let objectFirst = {
+        aaa: 20,
+        bbb: 7,
+        txt_msg: "에이잉",
+        sum: function (x, y) {
+          return x + y;
+        },
+        printText: function () {
+          console.log("객체 안의 함수");
+        },
+      };
+
+      // 객체 안의 변수 호출
+      a = objectFirst.aaa + objectFirst.bbb;
+      console.log(a);
+      console.log(objectFirst.txt_msg);
+
+      // 객체 안의 함수 호출
+      a = objectFirst.sum(100, 21);
+      console.log(a);
+      objectFirst.printText();
+
+      // 객체 안에 새로운 변수 추가
+      objectFirst.c = 14;
+      c = objectFirst.c;
+      console.log(c);
+
+      // 객체 안에 새로운 함수 추가
+      objectFirst.sub = function (x, y) {
+        return x - y;
+      };
+      console.log(objectFirst.sub(100, 44));
+    </script>
+  </head>
+  <body>
+    <header></header>
+    <!-- header end -->
+    <main></main>
+    <!-- main end -->
+    <footer></footer>
+    <!-- footer end -->
+    <script src=""></script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="" />
+    <style></style>
+  </head>
+  <body>
+    <h3>문자열 분할</h3>
+    <hr />
+    <script>
+      let url = prompt("URL 주소 입력");
+      let dissect = url.split("&");
+      for (i = 0; i < dissect.length; i++) document.write(`${dissect[i]}<br>`);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE>
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <style>
+	span{
+		visibility:hidden;
+	}
+  </style>
+  <script>
+	function toggleFn(){
+		//dom의 style 프로퍼티는 html에 인라인으로 적용한 스타일 시트의 값을 가져오거나 변경하는 것이므로
+		//style 태그를 이용하여 적용한 스타일 시트는 제어 할 수 없다.
+		//style 태그로 적용된 css 를 제어하기 위해서는 document의 getComputedStyle() 메소드를 사용해야 한다.
+		var spans = document.getElementsByTagName("span");
+		for(var i=0; i<spans.length; i++){
+			var value = spans[i].style.visibility;
+			if(value == "hidden" || value == ""){
+				spans[i].style.visibility = "visible";
+			}else{
+				spans[i].style.visibility = "hidden";
+			}
+		}
+	}
+  </script>
+ </HEAD>
+ <BODY>
+	<h3>다음 빈 곳에 숨은 단어?
+		<button onclick="toggleFn()">show/hide</button>
+	</h3>
+	<hr>
+	<ul>
+		<li>I (<span>love</span>) you.</li>
+		<li>CSS is Cascading (<span>Style</span>) Sheet.</li>
+		<li>응답하라 (<span>1988</span>) </li>
+	</ul>
+ </BODY>
+</HTML>

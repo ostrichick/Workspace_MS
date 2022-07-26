@@ -1,0 +1,214 @@
+<!DOCTYPE>
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <script src="../jquery-3.6.0.min.js"></script>
+  <script>
+	$(function(){
+		/*$("div#d1").css("color","red");
+		$("div.d2").css("color","green");*/
+		var div =$("div"); //dom 트리내에 존재하는 모든 div 객체를 제이쿼리 배열 객체로 가지고 있다.
+
+		div.filter("#d1").css("color","red");
+		div.filter(".d2").css("color","green");
+
+		$("tr").filter(function(i){
+			return i%3 == 0;
+		}).css("background","yellow");
+
+		div.each(function(){
+			//모든 div 요소에 방문하며 해당 요소가 isTest id값을 가지고 있는지 판단
+			var isTest = $(this).is("#isTest"); //자기 자신이 해당 셀렉터 또는 필터를 가지고 있는 판단
+			var hasTest = $(this).has("#isTest"); //자기 자신의 후손 중 해당 셀렉터를 가지고 잇는 요소가 있다면 자기 자신 반환
+			console.log(isTest);
+			console.log(hasTest);
+			if(isTest){
+				$(this).css("color","orange");
+			}
+		});
+
+		var array = [1,2,3,4,5];
+		var sum =0;
+		array.forEach(function(i,value){
+			sum += value;
+		});
+		alert(sum);
+
+		sum = 0;
+		//$.each()를 이용하면 jQuery 객체 배열 뿐만 아니라 자바스크립트 배열도 접근 할 수 있다.
+		$.each(array,function(i,value){
+			console.log(value);
+			sum += value;
+		});
+		alert(sum);
+
+
+	});
+  </script>
+  <style>
+	.p{
+		background: orange;
+	}
+  </style>
+ </HEAD>
+ <BODY>
+	<div id="d1">1</div>
+	<div class="d2">2</div>
+	<div class="d2">3</div>
+
+<!-- .filter()를 사용하여 tr중 3의 배수에 해당하는 인덱스 요소의 배경 노란색을 만드세요. -->
+	<table border="1">
+		<tr>
+			<td>1</td>
+		</tr>
+		<tr>
+			<td>2</td>	
+		</tr>
+		<tr>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td>4</td>
+		</tr>
+		<tr>
+			<td>5</td>
+		</tr>
+		<tr>
+			<td>6</td>
+		</tr>
+		<tr>
+			<td>7</td>
+		</tr>
+	</table>
+
+	<div id="isTest">isTestDiv</div>
+
+	<table id="t2" border="1">
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>5</td>
+			<td>6</td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td>8</td>
+			<td>9</td>
+		</tr>
+	</table>
+	<script>
+		$("#t2 td").each(function(i,item){
+			var text = $(this).text();
+			$(this).click(function(){
+				alert(text);
+				$(this).text("click!");
+			});
+		});
+	</script>
+
+	<p>p 태그입니다.</p>
+	<p>p 태그입니다.</p>
+	<button onclick="addClassP()">addClass</button>
+	<button onclick="removeClassP()">removeClass</button>
+	<button onclick="toggleClassP()">toggleClass</button>
+	<script>
+		function addClassP(){
+			$("p").addClass("p");
+		}
+		function removeClassP(){
+			$("p").removeClass("p");
+		}
+		function toggleClassP(){
+			$("p").toggleClass("p");
+		}
+	</script>
+
+	<input type="text" id="t1">
+	<input type="password" id="t1">
+	<button onclick="getAttr()">attr()사용</button>
+	<button onclick="setAttr()">attr("")사용</button>
+	<script>
+		function getAttr(){
+			$("input").each(function(){
+			//attr()는 하나의 인자만 넘어가는 경우 해당 요소의 해당 속성 값을 반환한다.
+			//이때 attr()의 사용 대상이 제이쿼리 배열 객체라면 첫번째 원소의 속성값을 가져온다.
+				alert($(this).attr("type"));
+			});
+		}
+
+		function setAttr(){
+			$("input").each(function(){
+				var type = $(this).attr("type");
+
+				if(type == "text"){
+				//attr()에 인자가 두가지가 넘어가게 되면 첫번째 인자 속성을 두번째 값으로 변경한다.
+					$(this).attr("type","password");
+				}else{
+					$(this).attr("type","text");
+					$(this).css({color:"red",background:"yellow"});
+				}
+			});
+		}
+	</script>
+
+	<h1><strong>1</strong></h1>
+	<h1><ins>1</ins></h1>
+
+	<script>
+		//html()는 자바스크립트의 innerHTML과 동일한 역할을 하며
+		//html을 변경할 수도 값을 가져올수도 있다.
+		//이때 값을 가져오는 경우에 셀렉터로 검색된 요소가 많은 경우에는 첫번째 요소의 html을 반환한다.
+		//html을 변경할 때는 셀렉터로 검색된 모든 요소에 동일하게 html을 변경한다.
+		alert($("h1").html());
+		$("h1").html("변경!!");
+	</script>
+
+	<div class="box">1</div>
+	<div class="box">2</div>
+	<div class="box">3</div>
+	<div class="box">4</div>
+	<div class="box">5</div>
+	<button onclick="removeBox()">removeBox</button>
+	<button onclick="emptyBox()">emptyBox</button>
+	<script>
+		function removeBox(){
+			//최신 jQuery 버전에서는 remove()사용시 모든 셀렉터 집합이 제거 된다.
+			$(".box").last().remove();
+		}
+		function emptyBox(){
+			//empty()는 셀렉터로 검색된 요소의 내용을 지운다.
+			$(".box").empty();
+		}
+	</script>
+
+	<div id="here" style="border:1px solid black;"></div>
+	<button onclick="append()">append</button>
+	<button onclick="prepend()">prepend</button>
+	<button onclick="after()">after</button>
+	<button onclick="before()">before</button>
+	<script>
+		var appendCnt=0;
+		function append(){
+			appendCnt++;
+			$("#here").append("<p>마지막 자식으로 추가 "+appendCnt+"</p>")
+		}
+		var prependCnt=0;
+		function prepend(){
+			prependCnt++;
+			$("#here").prepend("<h3>첫번째 자식으로 추가"+prependCnt+"</h3>");
+		}
+
+		function after(){
+			$("#here").after("<div>동생으로 추가!</div>");
+		}
+		
+		function before(){
+			$("#here").before("<div>바로 위 형으로 추가!</div>");
+		}
+	</script>
+ </BODY>
+</HTML>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="" />
+    <style>
+      div {
+        font-size: 20px;
+      }
+    </style>
+    <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <div id="d1">1</div>
+    <div class="d2">2</div>
+    <div class="d2">3</div>
+    <div id="d1">4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <script>
+      //   $("div#d1").css("color", "red");
+      //   $("div.d2").css("color", "green");
+      //    DOM 트리 풀스캔을 2번만
+
+      $(function () {
+        var div = $("div"); // dom트리내에 존재하는 모든 div를 jQuery 배열로 저장
+        div.filter("#d1").css("color", "red");
+        div.filter(".d2").css("color", "green");
+        //   DOM트리 풀스캔을 1번만 함
+
+        div
+          .filter(function (index) {
+            return index % 3 == 2;
+          })
+          .css({ color: "blue" });
+        //
+        //
+        //
+        div.each(function () {
+          //모든 div요소에 방문하여 해당 요소가 isTest id를 가지고 있는지 판단
+          let isTest = $(this).is("#isTest");
+          console.log(isTest + "이즈테스트");
+          // 자기가 해당 셀렉터,필터를 가지고있는지 판단하요 ture false 반환
+
+          let hasTest = $(this).has("#isTest");
+          console.log(hasTest + "해스테스트");
+          // 후손 중 해당 셀렉터를 가지고있는 요소가 있다면 자기 자신 선택
+
+          if (isTest) {
+            $(this).css("color", "orange");
+          }
+        });
+
+        var array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        var sum = 0;
+        array.forEach(function (num) {
+          sum += num;
+        });
+        console.log(sum);
+
+        let sum2 = 0;
+        // $.each()을 이용하여 jQuery 객체배열뿐만 아니라 자바스크립트 배열도 접근할 수 있다.
+        $.each(array, function (i, num) {
+          sum2 += num;
+        });
+        console.log(sum2);
+        //
+      });
+    </script>
+    <table border="1">
+      <tr>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>2</td>
+        <td>2</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>3</td>
+        <td>3</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>4</td>
+        <td>4</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>5</td>
+        <td>5</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>6</td>
+        <td>6</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>7</td>
+        <td>7</td>
+        <td>7</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>8</td>
+        <td>8</td>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>9</td>
+        <td>9</td>
+        <td>9</td>
+      </tr>
+    </table>
+    <!-- .filter()사용하여 tr중 3의 배수에 해당하는 인덱스 요소의 배경 노란색으로 -->
+    <script>
+      let allTr = $("tr");
+      allTr
+        .filter(function (index) {
+          return index % 3 == 0;
+        })
+        .css({ background: "yellow" });
+    </script>
+    <div id="isTest">isTestDiv</div>
+
+    <table id="t2" border="1">
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+      </tr>
+    </table>
+    <script>
+      $("#t2 td").each(function () {
+        let text = $(this).text();
+        $(this).click(function () {
+          console.log(text);
+          $(this).text("클릭됨");
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="" />
+    <style></style>
+  </head>
+  <body>
+    <input type="text" id="t1" />
+    <input type="password" />
+    <button onclick="getAttr()">attr()사용</button>
+    <button onclick="setAttr()">attr("")사용</button>
+    <script>
+      function getAttr() {
+        $("input").each(function () {
+          // attr()은 하나의 인자만 넘어가는 경우 해당요소의 속성값 반환
+          // attr의 사용 대상이 제이쿼리 배열 객체라면 첫번재 원소의 속성값만
+          alert($(this).attr("type"));
+        });
+      }
+      function setAttr() {
+        $("input").each(function () {
+          let type = $(this).attr("type");
+          if (type == "text") {
+            //attr()에 인자가 두개가 넘어가면 첫인자를 두번째 값으로 변경
+            $(this).attr("type", "password");
+          } else {
+            $(this).attr("type", "text");
+            $(this).css({ color: "red", background: "yellow" });
+          }
+        });
+      }
+    </script>
+    <h1><strong>응애</strong></h1>
+    <h1><ins>으앙</ins></h1>
+    <script>
+      //html()은 innerHTML과 같은 역할을하며 값 가져오기, 변경이 가능
+      //값을 가져올때는 첫번재 요소의 값만 가져옴
+      //변경 할 때는 모든 요소를 변경
+      console.log($("h1").html()); //하나만 가져옴
+      console.log($("h1").text()); //다 가져옴
+      // $("h1").html("변경"); // 전부 변경
+    </script>
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <button onclick="removeBox()">removeBox</button>
+    <button onclick="emptyBox()">emptyBox</button>
+    <script>
+      // 이전 버전에서는 한개만 지웠으나 최신 jQuery에서는 해당 요소 모두 지움
+      function removeBox() {
+        $(".box").last().remove();
+      }
+      // 요소의 내용을 지우고 요소 자체는 살아있음
+      function emptyBox() {
+        $(".box").last().empty();
+      }
+    </script>
+    <hr />
+    <div id="here" style="min-height: 100px; border: 1px solid blue"></div>
+    <button onclick="appendB()">append</button>
+    <button onclick="prependB()">prepend</button>
+    <button onclick="afterB()">after</button>
+    <button onclick="beforeB()">before</button>
+    <script>
+      let appendCnt = 0;
+      function appendB() {
+        appendCnt++;
+        $("#here").append("<p>마지막자식" + appendCnt + "</p>");
+      }
+      let prependCnt = 0;
+      function prependB() {
+        prependCnt++;
+        $("#here").prepend("<p>첫번재자식" + prependCnt + "</p>");
+      }
+      let afterCnt = 0;
+      function afterB() {
+        afterCnt++;
+        $("#here").after("<p>동생" + afterCnt + "</p>");
+      }
+      let beforeCnt = 0;
+      function beforeB() {
+        beforeCnt++;
+        $("#here").before("<p>형" + beforeCnt + "</p>");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!--문자 인코딩 정보표기 (필수)-->
+    <title>이미지삽입하기</title>
+  </head>
+  <body>
+    <h1>이미지삽입하기</h1>
+    <hr />
+    <div>
+      <h2>절대경로로 주소지정하기</h2>
+      <p>최상위(=루트폴더)에서부터 순차적으로 위치를 지정해나감</p>
+      <p>
+        <img src="C:\최문성(221025)\01HTML\html.jpg" alt="깐풍삼겹" height="225" />
+        <img src="C:\최문성(221025)\01HTML\사진\sajin.jpg" alt="깻잎쌈" height="225" />
+        <img src="C:\최문성(221025)\name.jpg" alt="쌈장" height="225" />
+      </p>
+    </div>
+    <hr />
+    <div>
+      <h2>상대경로로 주소지정하기</h2>
+      <p>현재 작성문서를 기준으로 위치 지정</p>
+      <p>
+        <img src="html.jpg" alt="깐풍삼겹" height="225" />
+        <img src="사진\sajin.jpg" alt="깻잎쌈" height="225" />
+        <img src="..\name.jpg" alt="쌈장" height="225" />
+        <br />
+        <img src="..\..\c.jpg" alt="삼튀" height="225" />
+        <img src="https://img1.daumcdn.net/thumb/S500x500/?fname=http://t1.daumcdn.net/brunch/service/user/3fuW/image/iC-WXuTBY2EtYl5zOyT6QFnoxnE.jpg" alt="필리핀돼지요리" height="225" />
+        <!--
+					..\ 		한 수준 위 폴더
+					..\..\ 		두 수준 위 폴더
+					alt 속성은 반드시 표기해야한다. 미표기시 웹표준에 어긋남.
+					내용이 없는 이미지면 alt속성을 공란(alt="")으로 표시
+				-->
+      </p>
+    </div>
+  </body>
+</html>

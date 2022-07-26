@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="" />
+    <style></style>
+    <script>
+      let names = new Array("wonsun", "jaemoonlee", "kitae", "gracehwang");
+      for (i = 0; i < names.length; i++) {
+        document.write(`names 배열의 ${i + 1}번째 이름: ${names[i]}<br>`);
+      }
+      document.write(`names 배열에서 사전에서 가장 먼저 나오는 이름: ${names.sort()[0]}<br>`);
+      document.write("names 배열을 증가순 정렬:");
+      for (i = 0; i < names.length; i++) {
+        document.write(` ${names.sort()[i]}`);
+      }
+      // 가장 긴 이름 코드
+      let longest = names[0];
+      for (let i = 1; i < names.length; i++) {
+        // 하나씩 비교해서 긴걸 longest 값으로 넣음. 더 긴것이 나오면 교체 아니면 계속 유지
+        if (names[i].length > longest.length) longest = names[i];
+      }
+      document.write("<br>가장 긴 이름 : " + longest + "<br>");
+      // let numbering = new Object();
+      // for (i = 0; i < names.length; i++) {
+      //   numbering.+"names"+i = names[i].length;
+      // }
+    </script>
+  </head>
+  <body></body>
+</html>

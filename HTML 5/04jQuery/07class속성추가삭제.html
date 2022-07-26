@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <style>
+      .p {
+        background: red;
+      }
+    </style>
+    <p>p 태그</p>
+    <p>p 태그</p>
+    <p>p 태그</p>
+    <p>p 태그</p>
+    <p>p 태그</p>
+    <p>p 태그</p>
+    <button onclick="addClassP()">addClass</button>
+    <button onclick="removeClassP()">removeClass</button>
+    <button onclick="toggleClassP()">toggleClass</button>
+    <script>
+      function addClassP() {
+        $("p").addClass("p");
+      }
+      function removeClassP() {
+        $("p").removeClass("p");
+      }
+      function toggleClassP() {
+        $("p").toggleClass("p");
+      }
+    </script>
+  </body>
+</html>

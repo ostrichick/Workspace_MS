@@ -1,0 +1,67 @@
+<!DOCTYPE>
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <script src="../jquery-3.6.0.min.js"></script>
+  <script>
+	$(function(){
+		$("table:not(#t1) td:last").css("background","yellow");
+
+		// 셀렉터로 찾은 요소 안에 해당 문자열을 포함하고 있는 요소를 찾는다.
+		$("#t1 td:contains('1')").css("background","red");
+		
+		//셀렉터로 찾은 요소의 자손으로 has의 섹렉터를 포함하고 있는 요소를 찾는다.
+		$("#t1 td:has(h5)").css("color","yellow");
+
+		$("#t1 td:gt(3)").css("background","blue");
+		$("#t1 td:lt(3)").css("background","pink");
+		$("#t1 td:eq(3)").css("background","orange");
+
+		//셀렉터로 찾아진 요소들 중에 구조적으로 몇번째 자식인지를 비교하여 요소를 찾는다.
+		//이때 수열을 사용하거나 정확한 수치를 사용할 수 있다.
+		$("#t1 td:nth-child(2n)").css("background","skyblue");
+	});
+  </script>
+ </HEAD>
+ <BODY>
+	<table border="1">
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>5</td>
+				<td>6</td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td>8</td>
+				<td>9</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<table id="t1" border="1">
+		<tbody>
+			<tr>
+				<td><h5>1</h5></td>
+				<td>1</td>
+				<td>3</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>5</td>
+				<td>6</td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td>8</td>
+				<td>9</td>
+			</tr>
+		</tbody>
+	</table>
+ </BODY>
+</HTML>

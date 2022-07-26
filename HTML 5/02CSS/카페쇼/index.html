@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<!--문서의 구조 제작 순서
+* 큰 영역 상위영역에서부터 작은영역 하위영역 순으로
+* 방향은 위에서부터 아래, 왼쪽에서부터 오른쪽으로
+* DIV는 범용 태그
+1. 상단 중앙 하단으로 분할
+    <header> 상단: 사이트 로고, 타이틀, 네비게이션과 같은 인터페이스
+    <main> 중앙: 페이지 내용
+    <footer> 하단: 회사정보와 필수요소
+    <aside> : 화면의 가장자리
+
+2. 컨텐츠를 기준으로하여 영역을 제작한다.
+    <section>: 주요 컨텐츠(내용)
+    <article>: 독립적 컨텐츠, 보조내용
+
+3. 배경의 형태가 공통된 스타일을 적용하기 위해 추가적으로 영역을 생성한다.
+-->
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>CafeShow</title>
+    <style>
+      @import url(style.css);
+    </style>
+  </head>
+  <body>
+    <header>
+      <!--상단 영역-->
+      <div class="header">
+        <div class="header-left-sns">
+          <ul>
+            <li>
+              <a href=""><img src="images/sns01.jpg" alt="페이스북" /></a>
+            </li>
+            <li>
+              <a href=""><img src="images/sns02.jpg" alt="인스타그램" /></a>
+            </li>
+            <li>
+              <a href=""><img src="images/sns03.jpg" alt="블로그" /></a>
+            </li>
+            <li>
+              <a href=""><img src="images/sns04.jpg" alt="유튜브" /></a>
+            </li>
+          </ul>
+        </div>
+        <div class="header-right-login">
+          <ul>
+            <li>
+              <a href=""><img src="images/login.jpg" alt="로그인" /></a>
+            </li>
+            <li>
+              <a href=""><img src="images/english.jpg" alt="English" /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <nav class="topbar">
+        <div class="logo">
+          <h1><img src="images/logo.jpg" alt="카페쇼 로고" /></h1>
+        </div>
+        <div class="banner"><img src="images/banner.jpg" alt="" /></div>
+        <div class="mainmenu">
+          <ul>
+            <li>
+              <a href=""><img src="images/menu01.jpg" alt="서울카페쇼" /></a>
+            </li>
+            <li>
+              <a href=""><img src="images/menu02.jpg" alt="주요행사" /></a>
+            </li>
+            <li>
+              <a href=""><img src="images/menu03.jpg" alt="참가업체" /></a>
+            </li>
+            <li>
+              <a href=""><img src="images/menu04.jpg" alt="참관객" /></a>
+            </li>
+            <li>
+              <a href=""><img src="images/menu05.jpg" alt="파트너스" /></a>
+            </li>
+            <li>
+              <a href=""><img src="images/menu06.jpg" alt="미디어센터" /></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!--중앙영역-->
+    <section class="main-top">
+      <div class="scrollbar">
+        <h3>
+          <img
+            src="images/main_veiw.jpg"
+            alt="서울카페쇼 홍보대사 카페리안 9기 모집"
+          />
+        </h3>
+      </div>
+    </section>
+    <section class="main-2nd">
+      <div class="notice">
+        <h3><img src="images/notice_t.jpg" alt="공지사항" /><br /></h3>
+        <img src="images/notice.jpg" alt="공지사항 내용" />
+      </div>
+      <div class="movieclip">
+        <h3><img src="images/movie_t.jpg" alt="홍보동영상" /><br /><br /></h3>
+        <p>
+          <iframe
+            width="464"
+            height="236"
+            src="https://www.youtube.com/embed/orfyJhJ-djY"
+            title="카페쇼 브랜드 소개영상"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </p>
+      </div>
+      <div class="contact">
+        <img
+          src="images/tel.jpg"
+          alt="사무국 안내 참가 업체 문의 02-6000-6701 참관문의 02-6000-6720 이메일 info@cafeshow.com"
+        />
+      </div>
+    </section>
+    <section class="main-3rd">
+      <div class="event">
+        <h3>주요행사</h3>
+        <div class="event-detail">
+          <ul>
+            <li class="event-left">
+              <img src="images/event_img_01.jpg" alt="" /> <br />경연대회
+            </li>
+            <li>
+              <img src="images/event_img_03.jpg" alt="" /><br />체험/특별행사
+            </li>
+            <li><img src="images/event_img_02.jpg" alt="" /><br />세미나</li>
+            <li>
+              <img
+                src="images/event_img_05.jpg"
+                alt=""
+              /><br />월드커피리더스포럼
+            </li>
+            <li class="event-right">
+              <img src="images/event_img_04.jpg" alt="" /><br />WBC 2017
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="main-4th">
+      <div class="dongsi">
+        <h3><img src="images/forum_t.jpg" alt="동시개최행사" /></h3>
+        <a href=""
+          ><img
+            src="images/forum.jpg"
+            alt="월드 커피 리더스 포럼 2016년 11월 10일 목요일부터 12일 토요일까지 서울 코엑스"
+        /></a>
+      </div>
+      <div class="advert">
+        <!--<img src="images/ads_t.jpg" alt="광고" />-->
+        <a href=""
+          ><h3><img src="images/hello.jpg" alt="광고2" /></h3>
+          <img
+            src="images/ads.jpg"
+            alt="서울카페쇼 공식파트너십 엔조이카페 모집!"
+        /></a>
+      </div>
+    </section>
+    <!--하단영역-->
+    <footer class="footer">
+      <div class="coop">
+        <h3><img src="images/ep_t.jpg" alt="참가업체소개" /></h3>
+        <div class="companies">
+          <a href=""><img src="images/ep01.jpg" alt="바겐" /></a>
+          <a href=""><img src="images/ep02.jpg" alt="발리푸드" /></a>
+          <a href=""><img src="images/ep03.jpg" alt="비엘코리아" /></a>
+          <a href=""><img src="images/ep04.jpg" alt="비티엔" /></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

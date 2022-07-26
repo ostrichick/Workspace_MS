@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <!--
+진열방식 display 에 따른 구분
+1. 모든 태그는 네모나게 생겼다
+2. 태그는 블럭blcok과 인라인inline으로 나뉜다
+    *테이블 관련 태그는 제외
+3. 인라인블록 inline-block 형태도 있다
+    1) 블럭태그
+        div,h1~h6,p,ol,ul,li,dl,dt,dd,hr
+
+        a. 수직정렬 = 구조를 만들 때 사용됨
+        b. width와 height로 크기조절이 가능
+        c. 기본 너비는 부모와 같고 높이는 내용만큼 적용
+
+    2) 인라인태그
+        a,span,strong,em
+        (중요하지않음) b,i,small,del,ins,sup,sub,mark
+        
+        a. 수평정렬 = 내용을 표시할 때 사용 (=텍스트와 같은 취급)
+        b. 크기조절이 불가능 
+        c. 너비 높이 둘 다 내용만큼 적용
+        d. 공백, 띄어쓰기 인식함
+        e. 블럭태그를 감쌀 수 없다 (부모가 될 수 없다)
+
+    3) 인라인블록
+        img,iframe,video,audio 
+
+        a. 수평정렬
+        b. 크기조절이 가능
+        c. 너비 높이가 내용만큼 적용됨
+
+  블럭태그를 수평정렬하는 방법
+
+  1) display:inline; 또는 inline-block;
+    1. inline은 크기 조절이 안됨
+    2. inline은 block 요소를 감쌀 수 없다 
+    3. 공백을 인식함
+    4. inline-block은 수직정렬을 추가로 지정해야함
+
+  2) float:left 또는 right
+    1.가운데정렬이 안됨
+    2.block요소가 float 적용된 요소들을 인식하지 못한다
+      -float다음에 오는 요소 : clear 속성 사용하여 float의 영향을 지우면 영역 인식 가능
+      -float요소를 감싸는 부모요소
+        ㄱ. 부모요소에게 float를 적용 (쓰지않음)
+        ㄴ. 강제로 높이값 주기 (간단하지만 차선책)
+        ㄷ. 밑에다 투명한 hr같은 블럭태그 추가
+        ㄹ. css에 가상요소 after로 content:''; display:block, clear:both 추가
+
+
+      *. clear:both;(left,right) 선행되는 float효과를 지운다
+      -float 요소의 행을 나눌 수 있다
+
+  레이아웃을 구성하는 새로운 기능
+-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>진열방식</title>
+    <style>
+      .tag {
+        border: 1px solid #474747;
+        width: 200px;
+        height: 100px;
+        margin: 0px;
+      }
+      /*.block {
+        display: inline-block;
+      }
+      .inline {
+        display: inline-block;
+      }*/
+    </style>
+  </head>
+  <body>
+    <!--블록-->
+    <div class="block tag">영역태그</div>
+    <h1 class="block tag">제목태그</h1>
+    <p class="block tag">단락태그</p>
+    <!--인라인-->
+    <span class="inline tag">인라인영역</span>
+    <a class="inline tag">링크</a>
+    텍스트
+    <strong class="inline tag">강조</strong>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>웹 페이지의 구성 요소</title>
+<style>
+	body { background-color : skyblue; color : green;
+				margin-left : 40px; margin-right : 40px;}
+	h3 { text-align : center; color : blue;}
+	hr { height : 5px; border : solid grey;
+				background-color : grey }
+	span { color: red; font-size: 20px; }
+</style>
+<script>
+	function show() { // <img>에 이미지 달기
+		document.getElementById("fig").src = "ElvisPresley.png"
+	}
+	function hide() { // <img>에 이미지 제거
+		document.getElementById("fig").src= "";
+	}
+</script>
+</head>
+<body>
+<h3 onmouseover="show()" onmouseout="hide()">자기소개</h3>
+<hr>
+<div><img id="fig" src=""></div>
+나는 서울에서 태어났다
+신발 사이즈는 <span>265mm</span>이다.
+좋아하는 음식은<span>타코</span>이다.
+</body>
+</html>

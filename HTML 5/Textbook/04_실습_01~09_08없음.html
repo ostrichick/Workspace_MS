@@ -1,0 +1,120 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4과 실습</title>
+    <style>
+      a#linkcolor {
+        text-decoration: none;
+        color: blue;
+      }
+      a#linkcolor:hover {
+        font-size: 2em;
+      }
+      a#linkcolor:visited {
+        color: violet;
+      }
+      .s01 span {
+        background-color: aqua;
+      }
+      .s01 {
+        background: beige;
+        color: navy;
+      }
+      .s01 h1 {
+        text-align: right;
+      }
+      .s02 p {
+        background: aliceblue;
+        color: brown;
+        font-family: "Lucida Console", "맑은 고딕";
+        font-size: 20px;
+      }
+      .s02 span {
+        font-size: 1.5em;
+        text-decoration: underline;
+      }
+      /* .s03 table {
+        border: 1px green dotted;
+      } */
+      .s03 .brown {
+        background: brown;
+      }
+      .s03 td,
+      .s03 th {
+        min-width: 80px;
+      }
+      .s07 div {
+        width: 400px;
+        height: 400px;
+        border: green dotted 5px;
+        background: url("kitty.jpg") no-repeat;
+        background-size: contain;
+      }
+      .s07 div:hover {
+        background: url("g_kitty.jpg") center/contain no-repeat;
+        box-shadow: 0 0 15px blue;
+      }
+      .s07 h1{color:yellow;text-shadow: 5px 5px 5px black,0 0 25px blue,0 0 5px darkblue;}
+    </style>
+  </head>
+  <body>
+    <h1><a id="linkcolor" href="https://naver.com">연습 11번</a></h1>
+    <hr />
+    <section class="s01">
+      <h1>소연재</h1>
+      <hr />
+      <p>Lorem, ipsum <span> dolor</span> sit amet consectetur adipisicing<span>elit.</span> Inventore deserunt officiis velit ad <span> praesentium </span> beatae, omnis natus ex eos.</p>
+    </section>
+    <hr />
+    <section class="s02">
+      <h1>02 텍스트와 폰트</h1>
+      <hr />
+      <p>aliciablue에 browm색 무슨 폰트로 20px 크기이고 <span>이 부분은 그것보다 1.5배 크다.</span></p>
+    </section>
+    <hr />
+    <section class="s03">
+      <h1>03 색 이름과 코드</h1>
+      <hr />
+      <table border="1">
+        <thead>
+          <th>이름</th>
+          <th>코드</th>
+          <th>색</th>
+          <th>이름</th>
+          <th>코드</th>
+          <th>색</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Brown</td>
+            <td>#A52A2A</td>
+            <td class="brown"></td>
+            <td></td>
+            <td>#A52A2A</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <hr />
+    <section class="s07">
+      <h1>07 :hover 활용 08 액자 테두리</h1>
+      <hr />
+      마우스를 올리면 앞면
+      <div class="card">d?</div>
+    </section>
+  </body>
+</html>

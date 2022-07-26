@@ -1,0 +1,57 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "java",
+      "targetPath": "${workspaceFolder}/${workspaceFolderBasename}.jar",
+      "elements": [
+        "${compileOutput:Estudiar}",
+        "${dependencies:Estudiar}",
+        "${compileOutput:JSPnew}",
+        "${dependencies:JSPnew}",
+        "${compileOutput:app}",
+        "${dependencies:app}",
+        "${compileOutput:boardStudy}",
+        "${dependencies:boardStudy}",
+        "${compileOutput:dev_erd}",
+        "${dependencies:dev_erd}",
+        "${compileOutput:dev_jdbc}",
+        "${dependencies:dev_jdbc}",
+        "${compileOutput:happybath}",
+        "${dependencies:happybath}",
+        "${compileOutput:jspStudy}",
+        "${dependencies:jspStudy}"
+      ],
+      "problemMatcher": [],
+      "label": "java: exportjar:221025",
+      "group": "build"
+    },
+    {
+      "type": "cppbuild",
+      "label": "C/C++: g++.exe 활성 파일 빌드",
+      "command": "C:/MinGW/bin/g++.exe",
+      "args": ["-fdiagnostics-color=always", "-g", "${file}", "-o", "${fileDirname}\\${fileBasenameNoExtension}.exe"],
+      "options": {
+        "cwd": "C:/MinGW/bin"
+      },
+      "problemMatcher": ["$gcc"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "detail": "디버거에서 생성된 작업입니다."
+    },
+    {
+      "type": "cppbuild",
+      "label": "C/C++: g++.exe 활성 파일 빌드",
+      "command": "C:/MinGW/bin/g++.exe",
+      "args": ["-fdiagnostics-color=always", "-g", "${file}", "-o", "${fileDirname}\\${fileBasenameNoExtension}.exe"],
+      "options": {
+        "cwd": "C:/MinGW/bin"
+      },
+      "problemMatcher": ["$gcc"],
+      "group": "build",
+      "detail": "컴파일러: C:/MinGW/bin/g++.exe"
+    }
+  ]
+}

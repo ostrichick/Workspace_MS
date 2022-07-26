@@ -1,0 +1,293 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>와이어프레임 실습</title>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        margin: 0px;
+        background: #fafafa;
+        font-family: Arial, "돋움", dotum, sans-serif;
+      }
+      section {
+        width: 500px;
+        height: 80vh;
+        min-height: 680px;
+        background: white;
+        text-align: center;
+        margin: 10vh auto;
+        border: 1px solid black;
+        border-radius: 5px;
+      }
+      form {
+        width: 55%;
+        height: 100%;
+        margin: auto;
+      }
+      .header {
+        font-size: 30px;
+        padding: 10px 0px;
+      }
+      .header:first-letter {
+        font-weight: bold;
+        color: red;
+      }
+      input {
+        height: 30px;
+        width: 267px;
+      }
+      input[type="submit"] {
+        width: 100%;
+        height: 40px;
+        padding: 0px;
+      }
+      .rows {
+        width: 100%;
+        text-align: left;
+      }
+      .rows:not(.h) {
+        padding-bottom: 15px;
+      }
+      div.id {
+        text-align: left;
+      }
+      input[type="text"].id {
+        width: 177px;
+      }
+      input[type="button"].id {
+        width: 85px;
+        height: 36px;
+        margin-top: 2px;
+        margin-bottom: 0px;
+      }
+      .birth {
+        width: 80px;
+      }
+      .birth2 {
+        width: 80px;
+        height: 37px;
+      }
+      input[type="radio"] {
+        width: 30px;
+        height: inherit;
+      }
+      #phone1 {
+        width: 80px;
+        height: 35px;
+      }
+      #phone2,
+      #phone3 {
+        width: 80px;
+        height: 30px;
+      }
+    </style>
+    <script>
+      function checkFn(obj) {
+        if (obj.getAttribute("name") == "id") {
+          if (obj.value == "") {
+            obj.nextElementSibling.nextElementSibling.innerHTML = "*필수";
+            obj.nextElementSibling.nextElementSibling.style.color = "red";
+          } else {
+            obj.nextElementSibling.nextElementSibling.innerHTML = "";
+          }
+        } else if (obj.getAttribute("name") == "password") {
+          if (obj.value == "") {
+            obj.nextElementSibling.innerHTML = "*필수";
+            obj.nextElementSibling.style.color = "red";
+          } else {
+            obj.nextElementSibling.innerHTML = "";
+          }
+        } else if (obj.getAttribute("name") == "passwordre") {
+          if (obj.value == "") {
+            obj.nextElementSibling.innerHTML = "*필수";
+            obj.nextElementSibling.style.color = "red";
+          } else {
+            var passwordVal = document.getElementById("password").value;
+            if (passwordVal == obj.value) {
+              //패스워드 확인 양식이 비워있지 않고 입력한 값이 비밀번호와 일치함
+              obj.nextElementSibling.innerHTML = "";
+            } else {
+              obj.nextElementSibling.innerHTML = "*비밀번호 불일치";
+              obj.nextElementSibling.style.color = "red";
+            }
+          }
+        }
+      }
+
+      function validation() {
+        var id = document.getElementById("id").value;
+        id = document.frm.id.value;
+        var password = document.getElementById("password").value;
+        password = document.frm.password.value;
+
+        var passwordre = document.frm.passwordre.value;
+        var flag = true;
+
+        if (id == "") {
+          document.frm.id.nextElementSibling.nextElementSibling.innerHTML =
+            "*필수";
+          document.frm.id.nextElementSibling.nextElementSibling.style.color =
+            "red";
+          document.frm.id.focus();
+          flag = false;
+        }
+        if (password == "") {
+          document.frm.password.nextElementSibling.innerHTML = "*필수";
+          document.frm.password.nextElementSibling.style.color = "red";
+          document.frm.password.focus();
+          flag = false;
+        }
+
+        if (passwordre == "") {
+          document.frm.passwordre.nextElementSibling.innerHTML = "*필수";
+          document.frm.passwordre.nextElementSibling.style.color = "red";
+          document.frm.passwordre.focus();
+          flag = false;
+        } else {
+          if (passwordre != password) {
+            document.frm.passwordre.nextElementSibling.innerHTML =
+              "*비밀번호 불일치";
+            document.frm.passwordre.nextElementSibling.style.color = "red";
+            document.frm.passwordre.focus();
+            flag = false;
+          }
+        }
+        return flag;
+      }
+    </script>
+  </head>
+  <body>
+    <section>
+      <form name="frm" action="#" method="post" onsubmit="return validation();">
+        <div class="header">Join</div>
+        <div class="rows h">
+          <label for="id">아이디</label>
+        </div>
+        <div class="rows id">
+          <input
+            type="text"
+            class="id"
+            name="id"
+            id="id"
+            placeholder="아이디를 입력하세요."
+            onblur="checkFn(this)"
+          />
+          <input type="button" class="id" value="id 중복확인" />
+          <span></span>
+        </div>
+        <div class="rows h">
+          <label for="password">비밀번호</label>
+        </div>
+
+        <div class="rows">
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="비밀번호를 입력하세요."
+            onblur="checkFn(this)"
+          />
+          <span></span>
+        </div>
+        <div class="rows h">
+          <label for="passwordre">비밀번호 확인</label>
+        </div>
+        <div class="rows">
+          <input
+            type="password"
+            name="passwordre"
+            id="passwordre"
+            placeholder="비밀번호를 다시 입력하세요."
+            onblur="checkFn(this)"
+          />
+          <span></span>
+        </div>
+        <div class="rows h">
+          <label for="name">이름</label>
+        </div>
+        <div class="rows">
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="이름을 입력하세요."
+          />
+        </div>
+        <div class="rows h">
+          <label for="birth1">생년월일</label>
+        </div>
+        <div class="rows">
+          <input
+            type="text"
+            class="birth"
+            name="birth1"
+            id="birth1"
+            placeholder="년(4자)"
+          />&nbsp;
+          <select class="birth2" name="birth2">
+            <option value="0">월</option>
+            <option value="1">1월</option>
+            <option value="2">2월</option>
+            <option value="3">3월</option>
+            <option value="4">4월</option>
+            <option value="5">5월</option>
+            <option value="6">6월</option>
+            <option value="7">7월</option>
+            <option value="8">8월</option>
+            <option value="9">9월</option>
+            <option value="10">10월</option>
+            <option value="11">11월</option>
+            <option value="12">12월</option></select
+          >&nbsp;
+          <input
+            type="text"
+            class="birth"
+            name="birth3"
+            id="birth3"
+            placeholder="일"
+          />
+        </div>
+        <div class="rows h">
+          <label for="gender">성별</label>
+        </div>
+        <div class="rows">
+          <input type="radio" name="gender" id="gender" value="m" />남자
+          <input type="radio" name="gender" value="f" />여자
+        </div>
+        <div class="rows h">
+          <label for="email">이메일</label>
+        </div>
+        <div class="rows">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="이메일을 입력하세요"
+          />
+        </div>
+        <div class="rows h">
+          <label for="phone1">연락처</label>
+        </div>
+        <div class="rows">
+          <select name="phone1" id="phone1">
+            <option value="010">010</option>
+            <option value="010">011</option>
+            <option value="010">016</option></select
+          >&nbsp;
+          <input
+            type="text"
+            name="phone2"
+            id="phone2"
+            placeholder="연락처2"
+          />&nbsp;
+          <input type="text" name="phone3" id="phone3" placeholder="연락처3" />
+        </div>
+        <div class="rows">
+          <label>
+            <input type="submit" value="회원가입" />
+          </label>
+        </div>
+      </form>
+    </section>
+  </body>
+</html>

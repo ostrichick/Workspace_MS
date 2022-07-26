@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스위치문</title>
+    <script>
+      /*switch문: 값에 따라 서로 다른 코드를 실행할 때 사용*/
+
+      let fruits = "bananas";
+      switch (fruits) {
+        case "bananas":
+          //case 값에는 상수const나 리터럴literal만 가능
+          console.log("price is 200$");
+          break;
+        //   break의 역할은 블록{} 밖으로 내보내는 것
+        case "apples":
+          // 변수 또는 연산식은 사용할 수 없다
+          console.log("price is 400$");
+          break;
+        case "grapes":
+          console.log("price is 1300$");
+          break;
+        default: //식에 있는 값이 case에 없을 경우 실행
+          console.log("we don't have it");
+        //default는 항상 switch문 맨 마지막에 작성
+      }
+      let day = "Mon";
+      switch (day) {
+        case "Mon":
+        case "Tue":
+        case "Wed":
+        case "Thu":
+        case "Fri":
+          console.log("정상영업");
+          break;
+        case "Sat":
+        case "Sun":
+          console.log("휴일");
+          break;
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

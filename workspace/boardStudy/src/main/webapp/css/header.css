@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+header {
+  background: lightgrey;
+  border: 1px solid black;
+  height: 100px;
+}
+
+.menuArea li {
+  display: inline-block;
+}
+
+.loginArea {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}

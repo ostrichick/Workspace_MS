@@ -1,0 +1,205 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+}
+li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+/* @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap"); */
+/*div,
+nav,
+h2,
+h3,
+h4,
+article,
+li,
+ul {
+  outline: 3px green dotted;
+}*/ /*
+header,
+section,
+footer {
+  outline: 3px blue solid;
+}*/
+body {
+  font-family: "Noto Sans KR", "Noto Sans CJK KR", "Malgun Gothic", "맑은 고딕";
+}
+hr.clear_line {
+  clear: both;
+  border: 0;
+}
+header,
+section,
+footer {
+  width: 1200px;
+  margin: 30px auto 30px;
+  clear: both;
+  text-align: center;
+  /* outline: 3px dotted blue; */
+}
+.topbar {
+  border-bottom: 2px #ccc solid;
+  text-align: left;
+  height: 50px;
+}
+.topbar,
+header {
+  margin: 0 auto 30px;
+}
+.topbar h2,
+.topbar h3 {
+  float: left;
+}
+.topbar h3 {
+  margin-left: 120px;
+}
+header .nav01 {
+  float: right;
+}
+.secondbar {
+  clear: both;
+}
+.secondbar h1 {
+  float: left;
+}
+.secondbar .nav02 {
+  display: inline-block;
+}
+.secondbar .nav03 {
+  float: right;
+}
+nav li {
+  float: left;
+}
+.main-blue-area {
+  background: url(images/bg.png) center center no-repeat;
+  padding: 40px 0;
+  height: auto;
+  overflow: hidden;
+}
+.main-blue-area .blue-left {
+  text-align: left;
+  color: white;
+  float: left;
+  width: 50%;
+}
+.main-blue-area h2 {
+  font-size: 33px;
+  font-weight: bold;
+  padding: 18px 0;
+}
+.main-blue-area .blue-left p {
+  font-size: 14px;
+  color: #c5dbff;
+}
+.main-blue-area .blue-right {
+  float: right;
+  text-align: right;
+  width: 50%;
+}
+.main-blue-area .statsbar {
+  text-align: center;
+  font-size: 20px;
+  color: white;
+}
+.stats01,
+.stats02,
+.stats03 {
+  display: inline-block;
+  padding: 5px 30px;
+  margin: 30px 0;
+  color: #c5dbff;
+}
+.stats02 {
+  border-left: #c5dbff dashed 2px;
+  border-right: #c5dbff dashed 2px;
+}
+.statsbar dd {
+  font-size: 34px;
+  font-weight: bold;
+  font-family: "Roboto";
+  color: #fff;
+  letter-spacing: -1px; /*자간 글자간격*/
+}
+.statsbar dt {
+  font-weight: normal;
+  font-size: 16px;
+}
+.main-blue-area .blue-bot {
+  clear: both;
+  padding-top: 10px;
+}
+.main-blue-area .blue-nav,
+.main-blue-area .blue-banner {
+  display: inline-block;
+}
+.main-board {
+  height: auto;
+  padding: 30px 0;
+}
+.main-board .new-data,
+.main-board .popular-data {
+  display: inline-block;
+  margin: 0 10px;
+}
+.main-databanner {
+  height: auto;
+  font-size: 0;
+  /* background-color: rgb(223, 230, 240); */
+  background-color: #e3eaf4;
+  padding: 100px 0;
+}
+.main-databanner li {
+  display: inline-block;
+}
+.main-bottom {
+  padding: 30px 0;
+  font-size: 0;
+  height: 250px;
+}
+.main-bottom .notice,
+.bl-banner {
+  float: left;
+}
+.main-bottom .bottom-banner,
+.br-banner {
+  float: right;
+  /* margin-right: 10px; */
+}
+
+.bottom-banner div:first-child {
+  margin-right: 10px;
+}
+.br-banner img:first-child {
+  margin-bottom: 10px;
+}
+/*
+가상클래스
+:first-child 첫번재 자식요소에게 스타일 부여
+:last-child 마지막 자식요소에게 스타일 부여
+:nth-child($) $번째 자식요소에게 스타일 부여
+*/
+.footer-top {
+  background-color: rgb(67, 69, 71); /*#505256*/
+  padding: 12px 30px 12px 190px;
+  text-align: right;
+}
+.footer-top li {
+  float: left;
+}
+footer .footer-link {
+  padding-left: 30px;
+}
+.footer-bot {
+  background-color: rgb(80, 82, 86); /*#434547*/
+  text-align: left;
+  padding: 20px 30px;
+}
+.footer-bot img:first-child {
+  margin-right: 30px;
+}

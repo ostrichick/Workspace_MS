@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="" />
+    <style>
+      h3,
+      hr {
+        margin: 2px;
+      }
+      li {
+        transition: all 0.5s;
+      }
+    </style>
+  </head>
+  <body onload="loadFn()">
+    <h3>마우스휠을 사용한 이미지 확대 축소</h3>
+    <hr />
+    <img id="kitty" src="kitty.jpg" width="100" onwheel="wheelFn(event,this)" />
+    <script>
+      let imgSize = 100;
+      function wheelFn(e, obj) {
+        if (e.wheelDelta < 0) {
+          // 휠 위로 굴리면 양수, 아래로 굴리면 음수
+          imgSize *= 0.95;
+          obj.style.width = imgSize + "px";
+          if (imgSize < 100) imgSize = 100;
+        } else {
+          imgSize *= 1.05;
+          obj.style.width = imgSize + "px";
+        }
+        console.log(imgSize);
+      }
+    </script>
+    <img src="kitty.jpg" width="100" onwheel="changeIMG(event, this)" />
+    <script>
+      function changeIMG(e, obj) {
+        var delta = e.wheelDelta;
+        if (delta > 0) {
+          var width = obj.width;
+          obj.width = width + width * 0.05;
+          //   var width = obj.height;
+          //   obj.width = height + height * 0.5;
+        } else {
+          var width = obj.width;
+          obj.width = width - width * 0.05;
+          //   var height = obj.height;
+          //   obj.width = height - height * 0.5;
+        }
+      }
+    </script>
+    <hr />
+    <h3>span 태그에만</h3>
+    <p>span 태그에만 <span>마우스</span>가 올라올 때 (onmouseover) 밑줄이 그어지고 <span>마우스</span>가 내려갈 때 (onmouseout) 밑줄이 사라지도록 <span>자바스크립트 코드</span>를 작성해요</p>
+    <script>
+      //window에서 발생한 모든 mouseover 이벤트를 감지하여 호출되는 이벤트리스너
+      window.onmouseover = function (e) {
+        // window dom중 spandp 마우스 오버 된 경우 밑줄
+        //1. mouseover가 발생한 타겟을 가져온다
+        var target = e.target;
+        //2. target은 dom객체이므로 객체 태그명이 span인지 확인
+        if (target.tagName.toUpperCase() == "SPAN") {
+          //3. 해당 target에 css 밑줄을 추가
+          // window에 이벤트가 등록되었으므로 window가 this임
+          target.style.textDecoration = "underline";
+        }
+      };
+
+      window.onmouseout = function (e) {
+        var target = e.target;
+        if (target.tagName.toUpperCase() == "SPAN") {
+          target.style.textDecoration = "";
+        }
+      };
+    </script>
+    <hr />
+    <script>
+      //페이지 전부 로드
+      function loadFn() {
+        // 로드 후 모든 li 찾기
+        let tagLi = document.querySelectorAll("li");
+        //  li태그에 한번식 접근
+        for (i = 0; i < tagLi.length; i++) {
+          // console.log(tagLi[i].innerHTML);
+          // 모든 li에 이벤트 등록
+          tagLi[i].onclick = function () {
+            for (var j = 0; j < tagLi.length; j++) {
+              // 클릭할 때 모든 li태그 글씨 크기를 원래대로
+              tagLi[j].style.fontSize = "1em";
+            }
+            // 클릭이 발생한 li만 1.3배로
+            this.style.fontSize = "1.3em";
+          };
+          // tagLi[i].addEventListener("click", function () {
+          //   this.style.fontSize = "1.3em";
+          //   console.log(i);
+          // });
+
+          // tagLi[i].setAttribute("onclick", "larger(this)");
+          // function larger(obj) {
+          //   for (i = 0; i < tagLi.length; i++) {
+          //     tagLi[i].style.fontSize = "";
+          //   }
+          //   obj.style.fontSize = "1.3em";
+          //   console.log(i);
+          // }
+        }
+      }
+    </script>
+    <h3>아이템을 클릭하면 1.3배크기</h3>
+    <hr />
+    <p>여름 방학때 하고 싶은 것들</p>
+    <ul>
+      <li>태평양 요트 일주</li>
+      <li>로켓 타고 화성 탐사</li>
+      <li>전동휠체어 타기</li>
+      <li>계단 거꾸로 내려가기</li>
+    </ul>
+  </body>
+</html>

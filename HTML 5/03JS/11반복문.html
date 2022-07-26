@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반복문 while</title>
+    <script>
+      /*반복문while 해당되는 문장들을 반복하여 실행 p292*/
+      console.log("실행문1");
+      if (true) console.log("실행문2"); // 조건문
+      while (false) {
+        console.log("실행문3");
+        wait;
+      } // 반복문을 만들 때에는 무한반복이 되지 않도록 제어해야함
+      var num = 1;
+      while (num < 10 && num >= 0) console.log("반복문 실행 - " + num++);
+      // 반복을 시작할 때 마다 조건 while()을 검증함
+      console.log("현재 num의 값 : " + num);
+
+      /* 1부터 100까지 합을 구하기*/
+      var numero = 1;
+      var sum = 0;
+      while (numero >= 1 && numero < 101) {
+        sum += numero;
+        console.log(sum, "+", numero);
+        numero++;
+      }
+      console.log(sum, "+", numero);
+      var i = 1;
+      var total = 0;
+      while (i <= 100) {
+        total += i;
+        i++;
+        console.log(i, " and ", total);
+      }
+      console.log(i, " and ", total);
+    </script>
+  </head>
+  <body></body>
+</html>

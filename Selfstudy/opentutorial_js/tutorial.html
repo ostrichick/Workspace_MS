@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이이이잉</title>
+    <link rel="stylesheet" href="" />
+    <style></style>
+    <script>
+      /*
+      function Person() {} // 함수 생성
+      var p = new Person(); // new를 통해 빈 객체Person{} 를 생성함
+      p.name = "egoing"; // p 하위 name
+      p.introduce = function () {
+        // 익명함수를 p.introduce에 넣음?
+        // p 하위 introduce
+        return "My name is " + this.name;
+      };
+      document.write(p.introduce());
+
+      var p2 = new Person();
+      p2.name = "leezche";
+      p2.introduce = function () {
+        return "My name is " + this.name;
+      };
+      document.write(p2.introduce());
+      */
+      function Person(name) {
+        this.name = name;
+        this.introduce = function () {
+          return "My name is " + this.name;
+        };
+      }
+      var p1 = new Person("egoing"); // 생성자의 역할 = 객체 초기화 init.
+      //  빈 객체의 함수 안에 새 변수를 집어 넣음. 코드의 재 사용성이 높아짐
+      document.write(p1.introduce() + "<br />");
+
+      var p2 = new Person("leezche");
+      document.write(p2.introduce());
+
+      // var person = {};
+      // person.name = "egoing";
+      // person.introduce = function () {
+      //   return "My name is " + this.name;
+      // };
+      // document.write(person.introduce());
+    </script>
+  </head>
+  <body>
+    <header></header>
+    <!-- header end -->
+    <main></main>
+    <!-- main end -->
+    <footer></footer>
+    <!-- footer end -->
+    <script src=""></script>
+  </body>
+</html>

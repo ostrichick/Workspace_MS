@@ -1,0 +1,48 @@
+/*
+src:url(웹폰트의 주소)
+
+폰트의 확장자 
+.eot : 구형브라우저(IE)용 웹폰트
+.woff : 브라우저용 웹폰트
+.ttf : 시스템 폰트
+ */
+
+@font-face {
+  font-family: "NanumBarunGothic";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot");
+  /* 구형브라우저는 요소끼리 , 로 연결하는걸 오류로 받아들여 출력하지 않음. 그래서 위에 것만 적용 */
+  src: url("https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix") format("embedded-opentype"),
+    url("https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff") format("woff"), url("https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf") format("truetype");
+  /* 문서가 서버에 있는게 아니라 로컬 컴퓨터에 있기 때문에 맨 앞에 https:를 넣어줘야함 */
+}
+
+@font-face {
+  font-family: "NanumBarunGothic";
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot");
+  src: url("https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix") format("embedded-opentype"),
+    url("https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff") format("woff"), url("https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "NanumBarunGothic";
+  font-style: normal;
+  font-weight: 300;
+  src: url("https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot");
+  src: url("https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix") format("embedded-opentype"),
+    url("https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff") format("woff"),
+    url("https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf") format("truetype");
+}
+
+.nanumbarungothic * {
+  font-family: "NanumBarunGothic", sans-serif;
+}
+/* @font-face {
+  font-family: "nbg";
+  src: url("../font/NanumBarunGothic.eot");
+  src: url("../font/NanumBarunGothic.eot?#iefix") format("embedded-opentype"), url("../font/NanumBarunGothic.woff") format("woff"), url("../font/NanumBarunGothic.ttf") format("truetype");
+  src: local(※), url("../font/NanumBarunGothic.woff") format("woff");
+} */

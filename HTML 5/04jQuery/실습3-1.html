@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3-1</title>
+    <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="" />
+    <script>
+      function add() {
+        //코드 ㅈ가성
+        if ($("input[name = title]").val() == "" || $("input[name = content]").val() == "" || $("input[name = owner]").val() == "") {
+          alert("값을 모두 입력해주세요.");
+        } else {
+          $("table").append("<tr><td>" + $("input[name = title]").val() + "</td><td>" + $("input[name = content]").val() + "</td><td>" + $("input[name = owner]").val() + "</td></tr>");
+          $("input[name = title]").val("");
+          $("input[name = content]").val("");
+          $("input[name = owner]").val("");
+        }
+      }
+    </script>
+    <script>
+      function add_r() {
+        var title = $("input[name=title]").val();
+        var content = $("input[name=content]").val();
+        var owner = $("input[name=owner]").val();
+
+        var tr = "<tr><td>" + title + "</td><td>" + content + "</td><td>" + owner + "</td></tr>";
+        $("table").append(tr);
+
+        $("input[name]").val("");
+      }
+    </script>
+  </head>
+
+  <body>
+    제목 : <input type="text" name="title" /><br />
+    내용 : <input type="text" name="content" /><br />
+    작성자 : <input type="text" name="owner" /><br />
+    <input type="button" value="테이블에 추가" onclick="add_r()" />
+    <table border="1">
+      <tr id="tr">
+        <td>제목</td>
+        <td>내용</td>
+        <td>작성자</td>
+      </tr>
+    </table>
+  </body>
+</html>

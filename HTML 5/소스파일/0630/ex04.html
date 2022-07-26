@@ -1,0 +1,24 @@
+<!DOCTYPE>
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <script src="../jquery-3.6.0.min.js"></script>
+  <script>
+	function addFile(){
+		var html = "<input type='file'>";
+
+		$("div").append("<br>"+html);
+	}
+	function delFile(){
+		$("input:file").last().remove();
+	}
+  </script>
+ </HEAD>
+ <BODY>
+  <div>
+	<input type="file">
+	<input type="button" value="추가" onclick="addFile()">
+	<input type="button" value="삭제" onclick="delFile()">
+  </div>
+ </BODY>
+</HTML>

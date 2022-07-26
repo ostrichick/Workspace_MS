@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>매개변수와 인수</title>
+    <link rel="stylesheet" href="" />
+    <style></style>
+    <script>
+      let a = 10; //전역변수
+      let b = 5;
+      var x = 1;
+
+      if (false) {
+        let c = "블록변수 c";
+        var d = "전역변수 d";
+      }
+      //   console.log(c);
+      console.log(d);
+
+      function sum(x, y) {
+        // x,y는 매개변수
+        var value = x + y; // value 지역변수 : 해당 구역 안에서만 작동
+        //블록(구역)안에서 선언된 변수로 블럭 안에서만 효력을 지님
+        console.log("두 수의 합:" + value);
+        console.log("x의 값:" + this.x); //동일한 이름이 있으면 "this"로 접근
+        // 단 let으로 선언된 전역변수는 접근할 수 없음
+      }
+      //함수 호출시 각 매개변수에 들어갈 값을 지정해주어야 한다
+      //각 매개변수에 들어가는 값은 인수라고 한다
+      sum(7, 20); //인수7은 매개변수x, 인수20은 매개변수y에 들어간다 (순차적으로)
+      sum(6, 8);
+      sum(a, b);
+      /*let x = 1;
+      let y = 1;
+      console.log(x, y);*/
+      //   console.log("현재 value의 값:" + value);
+
+      function sub(x, y) {
+        //각 매개변수에 기본값 설정
+        var value = x - y;
+        console.log("두 수의 차:" + value);
+      }
+      sub(); //인수가 없거나 부족하면 기본값 사용함
+      sub(20); //x에 20, y에 기본값
+      sub(100, 46); //
+
+      function mul(x, y = 2) {
+        //기본값은 뒤의 변수부터 채워야함
+        var value = x * y;
+        console.log("두 수의 곱:" + value);
+      }
+      mul();
+      mul(3);
+    </script>
+  </head>
+  <body>
+    <header></header>
+    <!-- header end -->
+    <main></main>
+    <!-- main end -->
+    <footer></footer>
+    <!-- footer end -->
+  </body>
+</html>

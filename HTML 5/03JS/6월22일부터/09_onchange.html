@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>onchange</title>
+    <link rel="stylesheet" href="" />
+    <style></style>
+  </head>
+  <body>
+    <h3>onchange 이벤트 예제</h3>
+    <hr />
+    onchange는 입력 양식의 상태가 변했을 때 호출되는 이벤트<br />
+    <input type="checkbox" onchange="console.log('변경')" />
+    <!-- 체크박스의 onchange는 사실상 onclick과 동일 --><br />
+    <input type="text" onchange="console.log('변경')" /><br />
+    <textarea name="dd" id="" cols="30" rows="3" onchange="console.log('변경')"></textarea><br />
+    <select name="" id="" onchange="changeSel(this)" size="5">
+      <option value="ㅇ">ㅇㅇㅇㅇㅇ</option>
+      <option value="">ㄴㄴㄴㄴㄴ</option>
+      <option value="">ㅎㅎㅎㅎㅎ</option>
+      <option value="">ㅅㅅㅅㅅㅅ</option>
+    </select>
+    <script>
+      function changeSel(obj) {
+        //select box에서 선택된 목록이 변경 되었을 때 변경된 목록명 경고창 띄우기
+
+        // let options = obj.options;
+        // selecbox의 options 프로퍼티는 해당 셀렉트박스의 모든 옵션태그를 배열로 반환한다.
+        // for (i = 0; options.length; i++) {
+        //! option태그의 selected 프로퍼티는 선택 여부를 반환
+        //   if (options[i].selected) {
+        //     console.log(options[i].innerHTML + "선택됨");
+        //     break;
+        //   }
+        // }
+
+        //selectedIndex 프로퍼티는 셀렉트박스에서 현재 선택된 옵션의 index를 반환
+        var index = obj.selectedIndex;
+        console.log(obj.options[index].text);
+      }
+    </script>
+    <hr />
+    <input type="text" onkeydown="console.log('키다운');return false;" /> <br />
+    <input type="text" onkeypress="console.log('키프레스')" /><br />
+    <input type="text" onkeyup="this.value = this.value.replaceAll(/[^0-9]/g,'')" maxlength="3" />
+    <hr />
+    <form name="frm" onreset="console.log('초기화 클릭 됨');return false;" action="09_예제_10.html" method="get" onsubmit="validation();return false;">
+      <!-- form method get-오픈, post-숨기기 
+    action="" 데이터를 어디로 보낼 것인지 경로 정보-->
+      <fieldset>
+        <legend>폼 태그, 필드셋, 레전드</legend>
+        <input type="text" value="_" name="t1" /><br />
+        <input type="email" placeholder="abc@efg.com" name="email" /><br />
+        <input type="password" name="pw" /><br /><input type="reset" /><br />
+        <input type="submit" value="보내기" />
+        <!-- *화면 입력 폼에서 사용자가 입력한 데이터를 처리하는 곳으로 전송될 때 파라미터라고 함 
+        *파라미터는 & 구분자를 경계로 키와 값의 형태로 구성-->
+      </fieldset>
+    </form>
+    <script>
+      function validation() {
+        // 전송 버튼을 눌렀을 때 입력 값이 유효한지에 대한 체크를 하는 함수
+        // 모든 값이 유효해야만 데이터가 전송되게 한다
+        var t1 = document.frm.t1.value;
+        if (t1 == "") {
+          //전송 불가
+          alert("T1은 필수 입력 값입니다");
+          document.frm.t1.focus();
+        } else {
+          //전송
+          document.frm.submit();
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 우선 순위</title>
+    <style>
+      #this {
+        background: purple;
+      }
+      .parent .child {
+        background-color: navy;
+      }
+      .grand h1 a {
+        background-color: lime;
+      }
+      .parent a {
+        background-color: pink;
+      }
+      h1 .child {
+        background-color: brown;
+      }
+      .child {
+        background: orange;
+      }
+      div h1 a {
+        background: magenta;
+      }
+      h1 a {
+        background: yellow;
+      }
+      div a {
+        background: cyan;
+      }
+      a {
+        background: grey !important;
+        color: white;
+        padding: 10px 30px;
+      }
+      a {
+        background: red;
+      }
+    </style>
+    <link href="우선순위.css" rel="stylesheet" />
+    <style>
+      a {
+        background: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grand">
+      <h1 class="parent">
+        <a id="this" class="child" style="background: gold">CSS 우선순위</a>
+      </h1>
+      <ol>
+        <li></li>
+        <li>ID > CLASS > TAG</li>
+        <li>셀렉터의 갯수가 많은 쪽이 우선순위가 높다</li>
+        <li>작성순서가 아래에 작성된 것이 우선순위가 높다</li>
+      </ol>
+      <p>
+        우선 순위가 높다 = 최종적으로 적용되는 스타일 <br />브라우저 개발자
+        도구로 우선순위 확인 가능
+      </p>
+      <p><strong>!important</strong> 속성을 추가하여 스타일 강제 가능</p>
+    </div>
+  </body>
+</html>

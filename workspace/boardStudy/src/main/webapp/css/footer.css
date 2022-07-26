@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+footer {
+  text-align: center;
+  height: 70px;
+  background: darkgrey;
+  color: #999;
+  border-top: 1px solid black;
+}

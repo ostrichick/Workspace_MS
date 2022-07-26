@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>조건문 예제</title>
+  </head>
+  <body>
+    <h3>학 점 매 기 기</h3>
+    <hr />
+    <script>
+      //   alert("경고창 명령어");
+      //   prompt("값을 입력받는 창");
+      let grade;
+      let score = prompt("점수 입력");
+      if (score > 100 || score < 0) {
+        grade = "?";
+        document.write("잘못된 값을 입력했습니다.<br/>");
+        document.write("1부터 100까지의 값을 입력하세요.<br/>");
+      } else if (score >= 90) {
+        grade = "A학점";
+      } else if (score >= 80) grade = "B학점";
+      else if (score >= 70) grade = "C학점";
+      else if (score >= 60) grade = "D학점";
+      else grade = "F학점";
+
+      document.write(`${score}는 ${grade}입니다.`);
+      console.log(score);
+      console.log(grade);
+    </script>
+  </body>
+</html>

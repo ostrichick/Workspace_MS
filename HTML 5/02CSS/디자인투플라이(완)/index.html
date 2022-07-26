@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>디자인투플라이</title>
+
+    <!--파비콘연결-->
+    <link href="images/favicon.png" rel="shortcut icon" />
+
+    <!--웹폰트연결-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
+
+    <!--CSS연결-->
+    <link href="css/reset.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+
+    <!--플러그인 연결-->
+
+    <!--스크립트 작성-->
+    <!-- <script src="js/script.js"></script> -->
+  </head>
+  <body>
+    <header>
+      <div class="inner">
+        <div id="logo">
+          <h1><a href="#">디자인투플라이</a></h1>
+        </div>
+        <!--//logo-->
+
+        <div id="btns">
+          <ul>
+            <li>
+              <a href="#" class="open_search">
+                <i class="xi-search xi-2x"></i>
+                <span>검색하기</span></a
+              >
+            </li>
+            <li>
+              <a href="#" class="open_menu" onclick="menu_show(this,event)">
+                <i class="xi-bars xi-2x"></i>
+                <i class="xi-close xi-2x"></i>
+                <span>전체<br />메뉴</span></a
+              >
+            </li>
+          </ul>
+        </div>
+        <!--//btns-->
+
+        <div class="menu">
+          <nav id="gnb">
+            <ul>
+              <li>
+                <a href="#">ABOUT</a>
+                <div class="sub">
+                  <ul>
+                    <li><a href="#">BRAND STORY</a></li>
+                    <li><a href="#">PROCESS</a></li>
+                    <li><a href="#">NEWS</a></li>
+                  </ul>
+                </div>
+                <!--//sub-->
+              </li>
+              <li>
+                <a href="#">WORKS</a>
+                <div class="sub">
+                  <ul>
+                    <li><a href="#">ARCHITECTURE</a></li>
+                    <li><a href="#">RESIDENCE</a></li>
+                    <li><a href="#">COMMERCIAL</a></li>
+                    <li><a href="#">MEICAL</a></li>
+                    <li><a href="#">OFFICE</a></li>
+                  </ul>
+                </div>
+                <!--//sub-->
+              </li>
+              <li>
+                <a href="#">BRANDING</a>
+                <div class="sub">
+                  <ul>
+                    <li><a href="#">LOGO</a></li>
+                    <li><a href="#">WEB</a></li>
+                    <li><a href="#">PRINT</a></li>
+                    <li><a href="#">EMBLEM</a></li>
+                  </ul>
+                </div>
+                <!--//sub-->
+              </li>
+              <li><a href="#">PRESS</a></li>
+              <li>
+                <a href="#">고객문의</a>
+                <div class="sub">
+                  <ul>
+                    <li><a href="#">BOARD</a></li>
+                    <li><a href="#">WORKSTORY</a></li>
+                  </ul>
+                </div>
+                <!--//sub-->
+              </li>
+              <li><a href="#">CONTACT</a></li>
+            </ul>
+          </nav>
+          <!--//gnb-->
+
+          <div id="sns">
+            <ul>
+              <li>
+                <a href="#"><i class="xi-instagram xi-2x"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="xi-facebook-official xi-2x"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="xi-naver-square xi-2x"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!--//menu-->
+      </div>
+      <!--//inner-->
+    </header>
+
+    <section id="search">
+      <div class="inner">
+        <form>
+          <input type="text" placeholder="Search.." />
+          <p>검색을 할땐 엔터를 누르고, 닫으려면 <span>ESC키를 누르거나</span> X를 눌러주세요.</p>
+        </form>
+      </div>
+      <a class="close_search" onclick="close(this)"><i class="xi-close"></i></a>
+    </section>
+    <!--//search-->
+
+    <main>
+      <section id="main_view">
+        <div class="slider">
+          <article class="view view1">
+            <div class="text">
+              <h3>위크앤드 상가주택</h3>
+              <p>Residence / 주거공간인테리어</p>
+              <a href="#">READ MORE<i class="xi-angle-right"></i></a>
+            </div>
+            <!--//text-->
+          </article>
+          <article class="view view2">
+            <div class="text">
+              <h3>카페 올소 also</h3>
+              <p>Commercial / 카페 인테리어</p>
+              <a href="#">READ MORE<i class="xi-angle-right"></i></a>
+            </div>
+            <!--//text-->
+          </article>
+          <article class="view view3">
+            <div class="text">
+              <h3>위크앤드 상가주택</h3>
+              <p>Residence / 주거공간인테리어</p>
+              <a href="#">READ MORE<i class="xi-angle-right"></i></a>
+            </div>
+            <!--//text-->
+          </article>
+          <article class="view view4">
+            <div class="text">
+              <h3>PNB 풍년제과 본점</h3>
+              <p>Commercial / 상업공간인테리어</p>
+              <a href="#">READ MORE<i class="xi-angle-right"></i></a>
+            </div>
+            <!--//text-->
+          </article>
+          <article class="view view5">
+            <div class="text">
+              <h3>이중본 별궁</h3>
+              <p>Commercial / 상업공간인테리어</p>
+              <a href="#">READ MORE<i class="xi-angle-right"></i></a>
+            </div>
+            <!--//text-->
+          </article>
+          <article class="view view6">
+            <div class="text">
+              <h3>전주신시가지 아이파크</h3>
+              <p>Residence / 주거공간인테리어</p>
+              <a href="#">READ MORE<i class="xi-angle-right"></i></a>
+            </div>
+            <!--//text-->
+          </article>
+        </div>
+        <!--//slider-->
+        <div class="pager"></div>
+      </section>
+      <!--//main_view-->
+
+      <section id="works">
+        <h3><a href="#">WORKS</a></h3>
+        <ul class="list">
+          <li>
+            <a href="#">
+              <h4>온가족이 함께 할 수 있는 공간 – 진흥더블파크 50평대 아파트인테리어</h4>
+              <p><i class="xi-paper-o"></i>residence, works</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <h4>에코시티 포스코 더샵 2차 – 40평대 아파트 인테리어</h4>
+              <p><i class="xi-paper-o"></i>residence, works</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <h4>전주 신시가지 아이파크 – 50평대 아파트인테리어</h4>
+              <p><i class="xi-paper-o"></i>residence, works</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <h4>전주 에코시티 자이 인테리어 – 40평대 아파트인테리어</h4>
+              <p><i class="xi-paper-o"></i>residence, works</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <h4>코디얼레시피CORDIAL RECIPE – 전주객리단길 카페</h4>
+              <p><i class="xi-paper-o"></i>commercial, works</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <h4>코디얼레시피CORDIAL RECIPE – 전주객리단길 카페</h4>
+              <p><i class="xi-paper-o"></i>commercial, works</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <h4>테이블웍스(table works) – 스터디카페</h4>
+              <p><i class="xi-paper-o"></i>commercial, works</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <h4>디자이너의 집 미니멀 라이프 – 상가주택 인테리어</h4>
+              <p><i class="xi-paper-o"></i>residence, works</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <h4>그루브(Groove) – 프리미엄 하우스브랜드 안경 편집샵</h4>
+              <p><i class="xi-paper-o"></i>commercial, works</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <h4>익산 포스코 더샵 40평대 아파트 인테리어 – 전주인테리어</h4>
+              <p><i class="xi-paper-o"></i>residence, works</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <h4>더나은미래의원 – 전주 병원 인테리어</h4>
+              <p><i class="xi-paper-o"></i>medical, works</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <h4>전북대 올스타 양궁카페 인테리어</h4>
+              <p><i class="xi-paper-o"></i>residence, works, works</p>
+            </a>
+          </li>
+        </ul>
+        <a class="more" href="#">WORKS MORE..</a>
+      </section>
+      <!--//works-->
+
+      <section id="about">
+        <div class="inner">
+          <h3>ABOUT DESIGNTWOPLY</h3>
+          <p>항상 지켜봐 주시고 응원해주시고, 소중한 인연이 되어주신 모든 클라이언트 분들께 다시 한번 감사드립니다. 앞으로도 기대에 어긋나지 않는 디자인투플라이가 되기 위해 열심히 노력하겠습니다.</p>
+          <a href="#">ABOUT DESIGNTWOPLY<i class="xi-long-arrow-right"></i></a>
+        </div>
+      </section>
+      <!--//about-->
+
+      <section id="press">
+        <h3><a href="#">PRESS</a></h3>
+        <div class="inner">
+          <ul class="slider">
+            <li class="item">
+              <div class="box">
+                <p><img src="images/press/p01.jpg" alt="" /></p>
+                <h4>데코저널 DECO JOURNAL 2018.11<</h4>
+                <p><i class="xi-paper-o"></i>press</p>
+              </div>
+              <!---//box-->
+            </li>
+            <li class="item">
+              <div class="box">
+                <p><img src="images/press/p02.jpg" alt="" /></p>
+                <h4>데코저널 DECO JOURNAL 2018.08</h4>
+                <p><i class="xi-paper-o"></i>press</p>
+              </div>
+              <!---//box-->
+            </li>
+            <li class="item">
+              <div class="box">
+                <p><img src="images/press/p03.jpg" alt="" /></p>
+                <h4>iw 인테리어 월드 vol.163</h4>
+                <p><i class="xi-paper-o"></i>press</p>
+              </div>
+              <!---//box-->
+            </li>
+            <li class="item">
+              <div class="box">
+                <p><img src="images/press/p04.jpg" alt="" /></p>
+                <h4>데코저널 DECO JOURNAL 2018.04</h4>
+                <p><i class="xi-paper-o"></i>press</p>
+              </div>
+              <!---//box-->
+            </li>
+            <li class="item">
+              <div class="box">
+                <p><img src="images/press/p05.jpg" alt="" /></p>
+                <h4>인테르니 & 데코 interni & decor 2017.11</h4>
+                <p><i class="xi-paper-o"></i>press</p>
+              </div>
+              <!---//box-->
+            </li>
+            <li class="item">
+              <div class="box">
+                <p><img src="images/press/p06.jpg" alt="" /></p>
+                <h4>네이버 리빙</h4>
+                <p><i class="xi-paper-o"></i>press</p>
+              </div>
+              <!---//box-->
+            </li>
+            <li class="item">
+              <div class="box">
+                <p><img src="images/press/p07.jpg" alt="" /></p>
+                <h4>食尚小馆Ⅳ：从里到外的设计 IV (Delicious + Fashion: Restaurant & Bar Design 4)</h4>
+                <p><i class="xi-paper-o"></i>press</p>
+              </div>
+              <!---//box-->
+            </li>
+            <li class="item">
+              <div class="box">
+                <p><img src="images/press/p08.jpg" alt="" /></p>
+                <h4>인테르니 & 데코 interni & decor 2017.05</h4>
+                <p><i class="xi-paper-o"></i>press</p>
+              </div>
+              <!---//box-->
+            </li>
+            <li class="item">
+              <div class="box">
+                <p><img src="images/press/p09.jpg" alt="" /></p>
+                <h4>인테리어스 INTERIORS 2016.11</h4>
+                <p><i class="xi-paper-o"></i>press</p>
+              </div>
+              <!---//box-->
+            </li>
+            <li class="item">
+              <div class="box">
+                <p><img src="images/press/p10.png" alt="" /></p>
+                <h4>c3.korea</h4>
+                <p><i class="xi-paper-o"></i>press</p>
+              </div>
+              <!---//box-->
+            </li>
+            <li class="item">
+              <a class="more" href="#">PRESS MORE <i class="xi-long-arrow-right"></i></a>
+            </li>
+            <!---//box-->
+          </ul>
+          <div class="dot"></div>
+        </div>
+        <!--//inner-->
+      </section>
+      <!--//section-->
+
+      <section id="partners">
+        <h3>PARTNERS</h3>
+        <ul>
+          <li><img src="images/partners/01.jpg" alt="" /></li>
+          <li><img src="images/partners/02.jpg" alt="" /></li>
+          <li><img src="images/partners/03.jpg" alt="" /></li>
+          <li><img src="images/partners/04.jpg" alt="" /></li>
+          <li><img src="images/partners/05.jpg" alt="" /></li>
+          <li><img src="images/partners/06.jpg" alt="" /></li>
+          <li><img src="images/partners/07.jpg" alt="" /></li>
+          <li><img src="images/partners/08.jpg" alt="" /></li>
+          <li><img src="images/partners/09.jpg" alt="" /></li>
+          <li><img src="images/partners/10.jpg" alt="" /></li>
+          <li><img src="images/partners/11.jpg" alt="" /></li>
+          <li><img src="images/partners/12.jpg" alt="" /></li>
+          <li><img src="images/partners/13.jpg" alt="" /></li>
+          <li><img src="images/partners/14.jpg" alt="" /></li>
+          <li><img src="images/partners/15.jpg" alt="" /></li>
+          <li><img src="images/partners/16.jpg" alt="" /></li>
+          <li><img src="images/partners/17.jpg" alt="" /></li>
+          <li><img src="images/partners/18.jpg" alt="" /></li>
+          <li><img src="images/partners/19.jpg" alt="" /></li>
+          <li><img src="images/partners/20.jpg" alt="" /></li>
+          <li><img src="images/partners/21.jpg" alt="" /></li>
+          <li><img src="images/partners/22.jpg" alt="" /></li>
+          <li><img src="images/partners/23.jpg" alt="" /></li>
+          <li><img src="images/partners/24.jpg" alt="" /></li>
+          <li><img src="images/partners/25.jpg" alt="" /></li>
+          <li><img src="images/partners/26.jpg" alt="" /></li>
+          <li><img src="images/partners/27.jpg" alt="" /></li>
+        </ul>
+      </section>
+      <!--//partners-->
+    </main>
+
+    <footer>
+      <div class="inner">
+        <div class="logo">
+          <h1><img src="images/btm-logo.png" alt="디자인투플라이" /></h1>
+        </div>
+        <!--//logo-->
+        <div class="info">
+          <dl>
+            <dt>JEONJU</dt>
+            <dd>634-7, Junghwasan-dong 2-ga, Wansan-gu, Jeonju-si, Jeollabuk-do, Korea</dd>
+            <dd>designtwoply@naver.com</dd>
+            <dd>Tel : 070-4120-2678~2679</dd>
+            <dd>Fax : 063-232-2679</dd>
+          </dl>
+        </div>
+        <!--//info-->
+        <div class="info">
+          <dl>
+            <dt>DAEGU</dt>
+            <dd>14, Muhak-ro 21an-gil, Suseong-gu, Daegu, Korea</dd>
+            <dd>twoplytk@naver.com</dd>
+            <dd>Tel : 053-295-2915</dd>
+            <dd>Fax : 053-295-2916</dd>
+          </dl>
+        </div>
+        <!--//info-->
+      </div>
+      <!--//inner-->
+      <div class="copyright">
+        <p>Copyright $copy; 디자인투플라이 All Rights Reserved.</p>
+      </div>
+      <!--//copyright-->
+    </footer>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

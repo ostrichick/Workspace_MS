@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반복문 do while</title>
+    <script>
+      /*while 문*/
+      let a = 0;
+      while (a <= 10) {
+        // 반복 조건을 실행하기 전!에 검증
+        console.log("while문 반복 - a:" + a);
+        a += 2;
+      }
+
+      /* do while 문*/
+      let b = 0;
+      do {
+        // 조건과 관계없이 무조건! 한번은 실행됨
+        console.log("do while문 반복 - b:" + b);
+        b += 2;
+      } while (b <= 10); // 실행 후 반복 진행 여부를 조건에 의해 검증
+      console.log(a, b);
+      /*
+    break p294 블럭 바깥으로 탈출
+    continue p295
+    */
+
+      var num = 0;
+      while (num < 10) {
+        num++;
+        if (num == 8) break;
+        if (num == 4) continue;
+        console.log(`반복문 ${num}번째 실행`);
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

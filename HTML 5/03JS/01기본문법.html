@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>기본문법</title>
+    <!-- 자바스크립트
+    
+    1) 예전에는 동적 외형 구현 용도로 사용 -> 이후 다양한 기능 추가
+    2) 스크립트 언어로 프로그램 언어와 가장 큰 차이는 컴파일이 필요 없음
+    3) -->
+    <!-- 외부 CSS 연결 -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- HTML문서 내에 작성 -->
+    <style>
+      img {
+        border: 5px solid #f00;
+        width: 300px;
+      }
+      /* 주석 */
+    </style>
+
+    <!-- 외부 JS 연결 -->
+    <script src="script.js"></script>
+    <!-- HTML 내부에 스크립트 작성 -->
+    <script>
+      document.write("자바스크립트");
+    </script>
+  </head>
+  <body>
+    <!-- 태그 안 속성에 인라인 스타일로 작성 -->
+    <img
+      src="name.jpg"
+      style="width: 400px"
+      onmouseover="this.src='c.jpg'"
+      onmouseout="this.src='name.jpg'"
+    />
+    <img
+      src="name.jpg"
+      alt="이미지"
+      onmouseover="this.src='c.jpg'"
+      onmouseout="this.src='name.jpg'"
+    />
+    <!-- 이벤트에 한해서는 속성으로 작성할 수 있음 -->
+
+    <a href="javascript:alert('경고창표시');">링크!</a>
+    <!-- url 부분에 스크립트 작성할 수 있음 -->
+
+    <!-- 보통 문서의 하단에 스크립트를 적는 경우가 많다 -->
+    <script src="script2.js"></script>
+    <script>
+      /* body 마지막에 스크립트를 작성하는 이유
+      html요소들이 선행되어야하기 때문*/
+      document.write("body안 스크립트.");
+      document.write("ㅎㅇ");
+      document.write("ㅂㅂㅂㅂㅂㅂㅂㅂㅂㅂㅂ");
+      // 한줄 주석
+      /*
+      여
+      러
+      줄
+      주
+      석
+      */
+    </script>
+    <script>
+      let a = 3,
+        b = 5;
+      document.write("a=" + a + ", b=" + b + "<br><br>");
+      document.write("두수의 차이 : " + (a - b > 0 ? a - b : (a - b) * -1));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>실습3</title>
+  </head>
+  <body>
+    <script>
+      document.write("<h1>document.write()로 표만들기</h1><hr /><p>저희 홈페이지에 오신 것을 환영합니다.</p><table border='1'><tr><td><b>n</b></td>");
+
+      for (var a = 0; a <= 9; a++) {
+        document.write(`<td>${a}</td>`);
+      }
+      document.write("</tr><tr><td><b>n&sup2;</b></td>");
+      for (var b = 0; b <= 9; b++) {
+        document.write(`<td>${b * b}</td>`);
+      }
+      document.write("</tr>");
+    </script>
+    <!-- <table border="1">
+      <tr>
+        <td>n</td>
+        <td>0</td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+      </tr>
+      <td>n&sup2;</td>
+      <td>0</td>
+      <td>1</td>
+      <td>4</td>
+      <td>9</td>
+      <td>16</td>
+    </table> -->
+  </body>
+</html>

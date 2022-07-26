@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>inline-block 수직 위치 조절</title>
+    <style>
+      div {
+        border: 10px solid #0ff;
+        background-color: #fcc;
+        font-size: 60px;
+        line-height: 100px;
+      }
+      img {
+        width: 300px;
+        vertical-align: -20px;
+      } /* 
+      vertical-align(수직정렬) : inline-block의 수직정렬
+            :baseline;글자 나열되는 라인에 맞추어 정렬 (기본값
+            top; 행의 높이에 맞춰 위로 정렬
+            bottom; 행의 높이에 맞춰 아래 정렬
+            text-top; 텍스트 기준 위 정렬
+            text-bottom; 텍스트 기준 아래 정렬
+            middle; 가운데 정렬
+            :숫자px; 입력한 수치만큼 baseline을 기준으로 이동정렬
+        */
+    </style>
+  </head>
+  <body>
+    <div>Itext<img src="name.jpg" alt="인라인블럭" />jpg</div>
+  </body>
+</html>

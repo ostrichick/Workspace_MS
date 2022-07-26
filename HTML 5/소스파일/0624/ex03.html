@@ -1,0 +1,40 @@
+<!DOCTYPE>
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+ </HEAD>
+ <BODY>
+	<h3>마우스 휠을 이용한 이미지 확대/축소</h3>
+	<hr>
+	<p>
+		이미지 위에 휠을 위로 굴리면 이미지가 축소 되고 아래로 굴리면 이미지가 확대 됩니다.
+	</p>
+	<img src="1.jpg" width="100" height="100" onwheel="changeIMG(event,this)">
+	<script>
+		function changeIMG(e,obj){
+			var delta = e.wheelDelta;
+			// 휠을 위로 굴리면 양수, 아래로 굴리면 음수
+			if(delta < 0){
+				//아래로 굴렀다
+				var width = obj.width;
+				obj.width = width+(width*0.5);
+
+				// html 태그에 인라인 속성으로 높이를 고정해 놨기 때문에 너비 값을 변경하여도
+				// 높이는 배율 변경이 되지 않는다.
+				var height = obj.height;
+				obj.height = height +(width*0.5);
+			}else{
+				//위로 굴렀다.
+				var width = obj.width;
+				obj.width = width-(width*0.5);
+
+				// html 태그에 인라인 속성으로 높이를 고정해 놨기 때문에 너비 값을 변경하여도
+				// 높이는 배율 변경이 되지 않는다.
+				var height = obj.height;
+				obj.height = height-(width*0.5);
+			}
+
+		}
+	</script>
+ </BODY>
+</HTML>

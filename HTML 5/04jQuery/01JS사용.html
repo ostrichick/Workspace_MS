@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <script>
+      function changeDiv() {
+        let box = document.getElementById("box");
+        box.style.width = "100px";
+        box.style.height = "100px";
+        box.style.background = "yellow";
+        box.style.outline = "1px dashed #666";
+      }
+    </script>
+  </head>
+  <body onload="changeDiv();">
+    <div id="box"></div>
+    <!-- #box div를 화면이 전부 로드됐을 때 너비 100px 높이 100px 배경 노란색이 되도록 -->
+    <script></script>
+  </body>
+</html>

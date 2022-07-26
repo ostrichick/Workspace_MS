@@ -1,0 +1,21 @@
+<!DOCTYPE>
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <script src="../jquery-3.6.0.min.js"></script>
+  <script>
+	$(function(){
+		$("h1").css("color","red");
+		$("#text").css("color","orange");		
+		$("h1[name=text]").css("color","yellow");
+		$(".text").css("color","green");
+	});
+  </script>
+ </HEAD>
+ <BODY>
+  <h1>text1</h1>
+  <h1 id="text">text2</h1>
+  <h1 name="text">text3</h1>
+  <h1 class="text">text4</h1>
+ </BODY>
+</HTML>

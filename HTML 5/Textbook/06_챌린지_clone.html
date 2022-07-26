@@ -1,0 +1,36 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>별 출력하기</title>
+  </head>
+  <body>
+    <h1>별 문자 출력하기</h1>
+    <hr />
+    <script>
+      let num = 0;
+      num = prompt("정수를 입력하세요"); // "5"
+      function printStar(x) {
+        var i = parseInt(x); //문자"5"를 숫자5로 변경
+        //조건문
+        if (isNaN(i)) {
+          // isNaN 인수로 받는 값이 숫자가 아니면 true
+          document.write("입력오류입니다.");
+          return 0; // 함수 종료
+        }
+        //반복문
+        for (var a = 1; a <= i; a++) {
+          for (var b = 1; b <= a; b++) {
+            document.write("*");
+          } //반복문 중첩 실행
+          document.write("<br/>");
+        }
+      } //end printStar
+      printStar(num);
+    </script>
+  </body>
+</html>

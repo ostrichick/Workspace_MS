@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연 산 자 1</title>
+    <script>
+      /*연산자(연산기호): 좌변과 우변을 연산하여 하나의 값을 도출한다*/
+      var a = 10;
+      let b = 5,
+        c = 3,
+        d = 2;
+
+      /*산술연산자(+, -, *, /, %) p275*/
+      console.log(a + b);
+      console.log(a - b);
+      console.log(a * c);
+      console.log(a / d);
+      console.log(a % c); //나머지 연산자
+
+      //   연산 우선순위
+      console.log(a + b * c);
+      console.log((a + b) * c); //괄호로 묶으면 연산우선순위 높아짐
+      console.log(((a + b) * c) / 2); //소괄호만 사용
+
+      /*문자연결 연산자 : 좌변과 우변을 연결 p284*/
+      console.log(a + 100); // 모두 숫자면 산술연산자 역할을 함
+      console.log("my name is" + " giorgio");
+      console.log("123" + 45); // 12345
+      console.log("변수a:" + a); // 변수a:10
+      console.log("text" + 100 + 4); // text1004
+      console.log("text" + (100 + 4)); //text104
+      console.log("변수b" + b + ", 변수c:" + c); //변수b:3, 변수c:3
+
+      /*템플릿문자열 : 백틱``을 사용하여 문자열을 표현*/
+      console.log(`템플릿문자열`);
+      console.log(`변수a:${a}, 변수d:${d}`); // 문자열 내에서 변수를 호출
+
+      /*eodlqdustkswk(=, +=, -=, /=, %= ㅔ276*/
+      a = 20; // 우변의 값 20을 좌변 a에 넣는다 (대입)
+
+      a = a + 1; //21
+      console.log("a는 :" + a);
+      a += 1; //현재  a값에 1을 더한다. //22
+      console.log("a는 :" + a);
+      a /= 2; // 22/2=11
+      console.log("a는 :" + a);
+      a -= 3; // 11-3=8
+      console.log("a는 :" + a);
+      a %= 5; // 8%5=3
+      console.log("a는 :" + a);
+      a *= 4; // 3*4=12
+      console.log("a는 :" + a);
+
+      /*증가연산자(++), 감소연산자(--) p279*/
+      console.log(`b:${b}, c:${c}`); // b:5, c:3
+      b++; //현재 b값을 1 증가
+      c--; //현재 c값을 1 감소
+
+      console.log(`b:${b}, c:${c}`); // b:6, c:2
+
+      let num = 10;
+      let value = null;
+      console.log(`num:${num}, value:${value}`); // num:10, value:null
+
+      value = ++num; // 전위(전치) 연산식이 시작되기 전에 증가
+      console.log(`num:${num}, value:${value}`); // num:11, value:11
+
+      num = 10;
+      value = num++; // 후위(후치) 
+
+      console.log(`num:${num}, value:${value}`); // num:11, value:10
+    </script>
+  </head>
+  <body></body>
+</html>

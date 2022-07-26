@@ -1,0 +1,25 @@
+객체지향 프로그램 특성 상속성, 다형성, 캡슐화
+
+객체(현실객체) -> 객체모델링, 추상화 -> SW객체
+
+속성                 ->               변수 (클래스: 객체생성을 위한 틀, 설계도, 프레임)
+동작행위              ->              메소드
+
+프로그램 생성주기 Software development life cycle
+요구사항 분석 - 요구사랑 정의 명세
+설계
+구현
+테스트 및 배포
+유지보수
+
+  클래스
+  -멤버변수 : 스태틱/정적/클래스 - JVM 내 메쏘드 영역 - 하나만 존재 - 가장 오래 메모리에 존재
+            vs 인스턴스 멤버변수 - JVM내 힙 영역 - 객체별로 존재
+    1. 접근지정자(제한자) : private, protected, (default), public
+    2. 수정자 : static, final, transient
+    3. 데이터형 
+      - 기본(primitive) - byte short int long double float boolean char
+      - 참조(reference) - 배열 클래스 인터페이스 enum
+    4. 변수이름 - 식별자 identifier
+  -생성자
+  -메소드

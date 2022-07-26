@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>박스모델</title>
+    <style>
+      div {
+        width: 200px;
+        height: 100px;
+        border: 3px solid #444;
+        text-align: center;
+      }
+      #a {
+        background-color: #f9c;
+        width: 320px;
+        border-radius: 15px;
+      }
+      #b {
+        background-color: #cf9;
+        padding: 20px;
+        border: 10px solid #f00;
+        box-sizing: content-box; /*박스영역의 크기 조절 기준을 변경
+        content-box: content 영역을 기준으로 크기조절
+        border-box: 테두리영역까지 크기조절기준이 됨
+        */
+        /*margin-left: 30px;
+        margin-top: -30px;
+        margin-bottom: 30px;*/
+      }
+      #c {
+        background-color: #9cf;
+        margin: 20px;
+      }
+      img {
+        width: 200px;
+        height: 200px;
+        border-radius: 100px;
+        padding: 10px 20px 30px 40px;
+      }
+      /*
+      image{padding:20px;} padding값: 4방향 모두 적용
+      padding: 20px 10px;} 값1: 위아래, 값2:좌우
+      padding: 20px 10px 5px;} 값1: 위, 값2: 좌우, 값3: 아래
+      padding: 20px 10px 5px 15px;} 시계방향 순서로 적용
+      */
+    </style>
+  </head>
+  <body>
+    <div id="a">영역태그 A</div>
+    <div id="b">영역태그 B</div>
+    <div id="img"><img src="..\name.jpg" alt="" /></div>
+    <div id="c">영역태그 C</div>
+    <!--
+      박스의 구성
+      1) content: 태그 안, 내용 (텍스트 혹은 다른 태그)
+        :width 와 height로 크기 조절
+      2) padding: 내부여백(영역의 확장) 백그라운드만 표현함
+      3) border: 테두리
+      4) margin :외부여백, 
+      상대적 위치, 
+      겹치는 영역에서 여러 값이 합쳐지지 않음 (여백이 겹쳐짐)
+      다른요소의 border를 기준으로 여백이 설정됨
+    -->
+  </body>
+</html>

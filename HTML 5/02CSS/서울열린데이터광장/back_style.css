@@ -1,0 +1,52 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+}
+li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h3 {
+  all: unset;
+}
+/*
+div,
+nav {
+  outline: 3px green dotted;
+}
+header,
+section,
+footer {
+  outline: 3px blue solid;
+}*/
+
+header,
+section,
+footer {
+  height: 50px;
+  margin: 0 auto 30px;
+  clear: both;
+}
+
+header {
+  width: 1200px;
+  margin: 0, auto;
+  border: 5px solid black;
+}
+header div {
+  outline: 3px solid blue;
+}
+header .topbar,
+header h3 {
+  float: left;
+}
+header nav {
+  float: right;
+}
+nav li {
+  float: left;
+}

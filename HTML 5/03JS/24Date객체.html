@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Date 객체</title>
+  </head>
+  <body>
+    <script>
+      // Date는 날짜와 시간 정보를 담는 객체
+
+      let now = new Date();
+      console.log(now);
+      let start = new Date(2022, 5, 14 - 30000);
+      //   월은 0에서 11까지
+      console.log(start);
+
+      if (now.getSeconds() % 2 == 0) {
+        document.body.style.backgroundColor = "pink";
+      } else {
+        document.body.style.backgroundColor = "cyan";
+      }
+      var output = "현재 : ";
+      output += now.getFullYear() + "년 ";
+      output += now.getMonth() + "월 ";
+      output += now.getDay() + "일 ";
+      output += now.getHours() + "시 ";
+      output += now.getMinutes() + "분 ";
+      output += now.getSeconds() + "초 ";
+      output += now.getMilliseconds() + "밀리초 ";
+      document.write(output);
+      //   document.write("<hr />현재 시간 : ");
+      //   document.write(now.getHours(), "시,");
+      //   document.write(now.getMinutes(), "분,");
+      //   document.write(now.getSeconds(), "초<br>");
+    </script>
+  </body>
+</html>

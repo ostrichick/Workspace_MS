@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML DOM 트리</title>
+    <link rel="stylesheet" href="" />
+    <style></style>
+  </head>
+  <body>
+    <h3>DOM 객체 P의 프로퍼티, 스타일, 이벤트리스너</h3>
+    <hr />
+    <p id="firstP" style="color: rgb(12, 12, 155); background: rgb(212, 212, 155)" onclick="this.style.color='teal'">이것은 <span style="color: magenta">문장입니다</span></p>
+    <script>
+      let p = document.getElementById("firstP");
+      let text = "p.id = " + p.id + "\n";
+      text += "p.tagName = " + p.tagName + "\n";
+      text += "p.innerHTML = " + p.innerHTML + "\n";
+      text += "p.style.color = " + p.style.color + "\n";
+      //   text += "p.style.margin = " + p.style.margin + "\n";
+      text += "p.style.backgroundColor = " + p.style.backgroundColor + "\n";
+      text += "p.onclick = " + p.onclick + "\n";
+      text += "p.childElementCount = " + p.childElementCount + "\n";
+      text += "너비 = " + p.offsetWidth + "\n";
+      text += "높이 = " + p.offsetHeight + "\n";
+      //   text += "너비 = " + p.style.width + "\n";
+      //   text += "높이 = " + p.style.height + "\n";
+      //   text += "p." = + p.  +  "\n";
+      alert(text);
+    </script>
+  </body>
+</html>

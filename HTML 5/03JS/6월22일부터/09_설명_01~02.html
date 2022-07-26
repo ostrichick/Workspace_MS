@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="" />
+    <script>
+      function init() {
+        document.getElementsByTagName("p")[0].style.color = "red";
+      }
+      function colorP() {
+        // document.getElementsByTagName("p")[0].style.color = "red";
+        document.getElementsByTagName("p")[0].addEventListener("click", init);
+      }
+    </script>
+    <style>
+      hr,
+      h3 {
+        margin: 2px;
+      }
+      #box01 {
+        border: 1px solid grey;
+        width: 100px;
+        height: 100px;
+        background: yellow;
+        margin: 5px;
+      }
+      #parent,
+      #parent2 {
+        height: 100px;
+        border: 1px solid grey;
+        background: orange;
+      }
+      #parent div,
+      #parent2 div {
+        height: 50px;
+        width: 100px;
+        margin: 30px;
+        border: 1px solid grey;
+        background: magenta;
+      }
+    </style>
+  </head>
+  <body onload="colorP()">
+    <p>로드되면 빨간색으로 변경</p>
+    <hr />
+    <h3>마우스 움직임</h3>
+    <hr />
+    <div>
+      <div id="box01"></div>
+    </div>
+    <script>
+      var box01 = document.getElementById("box01");
+      box01.onmouseover = function (e) {
+        this.innerHTML = e.x + "," + e.y;
+      };
+    </script>
+    <div id="parent">
+      <div id="box02"></div>
+    </div>
+    <div id="result"></div>
+    <script>
+      var cnt = 1;
+      // mouseover 이벤트는 자식요소에게도 영향을 주기 때문에 자식요소에 마우스가 들어와도 부모의 mouseover 이벤트가 발생한다
+      document.getElementById("parent").onmouseover = function (e) {
+        document.getElementById("result").innerHTML = cnt;
+        cnt++;
+      };
+    </script>
+    <div id="parent2">
+      <div id="box02"></div>
+    </div>
+    <div id="result2"></div>
+    <script>
+      var cnt2 = 1;
+      // mouseover 이벤트는 자식요소에게도 영향을 주기 때문에 자식요소에 마우스가 들어와도 부모의 mouseover 이벤트가 발생한다
+      document.getElementById("parent2").onmouseenter = function (e) {
+        document.getElementById("result2").innerHTML = cnt2;
+        cnt2++;
+      };
+    </script>
+    <hr />
+    <div onwheel="wheelFn(event,this)" style="height: 150px; border: 1px solid grey"></div>
+    <script>
+      function wheelFn(e, obj) {
+        obj.innerHTML += e.wheelDelta;
+      }
+    </script>
+  </body>
+</html>

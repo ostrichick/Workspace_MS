@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>마우스 리스너</title>
+    <link rel="stylesheet" href="" />
+    <style></style>
+    <script>
+      let width = 1;
+      function up(obj) {
+        obj.style.fontStyle = "";
+      }
+      function down(obj) {
+        obj.style.fontStyle = "italic";
+      }
+      function over(obj) {
+        obj.style.borderColor = "magenta";
+      }
+      function out(obj) {
+        obj.style.borderColor = "lightgrey";
+      }
+      function wheel(e, obj) {
+        if (e.wheelDelta < 0) {
+          width--;
+          if (width < 0) width = 0;
+        } else width++;
+        obj.style.borderStyle = "ridge";
+        obj.style.borderWidth = width + "px";
+
+        console.log(width);
+      }
+    </script>
+  </head>
+  <body>
+    <h3>마우스 관련 이벤트 리스너</h3>
+    <hr />
+    <div>
+      <p>
+        마우스 관련
+        <span onwheel="wheel(event, this)" onmousedown="down(this)" onmouseup="up(this)" onmouseover="over(this)" onmouseout="out(this)" style="border: 3px ridge grey; display: inline-block">
+          이 벤 트
+        </span>
+        가 발생
+      </p>
+    </div>
+    <script></script>
+  </body>
+</html>

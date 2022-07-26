@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent01 {
+        border: 10px solid #000;
+        width: 240px;
+        height: 240px;
+        margin: 5px;
+      }
+      .parent01 div {
+        width: 80px;
+        height: 80px;
+        float: left;
+      }
+      #c1 {
+        background: #234;
+      }
+      #c2 {
+        background: #432;
+      }
+      #c3 {
+        background: #345;
+      }
+      #c4 {
+        background: #543;
+      }
+      #c5 {
+        background: #456;
+      }
+      #c6 {
+        background: #654;
+      }
+      #c7 {
+        background: #678;
+      }
+      #c8 {
+        background: #876;
+      }
+      #c9 {
+        background: #789;
+      }
+      .parent02 {
+        border: 10px solid #000;
+        background: url(name.jpg);
+        width: 400px;
+        height: 500px;
+        margin: 5px;
+      }
+      .parent02 div {
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        vertical-align: middle;
+      }
+      #d01 {
+        background: #f11;
+      }
+      #d02 {
+        background: #f26;
+      }
+      #d03 {
+        background: #f62;
+      }
+      #d04 {
+        background: #f18;
+      }
+      #d05 {
+        background: #f81;
+      }
+      #d06 {
+        background: #c16;
+      }
+      #d07 {
+        background: #f61;
+      }
+      #d08 {
+        background: #a23;
+      }
+      #d09 {
+        background: #a94;
+      }
+      #d10 {
+        background: #392;
+      }
+      #d11 {
+        background: #129;
+      }
+      #d12 {
+        background: #938;
+      }
+      .asc21 {
+        float: left;
+      }
+      .asc22 {
+        float: right;
+      }
+      #d04,
+      #d06,
+      #d08,
+      #d10 {
+        clear: both;
+      }
+      .parent03 {
+        width: 900px;
+        height: 400px;
+        background: #ffc;
+        margin: 5px;
+        border: 10px solid #333;
+      }
+      .parent03 > div {
+        width: 300px;
+        height: 300px;
+        margin: 50px;
+        border: 10px solid rgb(118, 118, 211);
+      }
+      .left03 {
+        float: left;
+        background: pink;
+      }
+      .right03 {
+        float: right;
+        background: greenyellow;
+      }
+      .left03 div {
+        float: left;
+      }
+      .right03 div {
+        float: right;
+      }
+      .s100x100 {
+        width: 100px;
+        height: 100px;
+      }
+      #s01,
+      #s06 {
+        background: #00f;
+      }
+      #s02,
+      #s07 {
+        background: #33f;
+      }
+      #s03,
+      #s08 {
+        background: #66f;
+      }
+      #s04,
+      #s09 {
+        background: #99f;
+      }
+      #s05,
+      #s10 {
+        background: #bbf;
+      }
+      #s05,
+      #s07,
+      #s08 {
+        clear: both;
+      }
+      .wrap {
+        border: 10px solid #333;
+        width: 800px;
+        margin: 5px;
+        text-align: center;
+      }
+      .example04 {
+        height: 380px;
+      }
+      #e01 {
+        width: 65%;
+        height: 380px;
+        background: beige;
+        float: left;
+      }
+      #e02,
+      #e03,
+      #e04 {
+        width: 30%;
+        height: 100px;
+        background: #33f;
+        float: right;
+      }
+      #e03 {
+        margin: 40px 0;
+      }
+      .example05 {
+        height: 180px;
+      }
+      .example05 div {
+        width: 30%;
+        height: 100%;
+        background: #cfc;
+        float: left;
+      }
+      #f02 {
+        margin: 0 5%;
+      }
+      .example06 {
+        height: 200px;
+      }
+      .example06 div {
+        width: 47.5%;
+        height: 100%;
+        background: #392;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent01">
+      <div id="c1" class="asc1"></div>
+      <div id="c2" class="asc1"></div>
+      <div id="c3" class="asc1"></div>
+      <div id="c4" class="asc1"></div>
+      <div id="c5" class="asc1"></div>
+      <div id="c6" class="asc1"></div>
+      <div id="c7" class="asc1"></div>
+      <div id="c8" class="asc1"></div>
+      <div id="c9" class="asc1"></div>
+    </div>
+    <div class="parent02">
+      <div id="d01" class="asc21">1</div>
+      <div id="d02" class="asc21">2</div>
+      <div id="d03" class="asc21">3</div>
+      <div id="d04" class="asc21">4</div>
+      <div id="d05" class="asc21">5</div>
+      <div id="d06" class="asc21">6</div>
+      <div id="d07" class="asc22">7</div>
+      <div id="d08" class="asc22">8</div>
+      <div id="d09" class="asc22">9</div>
+      <div id="d10" class="asc22">0</div>
+      <div id="d11" class="asc22">1</div>
+      <div id="d12" class="asc22">2</div>
+    </div>
+    <div class="parent03">
+      <div class="left03">
+        <div id="s01" class="s100x100"></div>
+        <div id="s02" class="s100x100"></div>
+        <div id="s03" class="s100x100"></div>
+        <div id="s04" class="s100x100"></div>
+        <div id="s05" class="s100x100"></div>
+      </div>
+      <div class="right03">
+        <div id="s06" class="s100x100"></div>
+        <div id="s07" class="s100x100"></div>
+        <div id="s08" class="s100x100"></div>
+        <div id="s09" class="s100x100"></div>
+        <div id="s10" class="s100x100"></div>
+      </div>
+    </div>
+    <div class="example04 wrap">
+      <div id="e01">E-1</div>
+      <div id="e02">E-2</div>
+      <div id="e03">E-3</div>
+      <div id="e04">E-4</div>
+    </div>
+    <div class="example05 wrap">
+      <div id="f01">F-1</div>
+      <div id="f02">F-2</div>
+      <div id="f03">F-3</div>
+    </div>
+    <div class="example06 wrap">
+      <div id="g01" style="float: left">E-1</div>
+      <div id="g02" style="float: right">E-2</div>
+    </div>
+  </body>
+</html>

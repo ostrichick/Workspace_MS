@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>객체추가설명</title>
+    <link rel="stylesheet" href="" />
+    <style></style>
+    <script>
+      var ob = {
+        a: 10, // 속성: 변수와 같이 값을 저장하는 속성
+        b: 5,
+        c: 3,
+        문자: 22, // 키에는 식별자 또는 문자열 사용 가능
+        abc: { x: 1, y: 2 },
+      };
+      //객체 안 속성 접근시 도트연산자 .가 아닌 배열과 같이 대괄호로 호출 가능
+      console.log(ob.a);
+      console.log(ob["a"]);
+      console.log(ob["b"]);
+      console.log(ob.문자);
+      console.log(ob["문자"]); // 키값이 문자열인경우 대괄호로 호출
+      ob.d = 100;
+      console.log(ob.d);
+      ob.문자열 = "엥";
+      console.log(ob.문자열);
+      ob["텍-스트"] = 123;
+      console.log(ob["텍-스트"]);
+      //   console.log(ob.텍 - 스트); // 작동 안 함
+      console.log(ob.abc);
+      console.log(ob.abc.y);
+
+      // in 예약어 : 해당속성이 객체 안에 있는 지를 판별 (출력:논리값)
+      console.log("a" in ob); // ob 안에 a가 존재? = true
+      //delete() : 객체 안 속성 제거
+      delete ob.a;
+      console.log("a" in ob);
+      console.log(ob.a);
+      //   with 예약어 : 객체 안의 속성에 쉽게 접근
+      var c = 444;
+      with (ob) {
+        console.log(b);
+        console.log(c);
+        console.log(문자);
+        console.log(window.c); // ob 밖에 있는 전역 변수에 접근 (window의 하위 객체)
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

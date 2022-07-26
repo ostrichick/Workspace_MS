@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>라면을 끓이는 순서</title>
+    <link rel="stylesheet" href="" />
+    <style></style>
+  </head>
+  <body>
+    <h3>라면을 끓이는 순서</h3>
+    <hr />
+    <ol type="A">
+      <li>물을 끓인다</li>
+      <li>라면과 스프를 넣는다</li>
+      <li>파를 썰어 넣는다</li>
+      <li>5분 후 <strong>맛있게</strong> 먹는다</li>
+    </ol>
+    <script>
+      //   document.querySelector("ol[type='A']").style.color = "green";
+      let greener = document.getElementsByTagName("li");
+      for (i = 0; i < greener.length; i++) {
+        greener[i].style.color = "green";
+      }
+      // for (let key in greener) {
+      //   console.log(greener[key]);
+      //   greener[key].style.fontWeight = 400;
+      // }
+    </script>
+    <script>
+      // document.querySelector("ol[type=A]").setAttribute("onclick", "turn(this)");
+      // function turn(obj) {
+      //   obj.style.backgroundColor = "yellowgreen";
+      // }
+      document.querySelector("ol[type=A]").onclick = function turn() {
+        this.style.backgroundColor = "yellowgreen";
+      };
+    </script>
+    <hr />
+    <h3>
+      자바스크립트란?
+      <!-- <button onclick="mySpan.style.border = '2px dotted violet';"> --><button>border</button><button>p</button>
+    </h3>
+    <hr />
+    <p>자바스크립트는 웹 프로그래밍 언어로 웹 ㅍ에ㅣ지를 동적 변경시킬 수 있다</p>
+    <p><span id="mySpan">C 언어</span>를 아는 사용자는 빠르게 학습할 수 있다</p>
+    <p>이벤트 등 GUI프로그래밍에 필요한 요소들이 있어 학습에 약간의 어려움이 있다</p>
+    <script>
+      let mySpan = document.querySelector("#mySpan");
+      let buttons = document.querySelectorAll("button");
+
+      buttons[0].setAttribute("onclick", "makeborder()");
+      function makeborder() {
+        mySpan.style.border = "dotted 2px violet";
+      }
+      buttons[1].setAttribute("onclick", "printP()");
+      let pnum = document.querySelectorAll("p");
+      function printP() {
+        alert(`<p>태그의 개수는 ${pnum.length}개요`);
+      }
+    </script>
+    <hr />
+    <style>
+      span.hide {
+        visibility: hidden;
+      }
+    </style>
+    <h3>다음 빈 곳에 숨은 단어? <button onclick="toggle()">show/hide</button></h3>
+    <hr />
+    <ul>
+      <li>I (<span class="hide">love</span>) you.</li>
+      <li>CSS is Cascading (<span class="hide">Style</span>) Sheet.</li>
+
+      <li>응답하라 (<span class="hide">1988</span>).</li>
+    </ul>
+    <script>
+      state_show = false;
+      let spans = document.querySelectorAll(".hide");
+      // function toggle() {
+      //   if (state_show) {
+      //     for (i = 0; i < spans.length; i++) {
+      //       spans[i].style.visibility = "hidden";
+      //     }
+      //     state_show = false;
+      //   } else {
+      //     for (i = 0; i < spans.length; i++) {
+      //       spans[i].style.visibility = "visible";
+      //     }
+      //     state_show = true;
+      //   }
+      // }
+      function toggle() {
+        for (var i = 0; i < spans.length; i++) {
+          var value = spans[i].style.visibility;
+          if (value != "visible") {
+            spans[i].style.visibility = "visible";
+          } else {
+            spans[i].style.visibility = "hidden";
+          }
+        }
+      } // DOM의 인라인 STYLE 프로퍼티를 가져오거나 변경함
+      // CSS로 적용한 스타일은 제어할 수 없음
+      // CSS에서 값 가져오려면 getComputedStyle() 메소드를 사용해야함
+    </script>
+    <hr />
+    <h3>계산해봅시다</h3>
+    <hr />
+    <p>2 + 4 = <span onclick="this.innerHTML = eval(2+4)">답</span></p>
+    <p>4 * 20 = <span onclick="this.innerHTML=eval(4*20+64)">답</span></p>
+    <p>20 / 5 - 8 * 2 = <span onclick="this.innerHTML=eval(20/5-8*2)">답</span></p>
+  </body>
+  <hr />
+  <style>
+    div {
+      position: absolute;
+    }
+    img {
+      position: absolute;
+    }
+    /* #spadeA {
+      z-index: -3;
+      left: 10px;
+      top: 20px;
+    }
+    #spade2 {
+      z-index: 2;
+      left: 40px;
+      top: 30px;
+    }
+    #spade3 {
+      z-index: 3;
+      left: 80px;
+      top: 40px;
+    }
+    #spade7 {
+      z-index: 7;
+      left: 120px;
+      top: 50px;
+    } */
+  </style>
+  <h3>z-index 프로퍼티</h3>
+  <hr />
+  <div>
+    <img id="spadeA" class="cards" src="media/5장/media/spade-A.png" width="100" height="140" alt="스페이드A" onclick="flip(this)" />
+    <img id="spade2" class="cards" src="media/5장/media/spade-2.png" width="100" height="140" alt="스페이드2" onclick="flip(this)" />
+    <img id="spade3" class="cards" src="media/5장/media/spade-3.png" width="100" height="140" alt="스페이드3" onclick="flip(this)" />
+    <img id="spade7" class="cards" src="media/5장/media/spade-7.png" width="100" height="140" alt="스페이드7" onclick="flip(this)" />
+  </div>
+  <script>
+    let reset = 0;
+    function flip(obj) {
+      let img = document.querySelectorAll("img");
+      obj.style.zIndex = "-1";
+      reset++;
+      console.log(reset);
+      if (reset == 4)
+        for (i = 0; i < img.length; i++) {
+          img[i].style.zIndex = "0";
+          reset = 0;
+        }
+    }
+  </script>
+</html>

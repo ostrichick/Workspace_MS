@@ -1,0 +1,49 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>별문자 출력하기</title>
+    <link rel="stylesheet" href="" />
+    <style></style>
+  </head>
+  <body>
+    <h1>별 문자 출력하기</h1>
+    <hr />
+    <script>
+      let numero = prompt("출력할 별의 갯수를 정수로 입력해주세요.");
+      if (isNaN(numero)) {
+        document.write("입력 오류입니다. 다시 입력해주세요.");
+      } else if (numero < 1) {
+        numero = prompt("1이상의 정수를 다시 입력해주세요.");
+      } else numero = parseInt(numero);
+            function printStar(numero) {
+        for (let star = 1; star <= numero; star++) {
+          console.log(`바깥쪽 star값 :${star} `);
+          document.write("<br/>");
+          for (let aster = 1; aster <= star; aster++) {
+            console.log(`안쪽 aster값: ${aster}`);
+            document.write("ㅇ");
+          }
+        }
+      }printStar(numero);
+    </script>
+  </body>
+</html>
+<!-- 
+    1. 숫자를 string으로 입력 받는다. 
+     1.1 해당 입력값을 parseInt로 숫자로 변경 시도
+     - 숫자가 아닐 경우 : 에러 출력 
+     - 숫자일 경우 : 다음으로 진행
+    2. 입력받은 숫자값 numero는 * 갯수를 출력할 한계임
+
+    star = 1
+    if star < numero
+    document.write("*"), star++;
+
+    if start = numero
+    break
+ -->

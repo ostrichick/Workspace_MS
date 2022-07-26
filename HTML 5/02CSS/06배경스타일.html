@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배경스타일</title>
+    <style>
+      body {
+        height: 3000px;
+        background-color: #cfc;
+        background-image: url("../name.jpg");
+        background-repeat: no-repeat;
+        /*
+        repeat 반복 (기본)
+        no-repeat 반복 x
+        repeat-x x축 반복 수평
+        repeat-y y축 반복 수직
+        */
+        background-position: center;
+        /*
+        비율값 %
+        top, left, right, bottom, center 등 값 입력
+        */
+        background-size: 70% auto;
+        /*
+        너비 높이 순
+        비율값% 표시 영역에 비례 크기 조절
+        auto: 이미지의 비율에 맞춰 크기 조절
+        cover: 이미지 비율을 유지한 상태에서 영역을 다 채울 최소한의 크기
+        contain: 이미지 비율을 유지하고 가능한 최대의 크기로 채움
+        */
+        background-attachment: fixed;
+        /*배경 이미지 배치
+        scroll 기본값
+        fixed 화면에 고정
+        */
+        background: red url("../01HTML/html.jpg") center center/auto auto fixed;
+        /*
+        단축프로퍼티: 색상, 이미지주소, 수평위치, 수직위치, 너비, 높이, 반복여부, 배치
+        */
+        /*
+        추가 배경스타일
+        background-origin, background-clip, background-blend-mode
+        */
+      }
+      div {
+        width: 80%;
+        height: 600px;
+        margin: 200px 10%;
+        border: 10px solid black;
+        background: url("name.jpg") center no-repeat #ffc;
+        background-size: contain;
+        background-attachment: fixed;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>1</h1>
+    </div>
+  </body>
+</html>

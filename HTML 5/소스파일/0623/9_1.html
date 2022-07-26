@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <script>
+	function colorP(){
+		document.getElementsByTagName("p")[0].style.color = "red";
+		
+		//콜백함수란 호출하는 함수의 매개값으로 다른 함수를 넘기는 것을 의미한다.
+		document.getElementsByTagName("p")[0].addEventListener("click",callAlert);
+	}
+
+	function callAlert(e){
+		alert("클릭했습니다.");
+	}
+  </script>	
+ </HEAD>
+ <BODY onload="colorP()">
+
+	<p>로드 되면 색상 빨간색으로 변경됩니다.</p>
+ </BODY>
+</HTML>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>바인드 사용</title>
+    <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style></style>
+    <script>
+      $(function () {
+        $(".clickDiv").bind("click", function () {
+          var text = $(this).text();
+          alert(text);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="clickDiv">1</div>
+    <div class="clickDiv">2</div>
+    <div class="clickDiv">3</div>
+
+    <hr />
+    <div class="mouseBox" style="width: 100px; height: 100px; outline: 1px solid brown"></div>
+    <div class="mouseBox" style="width: 100px; height: 100px; outline: 1px solid brown"></div>
+    <div class="mouseBox" style="width: 100px; height: 100px; outline: 1px solid brown" onclick="changeColor(this)"></div>
+    <style>
+      .mouseBox {
+        display: inline-block;
+      }
+    </style>
+    <script>
+      $(".mouseBox").mousedown(function (event) {
+        var btn = event.button;
+        $(this).html(btn + "버튼 눌러짐");
+      });
+
+      $(".mouseBox").click(function () {
+        var array = ["red", "orange", "yellow", "green", "blue", "navy", "purple"];
+        var randomIndex = Math.floor(Math.random() * 7);
+        $(this).css("background", array[randomIndex]);
+      });
+
+      function changeColor(obj) {
+        var array = ["red", "orange", "yellow", "green", "blue", "navy", "purple"];
+        var randomIndex = Math.floor(Math.random() * 7);
+        obj.style.background = array[randomIndex];
+      }
+    </script>
+    <hr />
+    <form action="">
+      제목 : <input type="text" name="title" /><br />
+      작성자 : <input type="text" name="owner" /><br />
+      내용 : <textarea name="content" id="" cols="25" rows="4"></textarea><br />
+      <input type="submit" value="전송" />
+    </form>
+    <script>
+      $("input:text").focus(function () {
+        $(this).css("background", "lightgrey");
+      });
+      $("input:text").blur(function () {
+        var next;
+        next = $(this).next("span");
+        $(this).css("background", "");
+        if ($(this).val() == "") {
+          // 개선
+          if (next.length == 0) {
+            $(this).after("<span>*필수</span>");
+          }
+        } else {
+          $(this).next("span").remove();
+        }
+      });
+      $("form").submit(function () {
+        // return false;
+        var flag = true;
+        if ($("input[name=title]").val() == "") {
+          flag = false;
+          var next;
+          next = $("input[name=title]").next("span");
+          if (next.length == 0) {
+            $("input[name=title]").after("<span>*필수</span>");
+          }
+        }
+        if ($("input[name=owner]").val() == "") {
+          flag = false;
+          var next;
+          next = $("input[name=owner]").next("span");
+          if (next.length == 0) {
+            $("input[name=owner]").after("<span>*필수</span>");
+          }
+        }
+        return flag;
+      });
+    </script>
+    <hr />
+    <!-- !버튼 클릭시 boxDiv 막내 자식으로  div 요소를 추가 -->
+    <div id="boxDiv" style="outline: 1px solid brown">
+      <div>div_1</div>
+    </div>
+    <button onclick="add()">add</button>
+    <script>
+      let div_cnt = 1;
+      function add() {
+        div_cnt++;
+        $("#boxDiv").append("<div>div_" + div_cnt + "</div>");
+      }
+      // $("#boxDIV>div").click(function () {
+      //   alert($(this).text());
+      // });
+      $(document).on("click", "#boxDiv > div", function () {
+        alert($(this).text());
+      });
+    </script>
+    <hr />
+    <table border="1">
+      <tr>
+        <td>첫번째 제목</td>
+        <td>첫번째 작성자</td>
+        <td><button>정보 이동</button></td>
+      </tr>
+      <tr>
+        <td>두번째 제목</td>
+        <td>두번째 작성자</td>
+        <td><button>정보 이동</button></td>
+      </tr>
+      <tr>
+        <td>세번째 제목</td>
+        <td>세번째 작성자</td>
+        <td><button <!--onclick="info(this)" -->정보 이동</button></td>
+      </tr>
+    </table>
+    <div id="info"></div>
+    <style>
+      div#info {
+        height: 50px;
+      }
+    </style>
+    <script>
+      $("table button").click(function () {
+        // next() 동생, prev() 형, parent() 부모
+        // children() 자식요소들을 얻어옴
+        var title = $(this).parent().prev().prev().text();
+        var writer = $(this).parent().prev().text();
+        $("#info").text(title + "/" + writer);
+      });
+    </script>
+    <script>
+      // 자바스크립트로 태그에 onclick=info(this) 붙혀놨다는 전제하에
+      function info(obj) {
+        var owner = obj.parentElement.previousElementSibling.textContent;
+        var title = obj.parentElement.previousElementSibling.previousElementSibling.textContent;
+        document.getElementById("info").innerHTML = title + "/" + owner;
+      }
+    </script>
+  </body>
+</html>

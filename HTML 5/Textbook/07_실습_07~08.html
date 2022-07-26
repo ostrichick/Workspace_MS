@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습 7</title>
+    <link rel="stylesheet" href="" />
+    <style>
+      div {
+        display: inline-block;
+        width: 130px;
+        padding: 5px;
+        border: 1px dotted brown;
+      }
+    </style>
+    <script></script>
+  </head>
+  <body>
+    <h1>17개의 CSS2 색이름과 색</h1>
+    <script>
+      let colorNames = ["maroon", "red", "orange", "yellow", "olive", "purple", "fuchsia", "white", "lime", "green", "navy", "blue", "aqua", "teal", "black", "silver", "grey", "gold"];
+      //   let div = document.createElement("div");
+      //   for (i = 0; i < colorNames.length; i++) {
+      //     console.log("동작중!");
+      //     document.body.appendChild(coloreNames[i]);
+      //   }
+
+      //   for (colors in colorNames)
+      for (i = 0; i < colorNames.length; i++) {
+        document.write(`<div>${colorNames[i]}</div>`);
+        let allDiv = document.getElementsByTagName("div");
+        allDiv[i].style.background = colorNames[i];
+      }
+    </script>
+    <hr />
+    <h1>16개의 랜덤한 색 만들기</h1>
+    <hr />
+    <script>
+      for (j = 0; j < 16; j++) {
+        let n1 = Math.floor(Math.random() * 256);
+        let n2 = Math.floor(Math.random() * 256);
+        let n3 = Math.floor(Math.random() * 256);
+        document.write(`<div class="random">rgb (${n1},${n2},${n3})</div>`);
+        let randomDiv = document.getElementsByClassName("random");
+        randomDiv[j].style.background = "rgb(" + n1 + "," + n2 + "," + n3 + ")";
+      }
+    </script>
+  </body>
+</html>

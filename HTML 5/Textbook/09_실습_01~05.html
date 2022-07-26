@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습 01~05</title>
+    <link rel="stylesheet" href="" />
+    <style>
+      hr,
+      h3 {
+        margin: 2px;
+      }
+    </style>
+  </head>
+  <body onblur="onBl()" onfocus="onFoc()" ondblclick="randomColor(this)">
+    <h3>포커스와 onblur, onfocus</h3>
+    <hr />
+    브라우저 바깥에 마우스를 클릭하면 window 객체에 blur, 마우스를 클릭하면 focus
+    <script>
+      document.body.addEventListener("onblur", function () {
+        document.body.style.background = "lightgrey";
+      });
+
+      function onBl() {
+        document.body.style.background = "lightgrey";
+      }
+      function onFoc() {
+        document.body.style.background = "";
+      }
+    </script>
+    <hr />
+    <h3>라디오버튼으로 이미지출력</h3>
+    <hr />
+    <input type="radio" name="fruit" onclick="loadFruit(value)" value="banana" />바나나 <input type="radio" name="fruit" onclick="loadFruit(value)" value="mango" />망고
+    <input type="radio" name="fruit" onclick="loadFruit(value)" value="apple" />사과<br />
+
+    <img id="printFruit" src="" alt="" />
+    <script>
+      function loadFruit(value) {
+        // let value = value;
+        let allRadio = document.querySelectorAll("input[type=radio]");
+        for (let i = 0; i < allRadio.length; i++) {
+          if (allRadio[i].checked) {
+            document.querySelector("#printFruit").src = "media/9장/media/" + value + ".png";
+          }
+        }
+      }
+    </script>
+    <style>
+      img {
+        transition: all 1s;
+      }
+    </style>
+    <hr />
+    <h3>계산기 만들기</h3>
+    <hr />
+    <p>수식을 만들고 Enter를 입력하세요</p>
+
+    <p>식 <input type="text" id="input" /></p>
+    <p>값 <input type="text" id="result" /></p>
+    <script>
+      document.documentElement.addEventListener("keyup", function (e) {
+        var keyName = e.key;
+        console.log(`현재 눌린 키 이름 : ${keyName}`);
+        if (keyName == "Enter") {
+          document.querySelector("#result").value = eval(document.querySelector("#input").value);
+        }
+      });
+    </script>
+    <hr />
+    <div onmouseover="where(event)">
+      <h3>이미지 커서 만들기</h3>
+      <hr />
+      <div style="height: 50px"></div>
+      <div id="cursor" style="position: absolute" width="30"><img src="gary.webp" width="30" alt="" /></div>
+      <script>
+        let cursor = document.querySelector("#cursor");
+        // document.body.addEventListener("onmousemove", function where(event) {
+
+        function where(e) {
+          console.log(e.screenX + "px" + e.screenY + "px");
+          cursor.style.left = e.clientX - 10 + "px";
+          cursor.style.top = e.clientY - 10 + "px";
+        }
+      </script>
+      <style>
+        div#cursor {
+          left: 50px;
+          /* top: 10px; */
+        }
+      </style>
+      <hr />
+    </div>
+    <h3>브라우저의 아무 곳이나 더블 클릭</h3>
+    <hr />
+    더블 클릭하면 배경색이 랜덤하게 바뀝니다
+    <script>
+      function randomColor(obj) {
+        let randomR = Math.floor(Math.random() * 256);
+        let randomG = Math.floor(Math.random() * 256);
+        let randomB = Math.floor(Math.random() * 256);
+        console.log("rgb(" + randomR + "," + randomG + "," + randomB + ")");
+        obj.style.background = "rgb(" + randomR + "," + randomG + "," + randomB + ")";
+      }
+    </script>
+    <hr />
+
+    <!--  -->
+  </body>
+</html>

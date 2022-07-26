@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>매개변수타입</title>
+    <link rel="stylesheet" href="" />
+    <style></style>
+    <script>
+      //함수 선언
+      function play1(ab) {
+        //매개변수 ab : 하나의 값을 가지는 변수
+        console.log("play1 함수 실행.");
+        var value = 100 + ab;
+        console.log("play1의 value:" + value);
+      }
+      play1(33); //인수로 값 하나만 필요 33+100=133
+
+      //함수 선언
+      function play2(ab) {
+        //매개변수 ab : 함수타입
+        console.log("play2 함수 실행.");
+        ab(); // ab는 이 곳에서 함수로써 호출된다
+        console.log("play2 함수 종료.");
+      }
+      var printText = function () {
+        console.log("printText 함수 호출");
+      };
+      play2(printText); // 
+      play2(function () {
+        console.log("익명함수 작성");
+      });
+
+      //함수 선언
+      function play3(ab) {
+        //매개변수 ab : 객체타입
+        console.log("play3 함수 실행.");
+        var value = ab.x + ab.y;
+        console.log("play3의 value:" + value);
+      }
+      var ob = { x: 40, y: 8, z: 2 };
+      play3(ob); // 40+8=48
+      play3({ x: 20, y: 5, z: 43 }); //20+5=25
+    </script>
+  </head>
+  <body>
+    <header></header>
+    <!-- header end -->
+    <main></main>
+    <!-- main end -->
+    <footer></footer>
+    <!-- footer end -->
+    <script src=""></script>
+  </body>
+</html>

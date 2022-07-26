@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>예제 2022-06-02</title>
+    <style>
+      strong {
+        transition: font-size 5s;
+      }
+      strong:hover {
+        /* 5초에 걸쳐 500%까지 글자 키우는 전환 효과 시작 */
+        font-size: 500%;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>
+      <strong>p</strong>rompt, else if, switch를 사용한 예<strong>제</strong>
+    </h3>
+    <script>
+      let mth = prompt("지금은 몇 월입니까? 1~12 사이의 숫자를 입력해주세요.");
+      if (mth <= 0 || mth > 12) {
+        season = null;
+        document.write(
+          "잘못된 값을 입력했습니다.<br/>1~12 사이의 숫자를 다시 입력해주세요."
+        );
+      } else if (6 <= mth && mth <= 8) season = "여름";
+      else if (9 <= mth && mth <= 11) season = "가을";
+      else if (12 <= mth || mth <= 2) season = "겨울";
+      else season = "봄";
+      // 31=1,3,5,7,8,10,12
+      // 30=4,6,9,11
+      // 28=2
+      let day;
+      console.log(typeof mth);
+      mth = parseInt(mth); //문자를 정수로 변환
+      console.log(typeof mth);
+
+      switch (mth) {
+        case 2:
+          day = 28;
+          console.log(day);
+          break;
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+          day = 30;
+          console.log(day);
+          break;
+        default:
+          day = 31;
+          console.log(day);
+      }
+      if (season != null)
+        document.write(
+          `${mth}월은 <strong style=font-size:30px;color:red;font-weight:400;>${season}</strong>이고 ${day}일까지 있습니다.`
+        );
+    </script>
+  </body>
+</html>
+<!-- prompt()를 활용하여 현재 월을 입력받고 화면에 계절의 정보와 말일을 나타내는 스크립트를 작성하세요
+1. 계절의 정보 - 다중if문
+2. 말일의 정보 - switch문
+
+출력예
+
+현재 월을 입력하세요. (1~12 정수)
+
+현재는 season입니다. 
+$월은 number일까지 있습니다-->

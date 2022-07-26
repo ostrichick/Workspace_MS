@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문서객체가져오기</title>
+    <link rel="stylesheet" href="" />
+    <style>
+      a {
+        font-style: italic;
+      }
+    </style>
+    <script></script>
+  </head>
+  <body>
+    <h1 id="title">제목</h1>
+    <div id="div01"><span>영역</span></div>
+    <div class="abc"><span>영역</span></div>
+    <div class="abc"><span>영역</span></div>
+    <script>
+      var allDiv = document.getElementsByTagName("div");
+      //   var div = document.createElement("div");
+
+      allDiv[0].style.border = "3px solid brown";
+      allDiv[1].style.border = "3px solid brown";
+      allDiv[2].style.border = "3px solid brown";
+      //   태그네임이나 클래스는 여러 종류가 있으므로 배열로 들어와서 [배열순서]로 선택해야함
+
+      var div01 = document.getElementById("div01");
+      div01.style.backgroundColor = "#a92";
+      // abc.style. = "#red";
+
+      var abc = document.getElementsByClassName("abc");
+      abc[0].style.backgroundColor = "#cfc";
+
+      var h1 = document.getElementById("title");
+      h1.style.backgroundColor = "blue";
+      h1.style.margin = "50px 20px";
+
+      //querySelector = css 선택자 방식으로 선택
+      var h2 = document.querySelector("#title");
+      h2.style.color = "violet";
+
+      var div = document.querySelector("div");
+      div.style.fontSize = "1.2em"; // 하나에만 적용. 여러개를 선택하려면 querySelectorAll을 사용해야함
+
+      var divAll = document.querySelectorAll("div");
+      divAll[0].style.borderRadius = "15px";
+      divAll[1].style.borderRadius = "15px"; // 배열로 불러와서 하나씩 적용해야함
+      divAll[2].style.borderRadius = "15px";
+
+      var divAbc = document.querySelectorAll(".abc");
+      divAbc[0].style.lineHeight = "50px";
+      divAbc[1].style.textAlign = "center";
+
+      var span = document.querySelectorAll(".abc span");
+      span[0].style.backgroundColor = "magenta";
+      span[1].style.backgroundColor = "magenta";
+
+    //   DOM 트리
+    </script>
+  </body>
+</html>

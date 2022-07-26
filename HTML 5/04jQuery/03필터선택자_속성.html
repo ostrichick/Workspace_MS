@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="" />
+    <style></style>
+    <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(function () {
+        $("input:text").css("background", "yellow");
+        $("input:password").css("background", "red");
+      });
+      function clickBtn() {
+        //체크된 항목만 접근이 가능하기때문에 체크가 풀렸을때 초기화를 할 수 없다
+        //
+        /*
+        $("input:checked").each(function () {
+          // document.getElementById("box") - dom 객체 JS문법사용
+          // $("#box") - jQuery 객체, jQuery 문법 사용
+
+          //this 는 dom 객체이므로 jQuery 문법 바로 사용 불가능
+          $(this).next("span").css("color", "red");
+          // $()로 감싸서 jQuery 객체로 변환
+          // next()는 nextElementSibling과 같은 역할
+          // 무조건 옆 객체를 찾는게 아니라 특정 선택자에 해당하는 형제를 찾으려면 선택자를 () 안의 매개 값을 넣는다
+        });
+        */
+        $("input").each(function () {
+          // is() 의 역할은 선택자의 상태가 매개값 상태라면 true 아니면 false 반환
+          if ($(this).is(":checked")) {
+            // 현재 접근중인 요소가 checked 상태라면
+            $(this).next("span").css("color", "red");
+          } else {
+            //checked가 아니라면
+            $(this).next("span").css("color", "");
+          }
+        });
+        // :checked 필터는 주로 전체 선택/ 전체 선택 해제 부분에서 자주 사용
+        //
+        //each == 선택자로 찾아진 객체에 한번씩 방문
+        /*
+        var array = [1, 2, 3, 4];
+        //외부 반복자 - 반복에 개발자가 직접 관려
+        sum = 0;
+        for (var i = 0; i < array.length; i++) {
+          sum += array[i];
+        }
+        console.log(sum);
+        */
+        /*
+        //내부 반복자 - 반복에 관여하지 않고 반복할 작업만 전달
+        sum = 0;
+        array.forEach(function (index, value) {
+          sum += value;
+        });
+        console.log(sum);
+        */
+      }
+    </script>
+  </head>
+  <body onload="backColor()">
+    <form action="">
+      <p>text : <input type="text" /></p>
+      <p>password : <input type="password" name="pass" disabled value="1234" /></p>
+      <p>checkbox : <input type="checkbox" name="c1" value="1" /><span>1</span> <input type="checkbox" name="c1" value="2" checked /><span>2</span></p>
+      <div id="cresult"></div>
+      <p>radio : <input type="radio" name="r1" value="1" /><span>1</span> <input type="radio" name="r1" value="2" checked /><span>2</span></p>
+      <div id="rresult"></div>
+      <input onclick="clickBtn()" type="button" value="일반버튼" />
+      <input type="reset" value="초기화" />
+      <input type="submit" value="전송" />
+    </form>
+    <script>
+      // querySelector 사용하기
+      // for (i = 0; i < document.querySelectorAll("input[type=text]").length; i++) document.querySelectorAll("input[type=text]")[i].style.background = "yellow";
+
+      function backColor() {
+        // getAttribute 사용
+        //   let listInput = document.getElementsByTagName("input");
+        //   for (i = 0; i < listInput.length; i++) {
+        //     if (listInput[i].getAttribute("type") == "text") listInput[i].style.background = "yellow";
+        //   }
+        // }
+        //
+        //findElementByAttribute 사용 !! 불가능
+        // let inputText = document.findElementByAttribute("type", "text");
+        // console.log(inputText);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .pa {
+        border: 10px solid black;
+        background-color: rgb(207, 219, 179);
+        overflow: hidden;
+        box-sizing: border-box;
+        margin: 5px;
+      }
+      .left,
+      .right {
+        width: 300px;
+        height: 300px;
+        border: 10px solid black;
+        margin: 20px;
+      }
+      .left {
+        float: left;
+        background-color: rgb(241, 178, 178);
+      }
+      .right {
+        float: right;
+        background-color: rgb(175, 175, 241);
+      }
+      .small {
+        width: 100px;
+        height: 100px;
+      }
+      .left > div {
+        float: left;
+      }
+      .right > div {
+        float: right;
+      }
+      #a1 {
+        background-color: rgb(13, 59, 105);
+      }
+      #a2 {
+        background-color: rgb(15, 84, 153);
+      }
+      #a3 {
+        background-color: rgb(22, 114, 206);
+      }
+      #a4 {
+        background-color: rgb(21, 48, 75);
+      }
+      #a5 {
+        clear: both;
+        background-color: rgb(39, 78, 117);
+      }
+      #b1 {
+        background-color: rgb(13, 59, 105);
+      }
+      #b2 {
+        clear: both;
+        background-color: rgb(15, 84, 153);
+      }
+      #b3 {
+        clear: both;
+        background-color: rgb(22, 114, 206);
+      }
+      #b4 {
+        background-color: rgb(21, 48, 75);
+      }
+      #b5 {
+        background-color: rgb(39, 78, 117);
+      }
+      .top {
+        background-color: white;
+        /*min-width: 640px;*/
+        /*min-height: 340px;*/
+        border: 10px solid black;
+        margin: 5px;
+        box-sizing: border-box;
+      }
+      .small2 {
+        width: 200px;
+        height: 100px;
+      }
+      .top > .small2 {
+        background-color: rgb(221, 130, 180);
+        float: right;
+        clear: both;
+      }
+      #d2 {
+        margin: 20px 0px;
+      }
+      #d4 {
+        width: 420px;
+        height: 340px;
+        background-color: beige;
+      }
+      .middle {
+        margin: 5px;
+        border: 10px solid black;
+        /*min-width: 640px;*/
+        /*min-height: 100px;*/
+        overflow: hidden;
+        box-sizing: border-box;
+      }
+      .middle > .small2 {
+        background-color: aqua;
+        float: left;
+      }
+      #e2 {
+        margin: 0px 20px;
+      }
+      #e3 {
+        float: right;
+      }
+      .bottom {
+        border: 10px solid black;
+        margin: 5px;
+        /*width: 100%;*/
+        /*min-height: 100px;*/
+        overflow: hidden;
+        box-sizing: border-box;
+      }
+      .not-small {
+        width: 310px;
+        height: 100px;
+        background-color: aquamarine;
+        float: left;
+      }
+      #f2 {
+        float: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pa">
+      <div class="left">
+        <div id="a1" class="small"></div>
+        <div id="a2" class="small"></div>
+        <div id="a3" class="small"></div>
+        <div id="a4" class="small"></div>
+        <div id="a5" class="small"></div>
+      </div>
+      <div class="right">
+        <div id="b1" class="small"></div>
+        <div id="b2" class="small"></div>
+        <div id="b3" class="small"></div>
+        <div id="b4" class="small"></div>
+        <div id="b5" class="small"></div>
+      </div>
+    </div>
+
+    <div class="top">
+      <div id="d1" class="small2 one"></div>
+      <div id="d2" class="small2 one"></div>
+      <div id="d3" class="small2 one"></div>
+      <div id="d4"></div>
+    </div>
+    <div class="middle">
+      <div class="small2 two"></div>
+      <div id="e2" class="small2 two"></div>
+      <div id="e3" class="small2 two"></div>
+    </div>
+    <div class="bottom">
+      <div id="f1" class="not-small"></div>
+      <div id="f2" class="not-small"></div>
+    </div>
+  </body>
+</html>

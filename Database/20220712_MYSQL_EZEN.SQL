@@ -1,0 +1,32 @@
+﻿SHOW DATABASES;
+
+-- 사용자 계정 생성하기
+CREATE USER 'DEV01' IDENTIFIED BY '1234'; -- 기본값 : @'%'
+CREATE USER 'DEV02@LOCALHOST' IDENTIFIED BY '1234'; -- @내부접근 허용
+CREATE USER 'DEV03'@'%' IDENTIFIED BY '1234'; -- @'%' 내 외부 접근 허용
+
+;
+-- 새로생성된 사용자 확인: MYSQL데이터베이스의 ROOT계정에서 확인
+SELECT USER, HOST FROM USER;
+
+-- 사용자에게 데이터베이스 모든 사용권한 부여하기
+grant all privileges on ezen_db.* to 'dev1';
+GRANT ALL PRIVILEGES ON EZEN_DB.* TO 'DEV1' ;
+GRANT ALL PRIVILEGES ON EZEN_DB.* TO 'DEV2'@'LOCALHOST';
+GRANT ALL PRIVILEGES ON EZEN_DB.* TO 'DEV1'@'%';
+
+-- 변경된 권한 적용하기(메모리에 반영하기)
+FLUSH PRIVILEGES;
+
+-- 권한 확인하기
+SHOW GRANTS FOR 'DEV1';
+SHOW GRANTS FOR 'DEV2'@'LOCALHOST';
+SHOW GRANTS FOR 'DEV3'@'%';
+
+-- 권한 취소하기
+REVOKE ALL PRIVILEGES ON EZEN_DB.* FROM 'DEV2'@'LOCALHOST';
+REVOKE ALL PRIVILEGES ON EZEN_DB.* FROM 'DEV3'@'%';
+
+-- 사용자 계정 삭제하기
+DROP USER 'DEV2'@'LOCALHOST';
+DROP USER 'DEV3';

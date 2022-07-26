@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>예제2</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      img {
+        vertical-align: top;
+      }
+
+      body {
+        background: url("img2/dog.png") no-repeat right top #f5ede3;
+      }
+      /* div {
+        outline: 1px solid #000;
+      } */
+      #face {
+        width: 554px;
+        margin: 300px auto 0;
+        position: relative;
+      }
+      #face img {
+        position: relative;
+        z-index: 0;
+      }
+      #shadow {
+        bottom: -1px;
+        right: 0px;
+        position: absolute;
+        z-index: 15;
+      }
+      #ear_left_out {
+        position: absolute;
+        top: -80px;
+        left: 10px;
+        z-index: -1;
+      }
+      #ear_right_out {
+        position: absolute;
+        top: -80px;
+        right: 10px;
+        z-index: -1;
+      }
+      #eye_left {
+        position: absolute;
+        top: 220px;
+        left: 130px;
+        z-index: 10;
+      }
+      #eye_right {
+        position: absolute;
+        top: 220px;
+        right: 130px;
+        z-index: 10;
+      }
+      #flush_left {
+        position: absolute;
+        top: 270px;
+        left: 140px;
+        z-index: 10;
+      }
+      #flush_right {
+        position: absolute;
+        top: 270px;
+        right: 140px;
+        z-index: 10;
+      }
+      #nose {
+        position: absolute;
+        top: 220px;
+        left: 240px;
+        z-index: 10;
+      }
+      #mouth {
+        position: absolute;
+        top: 245px;
+        left: 245px;
+        z-index: 10;
+      }
+      #jaw {
+        position: absolute;
+        bottom: -1px;
+        left: 9px;
+        z-index: 5;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="face">
+      <p><img src="img2/face.png" /></p>
+      <div id="ear_left_out"><img src="img2/ear_left_out.png" alt="" /></div>
+      <div id="ear_right_out"><img src="img2/ear_right_out.png" alt="" /></div>
+      <div id="eye_left"><img src="img2/eye_left.png" alt="" /></div>
+      <div id="eye_right"><img src="img2/eye_right.png" alt="" /></div>
+      <div id="flush_left"><img src="img2/flush_left.png" alt="" /></div>
+      <div id="flush_right"><img src="img2/flush_right.png" alt="" /></div>
+      <div id="jaw"><img src="img2/jaw.png" alt="" /></div>
+      <div id="mouth"><img src="img2/mouth.png" alt="" /></div>
+      <div id="nose"><img src="img2/nose.png" alt="" /></div>
+      <div id="shadow"><img src="img2/shadow.png" alt="" /></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>트 랜 지 션!</title>
+    <style>
+      #this {
+        width: 100px;
+        height: 100px;
+        background: blue;
+        transition-property: background, width, height; /*적용속성, :all 모든 속성*/
+        transition-duration: 500ms;
+        /*전환시간 s초 ms밀리세컨드*/
+        transition-timing-function: 300%;
+        /*속도
+        https://arof03.cafe24.com/%EC%86%8D%EB%8F%84%EB%B9%84%EA%B5%90.html
+
+        ease (기본값)처음과 끝이 느리고 중간이 빠르지만 속도 변화가 적음
+        linear 처음부터 끝까지 같은 속도
+        ease-in 처음엔 느리지만 갈수록 빨라짐
+        ease-out 처음엔 빠르지만 갈수록 느려짐
+        ease-in-out 처음과 끝이 느리고 중간이 빠름
+        */
+        transition-delay: 200ms; /*대기시간*/
+
+        /*축약표현
+        transition: 적용속성 전환시간 속도 대기시간;*/
+        transition: 200ms 1200ms all ease
+      }
+      #this:hover {
+        width: 200px;
+        height: 200px;
+        background: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>트랜지션 효과</h2>
+    <p>
+      CSS 동적표현 효과 중 하나로 기존 스타일에서 다른 스타일로 부드럽게
+      변환시키는 효과
+    </p>
+    <div id="this"></div>
+  </body>
+</html>

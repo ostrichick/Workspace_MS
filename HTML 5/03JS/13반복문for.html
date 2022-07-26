@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반복문 for</title>
+    <script>
+      /*
+            반복문for 주로 사용되는 반복문 p291
+            */
+      var a = 1; //변수초기화
+      while (a <= 10) {
+        // 반복 조건
+        console.log(`변수a의 값 ${a}`);
+        a++; //변환식 반복에 의해 변화
+      }
+      // for(변수초기화; 반복조건; 변환식) 반복문
+      for (let b = 1; b <= 10; b++) {
+        console.log(`변수b의 값 ${b}`);
+      }
+      /*
+      반복문의 중첩
+      */
+      for (var i = 1; i <= 3; i++) {
+        document.write(`<div id="i-${i}" style="border:10px solid #000">`);
+        document.write(`<h2>첫번째 반복문 i:${i}</h2>`);
+        for (var j = 1; j <= 5; j++) {
+          document.write(`<p>안에 있는 반복문 i:${i} / j:${j}</p>`);
+        }
+        document.write("</div>");
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
