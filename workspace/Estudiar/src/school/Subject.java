@@ -7,7 +7,7 @@ import utils.Define;
 public class Subject {
 	private String subjectName;
 	private int subjectId;
-	private boolean gradeType;
+	private byte gradeType;
 
 	private ArrayList<Student> studentList = new ArrayList<Student>();
 
@@ -18,7 +18,7 @@ public class Subject {
 	public Subject(String subjectName, int subjectId) {
 		this.subjectName = subjectName;
 		this.subjectId = subjectId;
-		this.gradeType = Define.KOREAN.AB_TYPE != null;
+		this.gradeType = Define.AB_TYPE.type;
 	}
 
 	public String getSubjectName() {
@@ -45,11 +45,11 @@ public class Subject {
 		this.studentList = studentList;
 	}
 
-	public boolean getGradeType() {
+	public byte getGradeType() {
 		return gradeType;
 	}
 
-	public void setGradeType(boolean gradeType) {
+	public void setGradeType(byte gradeType) {
 		this.gradeType = gradeType;
 	}
 

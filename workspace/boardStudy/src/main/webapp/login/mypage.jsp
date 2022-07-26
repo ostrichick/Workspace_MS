@@ -10,8 +10,7 @@ if (login == null) {
 <head>
 <script> 
 alert("로그인 후 이용할 수 있는 페이지입니다");
-   location.href="<%request.getContextPath();%> 
- /login/login.jsp";
+location.href="<%request.getContextPath();%>/boardStudy/login/login.jsp";
  </script>
 <%
 }

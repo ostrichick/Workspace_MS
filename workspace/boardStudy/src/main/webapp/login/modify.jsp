@@ -10,10 +10,9 @@ Connection conn = null;
 PreparedStatement psmt = null;
 ResultSet rs = null;
 
-User user = new User();
 User login = (User) session.getAttribute("login");
 String prompt = request.getParameter("password");
-
+User user = new User();
 try {
 	String url = "jdbc:oracle:thin:@localhost:1521:xe";
 	String dbName = "c##jsptest";
@@ -37,7 +36,8 @@ try {
 		user.setPassword(rs.getString("password"));
 	} else { //불일치
 %>
-<script>alert("입력한 비밀번호가 일치하지 않습니다");location.href="<%=request.getContextPath()%>/index.jsp";
+<script>alert("입력한 비밀번호가 일치하지 않습니다");location.href="<%=request.getContextPath()%>
+  /index.jsp";
 </script>
 <%
 //response.sendRedirect(request.getContextPath());
@@ -79,8 +79,13 @@ section {
 <body>
   <%@include file="/include/header.jsp"%>
   <section>
-    <form action="">
+    <form action="modify_action.jsp" method="post">
+    <input type="hidden" name="uidx" value="<%=user.getUidx()%>"/>
       <table>
+        <tr>
+          <th align="right">회원번호</th>
+          <td><%=user.getUidx()%></td>
+        </tr>
         <tr>
           <th align="right">아이디</th>
           <td><%=user.getId()%></td>
@@ -94,7 +99,7 @@ section {
         <tr>
           <th align="right">비밀번호</th>
           <td>
-            <input type="password" name="password" />
+            <input type="password" name="password" value="<%=user.getPassword()%>" />
           </td>
         </tr>
         <tr>
@@ -103,16 +108,9 @@ section {
             <input type="text" value="<%=user.getAddr()%>" name="addr" />
           </td>
         </tr>
-        <tr>
-          <th align="right">회원번호</th>
-          <td><%=user.getUidx()%></td>
-        </tr>
-        <tr>
-          <td>
-            <input type="submit" value="전송" />
-          </td>
-        </tr>
       </table>
+      <button>저장!</button>
+      <!-- form태그 안에 타입이생략된 버튼은 submit -->
     </form>
   </section>
   <%@include file="/include/footer.jsp"%>

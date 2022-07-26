@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import javax.security.auth.Subject;
 
 public class Student {
-	private int studendId;
+	private int studentId;
 	private String studentName;
 	private Subject majorSubject;
 
@@ -16,17 +16,17 @@ public class Student {
 	}
 
 	public Student(int studendId, String studentName, Subject majorSubject) {
-		this.studendId = studendId;
+		this.studentId = studendId;
 		this.studentName = studentName;
 		this.majorSubject = majorSubject;
 	}
 
-	public int getStudendId() {
-		return studendId;
+	public int getStudentId() {
+		return studentId;
 	}
 
-	public void setStudendId(int studendId) {
-		this.studendId = studendId;
+	public void setStudentId(int studendId) {
+		this.studentId = studendId;
 	}
 
 	public String getStudentName() {
