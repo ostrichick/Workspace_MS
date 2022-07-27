@@ -2,6 +2,7 @@
 
 int main()
 {
+    //chcp 65001
     printf("Hello, world!?\n");
     printf("Hello, world!\n");
     int age = 12;
