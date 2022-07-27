@@ -12,7 +12,11 @@ import school.Subject;
 import utils.Define;
 
 public class GenerateGradeReport {
+
 	School school = School.getInstance();
+	public static final String TITLE = " 수강생 학점 \t\t\n";
+	public static final String HEADER = " 이름  |  학번  |중점과목| 점수   \n ";
+	public static final String LINE = "---------------------------------\n";
 	private StringBuffer buffer = new StringBuffer();
 
 	public String getReport() {
@@ -27,15 +31,15 @@ public class GenerateGradeReport {
 	}
 
 	public void makeHeader(Subject subject) {
-		buffer.append(Define.LINE.getFormat());
-		buffer.append("\t" + subject.getSubjectId());
-		buffer.append(Define.TITLE.getFormat());
-		buffer.append(Define.HEADER.getFormat());
-		buffer.append(Define.LINE.getFormat());
+		buffer.append(GenerateGradeReport.LINE);
+		buffer.append("\t" + subject.getSubjectName());
+		buffer.append(GenerateGradeReport.TITLE);
+		buffer.append(GenerateGradeReport.HEADER);
+		buffer.append(GenerateGradeReport.LINE);
 	}
 
 	public void makeBody(Subject subject) {
-		ArrayList<Student> studentList = subject.getStudentList();
+		ArrayList<Student> studentList = subject.getStudentList(); // 각 과목의 학생들
 
 		for (int i = 0; i < studentList.size(); i++) {
 			Student student = studentList.get(i);
@@ -49,28 +53,24 @@ public class GenerateGradeReport {
 			getScoreGrade(student, subject.getSubjectId());
 
 			buffer.append("\n");
-			buffer.append(Define.LINE.getFormat());
+			buffer.append(LINE);
 		}
-	}
-
-	public void makeFooter() {
-		buffer.append("\n");
 	}
 
 	public void getScoreGrade(Student student, int subjectId) {
 		ArrayList<Score> scoreList = student.getScoreList();
 		int majorId = student.getMajorSubject().getSubjectId();
 
-		GradeEvaluation[] gradeEvaluations = { new BasicEvaluation(), new MajorEvaluation() };
+		GradeEvaluation[] gradeEvaluations = { new BasicEvaluation(), new MajorEvaluation(), };
 
 		for (int i = 0; i < scoreList.size(); i++) {
 			Score score = scoreList.get(i);
 			if (score.getSubject().getSubjectId() == subjectId) {
 				String grade;
 				if (score.getSubject().getSubjectId() == majorId) {
-					grade = gradeEvaluations[Define.SAB_TYPE.type].getGrade(score.getPoint());
+					grade = gradeEvaluations[Define.SAB_TYPE].getGrade(score.getPoint());
 				} else {
-					grade = gradeEvaluations[Define.AB_TYPE.type].getGrade(score.getPoint());
+					grade = gradeEvaluations[Define.AB_TYPE].getGrade(score.getPoint());
 				}
 				buffer.append(score.getPoint());
 				buffer.append(":");
@@ -78,5 +78,9 @@ public class GenerateGradeReport {
 				buffer.append(" | ");
 			}
 		}
+	}
+
+	public void makeFooter() {
+		buffer.append("\n");
 	}
 }

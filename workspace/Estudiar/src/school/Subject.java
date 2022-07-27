@@ -5,20 +5,17 @@ import java.util.ArrayList;
 import utils.Define;
 
 public class Subject {
+
 	private String subjectName;
 	private int subjectId;
 	private byte gradeType;
 
 	private ArrayList<Student> studentList = new ArrayList<Student>();
 
-	public void register(Student student) {
-		studentList.add(student);
-	}
-
 	public Subject(String subjectName, int subjectId) {
 		this.subjectName = subjectName;
 		this.subjectId = subjectId;
-		this.gradeType = Define.AB_TYPE.type;
+		this.gradeType = Define.AB_TYPE;
 	}
 
 	public String getSubjectName() {
@@ -53,4 +50,7 @@ public class Subject {
 		this.gradeType = gradeType;
 	}
 
+	public void register(Student student) {
+		studentList.add(student);
+	}
 }

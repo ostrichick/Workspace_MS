@@ -2,9 +2,9 @@ package school;
 
 public class Score {
 
-  int studentId;
-  Subject subject;
-  int point;
+  int studentId; //학번
+  Subject subject; //과목
+  int point; //점수
 
   public Score(int studentId, Subject subject, int point) {
     this.studentId = studentId;
@@ -36,16 +36,7 @@ public class Score {
     this.point = point;
   }
 
-  @Override
   public String toString() {
-    return (
-      "Score [studentId=" +
-      studentId +
-      ", subject=" +
-      subject +
-      ", point=" +
-      point +
-      "]"
-    );
+    return "학번:" + studentId + "," + subject.getSubjectName() + ":" + point;
   }
 }
