@@ -10,9 +10,9 @@ int uidx = login.getUidx(); // 세션에서 uidx 가져옴. 처리를 하는 곳
 
 Connection conn = null;
 PreparedStatement psmt = null;
-DBConnector dbConnector = new DBConnector(); //db와 연결
+DBConnector dbConnector = new DBConnector();
 try {
-		conn = dbConnector.getConnection();
+	conn = dbConnector.getConnection(); // db와 연결
 
 	String sql = "insert into boardtb(bidx, title, content, uidx) VALUES (bidx_seq.nextval, ?, ?, ?)";
 	// wdate 컬럼은 기본값이 있으므로 여기에서 안 넣어도 됨
@@ -29,7 +29,7 @@ try {
 <script>
   alert("업로드 완료"); // 작동안됨
   location.href = "list.jsp";
-  </script>
+</script>
 <%
 } else {
 %>

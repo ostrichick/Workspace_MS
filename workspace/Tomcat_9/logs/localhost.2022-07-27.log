@@ -1,0 +1,5 @@
+27-Jul-2022 15:00:37.711 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+27-Jul-2022 15:00:37.711 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+27-Jul-2022 15:00:37.713 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@34a1d21f')
+27-Jul-2022 15:00:38.122 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+27-Jul-2022 15:00:38.122 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()

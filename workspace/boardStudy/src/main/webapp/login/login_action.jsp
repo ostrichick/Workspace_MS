@@ -26,11 +26,11 @@ try {
 	String sqlold = "select * from usertb where id=" + id + " and password=" + password;
 	String sql = "select * from usertb where id=? and password=?"; // 동적쿼리
 
-	psmt = conn.prepareStatement(sql);
+	psmt = conn.prepareStatement(sql); // 쿼리를 실행할 준비
 	psmt.setString(1, id); // (n번째물음표,변수)
 	psmt.setString(2, password);
 
-	rs = psmt.executeQuery();
+	rs = psmt.executeQuery(); // 쿼리 실행
 	// 결과가 없는것들은 executeUpdate()를 이용해 실행, 결과를 받아와야되면 executeQuery 사용후 rs에 담기
 
 	// 	String loginId = null;
@@ -38,9 +38,9 @@ try {
 	// 	String loginPassword = null;
 	// 	String loginAddr = null;
 	// 	int uidx = 0;
-	if (rs.next()) {
+	if (rs.next()) { // 고유키가 걸린 데이터를 조회하기때문에 결과는 단 하나이므로 while대신 if 사용
 		//쿼리실행의 결과가 존재
-		User user = new User(); // session에 담길 loginUser 객체
+		User user = new User(); // session에 담길 loginUser 객체. 자바 beans
 
 		user.setId(rs.getString("id")); // 객체에다가 rs로 꺼내온 결과를 담음
 		user.setName(rs.getString("name"));
@@ -64,12 +64,10 @@ try {
 %>
 <script>
 	alert("아이디/비밀번호가 틀렸습니다.");
-	location.href = "<%request.getContextPath();%>
-	/boardStudy/login/login.jsp";
+	location.href = "<%request.getContextPath();%>/boardStudy/login/login.jsp"; // 자바가 JS보다 먼저실행되기 때문에 자바 response로 리다이렉트하면 경고문을 볼 수 없음
 </script>
 <%
 }
-
 } catch (Exception e) {
 e.printStackTrace();
 } finally { // 작업 후 사용한 연결을 종료해야함

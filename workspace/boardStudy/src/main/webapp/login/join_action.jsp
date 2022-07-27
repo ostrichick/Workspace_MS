@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@page import="java.sql.*"%>
+<%@ page import="java.sql.*"%>
 <%
 request.setCharacterEncoding("UTF-8");
 String id = request.getParameter("id");
@@ -20,9 +20,10 @@ try {
 	String sql = "insert into usertb(uidx, id, password, name, addr) values(uidx_seq.nextval, '" + id + "','" + password
 	+ "','" + name + "','" + addr + "')";
 	psmt = conn.prepareStatement(sql); // sql문을 psmt에 집어넣음
-	int result = psmt.executeUpdate();
-	response.sendRedirect(request.getContextPath()); // index로
-  System.out.println("성공");
+  
+	int result = psmt.executeUpdate(); // 쿼리를 실행하고 입력 결과에따른 숫자 반환
+	response.sendRedirect(request.getContextPath()); // 위의 내용 실행후 리다이렉트
+	System.out.println("성공");
 } catch (Exception e) {
 	e.printStackTrace();
 } finally {
@@ -31,7 +32,7 @@ try {
 	}
 	if (psmt != null) {
 		psmt.close();
-	} // 커넥션 psmt 쓴 후에 닫아줘야함
+	} // conn, psmt 쓴 후에 닫아줘야함
 
 }
 %>

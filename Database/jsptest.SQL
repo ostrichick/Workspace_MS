@@ -38,4 +38,8 @@ CREATE SEQUENCE bidx_seq START WITH 1 INCREMENT BY 1;
 
 TRUNCATE TABLE boardtb;
 
-select * from boardtb b inner join usertb u on b.uidx = u.uidx;
+select * from boardtb b inner join usertb u on b.uidx = u.uidx WHERE bidx=162;
+
+UPDATE BOARDTB SET TITLE=111, CONTENT=111 WHERE BIDX=162;
+
+COMMIT;

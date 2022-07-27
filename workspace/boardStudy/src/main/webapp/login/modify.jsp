@@ -9,20 +9,25 @@
 Connection conn = null;
 PreparedStatement psmt = null;
 ResultSet rs = null;
+
 User login = (User) session.getAttribute("login");
 String prompt = request.getParameter("password");
 User user = new User();
+
 try {
 	String url = "jdbc:oracle:thin:@localhost:1521:xe";
 	String dbName = "c##jsptest";
 	String dbPass = "1234";
 	Class.forName("oracle.jdbc.driver.OracleDriver");
 	conn = DriverManager.getConnection(url, dbName, dbPass);
+  
 	String sql = "select * from usertb where uidx=? and password=?";
+  // 쿼리문에 propmt로 받아온 비밀번호를 입력해봐서 조회가 되는지 확인
 	psmt = conn.prepareStatement(sql);
 	psmt.setInt(1, login.getUidx());
 	psmt.setString(2, prompt);
 	rs = psmt.executeQuery();
+  
 	if (rs.next()) {
 		user.setUidx(rs.getInt("uidx"));
 		user.setId(rs.getString("id"));
@@ -33,8 +38,7 @@ try {
 %>
 <script>
       alert("입력한 비밀번호가 일치하지 않습니다");
-      location.href = "<%=request.getContextPath()%>
-  /index.jsp";
+      location.href = "<%=request.getContextPath()%>/index.jsp";
 </script>
 <%
 //response.sendRedirect(request.getContextPath()); 
