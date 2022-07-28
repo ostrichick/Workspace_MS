@@ -7,13 +7,76 @@
     <title>눈 내리는 웹페이지</title>
     <link rel="stylesheet" href="" />
     <style>
-      body {
+      div {
         background: url("icysunset.jpg") no-repeat;
+        min-height: 900px;
+      }
+      img {
+        transition: all 0.95s linear;
       }
     </style>
   </head>
   <body>
+    <div class="starArea">
+      <img class="star" src="star.png" width="20" alt="" style="position: absolute; left: 500px; top: 5px" />
+    </div>
     <script>
+      console.log(window.innerWidth);
+      console.log(Math.floor(Math.random() * window.innerWidth));
+
+      // 인터벌과 함께 30회 반복 시킬것
+      let imgCnt = 1;
+      let starArea = document.querySelector(".starArea");
+      function newImg() {
+        if (imgCnt < 50) {
+          let starImg = document.createElement("img");
+          starImg.setAttribute("class", "star");
+          starImg.setAttribute("src", "star.png");
+          starImg.setAttribute("width", "20");
+          starImg.setAttribute("style", "position:absolute");
+          starImg.style.left = Math.floor(Math.random() * window.innerWidth) + "px";
+          starImg.style.top = Math.floor(Math.random() * 10) + "px";
+          starArea.append(starImg);
+          imgCnt++;
+        }
+      }
+      setInterval("newImg()", Math.random() * 1000);
+
+      let wHeight = screen.availHeight;
+      // let imgList = document.querySelectorAll(".star");
+      function downFall() {
+        let imgList = document.querySelectorAll(".star");
+        let randomImg = imgList[Math.floor(Math.random() * imgList.length)];
+        // console.log(randomImg);
+        // console.log(randomImg.style.top + " 탑 px");
+        let randomImgTop = parseInt(randomImg.style.top.replace("px", ""));
+        if (randomImgTop < wHeight - 250) {
+          // console.log(randomImgTop + " 변수imgtop");
+          randomImg.style.top = randomImgTop + 15 + "px";
+        } else if (randomImgTop >= wHeight - 250) {
+          starArea.removeChild(randomImg);
+          console.log("downFall에 의해 삭제");
+          imgCnt--;
+        }
+
+        // console.log(randomImgTop);
+      }
+      setInterval("downFall()", (Math.random() * 500) / imgCnt);
+
+      function allDown() {
+        let imgList = document.querySelectorAll(".star");
+        for (i = 0; i < imgList.length; i++) {
+          if (parseInt(imgList[i].style.top.replace("px", "")) < wHeight - 150) {
+            imgList[i].style.top = parseInt(imgList[i].style.top.replace("px", "")) + 25 + "px";
+            imgList[i].style.left = parseInt(imgList[i].style.left.replace("px", "")) + (Math.floor(Math.random() * 20) - 10) + "px";
+          } else {
+            starArea.removeChild(imgList[i]);
+            console.log("allDown에 의해 삭제");
+            imgCnt--;
+          }
+        }
+      }
+      setInterval("allDown()", 1000);
       // 브라우저 맨 위 위치 30곳에 랜덤하게 div에 담긴 star.png 이미지 뿌리기
       // intervel 에 따라 아래로 한칸씩 내려오다가 맨 밑에 닿으면 삭제하고 다시 위에 하나 추가
     </script>
