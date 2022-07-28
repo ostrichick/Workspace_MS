@@ -82,7 +82,7 @@ table div {
 <body>
   <%@include file="/include/header.jsp"%>
   <section>
-    <form action="edit_action.jsp" method="post">
+    <form action="modify_action.jsp" method="post">
       <h4>게시글 수정 페이지입니다</h4>
       <table>
         <tr>
@@ -117,7 +117,7 @@ table div {
         <tr>
           <td colspan="2">
             <input type="hidden" name="bidx" value="<%=board.getBidx()%>" />
-            <button>수정완료</button>
+            <button>저장</button>
           </td>
         </tr>
       </table>

@@ -9,9 +9,9 @@ User loginUser = (User) session.getAttribute("login");
   <nav>
     <div class="menuArea">
       <ul>
-        <li><a href="<%=request.getContextPath()%>/write.jsp">게시판1</a></li> | 
-        <li><a href="<%=request.getContextPath()%>/board/list.jsp">게시판2</a></li> | 
-        <li>게시판3</li>
+        <li><a href="<%=request.getContextPath()%>/write.jsp">게시판1</a> | </li> 
+        <li><a href="<%=request.getContextPath()%>/board/list.jsp">게시판2</a>  | </li> 
+        <li><a href="<%=request.getContextPath()%>/member/list.jsp">게시판3</a></li>
       </ul>
     </div>
     <div class="loginArea">

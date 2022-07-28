@@ -42,4 +42,11 @@ select * from boardtb b inner join usertb u on b.uidx = u.uidx WHERE bidx=162;
 
 UPDATE BOARDTB SET TITLE=111, CONTENT=111 WHERE BIDX=162;
 
-COMMIT;
+COMMIT; -- 항상 커밋 빼먹지 말것. 커밋 안한 상태로 놔두면 다른쪽에서 DB 수정 못 함
+UPDATE BOARDTB SET HIT=2 WHERE BIDX=162;
+
+DELETE FROM boardtb WHERE bidx=162;
+
+select * from boardtb b inner join usertb u on b.uidx = u.uidx WHERE content LIKE '%?%';
+select * from boardtb b inner join usertb u on b.uidx = u.uidx WHERE title LIKE '%?%';
+select * from boardtb b inner join usertb u on b.uidx = u.uidx WHERE name LIKE '%?%';
