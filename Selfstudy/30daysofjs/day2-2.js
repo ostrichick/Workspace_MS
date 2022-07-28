@@ -7,22 +7,32 @@ console.log(
 );
 
 // Check if typeof '10' is exactly equal to 10. If not make it exactly equal.
-console.log(typeof "10");
+console.log(typeof "10"); // string
 let istrue = parseInt("10") === 10;
-console.log(istrue);
+console.log(istrue); //true
 
 // Check if parseFloat('9.8') is equal to 10 if not make it exactly equal with 10.
-console.log(Math.ceil(parseFloat("9.8")));
+console.log(Math.ceil(parseFloat("9.8"))); //10
 
 // Check if 'on' is found in both python and jargon
+let python = "python";
+let jargon = "jargon";
+
+console.log(python.includes("on")); //true
+console.log(jargon.includes("on")); //true
 
 // I hope this course is not full of jargon. Check if jargon is in the sentence.
+let jargonSentence = "I hope this course is not full of jargon.";
+console.log(jargonSentence.includes("jargon")); //true
 
 // Generate a random number between 0 and 100 inclusively.
+console.log(Math.floor(Math.random() * 101));
 
 // Generate a random number between 50 and 100 inclusively.
+console.log(Math.floor(Math.random() * 50 + 50));
 
 // Generate a random number between 0 and 255 inclusively.
+console.log(Math.floor(Math.random() * 256));
 
 // Access the 'JavaScript' string characters using a random number.
 
