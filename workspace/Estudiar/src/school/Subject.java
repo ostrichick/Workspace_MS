@@ -8,7 +8,7 @@ public class Subject {
 
 	private String subjectName;
 	private int subjectId;
-	private byte gradeType;
+	private int gradeType;
 
 	private ArrayList<Student> studentList = new ArrayList<Student>();
 
@@ -42,12 +42,12 @@ public class Subject {
 		this.studentList = studentList;
 	}
 
-	public byte getGradeType() {
+	public int getGradeType() {
 		return gradeType;
 	}
 
-	public void setGradeType(byte gradeType) {
-		this.gradeType = gradeType;
+	public void setGradeType(int pfType) {
+		this.gradeType = pfType;
 	}
 
 	public void register(Student student) {

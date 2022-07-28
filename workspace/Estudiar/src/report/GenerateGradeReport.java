@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import grade.BasicEvaluation;
 import grade.GradeEvaluation;
 import grade.MajorEvaluation;
+import grade.PassFailEvaluation;
 import school.School;
 import school.Score;
 import school.Student;
@@ -50,27 +51,31 @@ public class GenerateGradeReport {
 			buffer.append(student.getMajorSubject().getSubjectName() + "\t");
 			buffer.append(" | ");
 
-			getScoreGrade(student, subject.getSubjectId());
+			getScoreGrade(student, subject);
 
 			buffer.append("\n");
 			buffer.append(LINE);
 		}
 	}
 
-	public void getScoreGrade(Student student, int subjectId) {
+	public void getScoreGrade(Student student, Subject subject) {
 		ArrayList<Score> scoreList = student.getScoreList();
 		int majorId = student.getMajorSubject().getSubjectId();
 
-		GradeEvaluation[] gradeEvaluations = { new BasicEvaluation(), new MajorEvaluation(), };
+		GradeEvaluation[] gradeEvaluations = { new BasicEvaluation(), new MajorEvaluation(), new PassFailEvaluation() };
 
 		for (int i = 0; i < scoreList.size(); i++) {
 			Score score = scoreList.get(i);
-			if (score.getSubject().getSubjectId() == subjectId) {
+			if (score.getSubject().getSubjectId() == subject.getSubjectId()) {
 				String grade;
-				if (score.getSubject().getSubjectId() == majorId) {
-					grade = gradeEvaluations[Define.SAB_TYPE].getGrade(score.getPoint());
+				if (subject.getGradeType() == Define.PF_TYPE) {
+					grade = gradeEvaluations[Define.PF_TYPE].getGrade(score.getPoint());
 				} else {
-					grade = gradeEvaluations[Define.AB_TYPE].getGrade(score.getPoint());
+					if (score.getSubject().getSubjectId() == majorId) {
+						grade = gradeEvaluations[Define.SAB_TYPE].getGrade(score.getPoint());
+					} else {
+						grade = gradeEvaluations[Define.AB_TYPE].getGrade(score.getPoint());
+					}
 				}
 				buffer.append(score.getPoint());
 				buffer.append(":");
