@@ -28,10 +28,18 @@ if (bidxStr != null) { // 비인덱스 널이 아닐경우 스트링에서 인�
 try {
 	conn = dbConnector.getConnection(); // 디비 연결
 
+	// 	String sqlHit = "UPDATE BOARDTB SET HIT=HIT+1 WHERE BIDX=?";
+	// 	psmtHit = conn.prepareStatement(sqlHit);
+	// 	psmtHit.setInt(1, bidx);
+	// 	psmtHit.executeUpdate();
+
 	String sqlHit = "UPDATE BOARDTB SET HIT=HIT+1 WHERE BIDX=?";
-	psmtHit = conn.prepareStatement(sqlHit);
-	psmtHit.setInt(1, bidx);
-	psmtHit.executeUpdate();
+	psmt = conn.prepareStatement(sqlHit);
+	psmt.setInt(1, bidx);
+	psmt.executeUpdate();
+  psmt.addBatch();
+	psmt.clearParameters();
+	psmt.close();
 
 	String sql = "select * from boardtb b inner join usertb u on b.uidx = u.uidx where bidx=?"; // 디비에서 뷰에 담을 정보를 받아올 조인 쿼리
 	psmt = conn.prepareStatement(sql);
