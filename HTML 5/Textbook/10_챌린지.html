@@ -42,8 +42,8 @@
       }
       setInterval("newImg()", Math.random() * 800);
 
-      let wHeight = screen.availHeight;
       function downFall() {
+        let wHeight = screen.availHeight;
         let imgList = document.querySelectorAll(".star");
         let randomImg = imgList[Math.floor(Math.random() * imgList.length)];
         let randomImgTop = parseInt(randomImg.style.top.replace("px", ""));
@@ -60,6 +60,7 @@
       function allDown() {
         let imgList = document.querySelectorAll(".star");
         for (i = 0; i < imgList.length; i++) {
+          let wHeight = screen.availHeight;
           if (parseInt(imgList[i].style.top.replace("px", "")) < wHeight - 150) {
             imgList[i].style.top = parseInt(imgList[i].style.top.replace("px", "")) + 25 + "px";
             imgList[i].style.left = parseInt(imgList[i].style.left.replace("px", "")) + (Math.floor(Math.random() * 20) - 10) + "px";

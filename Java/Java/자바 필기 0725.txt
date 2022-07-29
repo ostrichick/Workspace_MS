@@ -172,7 +172,8 @@ float
       2) 문자 : FileReader("파일명" or 파일객체);
       
       입력은 반드시 정확한 경로명 파일명이 필요하지만 출력 파일명은 자동생성 가능함
-            
+    출력에 유용한 출력 클래스 PrintWriter - write(), print() 메소드 지원, autoFlush 기능 지원
+    입력에 유용한 유틸 클래스 Scanner 
 
 
 
