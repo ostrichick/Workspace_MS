@@ -73,7 +73,6 @@
       </p>
     </div>
     <script>
-      var i = 0;
       updateTime();
       function updateTime() {
         var now = new Date(); //날자와 시간과 관련된 객체
@@ -89,21 +88,21 @@
 
       function zero(n) {
         // 0~9사이 숫자일경우 앞에 0을 추가해서 두자리 숫자로 만들어줌
-        if (n < 10) return "0" + n;
-        else return n;
+        // if (n < 10) return "0" + n;
+        // else return n;
+        return n.toString().padStart(2, "0");
       }
       var week = ["일", "월", "화", "수", "목", "금", "토"]; //배열
       updateDay();
       function updateDay() {
         var today = new Date();
-        var yy = zero(today.getFullYear());
-        var mm = zero(today.getMonth());
+        var yy = today.getFullYear();
+        var mm = today.getMonth() + 1;
         var dd = zero(today.getDate());
         var yo = today.getDay();
         var day = document.getElementById("day");
         daytext.innerHTML = `${mm}월 ${dd}일 ${week[yo]}요일`;
       }
-      var yo = today.getDay();
       setInterval(updateDay, 60000);
     </script>
   </body>
