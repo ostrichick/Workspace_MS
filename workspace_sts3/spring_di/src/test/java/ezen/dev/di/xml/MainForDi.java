@@ -13,5 +13,6 @@ public class MainForDi {
 		b.methodB();
 		C c = xmlAppCtx.getBean("c", C.class);
 		c.methodC();
+		xmlAppCtx.close();
 	}
 }
