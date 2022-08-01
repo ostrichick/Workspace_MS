@@ -177,24 +177,7 @@ float
 
 
 
-
-Connection conn = null;
-PreparedStatement psmt = null;
-DBConnector dbConnector = new DBConnector();
-
-try {
-	conn = dbConnector.getConnection(); 
-	String sql = ""; 
-	psmt = conn.prepareStatement(sql); 
-	psmt.setString(1, 입력); 
-
-	int result = psmt.executeUpdate(); 
-}
-} catch (Exception e) {
-e.printStackTrace(); 
-} finally {
-dbConnector.connClose(); 
-if (psmt != null) {
-psmt.close();
-}
-}
+  JSP
+  <%! %> 선언문
+  <% %> 스크립틀릿
+  <%= %> 표현식
