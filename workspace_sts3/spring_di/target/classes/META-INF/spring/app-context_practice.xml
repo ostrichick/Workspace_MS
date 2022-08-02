@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<description>전주마트 삼성 엘지 애플 빈 설정</description>
+
+	<bean id="p_samsung" class="ezen.dev.di.practice_xml.Product" />
+	<bean id="p_lg" class="ezen.dev.di.practice_xml.Product" />
+	<bean id="p_apple" class="ezen.dev.di.practice_xml.Product" />
+	<bean id="jjMart" class="ezen.dev.di.practice_xml.JeonjuMart">
+		<constructor-arg ref="p_samsung" />
+		<constructor-arg ref="p_lg" />
+		<constructor-arg ref="p_apple" />
+		<property name="productList">
+			<list>
+				<ref bean="p_samsung" />
+				<ref bean="p_lg" />
+				<ref bean="p_apple" />
+			</list>
+		</property>
+	</bean>
+
+	<!-- <context:component-scan base-package="ezen.dev.di" /> -->
+
+</beans>

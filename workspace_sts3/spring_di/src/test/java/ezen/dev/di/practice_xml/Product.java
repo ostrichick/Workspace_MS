@@ -1,4 +1,4 @@
-package ezen.dev.di.practice;
+package ezen.dev.di.practice_xml;
 
 public class Product {
 	private String idx;
