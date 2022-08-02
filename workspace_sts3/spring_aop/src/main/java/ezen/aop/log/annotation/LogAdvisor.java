@@ -14,38 +14,42 @@ import org.springframework.stereotype.Component;
 @Component
 @Aspect
 public class LogAdvisor {
-	@Pointcut("execution(* ezen.apo..TargetB.method*())")
-	public void targetMethod() {
-	}// 임의의 메소드를 정의해서 변수처럼 사용
 
-	@Before("targetMethod()")
-	public void logBefore() {
-		System.out.println("메소드 실행 전 로깅: logBefore");
-	}
+  @Pointcut("execution(* ezen.aop..TargetB.method*())")
+  public void targetMethod() {} // 임의의 메소드를 정의해서 변수처럼 사용
 
-	@After("targetMethod()")
-	public void logAfter() {
-		System.out.println("메소드 실행 후 로깅: logAfter");
-	}
+  @Before("targetMethod()")
+  public void logBefore() {
+    System.out.println("메소드 실행 전 로깅: logBefore");
+  }
 
-	@AfterReturning("targetMethod()")
-	public void logAfterReturning() {
-		System.out.println("결과값 반환 후 로깅: logAfterReturning");
-	}
+  @After("targetMethod()")
+  public void logAfter() {
+    System.out.println("메소드 실행 후 로깅: logAfter");
+  }
 
-	@AfterThrowing("targetMethod()")
-	public void logAfterThorwing(JoinPoint joinPoint, Throwable e) {
-		System.out.println("쓰로잉 후 로깅 : logAfterThrowing");
-		System.out.println("발생한 예외 : " + e.getMessage());
-	}
+  @AfterReturning("targetMethod()")
+  public void logAfterReturning() {
+    System.out.println("결과값 반환 후 로깅: logAfterReturning");
+  }
 
-	@Around("targetMethod()")
-	public Object logAround(ProceedingJoinPoint joinPoint) throws Throwable {
-		String className = joinPoint.getTarget().getClass().getSimpleName();
-		String methodName = joinPoint.getSignature().getName();
-		System.out.println(className + " 의 " + methodName + " 메소드 실행 전 로깅 : logAround");
-		Object obj = joinPoint.proceed();
-		System.out.println(className + " 의 " + methodName + " 메소드 실행 후 로깅 : logAround");
-		return obj;
-	}
+  @AfterThrowing("targetMethod()")
+  public void logAfterThrowing(JoinPoint joinPoint, Throwable e) {
+    System.out.println("쓰로잉 후 로깅 : logAfterThrowing");
+    System.out.println("발생한 예외 : " + e.getMessage());
+  }
+
+  @Around("targetMethod()")
+  public Object logAround(ProceedingJoinPoint joinPoint) throws Throwable {
+    String className = joinPoint.getTarget().getClass().getSimpleName();
+    String methodName = joinPoint.getSignature().getName();
+    System.out.println(
+      className + " 의 " + methodName + " 메소드 실행 전 로깅 : logAround"
+    );
+    Object obj = joinPoint.proceed();
+    System.out.println(
+      className + " 의 " + methodName + " 메소드 실행 후 로깅 : logAround"
+    );
+    return obj;
+  }
 }

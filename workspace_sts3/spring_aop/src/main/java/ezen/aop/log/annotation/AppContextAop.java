@@ -6,7 +6,5 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 @Configuration
 @EnableAspectJAutoProxy
-@ComponentScan(basePackages = { "ezen.apo.log.annotation" })
-public class AppContextAop {
-
-}
+@ComponentScan(basePackages = { "ezen.aop.log.annotation" })
+public class AppContextAop {}

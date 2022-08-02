@@ -5,7 +5,7 @@ import org.springframework.context.support.GenericXmlApplicationContext;
 
 public class MainForAOP01 {
 	public static void main(String[] args) {
-		String path = "classpath:META-INF/spring/app-context_aop_log.xml";
+		String path = "classpath:META-INF/spring/app-context-aop-log.xml";
 		AbstractApplicationContext ctx = new GenericXmlApplicationContext(path);
 		TargetA a = ctx.getBean("targetA", TargetA.class);
 		a.method1();
