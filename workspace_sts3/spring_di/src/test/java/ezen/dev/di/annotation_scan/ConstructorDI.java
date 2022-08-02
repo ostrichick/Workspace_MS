@@ -8,9 +8,9 @@ import org.springframework.stereotype.Component;
 public class ConstructorDI {
 	private MessageService messageService;
 
-	@Autowired(required = false)
-	public ConstructorDI(@Qualifier("katalk") MessageService messageService) {
-		this.messageService = messageService; // 카톡만 주입받겠다는 표시
+	@Autowired(required = false) 
+	public ConstructorDI(@Qualifier("katalk") MessageService messageService) { // @Qualifier 카톡만 주입받겠다는 표시
+		this.messageService = messageService; 
 	}
 
 	@Autowired(required = false)

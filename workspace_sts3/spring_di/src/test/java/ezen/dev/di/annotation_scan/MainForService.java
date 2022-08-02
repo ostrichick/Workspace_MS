@@ -14,7 +14,7 @@ public class MainForService {
 		setterDI.processMsg("message sending... email");
 		
 		FieldDI fieldDI = ctx.getBean("field", FieldDI.class);
-		fieldDI.processMsg("message sending... email");
+		fieldDI.processMsg("message sending... sms");
 		
 		ctx.close();
 	}

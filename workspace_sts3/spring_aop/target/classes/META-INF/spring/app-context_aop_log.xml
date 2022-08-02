@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+
+	<description>스프링 AOP 관련 설정</description>
+	<!-- AOP의 대상 클래스Target Object -->
+	<bean id="targetA" class="ezen.aop.log.xml.TargetA" />
+
+	<!-- Aspect 공통기능과 적용 시점들Advice 가지고있는 Advisor클래스 -->
+	<bean id="logAdvisor" class="ezen.aop.log.xml.LogAdvisor" />
+
+	<!-- AOP 적용하기 위한 설정 -->
+	<aop:config proxy-target-class="true"><!-- 동적 프록시 객체 적용 -->
+		<!-- 공통기능을 적용할 메소드 지정. ("*" 와일드카드, "." 0개 이상 -->
+		<aop:pointcut id="pointcutLogAspect"
+			expression="execution(* ezen.aop..TargetA.*())" />
+		<!-- 공통기능 지정 -->
+		<aop:aspect ref="LogAdvisor">
+			<!-- 공통기능을 언제 적용할지 지정 -->
+			<!-- <aop:before method="LogBefore" -->
+			<!-- pointcut-ref="pointcutLogAspect" /> -->
+			<!-- <aop:after method="LogAfter" -->
+			<!-- pointcut-ref="pointcutLogAspect" /> -->
+			<!-- <aop:after-returning method="LogAfterReturning" -->
+			<!-- pointcut-ref="pointcutLogAspect" /> -->
+			<!-- <aop:after-throwing method="LogAfterThrowing" -->
+			<!-- pointcut-ref="pointcutLogAspect" throwing="e" /> -->
+			<aop:around method="logAround"
+				pointcut-ref="pointcutLogAspect" />
+		</aop:aspect>
+	</aop:config>
+
+	<!-- <context:component-scan base-package="ezen.aop.log.xml" /> -->
+
+</beans>
