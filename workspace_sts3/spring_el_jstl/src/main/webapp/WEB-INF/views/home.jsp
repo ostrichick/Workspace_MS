@@ -13,10 +13,10 @@
 		<a href="${pageContext.request.contextPath}/built_in_object.do">EL의 내장객체 사용</a>
 	</div>
 	<div>
-		<a href="${pageContext.request.contextPath}/.do">자바빈 사용</a>
+		<a href="${pageContext.request.contextPath}/java_bean.do">자바빈 사용</a>
 	</div>
 	<div>
-		<a href="${pageContext.request.contextPath}/.do">연산식 사용</a>
+		<a href="${pageContext.request.contextPath}/el_operation.do">연산식 사용</a>
 	</div>
 	<div>
 		<a href="${pageContext.request.contextPath}/.do">자바메소드 호출</a>
