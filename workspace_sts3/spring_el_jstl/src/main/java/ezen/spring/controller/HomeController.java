@@ -97,4 +97,9 @@ public class HomeController {
 		model.addAttribute("num2", 200);
 		return "/el_operation/use_operation";
 	}
+	
+	@GetMapping("/java_method.do")
+	public String java_method() {
+		return "/java_method/use_java_method";
+	}
 }

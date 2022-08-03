@@ -19,7 +19,7 @@
 		<a href="${pageContext.request.contextPath}/el_operation.do">연산식 사용</a>
 	</div>
 	<div>
-		<a href="${pageContext.request.contextPath}/.do">자바메소드 호출</a>
+		<a href="${pageContext.request.contextPath}/java_method.do">자바메소드 호출</a>
 	</div>
 	<div>
 		<a href="${pageContext.request.contextPath}/.do">배열과 컬렉션 사용</a>
