@@ -21,6 +21,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import ezen.spring.vo.Goods;
 import ezen.spring.vo.Product;
 
 /**
@@ -30,6 +31,29 @@ import ezen.spring.vo.Product;
 public class HomeController {
 
 	private Product product;
+	private Goods goods1, goods2, goods3;
+	private List<Goods> goodsList;
+
+	@Autowired(required = false)
+	public void setGoodsList(List<Goods> goodsList) {
+		goodsList.clear();
+		this.goodsList = goodsList;
+	}
+
+	@Autowired(required = false)
+	public void setGoods1(Goods goods1) {
+		this.goods1 = goods1;
+	}
+
+	@Autowired(required = false)
+	public void setGoods2(Goods goods2) {
+		this.goods2 = goods2;
+	}
+
+	@Autowired(required = false)
+	public void setGoods3(Goods goods3) {
+		this.goods3 = goods3;
+	}
 
 	// 자동 의존 주입 : setter메소드 이용
 	@Autowired(required = false)
@@ -134,6 +158,52 @@ public class HomeController {
 
 	@GetMapping("/jsp_jstl.do")
 	public String jsp_jstl() {
-		return "/jsp_jstl/use_jsp_jstl";
+		return "/jsp_jstl/jsp_jstl";
 	}
+
+	@GetMapping("/jstl_core_selection.do")
+	public String jstl_core_selection(Model model) {
+		model.addAttribute("num1", 1000);
+		model.addAttribute("num2", 500);
+		return "/jsp_jstl/use_core_selection";
+	}
+
+	@GetMapping("/jstl_core_loop.do")
+	public String jstl_core_loop(Model model) {
+		// 상품클래스를 Goods클래스로 정의해서
+		// 멤버변수(code, price)를 3개씩 값 입력
+		// List<Goods>에 저장
+
+		goodsList.clear();
+		goods1.setCode("G0001");
+		goods1.setPrice(1000);
+		goods2.setCode("G0002");
+		goods2.setPrice(2000);
+		goods3.setCode("G0003");
+		goods3.setPrice(3000);
+
+		goodsList.add(goods1);
+		goodsList.add(goods2);
+		goodsList.add(goods3);
+
+		model.addAttribute("goodsList", goodsList);
+
+		return "/jsp_jstl/use_core_loop";
+	}
+
+	@GetMapping("/jstl_core_etc.do")
+	public String jstl_core_etc() {
+		return "/jsp_jstl/use_core_etc";
+	}
+
+	@GetMapping("/jstl_function.do")
+	public String jstl_function() {
+		return "/jsp_jstl/use_function";
+	}
+
+	@GetMapping("/jstl_practice.do")
+	public String jstl_practice() {
+		return "/jsp_jstl/jstl_practice";
+	}
+
 }
