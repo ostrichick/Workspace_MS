@@ -22,6 +22,19 @@ public class MemberVo {
 	private Date reg_date;
 	private String del_yn;
 
+	public MemberVo() {
+		super();
+	}
+
+	public MemberVo(String member_id, String member_pw, String member_name, String member_handphone,
+			String member_gender) {
+		this.member_id = member_id;
+		this.member_pw = member_pw;
+		this.member_name = member_name;
+		this.member_handphone = member_handphone;
+		this.member_gender = member_gender;
+	}
+
 	public int getMember_idx() {
 		return member_idx;
 	}

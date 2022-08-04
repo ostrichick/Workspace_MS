@@ -13,7 +13,7 @@ DROP SEQUENCE member_sq;
 CREATE SEQUENCE member_sq START WITH 1 INCREMENT BY 1 MAXVALUE 9999999 NOCYCLE NOCACHE NOORDER;
 
 -- 회원가입 쿼리문
-INSERT INTO member_tbl VALUES (member_sq.NEXTVAL, ?, ?, ?, ?, ?, ?, DEFAULT, default);
+INSERT INTO member_tbl VALUES (member_sq.NEXTVAL, ?, ?, ?, ?, ?, DEFAULT, DEFAULT, default);
 -- 정보수정 쿼리문
 UPDATE member_tbl SET member_id = ?, member_name = ?, member_handphone = ? WHERE member_idx = ?;
 -- 회원 탈퇴 쿼리문
@@ -23,3 +23,6 @@ UPDATE member_tbl SET del_yn = 'Y' WHERE member_idx = ?;
 UPDATE member_tbl SET member_grade = ? WHERE member_idx = ?;
 -- 관리자의 회원삭제 쿼리문
 DELETE FROM member_tbl WHERE member_idx = ?;
+
+ALTER TABLE member_tbl MODIFY member_gender CHAR(3);
+ALTER TABLE member_tbl ADD UNIQUE (member_id);

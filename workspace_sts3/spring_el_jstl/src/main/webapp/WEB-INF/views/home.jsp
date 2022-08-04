@@ -10,22 +10,29 @@
 	<P>The time on the server is ${serverTime}.</P>
 	<h2>EL과 JSTL 연습</h2>
 	<div>
-		<a href="${pageContext.request.contextPath}/built_in_object.do">EL의 내장객체 사용</a>
+		<a href="${pageContext.request.contextPath}/built_in_object.do">EL의
+			내장객체 사용</a>
 	</div>
 	<div>
 		<a href="${pageContext.request.contextPath}/java_bean.do">자바빈 사용</a>
 	</div>
 	<div>
-		<a href="${pageContext.request.contextPath}/el_operation.do">연산식 사용</a>
+		<a href="${pageContext.request.contextPath}/el_operation.do">연산식
+			사용</a>
 	</div>
 	<div>
-		<a href="${pageContext.request.contextPath}/java_method.do">자바메소드 호출</a>
+		<a href="${pageContext.request.contextPath}/java_method.do">자바메소드
+			호출</a>
 	</div>
 	<div>
-		<a href="${pageContext.request.contextPath}/java_collection.do">배열과 컬렉션 사용</a>
+		<a href="${pageContext.request.contextPath}/java_collection.do">배열과
+			컬렉션 사용</a>
 	</div>
 	<div>
 		<a href="${pageContext.request.contextPath}/jsp_jstl.do">JSTL 사용</a>
+	</div>
+	<div>
+		<a href="${pageContext.request.contextPath}/member_index.do">회원관리시스템 메인</a>
 	</div>
 
 </body>
