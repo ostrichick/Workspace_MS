@@ -6,7 +6,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +17,7 @@ import ezen.spring.vo.MemberVo;
 @Repository // 클래스를 만들때마다 항상 무슨 어노테이션 붙일지 생각, 서블릿컨텍스트xml에 등록
 public class MemberDao {
 	private DriverManagerDataSource dataSource; // db연결객체
+	private HttpServletRequest request;
 
 	@Autowired(required = false)
 	public MemberDao(DriverManagerDataSource dataSource) {
@@ -82,9 +82,9 @@ public class MemberDao {
 				memberVo.setMember_idx(rs.getInt("member_idx"));
 				memberVo.setMember_id(rs.getString("member_id"));
 				memberVo.setMember_name(rs.getString("member_name"));
-				
-				
-//				session.setAttribute("login", memberVo);
+
+				HttpSession session = request.getSession();
+				session.setAttribute("login", memberVo);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
