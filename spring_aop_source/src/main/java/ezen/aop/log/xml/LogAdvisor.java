@@ -37,7 +37,3 @@ public class LogAdvisor {
     return obj;
   }
 }
-		return obj;
-	}
-
-}

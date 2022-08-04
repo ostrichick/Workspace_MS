@@ -22,10 +22,10 @@
 		<a href="${pageContext.request.contextPath}/java_method.do">자바메소드 호출</a>
 	</div>
 	<div>
-		<a href="${pageContext.request.contextPath}/.do">배열과 컬렉션 사용</a>
+		<a href="${pageContext.request.contextPath}/java_collection.do">배열과 컬렉션 사용</a>
 	</div>
 	<div>
-		<a href="${pageContext.request.contextPath}/.do">JSTL 사용</a>
+		<a href="${pageContext.request.contextPath}/jsp_jstl.do">JSTL 사용</a>
 	</div>
 
 </body>

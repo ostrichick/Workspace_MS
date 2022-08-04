@@ -1,6 +1,5 @@
 package ezen.aop.log.annotation;
 
-import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.AfterReturning;
@@ -52,5 +51,3 @@ public class LogAdvisor {
 
 }
 //	}
-
-}

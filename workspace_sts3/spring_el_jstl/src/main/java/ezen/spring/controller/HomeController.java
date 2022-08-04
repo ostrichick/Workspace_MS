@@ -1,8 +1,12 @@
 package ezen.spring.controller;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
@@ -97,9 +101,39 @@ public class HomeController {
 		model.addAttribute("num2", 200);
 		return "/el_operation/use_operation";
 	}
-	
+
 	@GetMapping("/java_method.do")
 	public String java_method() {
 		return "/java_method/use_java_method";
+	}
+
+	@GetMapping("/java_collection.do")
+	public String java_collection(Model model) {
+		// 배열 생성 및 모델에 속성으로 추가
+		String[] winners = { "홍길동", "심각갓0", "임꺽정" };
+		model.addAttribute("winners", winners);
+
+		// 문자열 값을 저장하는 List객체 생성 및 모델에 속성으로 추가
+		List<String> items = new ArrayList<String>();
+		items.add("딸기");
+		items.add("수박");
+		items.add("참외");
+		items.add("사과");
+		model.addAttribute("items", items);
+
+		// 문자열 값을 저장하는 Map객체 생성 및 모델에 속성으로 추가
+		Map<String, String> addressBook = new HashMap<String, String>();
+		addressBook.put("전주시청", "전라북도 전주시 완산구");
+		addressBook.put("독도", "울릉도 동남쪽 뱃길따라 이백리");
+		addressBook.put("청와대", "서울특별시 종로구 청와대로 1");
+		addressBook.put("에버랜드", "경기도 용인시 처인구");
+		model.addAttribute("addressBook", addressBook);
+
+		return "/java_collection/use_java_collection";
+	}
+
+	@GetMapping("/jsp_jstl.do")
+	public String jsp_jstl() {
+		return "/jsp_jstl/use_jsp_jstl";
 	}
 }
