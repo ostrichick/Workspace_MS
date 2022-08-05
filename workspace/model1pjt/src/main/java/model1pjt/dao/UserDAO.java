@@ -48,9 +48,10 @@ public class UserDAO {
 			psmt.setString(1, user.getId());
 			psmt.setString(2, user.getPassword());
 			rs = psmt.executeQuery();
-			System.out.println("rs.next() 값1 : " + rs.next());
+			System.out.println("rs.next()  : " + rs.next());
 			if (rs.next()) {
-				System.out.println("rs.next() 값2 : " + rs.next());
+				System.out.println("ㅇㅇㅇㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇ");
+				System.out.println("rs.next() 안쪽 : " + rs.next());
 				result = new User();
 				result.setId(rs.getString("id"));
 				result.setName(rs.getString("name"));

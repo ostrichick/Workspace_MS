@@ -10,8 +10,8 @@ UserDAO userDAO = new UserDAO();
 <%
 User result = userDAO.loginAction(userLogin);
 
-System.out.println("action : " + result.getId());
-System.out.println("action : " + result.getName());
+System.out.println(result);
+// System.out.println("action : " + result.getName());
 if (result != null) {
 	response.sendRedirect(request.getContextPath());
 	session.setAttribute("loginSession", result);
