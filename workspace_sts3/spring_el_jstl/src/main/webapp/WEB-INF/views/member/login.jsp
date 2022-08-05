@@ -14,10 +14,11 @@
 			<fieldset>
 				<legend>입력</legend>
 				<p>
-					<label for="">id : <input type="text" name="member_id" /></label>
+					<label for="">아이디<br> <input type="text"
+						name="member_id" /></label>
 				</p>
 				<p>
-					<label for="">password : <input type="password"
+					<label for="">비밀번호<br> <input type="password"
 						name="member_pw" /></label>
 				</p>
 				<p>

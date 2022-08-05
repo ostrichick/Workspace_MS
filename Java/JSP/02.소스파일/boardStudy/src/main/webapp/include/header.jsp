@@ -4,6 +4,8 @@
 <%
 	//로그인 객체를 꺼내오기
 	User loginUser = (User)session.getAttribute("login");
+	String include = (String)request.getAttribute("include");
+	out.print("include::::"+include);
 %>    
 <header>
 	<h2>게시판 만들기 연습용 페이지</h2>
@@ -12,7 +14,7 @@
 			<ul>
 				<li>게시판1</li>
 				<li><a href="<%=request.getContextPath()%>/board/list.jsp">게시판2</a></li>
-				<li>게시판3</li>
+				<li><a href="<%=request.getContextPath()%>/member/list.jsp">게시판3</a></li>
 			</ul>
 		</div>
 		<div class="loginArea">

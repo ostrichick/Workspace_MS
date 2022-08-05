@@ -47,6 +47,9 @@ UPDATE BOARDTB SET HIT=2 WHERE BIDX=162;
 
 DELETE FROM boardtb WHERE bidx=162;
 
+--로그인 쿼리문
+select * from usertb where id = 'asdf' and password = '1234';
+
 select * from boardtb b inner join usertb u on b.uidx = u.uidx WHERE content LIKE '%?%';
 select * from boardtb b inner join usertb u on b.uidx = u.uidx WHERE title LIKE '%?%';
 select * from boardtb b inner join usertb u on b.uidx = u.uidx WHERE name LIKE '%?%';

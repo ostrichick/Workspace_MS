@@ -39,8 +39,7 @@ try {
 		}
 	}
 	psmt = conn.prepareStatement(sql);
-	System.out.println(psmt);
-	System.out.println(sql);
+
 	if (searchType != null) {
 		psmt.setString(1, searchValue);
 	}

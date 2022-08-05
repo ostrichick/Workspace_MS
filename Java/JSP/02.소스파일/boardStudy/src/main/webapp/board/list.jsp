@@ -5,6 +5,10 @@
 <%@ page import="boardStudy.Board" %>
 <%@ page import="java.util.ArrayList" %>      
 <%
+	request.setCharacterEncoding("utf-8");
+	String searchType = request.getParameter("searchType");
+	String searchValue = request.getParameter("searchValue");
+
 	Connection conn = null;
 	PreparedStatement psmt = null;
 	ResultSet rs = null;
@@ -19,7 +23,21 @@
 		
 		String sql = "select * from boardtb b inner join usertb u on b.uidx = u.uidx";
 		
+		if(searchType != null){
+			if(searchType.equals("title")){
+				sql += " where b.title like '%'||?||'%'"; 
+			}else if(searchType.equals("writer")){
+				sql += " where u.name like '%'||?||'%'";
+			}
+		}
+		
+		
 		psmt = conn.prepareStatement(sql);
+		
+		if(searchType != null){
+			psmt.setString(1,searchValue);
+		}
+		
 		
 		rs = psmt.executeQuery();
 		
@@ -63,6 +81,17 @@
 	<section>
 		<h2>게시글 목록 페이지 입니다.</h2>
 		
+		<div class="searchArea">
+			<form action="list.jsp" method="get">
+				<select name="searchType">
+					<option value="title" <%if(searchType != null && searchType.equals("title")) out.print("selected"); %>>제목</option>
+					<option value="writer" <%if(searchType != null && searchType.equals("writer")) out.print("selected"); %>>작성자</option>
+				</select>
+				<input type="text" name="searchValue" <%if(searchValue != null && !searchValue.equals("")) out.print("value='"+searchValue+"'"); %>>
+				<input type="submit" value="검색">
+			</form>
+		</div>
+		
 		<table border="1" width="400"> 
 			<tr>
 				<th width="50">글번호</th>
@@ -75,7 +104,7 @@
 	%>
 			<tr>
 				<td><%=temp.getBidx() %></td>
-				<td><%=temp.getTitle() %></td>
+				<td><a href="view.jsp?bidx=<%=temp.getBidx()%>"><%=temp.getTitle() %></a></td>
 				<td><%=temp.getName() %></td>
 				<td><%=temp.getWdate() %></td>
 			</tr>
@@ -83,8 +112,19 @@
 		}
    %>
 		</table>
+		<!-- 로그인 시 노출 -->
+		<%
+			if(loginUser != null){
+		%>
 		<button onclick="location.href='insert.jsp'">등록</button>
+		<%
+			}
+		%>
 	</section>
 	<%@ include file="/include/footer.jsp" %>
 </body>
 </html>
+
+
+
+

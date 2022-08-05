@@ -4,11 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>EL&JSTL실습</title>
+<title>EL JSTL실습</title>
 </head>
 <body>
 
-<h2>EL&JSTL실습</h2>
+<h2>EL JSTL실습</h2>
 
 	
 

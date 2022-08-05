@@ -33,6 +33,17 @@ body {
 	width: 60%;
 	margin: auto;
 }
+
+table {
+	border-collapse: collapse;
+	border: 2px lightgrey solid;
+	margin: auto;
+}
+
+tr, td {
+	border: 2px lightgrey solid;
+	padding: 10px;
+}
 </style>
 <header>
 	<h2>EL JSTL 연습용 회원관리 페이지</h2>
@@ -47,20 +58,19 @@ body {
 			<!-- 			</ul> -->
 		</div>
 		<div class="loginArea">
-
 			<a href="<%=request.getContextPath()%>/member_index.do">메인</a> |
-			<!--     로그인이 안 되어 있을 때 -->
 			<c:choose>
-				<c:when test="${empty login }">
+				<c:when test="${empty member_id }">
+					<!--     로그인이 안 되어 있을 때 -->
 					<a href="<%=request.getContextPath()%>/member_login.do">로그인</a> | <a
 						href="<%=request.getContextPath()%>/member_join.do">회원가입</a>
 				</c:when>
 				<c:otherwise>
-					<a href="<%=request.getContextPath()%>/login/logout.jsp">로그아웃</a> | <a
-						href="<%=request.getContextPath()%>/login/mypage.jsp">마이페이지</a>
+					<!-- 로그인이 되어있을 때 -->
+					<a href="<%=request.getContextPath()%>/member_logout.do">로그아웃</a> | <a
+						href="<%=request.getContextPath()%>/member_mypage.do">마이페이지</a>
 				</c:otherwise>
 			</c:choose>
-
 		</div>
 	</nav>
 </header>
