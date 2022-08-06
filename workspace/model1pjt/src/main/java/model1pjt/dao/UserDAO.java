@@ -40,7 +40,6 @@ public class UserDAO {
 	public User loginAction(User user) throws Exception {
 		DBConnector dbConn = new DBConnector();
 		User result = null;
-
 		try {
 			conn = dbConn.getConnection();
 			String sql = "select * from usertb where id = ? and password = ?";
@@ -48,17 +47,11 @@ public class UserDAO {
 			psmt.setString(1, user.getId());
 			psmt.setString(2, user.getPassword());
 			rs = psmt.executeQuery();
-			System.out.println("rs.next()  : " + rs.next());
 			if (rs.next()) {
-				System.out.println("ㅇㅇㅇㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇ");
-				System.out.println("rs.next() 안쪽 : " + rs.next());
 				result = new User();
 				result.setId(rs.getString("id"));
 				result.setName(rs.getString("name"));
 				result.setUidx(rs.getInt("uidx"));
-				System.out.println("DAO : " + result.getId());
-				System.out.println("DAO : " + result.getName());
-				System.out.println("DAO : " + result.getUidx());
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
