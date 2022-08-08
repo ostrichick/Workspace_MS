@@ -1,10 +1,10 @@
 <%@page import="model1pjt.dao.UserDAO"%>
 <%@page import="model1pjt.dto.User"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%><%@ page import="java.sql.*"%>
-<jsp:useBean id="joinMember" class="model1pjt.dto.User" scope="request" />
 <%
 request.setCharacterEncoding("UTF-8");
 %>
+<jsp:useBean id="joinMember" class="model1pjt.dto.User" scope="request" />
 <jsp:setProperty name="joinMember" property="*" />
 <%
 User joinMember2 = (User) request.getAttribute("joinMember");

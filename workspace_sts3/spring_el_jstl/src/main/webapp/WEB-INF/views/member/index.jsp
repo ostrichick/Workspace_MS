@@ -14,10 +14,12 @@
 			연결테스트</a>
 	</p>
 	<p>
-<c:if test="${not empty joinResult}">${joinResult}</c:if>
-<c:if test="${not empty loginResult}">${loginResult}</c:if>
-<c:if test="${not empty logoutResult}">${logoutResult}</c:if>
-<c:if test="${not empty editResult}">${editResult}</c:if>
+		<c:if test="${not empty joinResult}">${joinResult}</c:if>
+		<c:if test="${not empty loginResult}">${loginResult}</c:if>
+		<c:if test="${not empty logoutResult}">${logoutResult}</c:if>
+		<c:if test="${not empty editResult}">${editResult}</c:if>
+		<c:if test="${not empty deactResult}">${deactResult}</c:if>
+		<c:if test="${not empty adminResult}">${adminResult}</c:if>
 	</p>
 	<%@include file="footer.jsp"%>
 </body>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="" />
+    <style></style>
+  </head>
+  <body>
+    <a href="#" class="deactivate">ㅁㄴㅇ</a>
+    <script>
+      document.querySelector(".deactivate").addEventListener("click", conf);
+      function conf() {
+        let confBoolean = confirm("정말 탈퇴하시겠습니까?");
+        if (confBoolean == true) {
+          alert("성공적으로 탈퇴하였습니다.");
+          location.href = request.getContextPath() + "/member_deactivete.do";
+        } else {
+          alert("탈퇴가 취소되었습니다.");
+        }
+      }
+    </script>
+  </body>
+</html>

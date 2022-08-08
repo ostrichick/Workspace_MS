@@ -1,5 +1,6 @@
 package ezen.spring.controller;
 
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Map;
 
@@ -82,12 +83,19 @@ public class MemberController {
 	@PostMapping("/member_loginProcess.do")
 	public String member_loginProcess(String member_id, String member_pw, HttpServletRequest request, Model model) {
 		Map<String, String> resultMap = memberDao.loginProcess(member_id, member_pw);
+//		System.out.println(resultMap.isEmpty());
+//		System.out.println(resultMap != null);
 		if (resultMap != null) {
 			HttpSession session = request.getSession();
+//			System.out.println(resultMap.isEmpty());
 			session.setAttribute("member_id", member_id);
 			session.setAttribute("member_name", resultMap.get("member_name"));
 			session.setAttribute("member_grade", resultMap.get("member_grade"));
-			model.addAttribute("loginResult", "로그인에 성공했습니다." + member_id + "님, 환영합니다");
+//			System.out.println(resultMap.get("member_name"));
+//			System.out.println(session.getAttribute("member_name"));
+//			System.out.println(session.getAttribute("member_grade"));
+			model.addAttribute("loginResult",
+					"로그인에 성공했습니다." + member_id + "님, 환영합니다. 회원등급은 " + session.getAttribute("member_grade") + " 입니다.");
 		} else {
 			model.addAttribute("loginResult", "로그인 도중 오류가 발생했습니다. 다시 시도해주세요.");
 		}
@@ -122,15 +130,11 @@ public class MemberController {
 	}
 
 	@PostMapping("/member_edit.do")
-	public String member_edit(String member_pw, HttpServletRequest request, Model model, MemberVo memberVo)
-			throws SQLException {
-		System.out.println(member_pw + " 컨트롤러");
+	public String member_edit(String member_pw, HttpServletRequest request, HttpServletResponse response, Model model,
+			MemberVo memberVo) throws SQLException, IOException {
 		HttpSession session = request.getSession();
 		String member_id = (String) session.getAttribute("member_id");
-		System.out.println("Controller : " + member_id + " , " + member_pw);
 		MemberVo memberVoMyPage = memberDao.edit(member_id, member_pw);
-		System.out.println(memberVoMyPage);
-		System.out.println(memberVoMyPage.getMember_name());
 		if (memberVoMyPage.getMember_name() != null) {
 			model.addAttribute("member_idx", memberVoMyPage.getMember_idx());
 			model.addAttribute("member_id", memberVoMyPage.getMember_id());
@@ -140,8 +144,49 @@ public class MemberController {
 			model.addAttribute("member_gender", memberVoMyPage.getMember_gender());
 		} else {
 			model.addAttribute("editResult", "비밀번호가 다릅니다.");
-			return "/member/mypage";
+			response.sendRedirect(request.getContextPath() + "/member_mypage.do");
+//			return "/member/mypage";
 		}
 		return "/member/edit";
+	}
+
+	@PostMapping("/member_editProcess.do")
+	public String member_editProcess(String member_pw, String member_name, String member_handphone,
+			HttpServletRequest request, Model model) throws SQLException {
+		HttpSession session = request.getSession();
+		String member_id = (String) session.getAttribute("member_id");
+		int result = memberDao.editProcess(member_id, member_pw, member_name, member_handphone);
+		if (result == 1) {
+			model.addAttribute("editResult", "성공적으로 정보가 수정되었습니다.");
+		} else {
+			model.addAttribute("editResult", "정보를 수정하는데 문제가 발생했습니다.");
+		}
+		return "/member/index";
+	}
+
+	@GetMapping("/member_deactivate.do")
+	public String member_deactivate(String member_id, HttpServletRequest request, Model model) throws SQLException {
+		HttpSession session = request.getSession();
+		String member_id1 = (String) session.getAttribute("member_id");
+		int result = memberDao.deactivate(member_id1);
+		if (result == 1) {
+			model.addAttribute("deactResult", "회원탈퇴에 성공했습니다.");
+		} else {
+			model.addAttribute("deactResult", "회원탈퇴 과정에 문제가 발생했습니다.");
+		}
+		return "/member/index";
+	}
+
+	@GetMapping("/member_admin.do")
+	public String member_admin(String member_grade, HttpServletRequest request, Model model) throws SQLException {
+		HttpSession session = request.getSession();
+		if ((String) session.getAttribute("member_grade") != "0") {
+			memberDao.admin();
+			model.addAttribute("adminResult", "관리자 권한으로 접속");
+		} else {
+			model.addAttribute("adminResult", "관리자 권한 없음");
+			return "/member/index";
+		}
+		return "/member/admin";
 	}
 }

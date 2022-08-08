@@ -17,6 +17,9 @@ section {
 	<%@include file="header.jsp"%>
 	<section>
 		<p>마이페이지</p>
+		<p>
+			<span>${editResult }</span>
+		</p>
 		<table>
 			<tr>
 				<th align="right">회원번호</th>

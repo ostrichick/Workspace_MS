@@ -68,11 +68,11 @@ public class MemberDao {
 			pstmt.setString(2, member_pw);
 			ResultSet rs = pstmt.executeQuery();
 			resultMap = new HashMap<String, String>();
-
 			if (rs.next()) {
 				resultMap.put("member_name", rs.getString("member_name"));
 				resultMap.put("member_grade", rs.getString("member_grade"));
-				return resultMap;
+				System.out.println("DAO : " + resultMap.get("member_name"));
+				System.out.println("DAO : " + resultMap.get("member_grade"));
 			}
 			conn.close();
 			pstmt.close();
@@ -144,7 +144,6 @@ public class MemberDao {
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		MemberVo memberVo = new MemberVo();
-		System.out.println("DAO : " + member_id + " , " + member_pw);
 		try {
 			conn = dataSource.getConnection();
 			String sql = "select * from member_tbl where member_id=? and member_pw=?";
@@ -170,6 +169,59 @@ public class MemberDao {
 			rs.close();
 		}
 		return memberVo;
+	}
+
+	public int editProcess(String member_id, String member_pw, String member_name, String member_handphone)
+			throws SQLException {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		int result = 0;
+
+		System.out.println(member_id);
+		System.out.println(member_pw);
+		System.out.println(member_name);
+		System.out.println(member_handphone);
+
+		try {
+			conn = dataSource.getConnection();
+			String sql = "UPDATE member_tbl SET member_pw = ?, member_name = ?, member_handphone = ? WHERE member_id = ?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, member_pw);
+			pstmt.setString(2, member_name);
+			pstmt.setString(3, member_handphone);
+			pstmt.setString(4, member_id);
+			result = pstmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			conn.close();
+			pstmt.close();
+		}
+		return result;
+	}
+
+	public int deactivate(String member_id) throws SQLException {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		int result = 0;
+		try {
+			conn = dataSource.getConnection();
+			String sql = "UPDATE member_tbl SET del_yn = 'Y' WHERE member_id = ?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, member_id);
+			result = pstmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			conn.close();
+			pstmt.close();
+		}
+		return result;
+	}
+
+	public int admin() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }

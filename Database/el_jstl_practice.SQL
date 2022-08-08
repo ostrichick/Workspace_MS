@@ -34,7 +34,7 @@ select * from member_tbl where member_id=? and member_pw=?;
 -- 내 정보 조회 쿼리
 select * from member_tbl where member_idx=?;
 -- 정보수정 쿼리문
-UPDATE member_tbl SET member_id = ?, member_name = ?, member_handphone = ? WHERE member_idx = ?;
+UPDATE member_tbl SET member_pw = ?, member_pw = ?, member_handphone = ? WHERE member_id = ?;
 -- 회원 탈퇴 쿼리문
 UPDATE member_tbl SET del_yn = 'Y' WHERE member_idx = ?;
 

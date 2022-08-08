@@ -50,6 +50,13 @@ DELETE FROM boardtb WHERE bidx=162;
 --로그인 쿼리문
 select * from usertb where id = 'asdf' and password = '1234';
 
+--검색 쿼리문
 select * from boardtb b inner join usertb u on b.uidx = u.uidx WHERE content LIKE '%?%';
 select * from boardtb b inner join usertb u on b.uidx = u.uidx WHERE title LIKE '%?%';
 select * from boardtb b inner join usertb u on b.uidx = u.uidx WHERE name LIKE '%?%';
+
+--게시판 view 쿼리문
+select * from boardtb b inner join usertb u on b.uidx = u.uidx where bidx = 161;
+UPDATE BOARDTB SET TITLE=222222, CONTENT=222 WHERE BIDX=161;
+
+

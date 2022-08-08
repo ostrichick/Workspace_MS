@@ -35,14 +35,14 @@ body {
 }
 
 table {
-	border-collapse: collapse;
-	border: 2px lightgrey solid;
-	margin: auto;
+	margin: 30px auto;
+	width: 600px;
 }
 
-tr, td {
+table, tr, td, th {
 	border: 2px lightgrey solid;
 	padding: 10px;
+	border-collapse: collapse;
 }
 </style>
 <header>
@@ -71,6 +71,10 @@ tr, td {
 						href="<%=request.getContextPath()%>/member_mypage.do">마이페이지</a>
 				</c:otherwise>
 			</c:choose>
+			<c:if test="${member_grade ge 1 }">
+				 | <a href="<%=request.getContextPath()%>/member_admin.do">회원관리
+					페이지</a>
+			</c:if>
 		</div>
 	</nav>
 </header>
