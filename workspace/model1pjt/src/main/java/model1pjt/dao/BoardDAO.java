@@ -14,7 +14,7 @@ public class BoardDAO {
 	private PreparedStatement psmt = null;
 	private ResultSet rs = null;
 
-	public ArrayList<Board> boardList(Board board) throws Exception {
+	public ArrayList<Board> boardList(Board board, String searchType, String searchValue) throws Exception {
 		DBConnector dbConn = new DBConnector();
 		ArrayList<Board> blist = new ArrayList<>();
 //		request.setCharacterEncoding("UTF-8");
@@ -23,17 +23,17 @@ public class BoardDAO {
 		try {
 			conn = dbConn.getConnection(); // 연결
 			String sql = "select * from boardtb b inner join usertb u on b.uidx = u.uidx";
-//			if (searchType != null) { //null이 아니면 검색할게 존재함
-//				if (searchType.equals("title")) { // 제목으로 검색할 경우
-//			sql += " where b.title like '%'||?||'%'"; // 맨 앞에 공백을 넣어야 sql에서 붙어져 인식돼는 오류가 안 남
-//				} else if (searchType.equals("writer")) { // 작성자로 검색할 경우
-//			sql += " where u.name like '%'||?||'%'"; // sql 구문 콘캣기호 ||를 이용해서 문자열을 합쳐야함
-//				}
-//			}
+			if (searchType != null) { // null이 아니면 검색할게 존재함
+				if (searchType.equals("title")) { // 제목으로 검색할 경우
+					sql += " where b.title like '%'||?||'%'"; // 맨 앞에 공백을 넣어야 sql에서 붙어져 인식돼는 오류가 안 남
+				} else if (searchType.equals("writer")) { // 작성자로 검색할 경우
+					sql += " where u.name like '%'||?||'%'"; // sql 구문 콘캣기호 ||를 이용해서 문자열을 합쳐야함
+				}
+			}
 			psmt = conn.prepareStatement(sql);
-//			if (searchType != null) {
-//				psmt.setString(1, searchValue);
-//			}
+			if (searchType != null) {
+				psmt.setString(1, searchValue);
+			}
 			rs = psmt.executeQuery();
 			while (rs.next()) {
 				Board boardR = new Board();

@@ -20,7 +20,7 @@ if (searchType != null) {
 <jsp:useBean id="boardList" class="model1pjt.dto.Board" scope="request" />
 <jsp:setProperty name="boardList" property="*" />
 <%
-ArrayList<Board> blist = boardDAO.boardList(boardList);
+ArrayList<Board> blist = boardDAO.boardList(boardList, searchType, searchValue);
 %>
 <!DOCTYPE html>
 <html>
@@ -30,7 +30,7 @@ ArrayList<Board> blist = boardDAO.boardList(boardList);
 </head>
 <body>
   <h2>게시판 목록</h2>
-  <div class="searchArea">
+  <div class="searchArea" style="margin: auto;">
     <form action="list.jsp" method="get">
       <select name="searchType" id="">
         <option value="title" <%if (searchType != null && searchType.equals("title"))
