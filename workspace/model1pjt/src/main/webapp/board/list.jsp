@@ -30,7 +30,7 @@ ArrayList<Board> blist = boardDAO.boardList(boardList, searchType, searchValue);
 </head>
 <body>
   <h2>게시판 목록</h2>
-  <div class="searchArea" style="margin: auto;">
+  <div class="searchArea" style="width:35%; margin: 5px auto;">
     <form action="list.jsp" method="get">
       <select name="searchType" id="">
         <option value="title" <%if (searchType != null && searchType.equals("title"))
