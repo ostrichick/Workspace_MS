@@ -21,7 +21,8 @@ member_name varchar2(30) not null,
 member_handphone char(20),
 member_gender char(3),
 member_grade number(1) default 0,
-reg_date date default sysdate, del_yn char(2) default 'N'
+reg_date date default sysdate,
+del_yn char(2) default 'N'
 );
 
 DROP SEQUENCE member_sq;
@@ -37,13 +38,19 @@ select * from member_tbl where member_idx=?;
 UPDATE member_tbl SET member_pw = ?, member_pw = ?, member_handphone = ? WHERE member_id = ?;
 -- 회원 탈퇴 쿼리문
 UPDATE member_tbl SET del_yn = 'Y' WHERE member_idx = ?;
+UPDATE member_tbl SET del_yn = 'Y' WHERE member_id = 'asdf';
 
 -- 관리자의 회원등급 변경 쿼리문
 UPDATE member_tbl SET member_grade = ? WHERE member_idx = ?;
+UPDATE member_tbl SET member_grade = 1 WHERE member_idx = 32;
+
 -- 관리자의 회원삭제 쿼리문
 DELETE FROM member_tbl WHERE member_idx = ?;
 
-INSERT INTO member_tbl VALUES (member_sq.NEXTVAL, 123, 523, 234, 463, 345, DEFAULT, DEFAULT, default);
+INSERT INTO member_tbl VALUES (member_sq.NEXTVAL, member_sq.NEXTVAL, 12, '스미스', 010, '남', DEFAULT, DEFAULT, default);
 
-select * from member_tbl where member_id='asdf', member_pw='1234';
+select * from member_tbl where member_id='asdf' AND member_pw='1234' AND del_yn='N';
 COMMIT;
+
+SELECT * FROM member_tbl;
+DELETE FROM member_tbl WHERE member_idx = 21;
