@@ -18,7 +18,7 @@ User loginSession = (User) session.getAttribute("loginSession");
 <html>
 <head>
 <meta charset="UTF-8">
-<title></title>
+<title>글 보기</title>
 </head>
 <body>
   <table border="2" style="border-collapse: collapse; margin: auto;">

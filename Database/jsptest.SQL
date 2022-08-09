@@ -60,14 +60,20 @@ SELECT a.*, ROWNUM r from (SELECT * FROM BOARDTB) a WHERE ROWNUM <= 10;
 -- where절로 범위 지정
 SELECT b.* FROM (SELECT a.*, ROWNUM r from (SELECT * FROM BOARDTB) a WHERE ROWNUM <= 10) b WHERE b.r >= 6;
 --rownum은 가상의 컬럼이기때문에 범위지정 못하므로 다시 서브쿼리로 감쌈
-SELECT b.*
+SELECT c.*
 	FROM (SELECT a.*, ROWNUM r
-		from (SELECT *
-			FROM BOARDTB) a
-				WHERE ROWNUM <= 10) b
-	WHERE b.r >= 6;
+		from (select *
+					from boardtb b
+					inner join usertb u
+					on b.uidx = u.uidx
+					ORDER BY b.bidx desc) a
+				WHERE ROWNUM <= 10) c
+	WHERE c.r >= 6;
 
+	SELECT c.*	FROM (SELECT a.*, ROWNUM r	from (select *	from boardtb b	inner join usertb u	on b.uidx = u.uidx ORDER BY b.bidx desc) a WHERE ROWNUM <= 10) c WHERE c.r >= 6;
 
+	-- 전체 게시물 갯수 조회 쿼리
+select count(*) from boardtb
 
 
 insert into boardtb(bidx, title, content, uidx) VALUES (bidx_seq.nextval, bidx_seq.nextval, bidx_seq.nextval, 41);
