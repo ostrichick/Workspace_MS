@@ -39,12 +39,35 @@ section {
 					<td>${memberVo.member_name }</td>
 					<td>${memberVo.member_handphone }</td>
 					<td>${memberVo.member_gender }</td>
-					<td>${memberVo.member_grade }</td>
+					<td>
+						<form action="member_gradeEdit.do" method="post">
+							<select name="member_grade" id="">
+								<c:choose>
+									<c:when test="${memberVo.member_grade eq 0 }">
+										<option value="0" selected>일반등급</option>
+										<option value="1">관리자등급</option>
+										<option value="2">최고관리자등급</option>
+									</c:when>
+									<c:when test="${memberVo.member_grade eq 1 }">
+										<option value="0">일반등급</option>
+										<option value="1" selected>관리자등급</option>
+										<option value="2">최고관리자등급</option>
+									</c:when>
+									<c:otherwise>
+										<option value="0">일반등급</option>
+										<option value="1">관리자등급</option>
+										<option value="2" selected>최고관리자등급</option>
+									</c:otherwise>
+								</c:choose>
+							</select> <input type="submit" value="수정" />
+						</form>
+					</td>
 					<td>${memberVo.del_yn }</td>
 					<td>
 						<form action="member_delMember.do" method="post">
-							<input type="hidden" name="member_idx" value="${memberVo.member_idx }" />
-							<input type="submit" value="삭제" />
+							<input type="hidden" name="member_idx"
+								value="${memberVo.member_idx }" /> <input type="submit"
+								value="삭제" />
 						</form>
 					</td>
 				</tr>

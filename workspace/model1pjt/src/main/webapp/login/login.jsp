@@ -14,7 +14,7 @@
     </p>
     <p>
       password<br />
-      <input type="text" name="password" />
+      <input type="password" name="password" />
     </p>
     <input type="submit" value="접속" />
   </form>

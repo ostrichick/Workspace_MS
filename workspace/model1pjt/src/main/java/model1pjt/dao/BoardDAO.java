@@ -165,4 +165,9 @@ public class BoardDAO {
 		}
 		return result;
 	}
+
+	public int deleteAction(String bidx) {
+		int result = 0;
+		return result;
+	}
 }

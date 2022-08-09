@@ -14,6 +14,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import ezen.spring.dao.MemberDao;
 import ezen.spring.vo.MemberVo;
@@ -194,17 +195,16 @@ public class MemberController {
 	}
 
 	@PostMapping("/member_delMember.do")
-	public void member_editProcess(String member_idx, HttpServletResponse response, HttpServletRequest request,
+	public String member_editProcess(String member_idx, HttpServletResponse response, HttpServletRequest request,
 			Model model) throws SQLException, IOException {
 		int result = memberDao.delMember(member_idx);
 		if (result == 1) {
 			model.addAttribute("delResult", "회원을 성공적으로 삭제했습니다");
-			response.sendRedirect(request.getContextPath() + "/member_admin.do");
-
+//			response.sendRedirect(request.getContextPath() + "/member_admin.do");
 		} else {
 			model.addAttribute("delResult", "회원정보 삭제에 실패했습니다");
-			response.sendRedirect(request.getContextPath() + "/member_admin.do");
+//			response.sendRedirect(request.getContextPath() + "/member_admin.do");
 		}
-//		return "/member/admin";
+		return "/member/admin";
 	}
 }

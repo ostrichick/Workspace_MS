@@ -1,5 +1,6 @@
 <%@ page import="model1pjt.dao.BoardDAO"%>
 <%@ page import="model1pjt.dto.Board"%>
+<%@ page import="model1pjt.dto.User"%>
 <%@ page import="java.sql.*"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
@@ -11,6 +12,7 @@ BoardDAO boardDAO = new BoardDAO();
 Board boardView_ = boardDAO.boardView(boardView);
 pageContext.setAttribute("LF", "\n");
 pageContext.setAttribute("cout", boardView.getContent());
+User loginSession = (User) session.getAttribute("loginSession");
 %>
 <!DOCTYPE html>
 <html>
@@ -48,7 +50,15 @@ pageContext.setAttribute("cout", boardView.getContent());
     </tr>
     <tr>
       <td colspan="2">
+        <%
+        if (loginSession.getUidx() == boardView_.getUidx()) {
+        %>
         <button onclick="location.href='modify.jsp?bidx=<%=boardView.getBidx()%>'">수정하기</button>
+        |
+        <button onclick="location.href='delete_action.jsp?bidx=<%=boardView_.getBidx()%>'">삭제하기</button>
+        <%
+        }
+        %>
       </td>
     </tr>
   </table>

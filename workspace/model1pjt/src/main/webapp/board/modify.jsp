@@ -5,6 +5,11 @@
 <jsp:useBean id="boardModify" class="model1pjt.dto.Board" scope="request" />
 <jsp:setProperty name="boardModify" property="*" />
 <%
+String bidxstr = request.getParameter("bidx");
+int bidx = 0;
+if (bidxstr != null && !bidxstr.equals("")) {
+	bidx = Integer.parseInt(bidxstr);
+}
 BoardDAO boardDAO = new BoardDAO();
 Board boardModify_ = boardDAO.boardModify(boardModify);
 %>

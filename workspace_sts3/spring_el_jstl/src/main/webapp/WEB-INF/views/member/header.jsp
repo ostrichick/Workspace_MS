@@ -24,9 +24,10 @@ header {
 }
 
 .loginArea {
-	position: absolute;
-	right: 10px;
-	top: 10px;
+	text-align: right;
+	/* 	position: absolute; */
+	/* 	right: 10px; */
+	/* 	top: 10px; */
 }
 
 body {
@@ -36,7 +37,7 @@ body {
 
 table {
 	margin: 30px auto;
-	width: 600px;
+	min-width: 600px;
 }
 
 table, tr, td, th {
@@ -46,7 +47,7 @@ table, tr, td, th {
 }
 </style>
 <header>
-	<h2>EL JSTL 연습용 회원관리 페이지</h2>
+
 	<nav>
 		<div class="menuArea">
 			<!-- 			<ul> -->
@@ -76,5 +77,6 @@ table, tr, td, th {
 					페이지</a>
 			</c:if>
 		</div>
+		<h3>EL JSTL 연습용 회원관리 페이지</h3>
 	</nav>
 </header>
