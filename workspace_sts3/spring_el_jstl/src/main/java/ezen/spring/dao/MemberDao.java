@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -67,8 +68,8 @@ public class MemberDao {
 			pstmt.setString(1, member_id);
 			pstmt.setString(2, member_pw);
 			ResultSet rs = pstmt.executeQuery();
-			resultMap = new HashMap<String, String>();
 			if (rs.next()) {
+				resultMap = new HashMap<String, String>();
 				resultMap.put("member_name", rs.getString("member_name"));
 				resultMap.put("member_grade", rs.getString("member_grade"));
 				System.out.println("DAO : " + resultMap.get("member_name"));
@@ -219,9 +220,64 @@ public class MemberDao {
 		return result;
 	}
 
-	public int admin() {
-		// TODO Auto-generated method stub
-		return 0;
+	public ArrayList<MemberVo> admin() throws SQLException {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		ArrayList<MemberVo> mList = new ArrayList<>();
+		try {
+			conn = dataSource.getConnection();
+			String sql = "select * from member_tbl";
+			pstmt = conn.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			while (rs.next()) {
+				MemberVo memberVo = new MemberVo();
+				memberVo.setMember_idx(rs.getInt("member_idx"));
+				memberVo.setMember_id(rs.getString("member_id"));
+				memberVo.setMember_name(rs.getString("member_name"));
+				memberVo.setMember_handphone(rs.getString("member_handphone"));
+				memberVo.setMember_gender(rs.getString("member_gender"));
+				memberVo.setMember_grade(rs.getInt("member_grade"));
+				memberVo.setDel_yn(rs.getString("del_yn"));
+				mList.add(memberVo);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (conn != null) {
+				conn.close();
+			}
+			if (pstmt != null) {
+				pstmt.close();
+			}
+			if (rs != null) {
+				rs.close();
+			}
+		}
+		return mList;
+	}
+
+	public int delMember(String member_idx) throws SQLException {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		int result = 0;
+		try {
+			conn = dataSource.getConnection();
+			String sql = "delete from member_tbl WHERE member_idx = ?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, member_idx);
+			result = pstmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (conn != null) {
+				conn.close();
+			}
+			if (pstmt != null) {
+				pstmt.close();
+			}
+		}
+		return result;
 	}
 
 }

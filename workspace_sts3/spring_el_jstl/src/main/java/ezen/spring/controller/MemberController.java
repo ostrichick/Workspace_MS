@@ -2,6 +2,7 @@ package ezen.spring.controller;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -97,7 +98,7 @@ public class MemberController {
 			model.addAttribute("loginResult",
 					"로그인에 성공했습니다." + member_id + "님, 환영합니다. 회원등급은 " + session.getAttribute("member_grade") + " 입니다.");
 		} else {
-			model.addAttribute("loginResult", "로그인 도중 오류가 발생했습니다. 다시 시도해주세요.");
+			model.addAttribute("loginResult", "로그인에 실패했습니다. 다시 시도해주세요.");
 		}
 		return "/member/index";
 	}
@@ -171,6 +172,7 @@ public class MemberController {
 		int result = memberDao.deactivate(member_id1);
 		if (result == 1) {
 			model.addAttribute("deactResult", "회원탈퇴에 성공했습니다.");
+			session.invalidate();
 		} else {
 			model.addAttribute("deactResult", "회원탈퇴 과정에 문제가 발생했습니다.");
 		}
@@ -181,12 +183,28 @@ public class MemberController {
 	public String member_admin(String member_grade, HttpServletRequest request, Model model) throws SQLException {
 		HttpSession session = request.getSession();
 		if ((String) session.getAttribute("member_grade") != "0") {
-			memberDao.admin();
-			model.addAttribute("adminResult", "관리자 권한으로 접속");
+			ArrayList<MemberVo> mList = memberDao.admin();
+			model.addAttribute("adminResult", "관리자 권한으로 접속 완료");
+			request.setAttribute("mList", mList);
 		} else {
 			model.addAttribute("adminResult", "관리자 권한 없음");
 			return "/member/index";
 		}
 		return "/member/admin";
+	}
+
+	@PostMapping("/member_delMember.do")
+	public void member_editProcess(String member_idx, HttpServletResponse response, HttpServletRequest request,
+			Model model) throws SQLException, IOException {
+		int result = memberDao.delMember(member_idx);
+		if (result == 1) {
+			model.addAttribute("delResult", "회원을 성공적으로 삭제했습니다");
+			response.sendRedirect(request.getContextPath() + "/member_admin.do");
+
+		} else {
+			model.addAttribute("delResult", "회원정보 삭제에 실패했습니다");
+			response.sendRedirect(request.getContextPath() + "/member_admin.do");
+		}
+//		return "/member/admin";
 	}
 }
