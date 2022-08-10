@@ -1,8 +1,5 @@
 package servletProject.controller;
 
-import java.io.IOException;
-
-import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -17,8 +14,7 @@ public class FrontController extends HttpServlet {
 	}
 
 	// 모든 요청에 대해서 어디로 보낼지 결정
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) {
 		String uri = request.getRequestURI();
 		String contextPath = request.getContextPath();
 		// /board/list.do
@@ -27,15 +23,26 @@ public class FrontController extends HttpServlet {
 
 		if (uris[0].equals("board")) {
 			BoardController boardController = new BoardController();
-			boardController.doAction(request, response, uris);
+			try {
+				boardController.doAction(request, response, uris);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 		} else if (uris[0].equals("member")) {
 			MemberController memberController = new MemberController();
-			memberController.doGet(request, response, uris);
+			try {
+				memberController.doGet(request, response, uris);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 		}
 	}
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		doGet(request, response);
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) {
+		try {
+			doGet(request, response);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }

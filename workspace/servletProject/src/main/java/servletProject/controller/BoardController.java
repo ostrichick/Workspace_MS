@@ -1,14 +1,16 @@
 package servletProject.controller;
 
-import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import servletProject.dao.BoardDAO;
+import servletProject.dto.Board;
 
 //@WebServlet("/board/list.do")
 public class BoardController extends HttpServlet {
@@ -18,14 +20,26 @@ public class BoardController extends HttpServlet {
 		super();
 	}
 
-	protected void doAction(HttpServletRequest request, HttpServletResponse response, String[] uris)
-			throws ServletException, IOException {
+	protected void doAction(HttpServletRequest request, HttpServletResponse response, String[] uris) throws Exception {
 		if (uris[1].equals("list.do")) {
 			list(request, response);
+		} else if (uris[1].equals("view.do")) {
+			view(request, response);
 		}
 	}
 
-	private void list(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	private void view(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		response.setContentType("text/html;charset=UTF-8");
+
+		BoardDAO boardDAO = new BoardDAO();
+		Board board = boardDAO.view();
+		request.setAttribute("board", board);
+
+		RequestDispatcher rd = request.getRequestDispatcher("/board/view.jsp");
+		rd.forward(request, response);
+	}
+
+	private void list(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		response.setContentType("text/html;charset=UTF-8");
 
 		String test = "TestData";
@@ -36,6 +50,10 @@ public class BoardController extends HttpServlet {
 		uinfo.put("나이", "20");
 		uinfo.put("주소", "전주시 덕진구");
 		request.setAttribute("uinfo", uinfo);
+
+		BoardDAO boardDAO = new BoardDAO();
+		ArrayList<Board> blist = boardDAO.list();
+		request.setAttribute("blist", blist);
 
 		RequestDispatcher rd = request.getRequestDispatcher("/board/list.jsp");
 		rd.forward(request, response);
