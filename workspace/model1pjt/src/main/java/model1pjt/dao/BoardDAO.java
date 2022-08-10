@@ -209,7 +209,7 @@ public class BoardDAO {
 		return result;
 	}
 
-	public int deleteAction(String bidx) {
+	public int deleteAction(int bidx) {
 		int result = 0;
 		return result;
 	}

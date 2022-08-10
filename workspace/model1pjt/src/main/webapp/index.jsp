@@ -12,5 +12,6 @@
   <hr />
   <a href="board/list.jsp">게시판으로 이동</a>
   <a href="member/list.jsp">회원목록으로 이동</a>
+  <a href="file/upload.jsp">파일 업로드로 이동</a>
 </body>
 </html>

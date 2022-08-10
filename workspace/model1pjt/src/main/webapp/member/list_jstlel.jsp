@@ -104,7 +104,7 @@ ArrayList<User> ulist = userDAO.userList(pagingUtil);
     </table>
 
     <hr />
-    <h4>자바빈 페이지</h4>
+    <h4>jstl 페이징</h4>
     <c:if test="${pagingBean.startPage > 1 }">
       <a href="list_jstlel.jsp?nowPage=${pagingBean.startPage - 1 }">&lt;</a>
     </c:if>

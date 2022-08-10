@@ -99,7 +99,7 @@ public class UserDAO {
 		try {
 			conn = dbConn.getConnection();
 			String sql = "SELECT c.* " + "	FROM (SELECT a.*, ROWNUM r " + "		from (select * from usertb u "
-					+ "					ORDER BY u.uidx desc) a " + "				WHERE ROWNUM <= ?) c "
+					+ "					ORDER BY u.uidx ) a " + "				WHERE ROWNUM <= ?) c "
 					+ "	WHERE c.r >= ? ";
 			psmt = conn.prepareStatement(sql);
 			psmt.setInt(1, pagingUtil.getEnd());
