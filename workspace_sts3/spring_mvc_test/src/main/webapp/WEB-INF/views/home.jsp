@@ -8,8 +8,7 @@
 <body>
 	<h1>Hello world!</h1>
 	<P>The time on the server is ${serverTime}.</P>
-	<a
-		href="${pageContext.request.contextPath }/home/test2.do?name=홍길동&id=hong">
+	<a href="${pageContext.request.contextPath }/home/test2.do?name=홍길동&id=hong&member_id=활빈당1">
 		test2.do </a>
 </body>
 </html>
