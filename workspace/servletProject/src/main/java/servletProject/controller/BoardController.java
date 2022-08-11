@@ -30,9 +30,13 @@ public class BoardController extends HttpServlet {
 
 	private void view(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		response.setContentType("text/html;charset=UTF-8");
-
+		String bidxStr = request.getParameter("bidx");
+		int bidx = 0;
+		if (bidxStr != null && !bidxStr.equals("")) {
+			bidx = Integer.parseInt(bidxStr);
+		}
 		BoardDAO boardDAO = new BoardDAO();
-		Board board = boardDAO.view();
+		Board board = boardDAO.view(bidx);
 		request.setAttribute("board", board);
 
 		RequestDispatcher rd = request.getRequestDispatcher("/board/view.jsp");

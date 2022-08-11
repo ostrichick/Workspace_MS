@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<boards>
+  <board>
+    <title>첫번재 제목</title>
+    <content>첫번재 내용</content>
+    <writer>작성자1</writer>
+    <wdate>2022-08-11</wdate>
+  </board>
+  <board>
+    <title>두번재 제목</title>
+    <content>두번재 내용</content>
+    <writer>작성자2</writer>
+    <wdate>2022-08-12</wdate>
+  </board>
+  <board>
+    <title>세번재 제목</title>
+    <content>세번재 내용</content>
+    <writer>작성자3</writer>
+    <wdate>2022-08-13</wdate>
+  </board>
+</boards>

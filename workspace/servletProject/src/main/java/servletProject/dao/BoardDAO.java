@@ -47,7 +47,7 @@ public class BoardDAO {
 		return blist;
 	}
 
-	public Board view() throws Exception {
+	public Board view(int bidx) throws Exception {
 		DBConnector dbConn = new DBConnector();
 		Board board = new Board();
 
@@ -55,6 +55,7 @@ public class BoardDAO {
 			conn = dbConn.getConnection();
 			String sql = "select * from boardtb b inner join usertb u on b.uidx = u.uidx where bidx = ?";
 			psmt = conn.prepareStatement(sql);
+			psmt.setInt(1, bidx);
 			rs = psmt.executeQuery();
 			if (rs.next()) {
 				board.setBidx(rs.getInt("bidx"));
