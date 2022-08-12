@@ -1,0 +1,10 @@
+http://jjezen.cafe24.com/FoodContainer
+http://jjezen.cafe24.com/HomeFriends
+http://jjezen.cafe24.com/teamTure
+http://jjezen.cafe24.com/shoerologue
+http://jjezen.cafe24.com/burning
+http://jjezen.cafe24.com/dajava_a
+http://jjezen.cafe24.com/TicketLupin
+http://jjezen.cafe24.com/team_Bling
+
+Set-Content -Path 'C:\Users\MYCOM\Dropbox\PC\Music\221025\.git' -Stream com.dropbox.ignored -Value 1
