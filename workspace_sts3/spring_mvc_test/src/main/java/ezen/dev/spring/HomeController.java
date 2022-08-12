@@ -46,7 +46,7 @@ public class HomeController {
 
 	@PostMapping("test5.do") // 폼의 파라미터를 하나하나씩 받는 대신에 클래스를 만들어서 통째로 받기
 	// MemberVo = 커맨드 객체 - 폼 전송 파라미터값을 저장, 처리하는데 사용됨
-	//				getter setter 포함하고 있어야하고 input태그의 네임값과 일치하는 값 가지고 있어야함 
+	// getter setter 포함하고 있어야하고 input태그의 네임값과 일치하는 값 가지고 있어야함
 	public String test3(MemberVo memberVo, Model model) {
 		model.addAttribute("member_id", memberVo.getMember_id());
 		model.addAttribute("member_pw", memberVo.getMember_pw());
@@ -54,5 +54,30 @@ public class HomeController {
 		model.addAttribute("field_interests", memberVo.getField_interests());
 		model.addAttribute("memberVo", memberVo);
 		return "home5";
+	}
+
+	@GetMapping("/ajax.do")
+	public String ajax(Model model) {
+		return "ajax_ex01";
+	}
+
+	@GetMapping("/ajax2.do")
+	public String ajax2(Model model) {
+		return "ajax_ex02";
+	}
+
+	@GetMapping("/ajax3.do")
+	public String ajax3(Model model) {
+		return "ajax_ex03";
+	}
+
+	@GetMapping("/ajax4.do")
+	public String ajax4(Model model) {
+		return "ajax_ex04";
+	}
+
+	@GetMapping("/ajax5.do")
+	public String ajax5(Model model) {
+		return "ajax_ex05";
 	}
 }

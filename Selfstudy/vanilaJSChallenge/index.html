@@ -3,6 +3,27 @@
   <head>
     <title>Time Until Christmas Eve<</title>
     <meta charset="UTF-8" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+      $(function() { //$(document).ready(); 와 동일
+      	//비밀번호 입력란에서 커서가 이동하면 발생하는 focusout 이벤트에 대해서
+      	//이벤트 처리하는 구문에서 ajax통신을 통해 서버로 아이디와 비밀번호를 전송
+      	//서버로부터 결과값을 result div태그에 출력
+      	$("#member_pw").focusout(function() { //비밀번호 focus out
+      		let member_id = $("member_id").val();      		let member_pw = $(this).val(); // 각각 input에서 값 가져오기
+
+      		// $.ajax({      			type : "post",
+      		// 	url : "${pageContext.request.contextPath}/ajax_ex01.do",
+      		// 	data : {"member_id":member_id, "member_pw":member_pw},      			dataType:"test",
+      		// 	success: function(data){
+      		// 		$("#result").text(data);
+      		// 	},
+      		// 	error: function(error){
+      		// 		alert("에러"+error)
+      		// 	}
+          //       	});
+      });
+    </script>
   </head>
   <body>
     <h1>Time Until Christmas Eve</h1>
