@@ -1,4 +1,10 @@
-﻿-- 문제1. ANIMAL_INS 테이블은 동물 보호소에 들어온 동물의 정보를 담은 테이블입니다.
+﻿alter table animal_ins change intake_date datetime datetime not null;
+
+
+
+select name from animal_ins  limit 15;
+
+-- 문제1. ANIMAL_INS 테이블은 동물 보호소에 들어온 동물의 정보를 담은 테이블입니다.
 -- 동물 보호소에 들어온 모든 동물의 정보를 ANIMAL_ID순으로 조회하는 SQL문을 작성해주세요.
 select * from animal_ins a order by a.animal_id;
 

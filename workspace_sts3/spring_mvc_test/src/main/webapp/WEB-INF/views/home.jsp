@@ -38,6 +38,32 @@
 				요청처리 메소드의 Map타입 매개변수와 매핑하기(JSON) </a></li>
 		<li><a href="${pageContext.request.contextPath }/home/ajax5.do">
 				요청처리 메소드의 문자열과 배열 동시 전송 </a></li>
+		<li><a href="${pageContext.request.contextPath }/home/ajax6.do">
+				요청처리 메소드의 커맨드 객체에 데이터 전송하기 1 </a></li>
+		<li><a href="${pageContext.request.contextPath }/home/ajax7.do">
+				요청처리 메소드의 커맨드 객체에 데이터 전송하기 2 </a></li>
+		<li><a href="${pageContext.request.contextPath }/home/ajax8.do">
+				요청처리 메소드의 커맨드 객체에 데이터 전송하기 3 </a></li>
+	</ul>
+	<h4>ajax 통신 수신 서버에서 데이터 받기</h4>
+	<ul>
+		<li><a
+			href="${pageContext.request.contextPath }/home/ajax02_ex01.do">
+				List로 데이터 받기 </a></li>
+		<li><a
+			href="${pageContext.request.contextPath }/home/ajax02_ex02.do">
+				List로 데이터 받기2 (별도의 함수) </a></li>
+		<li><a
+			href="${pageContext.request.contextPath }/home/ajax02_ex03.do">
+				Map으로 데이터 받기 </a></li>
+		<li><a
+			href="${pageContext.request.contextPath }/home/ajax02_ex04.do">
+				객체로 데이터 받기 </a></li>
+	</ul>
+	<h4>MyBatis를 이용한 MySQL 연결 DB작업</h4>
+	<ul>
+		<li><a href="${pageContext.request.contextPath }/home/db_test.do">
+				MySQL 에 데이터 입력하기 </a></li>
 	</ul>
 </body>
 </html>

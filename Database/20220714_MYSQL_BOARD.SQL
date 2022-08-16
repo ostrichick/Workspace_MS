@@ -6,6 +6,10 @@ CREATE TABLE BOARD (
  WRITE_DATE DATEtime DEFAULT NOW()
 
 );
+insert into board VALUES(13,'ㅇ','ㅇㄹㅇㄹ','이름',now());
+update board set BOARD_ID=15 where BOARD_TITLE='ㅇ' and BOARD_CONTENT='ㅇㄹㅇㄹ';
+alter table board add board_author varchar(30) not null after BOARD_CONTENT;
+select * from board;
 
 CREATE TABLE COMMENT_SECTION(
 COMMENT_ID INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,

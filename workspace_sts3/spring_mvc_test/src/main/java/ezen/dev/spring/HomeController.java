@@ -1,5 +1,6 @@
 package ezen.dev.spring;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,6 +13,16 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RequestMapping("/home") // 컨트롤러 요청URL의 공통부분은 클래스위에
 // @RequestMapping("경로") 붙여서 메소드에 붙은 요청URL과 결합하여 처리 (.../"클래스경로"/"메소드경로")
 public class HomeController {
+
+	private MemberInsertService memberInsertService;
+
+	@Autowired(required = false)
+	public void setMemberInsertService(MemberInsertService memberInsertService) {
+		this.memberInsertService = memberInsertService;
+	}
+
+	HomeController() {
+	}
 
 	@GetMapping("/test.do")
 	public String home(Model model) {
@@ -79,5 +90,57 @@ public class HomeController {
 	@GetMapping("/ajax5.do")
 	public String ajax5(Model model) {
 		return "ajax_ex05";
+	}
+
+	@GetMapping("/ajax6.do")
+	public String ajax6(Model model) {
+		return "ajax_ex06";
+	}
+
+	@GetMapping("/ajax7.do")
+	public String ajax7(Model model) {
+		return "ajax_ex07";
+	}
+
+	@GetMapping("/ajax8.do")
+	public String ajax8(Model model) {
+		return "ajax_ex08";
+	}
+
+	@GetMapping("/ajax02_ex01.do")
+	public String ajax02_ex01(Model model) {
+		return "ajax02_ex01";
+	}
+
+	@GetMapping("/ajax02_ex02.do")
+	public String ajax02_ex02(Model model) {
+		return "ajax02_ex02";
+	}
+
+	@GetMapping("/ajax02_ex03.do")
+	public String ajax02_ex03(Model model) {
+		return "ajax02_ex03";
+	}
+
+	@GetMapping("/ajax02_ex04.do")
+	public String ajax02_ex04(Model model) {
+		return "ajax02_ex04";
+	}
+
+	@GetMapping("/db_test.do")
+	public String db_test(Model model) {
+		return "db_test";
+	}
+
+	@GetMapping("/db_test2.do")
+	public String db_test2(MemberVo memberVo, Model model) {
+		int result = 0; // 0:입력실패
+		result = memberInsertService.insert(memberVo);
+		if (result == 1) {
+			model.addAttribute("result", "입력 성공");
+		} else {
+			model.addAttribute("result", "입력 실패");
+		}
+		return "db_test";
 	}
 }
