@@ -13,7 +13,7 @@ function onLoginSubmit(event) {
 }
 
 function paintGreetings(username) {
-  greeting.innerText = `Hello ${username}`;
+  greeting.innerText = `안녕하세요, ${username}님.`;
   greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 
@@ -24,10 +24,4 @@ if (savedUsername === null) {
   loginForm.addEventListener("submit", onLoginSubmit);
 } else {
   paintGreetings(savedUsername);
-}
-
-function logOut() {
-  // localStorage.setItem(USERNAME_KEY, "");
-  localStorage.clear(USERNAME_KEY);
-  location.reload();
 }

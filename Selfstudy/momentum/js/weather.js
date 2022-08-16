@@ -15,6 +15,6 @@ function onGeoOk(position) {
   // console.log(url);
 }
 function onGeoError(position) {
-  alert("fail");
+  console.log;
 }
 navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);

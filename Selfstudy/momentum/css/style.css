@@ -1,3 +1,48 @@
+html {
+  font-size: 62.5%;
+}
+* {
+  text-shadow: -1px 0px #222, 0px 1px #222, 1px 0px #222, 0px -1px #222;
+  color: #ddd;
+  border-radius: 10px;
+}
+body {
+  text-align: center;
+  font-size: 1.6rem;
+}
+input {
+  text-shadow: none;
+  color: #222;
+}
 .hidden {
-  display: none;
+  visibility: hidden;
+}
+#lowrapper {
+  text-align: right;
+}
+#logout {
+  display: inline-box;
+  font-size: 1.6rem;
+}
+#clock {
+  text-align: center;
+  font-size: 3rem;
+}
+#clock > span {
+  font-size: 2rem;
+}
+#todo-form > input {
+  width: 380px;
+  font-size: 2rem;
+  color: black;
+}
+#todo-list > li {
+  font-size: 2rem;
+}
+#quote {
+  margin-top: 15vh;
+  text-align: center;
+  position: relative;
+
+  font-size: 2.4rem;
 }
