@@ -24,6 +24,11 @@ public class HomeController {
 	HomeController() {
 	}
 
+	@GetMapping("/sample.do")
+	public String sample(Model model) {
+		return "sample";
+	}
+
 	@GetMapping("/test.do")
 	public String home(Model model) {
 		return "home";

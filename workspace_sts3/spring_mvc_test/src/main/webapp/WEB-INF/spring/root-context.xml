@@ -24,6 +24,8 @@
       value="classpath:config/mybatis-config.xml" />
     <property name="mapperLocations"
       value="classpath:mapper/**/*Mapper.xml" />
+
+
   </bean>
 
   <bean id="sqlSession"
