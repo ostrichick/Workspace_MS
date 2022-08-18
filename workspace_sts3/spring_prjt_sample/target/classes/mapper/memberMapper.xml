@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="ezen.dev.spring.member">
+  <!-- 꼭 패키지명을 써야하는건 아니지만 패키지명을 사용하면 중복을 피할 수 있음 -->
+  <insert id="join" parameterType="memberVo">
+    <!-- parameterType: SQL문 실행에 필요한 입력값에 대한 데이터형 풀패키지.클래스명 혹은 mybatis-config.xml에서 
+      지정한 별칭 SQL문에 사용되는 #{속성/멤버변수}는 입력값에서 -->
+    insert into
+    member_tbl(member_id,member_pw,member_name,member_handphone,member_gender)
+    values(#{member_id},#{member_pw},#{member_name},#{member_handphone},#{member_gender})
+  </insert>
+
+  <select id="login" parameterType="memberVo" resultType="memberVo">
+    select * from member_tbl
+    where
+    member_id = #{member_id}
+    and member_pw = #{member_pw}
+    and del_yn ='N'
+  </select>
+</mapper>	

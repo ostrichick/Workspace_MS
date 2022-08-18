@@ -23,6 +23,7 @@ public class TargetB {
 
 	public void test2() {
 		try {
+			@SuppressWarnings("unused")
 			int result = 100 / 0;
 //		} catch (Exception e) {
 //			e.printStackTrace();
