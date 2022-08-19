@@ -1,5 +1,6 @@
 package ezen.dev.spring.service;
 
+import java.util.List;
 import java.util.Map;
 
 import ezen.dev.spring.vo.MemberVo;
@@ -13,7 +14,18 @@ public interface MemberService {
 	}
 
 	default MemberVo login(Map<String, String> loginMap) {
-		return new MemberVo();
+		return null;
 	}
 
+	default MemberVo getMember(String member_id) {
+		return null;
+	}
+
+	default int updateProcess(MemberVo memberVo) {
+		return 0;
+	}
+
+	default List<MemberVo> getMemberList() {
+		return null;
+	};
 }

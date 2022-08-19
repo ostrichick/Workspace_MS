@@ -66,7 +66,7 @@
 											<span class="sr-only">(current)</span>
 									</a></li>
 									<li class="nav-item"><a class="nav-link"
-										href="${pageContext.request.contextPath}/member_login.do">내정보</a>
+										href="${pageContext.request.contextPath}/member_info.do">내정보</a>
 									</li>
 									<li class="nav-item"><a class="nav-link"
 										href="${pageContext.request.contextPath}/member_logout.do">로그아웃</a>
@@ -82,13 +82,13 @@
 											<span class="sr-only">(current)</span>
 									</a></li>
 									<li class="nav-item"><a class="nav-link"
-										href="${pageContext.request.contextPath}/member_login.do">내정보</a>
+										href="${pageContext.request.contextPath}/member_info.do">내정보</a>
 									</li>
 									<li class="nav-item"><a class="nav-link"
 										href="${pageContext.request.contextPath}/member_logout.do">로그아웃</a>
 									</li>
-									<li class="nav-item"><a class="nav-link" href="#">관리자페이지</a>
-									</li>
+									<li class="nav-item"><a class="nav-link"
+										href="${pageContext.request.contextPath}/admin/index.do">관리자페이지</a></li>
 								</ul>
 							</c:otherwise>
 						</c:choose>
@@ -128,15 +128,15 @@
 					</ol>
 					<div class="carousel-inner" role="listbox">
 						<div class="carousel-item active">
-							<img class="d-block img-fluid" src="http://placehold.it/900x350"
+							<img class="d-block img-fluid" src="http://place-hold.it/900x350"
 								alt="First slide">
 						</div>
 						<div class="carousel-item">
-							<img class="d-block img-fluid" src="http://placehold.it/900x350"
+							<img class="d-block img-fluid" src="http://place-hold.it/900x350"
 								alt="Second slide">
 						</div>
 						<div class="carousel-item">
-							<img class="d-block img-fluid" src="http://placehold.it/900x350"
+							<img class="d-block img-fluid" src="http://place-hold.it/900x350"
 								alt="Third slide">
 						</div>
 					</div>
@@ -156,7 +156,7 @@
 					<div class="col-lg-4 col-md-6 mb-4">
 						<div class="card h-100">
 							<a href="#"><img class="card-img-top"
-								src="http://placehold.it/700x400" alt=""></a>
+								src="http://place-hold.it/700x400" alt=""></a>
 							<div class="card-body">
 								<h4 class="card-title">
 									<a href="#">Item One</a>
@@ -175,7 +175,7 @@
 					<div class="col-lg-4 col-md-6 mb-4">
 						<div class="card h-100">
 							<a href="#"><img class="card-img-top"
-								src="http://placehold.it/700x400" alt=""></a>
+								src="http://place-hold.it/700x400" alt=""></a>
 							<div class="card-body">
 								<h4 class="card-title">
 									<a href="#">Item Two</a>
@@ -195,7 +195,7 @@
 					<div class="col-lg-4 col-md-6 mb-4">
 						<div class="card h-100">
 							<a href="#"><img class="card-img-top"
-								src="http://placehold.it/700x400" alt=""></a>
+								src="http://place-hold.it/700x400" alt=""></a>
 							<div class="card-body">
 								<h4 class="card-title">
 									<a href="#">Item Three</a>
@@ -214,7 +214,7 @@
 					<div class="col-lg-4 col-md-6 mb-4">
 						<div class="card h-100">
 							<a href="#"><img class="card-img-top"
-								src="http://placehold.it/700x400" alt=""></a>
+								src="http://place-hold.it/700x400" alt=""></a>
 							<div class="card-body">
 								<h4 class="card-title">
 									<a href="#">Item Four</a>
@@ -233,7 +233,7 @@
 					<div class="col-lg-4 col-md-6 mb-4">
 						<div class="card h-100">
 							<a href="#"><img class="card-img-top"
-								src="http://placehold.it/700x400" alt=""></a>
+								src="http://place-hold.it/700x400" alt=""></a>
 							<div class="card-body">
 								<h4 class="card-title">
 									<a href="#">Item Five</a>
@@ -253,7 +253,7 @@
 					<div class="col-lg-4 col-md-6 mb-4">
 						<div class="card h-100">
 							<a href="#"><img class="card-img-top"
-								src="http://placehold.it/700x400" alt=""></a>
+								src="http://place-hold.it/700x400" alt=""></a>
 							<div class="card-body">
 								<h4 class="card-title">
 									<a href="#">Item Six</a>

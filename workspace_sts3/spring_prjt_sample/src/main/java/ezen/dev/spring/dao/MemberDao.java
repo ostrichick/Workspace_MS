@@ -1,5 +1,6 @@
 package ezen.dev.spring.dao;
 
+import java.util.List;
 import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
@@ -32,6 +33,18 @@ public class MemberDao {
 
 	public MemberVo login(Map<String, String> loginMap) {
 		return sqlSession.selectOne(MAPPER + ".login", loginMap);
+	}
+
+	public MemberVo getMember(String member_id) {
+		return sqlSession.selectOne(MAPPER + ".getMember", member_id);
+	}
+
+	public int updateProcess(MemberVo memberVo) {
+		return sqlSession.update(MAPPER + ".updateProcess", memberVo);
+	}
+
+	public List<MemberVo> getMemberList() {
+		return sqlSession.selectList(MAPPER + ".getMemberList");
 	}
 
 }

@@ -9,6 +9,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
@@ -17,8 +18,14 @@ import ezen.dev.spring.vo.MemberVo;
 
 @Controller
 public class MemberController {
-
-	MemberService joinService, loginService;
+// 작업 순서
+// jsp 작업
+// -> 컨트롤러 매핑 
+// -> 서비스 인터페이스 & 디폴트 메소드생성 
+// -> 인터페이스 상속받는 구현클래스, 메소드생성 
+// -> Dao클래스로 보내서 sql문 처리
+// -> mapper.xml에 sql문 입력
+	MemberService joinService, loginService, updateService;
 
 	@Autowired(required = false)
 	public void setJoinService(@Qualifier("join") MemberService joinService) {
@@ -28,6 +35,11 @@ public class MemberController {
 	@Autowired(required = false)
 	public void setLoginService(@Qualifier("login") MemberService loginService) {
 		this.loginService = loginService;
+	}
+
+	@Autowired(required = false)
+	public void setUpdateService(@Qualifier("m_update") MemberService updateService) {
+		this.updateService = updateService;
 	}
 
 	@GetMapping("/member_join.do") // 회원가입 페이지 요청
@@ -82,5 +94,29 @@ public class MemberController {
 		HttpSession session = req.getSession();
 		session.invalidate();
 		return "redirect:/";
+	}
+
+	@GetMapping("/member_info.do")
+	public String member_info(HttpServletRequest req, Model model) {
+		HttpSession session = req.getSession();
+		String member_id = (String) session.getAttribute("member_id");
+		MemberVo memberVo = updateService.getMember(member_id);
+		model.addAttribute("memberVo", memberVo);
+		return "/member/update";
+	}
+
+	@PostMapping("/update_process.do")
+	public String update_process(MemberVo memberVo, HttpServletRequest req, Model model) {
+		int result = 0;
+		result = updateService.updateProcess(memberVo);
+		System.out.println(result);
+		String viewPage = "member/update";
+		if (result == 1) {
+			HttpSession session = req.getSession();
+			session.setAttribute("member_id", memberVo.getMember_id());
+			session.setAttribute("member_grade", memberVo.getMember_grade());
+			viewPage = "redirect:/";
+		}
+		return viewPage;
 	}
 }

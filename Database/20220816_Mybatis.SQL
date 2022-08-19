@@ -20,3 +20,18 @@ create table member_tbl(
  	reg_date datetime default now(),
  	del_yn char(3) default 'N'
 );
+
+
+select * from member_tbl
+    where
+    member_id = '1@1.1'
+    and member_pw = '2'
+    and del_yn ='N';
+
+update member_tbl SET member_grade = 2 where member_idx=1;
+
+update member_tbl
+    SET member_name = #{member_name},
+    member_pw = #{member_pw},
+    member_handphone = #{member_handphone}
+        where member_id=#{member_id};
