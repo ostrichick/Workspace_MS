@@ -1,25 +1,34 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="">
 <meta name="author" content="">
+
 <title>Shop Homepage - Start Bootstrap Template</title>
+
 <!-- Bootstrap core CSS -->
 <link
 	href="${pageContext.request.contextPath}/resources/vendor/bootstrap/css/bootstrap.min.css"
 	rel="stylesheet">
+
 <!-- Custom styles for this template -->
 <link
 	href="${pageContext.request.contextPath}/resources/css/shop-homepage.css"
 	rel="stylesheet">
+
 </head>
+
 <body>
+
 	<!-- Navigation -->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 		<div class="container">
@@ -30,53 +39,62 @@
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarResponsive">
+
 				<c:choose>
 					<c:when test="${empty member_id}">
-						<!-- 						비 로그인 -->
+						<!-- 일반사용자 -->
 						<ul class="navbar-nav ml-auto">
 							<li class="nav-item active"><a class="nav-link"
 								href="${pageContext.request.contextPath}/member_join.do">회원가입
 									<span class="sr-only">(current)</span>
 							</a></li>
 							<li class="nav-item"><a class="nav-link"
-								href="${pageContext.request.contextPath}/member_login.do">로그인</a></li>
+								href="${pageContext.request.contextPath}/member_login.do">로그인</a>
+							</li>
+							<li class="nav-item"><a class="nav-link" href="#">Services</a>
+							</li>
+							<li class="nav-item"><a class="nav-link" href="#">Contact</a>
+							</li>
 						</ul>
 					</c:when>
 					<c:otherwise>
 						<c:choose>
-							<!-- 						로그인 사용자 -->
 							<c:when test="${member_grade eq 0}">
-								<!-- 							일반 사용자 -->
+								<!-- 일반회원 -->
 								<ul class="navbar-nav ml-auto">
-									<li class="nav-item active">${member_id }${member_grade }<span
-										class="sr-only">(current)</span>
-									</li>
-									<li class="nav-item"><a class="nav-link"
-										href="${pageContext.request.contextPath}/member_logout.do">로그아웃</a></li>
-									<li class="nav-item"><a class="nav-link"
-										href="${pageContext.request.contextPath}/member_myinfo.do">내
-											정보</a></li>
-								</ul>
-							</c:when>
-							<c:otherwise>
-								<!-- 							관리자 -->
-								<ul class="navbar-nav ml-auto">
-									<li class="nav-item active"><a class="nav-link"
-										href="${pageContext.request.contextPath}/member_join.do">${ member_id }
+									<li class="nav-item active"><a class="nav-link" href="#">${member_id}
 											<span class="sr-only">(current)</span>
 									</a></li>
 									<li class="nav-item"><a class="nav-link"
-										href="${pageContext.request.contextPath}/member_logout.do">로그아웃</a></li>
+										href="${pageContext.request.contextPath}/member_login.do">내정보</a>
+									</li>
 									<li class="nav-item"><a class="nav-link"
-										href="${pageContext.request.contextPath}/member_admin.do">관리자페이지</a></li>
+										href="${pageContext.request.contextPath}/member_logout.do">로그아웃</a>
+									</li>
+									<li class="nav-item"><a class="nav-link" href="#">Contact</a>
+									</li>
+								</ul>
+							</c:when>
+							<c:otherwise>
+								<!-- 관리자 -->
+								<ul class="navbar-nav ml-auto">
+									<li class="nav-item active"><a class="nav-link" href="#">${member_id }
+											<span class="sr-only">(current)</span>
+									</a></li>
+									<li class="nav-item"><a class="nav-link"
+										href="${pageContext.request.contextPath}/member_login.do">내정보</a>
+									</li>
+									<li class="nav-item"><a class="nav-link"
+										href="${pageContext.request.contextPath}/member_logout.do">로그아웃</a>
+									</li>
+									<li class="nav-item"><a class="nav-link" href="#">관리자페이지</a>
+									</li>
 								</ul>
 							</c:otherwise>
 						</c:choose>
 					</c:otherwise>
 				</c:choose>
-				<!-- 				<li class="nav-item"><a class="nav-link" href="#">Services</a> -->
-				<!-- 				</li> -->
-				<!-- 				<li class="nav-item"><a class="nav-link" href="#">Contact</a></li> -->
+
 			</div>
 		</div>
 	</nav>
@@ -88,7 +106,7 @@
 
 			<div class="col-lg-3">
 
-				<h1 class="my-4">Shop Name ${member_id } ${member_grade }</h1>
+				<h1 class="my-4">Shop Name</h1>
 				<div class="list-group">
 					<a href="#" class="list-group-item">Category 1</a> <a href="#"
 						class="list-group-item">Category 2</a> <a href="#"
@@ -110,15 +128,15 @@
 					</ol>
 					<div class="carousel-inner" role="listbox">
 						<div class="carousel-item active">
-							<img class="d-block img-fluid" src="http://place-hold.it/900x350"
+							<img class="d-block img-fluid" src="http://placehold.it/900x350"
 								alt="First slide">
 						</div>
 						<div class="carousel-item">
-							<img class="d-block img-fluid" src="http://place-hold.it/900x350"
+							<img class="d-block img-fluid" src="http://placehold.it/900x350"
 								alt="Second slide">
 						</div>
 						<div class="carousel-item">
-							<img class="d-block img-fluid" src="http://place-hold.it/900x350"
+							<img class="d-block img-fluid" src="http://placehold.it/900x350"
 								alt="Third slide">
 						</div>
 					</div>
@@ -138,7 +156,7 @@
 					<div class="col-lg-4 col-md-6 mb-4">
 						<div class="card h-100">
 							<a href="#"><img class="card-img-top"
-								src="http://place-hold.it/700x400" alt=""></a>
+								src="http://placehold.it/700x400" alt=""></a>
 							<div class="card-body">
 								<h4 class="card-title">
 									<a href="#">Item One</a>
@@ -157,7 +175,7 @@
 					<div class="col-lg-4 col-md-6 mb-4">
 						<div class="card h-100">
 							<a href="#"><img class="card-img-top"
-								src="http://place-hold.it/700x400" alt=""></a>
+								src="http://placehold.it/700x400" alt=""></a>
 							<div class="card-body">
 								<h4 class="card-title">
 									<a href="#">Item Two</a>
@@ -177,7 +195,7 @@
 					<div class="col-lg-4 col-md-6 mb-4">
 						<div class="card h-100">
 							<a href="#"><img class="card-img-top"
-								src="http://place-hold.it/700x400" alt=""></a>
+								src="http://placehold.it/700x400" alt=""></a>
 							<div class="card-body">
 								<h4 class="card-title">
 									<a href="#">Item Three</a>
@@ -196,7 +214,7 @@
 					<div class="col-lg-4 col-md-6 mb-4">
 						<div class="card h-100">
 							<a href="#"><img class="card-img-top"
-								src="http://place-hold.it/700x400" alt=""></a>
+								src="http://placehold.it/700x400" alt=""></a>
 							<div class="card-body">
 								<h4 class="card-title">
 									<a href="#">Item Four</a>
@@ -215,7 +233,7 @@
 					<div class="col-lg-4 col-md-6 mb-4">
 						<div class="card h-100">
 							<a href="#"><img class="card-img-top"
-								src="http://place-hold.it/700x400" alt=""></a>
+								src="http://placehold.it/700x400" alt=""></a>
 							<div class="card-body">
 								<h4 class="card-title">
 									<a href="#">Item Five</a>
@@ -235,7 +253,7 @@
 					<div class="col-lg-4 col-md-6 mb-4">
 						<div class="card h-100">
 							<a href="#"><img class="card-img-top"
-								src="http://place-hold.it/700x400" alt=""></a>
+								src="http://placehold.it/700x400" alt=""></a>
 							<div class="card-body">
 								<h4 class="card-title">
 									<a href="#">Item Six</a>
