@@ -1,54 +1,98 @@
 public class Exam2 {
-	public static void main(String[] args) {
-		// 1
-		// 2
-		// 3
-		// 4
-		// 5
-		// 6
-		// 7
-		// 8
-		// 9
-		// 10
-		// 11. 3
-		// 12. 1, 3
-		// 13.
 
-		int sum = 0;
-		for (int i = 1; i <= 100; i++) {
-			sum += i;
-		}
-		System.out.println(sum);
+  public static void main(String[] args) {
+    // 1. String
+    // 2. 1234
+    double d = 1234.678;
+    int x2 = (int) d;
+    System.out.println(x2);
+    // 3. psvm
+    // 4.
+    String str = "result :";
+    int x4 = 10;
+    System.out.println(str + (x4 + 1));
+    // 5. sum += i;
+    int sum5 = 0;
+    for (int i = 1; i <= 100; i++) {
+      sum5 += i;
+    }
+    System.out.println(sum5);
+    // 6.
+    int[] Ary = { 10, 20, 30, 40, 50 };
+    int Sum = 0;
+    for (int i = 0; i < Ary.length; i++) {
+      Sum += Ary[i];
+    }
+    System.out.println(Sum);
+    // 7.
+    class Student7 {
 
-		// 14.
+      String Name;
+      int Age;
+    }
+    // 8.
+    class Student8 {
 
-		int x = 10, y = 0, z = 0;
-		try {
+      protected int Average = 0;
 
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-		}
+      Student8(int scoreA, int scoreB, int scoreC) {
+        Average = (scoreA + scoreB + scoreC) / 3;
+      }
 
-		// 15
-		// 16. 숫자값 변환 오류입니다. 실행이 완료되었습니다.
-		// 17. 1
-		// 18. 2
-		// 19.
-		class MultipleTable {
-			public static void main(String[] args) {
-				for (int i = 1; i <= 9; i++) {
-					if (i % 2 == 0) {
-						for (int j = 1; j <= 9; j++) {
-							if (i % 2 == 0) {
-								System.out.println(i + "x" + j + "=" + i * j);
-							}
-						}
-					}
-				}
-			}
-		}
-		// 20.
+      public int getAverage() {
+        return Average;
+      }
+    }
+    int scoreA = 10;
+    int scoreB = 20;
+    int scoreC = 30;
+    Student8 s = new Student8(scoreA, scoreB, scoreC);
+    System.out.println("AVGSCORE IS " + s.getAverage());
+    // 9. 2
+    // 10. NullPointerException
+    // 11. 3
+    // 12. 1, 3
+    // 13.
+    int sum = 0;
+    for (int i = 1; i <= 100; i++) {
+      if (i % 2 == 0) {
+        sum += i;
+      }
+    }
+    System.out.println(sum);
 
-	}
+    // 14.
+
+    try {
+      int x = 10, y = 0, z = 0;
+      z = x / y;
+      System.out.println("z is " + z);
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+    // 15. MyClass.class
+    // 16. 숫자값 변환 오류입니다.
+    // // 실행이 완료되었습니다.
+    // 17. 1
+    // 18. 2
+    // 19.
+
+    for (int i = 1; i <= 9; i++) {
+      if (i % 2 == 0) {
+        for (int j = 1; j <= 9; j++) {
+          if (j % 2 == 0) {
+            System.out.println(i + "x" + j + "=" + i * j);
+          }
+        }
+      }
+    }
+    // 20.
+
+    int sum20 = 0;
+    for (int i = 0; i < 10; i++) {
+      int x = sum20 + i;
+      sum20 = x;
+    }
+    System.out.println("sum is " + sum20 + ", x is ");
+  }
 }
