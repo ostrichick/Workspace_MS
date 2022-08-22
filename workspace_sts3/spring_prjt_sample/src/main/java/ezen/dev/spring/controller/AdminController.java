@@ -9,6 +9,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import ezen.dev.spring.service.MemberService;
 import ezen.dev.spring.vo.MemberVo;
@@ -24,7 +26,12 @@ public class AdminController {
 	// -> Dao클래스로 보내서 sql문 처리
 	// -> mapper.xml에 sql문 입력
 
-	private MemberService listService;
+	private MemberService listService, updateGradeService;
+
+	@Autowired(required = false) // setters (set메소드)를 통한 의존주입
+	public void setUpdateGradeService(@Qualifier("m_update_grade") MemberService updateGradeService) {
+		this.updateGradeService = updateGradeService;
+	}
 
 	@Autowired(required = false) // setters (set메소드)를 통한 의존주입
 	public void setListService(@Qualifier("m_list") MemberService listService) {
@@ -50,8 +57,14 @@ public class AdminController {
 	}
 
 	@PostMapping("/update_grade.do")
-	public String update_grade(String member_idx, String member_grade) {
-		return null;
+	@ResponseBody
+	public int update_grade(MemberVo memberVo) {
+		int result = 0;
+		result = updateGradeService.updateGrade(memberVo);
+		int returnMemberGrade = 0;
+		if (result == 1) {
+			returnMemberGrade = memberVo.getMember_grade();
+		}
+		return returnMemberGrade;
 	}
-
 }

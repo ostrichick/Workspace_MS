@@ -27,5 +27,9 @@ public interface MemberService {
 
 	default List<MemberVo> getMemberList() {
 		return null;
-	};
+	}
+
+	default int updateGrade(MemberVo memberVo) {
+		return 0;
+	}
 }

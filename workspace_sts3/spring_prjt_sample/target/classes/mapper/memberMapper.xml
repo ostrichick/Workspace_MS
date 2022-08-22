@@ -40,4 +40,10 @@
     select * from member_tbl
   </select>
 
+  <update id="updateGrade" parameterType="memberVo">
+    update member_tbl
+    set
+    member_grade = #{member_grade}
+    where member_idx = #{member_idx}
+  </update>
 </mapper>	

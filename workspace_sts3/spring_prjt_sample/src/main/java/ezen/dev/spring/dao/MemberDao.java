@@ -47,6 +47,10 @@ public class MemberDao {
 		return sqlSession.selectList(MAPPER + ".getMemberList");
 	}
 
+	public int updateGrade(MemberVo memberVo) {
+		return sqlSession.update(MAPPER + ".updateGrade", memberVo);
+	}
+
 }
 
 /*
