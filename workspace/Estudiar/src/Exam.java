@@ -1,4 +1,4 @@
-package j0718_set;
+
 
 public class Exam {
 
@@ -171,8 +171,34 @@ class Stdt {
 	public int getAverage() {
 		return Average;
 	}
-}
 
 //	int getAverage(int scoreA, int scoreB, int scoreC) {
 //		return (scoreA + scoreB + scoreC) / 3;
 //	}
+
+	//
+	//
+	//
+	//
+	// 1
+	// 2
+	// 3
+	// 4
+	// 5
+	// 6
+	// 7
+	// 8
+	// 9
+	// 10
+	// 11. 3
+	// 12. 1, 3
+	// 13.
+	// 14
+	// 15
+	// 16
+	// 17
+	// 18
+	// 19
+	// 20
+
+}
