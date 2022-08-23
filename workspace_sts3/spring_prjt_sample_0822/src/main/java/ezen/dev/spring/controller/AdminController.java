@@ -3,6 +3,8 @@ package ezen.dev.spring.controller;
 import java.util.HashMap;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
@@ -12,8 +14,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartRequest;
 
-import ezen.dev.spring.service.MemberService;
+import ezen.dev.spring.service.admin.AdminService;
+import ezen.dev.spring.service.member.MemberService;
+import ezen.dev.spring.vo.FileVo;
 import ezen.dev.spring.vo.MemberVo;
 
 @Controller
@@ -21,6 +26,12 @@ import ezen.dev.spring.vo.MemberVo;
 public class AdminController {
 
 	MemberService listService, updateService, deleteService;
+	AdminService fileService;
+
+	@Autowired(required = false)
+	public void setFileService(@Qualifier("file") AdminService fileService) {
+		this.fileService = fileService;
+	}
 
 	@Autowired(required = false)
 	public void setListService(@Qualifier("m_list") MemberService listService) {
@@ -103,6 +114,50 @@ public class AdminController {
 		model.addAttribute("deleteList", deleteList);
 
 		return "/admin/deleteList";
+	}
+
+	@GetMapping("/file_upload.do")
+	public String file_upload(Model model) {
+		return "/admin/file_upload";
+	}
+
+	/**
+	 * /* Spring MVC에서 파일 업로드를 구현하기 위한 조치들
+	 * 
+	 * 1. pom.xml에 fileupload에 필요한 dependency 추가 <!--
+	 * https://mvnrepository.com/artifact/commons-fileupload/commons-fileupload -->
+	 * <dependency> <groupId>commons-fileupload</groupId>
+	 * <artifactId>commons-fileupload</artifactId> <version>1.4</version>
+	 * </dependency>
+	 * 
+	 * 2. MultipartResolver를 빈 객체로 등록 (1) XML 기반 설정: servlet-context.xml
+	 * <beans:bean id="multipartResolver" class=
+	 * "org.springframework.web.multipart.support.StandardServletMultipartResolver"></beans:bean>
+	 * (2) Annotation 기반 설정: 설정 파일(예) MvcConfig.java
+	 * 
+	 * @Bean public StandardServletMultipartResolver
+	 *       standardServletMultipartResolver(){ return new
+	 *       StandardServletMultipartResolver(); }
+	 * 
+	 *       3. web.xml에 <servlet>태그 내에 multipart-config 설정 정보 추가 <multipart-config>
+	 *       <max-file-size>10485760</max-file-size> <!-- 파일 한 개의 최대 크기: 10MB -->
+	 *       <max-request-size>52428800</max-request-size> <!-- 한 번에 여러 파일 올릴 때 총
+	 *       크기: 50MB --> <file-size-threshold>20971520</file-size-threshold> <!--
+	 *       넘으면 temp에 넣고 업로드에 들어가지 않는다 : 20mb --> </multipart-config>
+	 * 
+	 *       4. resources/upload 폴더 생성
+	 */
+	@PostMapping("/upload_process.do")
+	public String upload_process(MultipartRequest uploadFile, HttpServletRequest req, Model model) {
+
+		int result = fileService.upload(uploadFile, req);
+		String viewPage = "admin/file_upload";
+		if (result == 1) {
+			List<FileVo> fileList = fileService.getFileList();
+			model.addAttribute("fileList", fileList);
+			viewPage = "admin/gallery";
+		}
+		return viewPage;
 	}
 
 }

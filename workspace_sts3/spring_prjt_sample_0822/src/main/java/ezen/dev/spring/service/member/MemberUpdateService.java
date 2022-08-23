@@ -1,4 +1,4 @@
-package ezen.dev.spring.service;
+package ezen.dev.spring.service.member;
 
 import java.util.HashMap;
 

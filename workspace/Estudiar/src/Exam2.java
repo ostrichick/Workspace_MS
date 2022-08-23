@@ -71,8 +71,7 @@ public class Exam2 {
       e.printStackTrace();
     }
     // 15. MyClass.class
-    // 16. 숫자값 변환 오류입니다.
-    // // 실행이 완료되었습니다.
+    // 16. Catch, Finally
     // 17. 1
     // 18. 2
     // 19.
@@ -86,13 +85,13 @@ public class Exam2 {
         }
       }
     }
-    // 20.
+    // 20.ㅇ
 
     int sum20 = 0;
     for (int i = 0; i < 10; i++) {
       int x = sum20 + i;
       sum20 = x;
     }
-    System.out.println("sum is " + sum20 + ", x is ");
+    System.out.println("ㅎsum is " + sum20 + ", x is ㅇ" + "ㅇ");
   }
 }

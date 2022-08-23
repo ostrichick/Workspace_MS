@@ -13,7 +13,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import ezen.dev.spring.service.MemberService;
+import ezen.dev.spring.service.member.MemberService;
 import ezen.dev.spring.vo.MemberVo;
 
 @Controller
