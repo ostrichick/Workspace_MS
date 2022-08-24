@@ -167,9 +167,68 @@ delimiter;
  system_filename3 varchar(100)
  );
 
+ alter table file_tbl add board_idx int unsigned AFTER file_idx;
+  alter table file_tbl add FOREIGN KEY(board_idx) REFERENCES board_tbl(board_idx);
+
+
 insert into file_tbl(
     origin_filename1,origin_filename2,origin_filename3,
     system_filename1,system_filename2,system_filename3)
     values (
     1,2,3,4,5,6
     );
+
+alter table board_tbl drop foreign key board_fk;
+drop table board_tbl;
+create table board_tbl(
+ board_idx int unsigned not null primary key auto_increment,
+ writer_id varchar(30) not null,
+ board_title varchar(90) not null,
+ board_content varchar(1000) not null,
+ board_addr varchar(90) not null,
+ board_price int unsigned not null,
+ board_reg_date datetime default now(),
+ origin_filename1 varchar(100),
+ origin_filename2 varchar(100),
+ origin_filename3 varchar(100),
+ system_filename1 varchar(100),
+ system_filename2 varchar(100),
+ system_filename3 varchar(100),
+ member_idx int unsigned not null,
+ 	CONSTRAINT fk_member
+ 	FOREIGN KEY (member_idx)
+ 	REFERENCES member_tbl(member_idx)
+ );
+
+ alter table board_tbl add FOREIGN KEY(writer_id) REFERENCES member_tbl(member_id);
+
+
+insert into board_tbl(
+  board_title, board_content, board_addr, origin_filename, system_filename)
+  values (
+ 1,2,3,4,5);
+
+insert into board_tbl(
+    writer_id,
+    board_title,
+    board_content,
+    board_addr
+    )
+    values (
+    1,
+    2,
+    3,
+    4);
+
+    insert into file_tbl(
+    origin_filename1,origin_filename2,origin_filename3,
+    system_filename1,system_filename2,system_filename3)
+    values (
+    1,
+    2,
+    3,
+    4,
+    5,
+    6);
+
+select * from board_tbl order by board_idx desc;

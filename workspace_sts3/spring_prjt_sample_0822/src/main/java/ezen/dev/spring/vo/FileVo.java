@@ -1,6 +1,6 @@
 package ezen.dev.spring.vo;
 
-public class FileVo {
+public class FileVo extends BoardVo {
 	private int file_idx;
 	private String origin_filename1;
 	private String origin_filename2;

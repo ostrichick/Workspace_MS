@@ -3,12 +3,12 @@
 	"http://mybatis.org/dtd/mybatis-3-config.dtd">
 
 <configuration>
-
   <!-- VO객체에 대한 별칭 설정 -->
   <typeAliases>
     <typeAlias alias="memberVo"
       type="ezen.dev.spring.vo.MemberVo" />
     <typeAlias alias="fileVo" type="ezen.dev.spring.vo.FileVo" />
+    <typeAlias alias="boardVo"
+      type="ezen.dev.spring.vo.BoardVo" />
   </typeAliases>
-
 </configuration>	
