@@ -1,8 +1,10 @@
 package ezen.dev.spring.controller;
 
+import java.io.IOException;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,7 +48,8 @@ public class BoardController {
 	}
 
 	@PostMapping("/insert_process.do")
-	public String insert_process(FileVo fileVo, MultipartRequest uploadFile, HttpServletRequest req, Model model) {
+	public String insert_process(FileVo fileVo, MultipartRequest uploadFile, HttpServletRequest req,
+			HttpServletResponse res, Model model) throws IOException {
 		HttpSession session = req.getSession();
 		String castedMemberId = (String) session.getAttribute("member_id");
 		int castedMemberIdx = (int) session.getAttribute("member_idx");
@@ -58,8 +61,11 @@ public class BoardController {
 		if (result == 1) {
 			List<FileVo> boardList = listService.getBoardList();
 			model.addAttribute("boardList", boardList);
+//			res.sendRedirect(${pageContext.request.contextPath}"/board/list.do");
 			viewPage = "board/list";
+			System.out.println(viewPage);
 		}
+		System.out.println(viewPage);
 		return viewPage;
 	}
 }

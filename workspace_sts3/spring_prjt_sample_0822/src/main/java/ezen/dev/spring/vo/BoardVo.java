@@ -9,14 +9,14 @@ public class BoardVo extends MemberVo {
 	private String board_addr;
 	private int board_price;
 	private String writer_id;
-	private Date reg_date;
+	private Date board_reg_date;
 
-	public Date getReg_date() {
-		return reg_date;
+	public Date getBoard_reg_date() {
+		return board_reg_date;
 	}
 
-	public void setReg_date(Date reg_date) {
-		this.reg_date = reg_date;
+	public void setBoard_reg_date(Date board_reg_date) {
+		this.board_reg_date = board_reg_date;
 	}
 
 	public int getBoard_price() {

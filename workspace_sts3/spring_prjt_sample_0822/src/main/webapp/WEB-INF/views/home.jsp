@@ -51,7 +51,8 @@
 							<li class="nav-item"><a class="nav-link"
 								href="${pageContext.request.contextPath}/member_login.do">로그인</a>
 							</li>
-							<li class="nav-item"><a class="nav-link" href="#">Services</a>
+							<li class="nav-item"><a class="nav-link"
+								href="${pageContext.request.contextPath}/board/board_list.do">자유게시판</a>
 							</li>
 							<li class="nav-item"><a class="nav-link"
 								href="${pageContext.request.contextPath}/board/list.do">자유마켓</a>
@@ -73,6 +74,9 @@
 										href="${pageContext.request.contextPath}/member_logout.do">로그아웃</a>
 									</li>
 									<li class="nav-item"><a class="nav-link"
+										href="${pageContext.request.contextPath}/board/board_list.do">자유게시판</a>
+									</li>
+									<li class="nav-item"><a class="nav-link"
 										href="${pageContext.request.contextPath}/board/list.do">자유마켓</a>
 									</li>
 								</ul>
@@ -90,10 +94,14 @@
 										href="${pageContext.request.contextPath}/member_logout.do">로그아웃</a>
 									</li>
 									<li class="nav-item"><a class="nav-link"
-										href="${pageContext.request.contextPath}/admin/index.do">관리자페이지</a>
+										href="${pageContext.request.contextPath}/board/board_list.do">자유게시판</a>
 									</li>
+
 									<li class="nav-item"><a class="nav-link"
 										href="${pageContext.request.contextPath}/board/list.do">자유마켓</a>
+									</li>
+									<li class="nav-item"><a class="nav-link"
+										href="${pageContext.request.contextPath}/admin/index.do">관리자페이지</a>
 									</li>
 								</ul>
 							</c:otherwise>
