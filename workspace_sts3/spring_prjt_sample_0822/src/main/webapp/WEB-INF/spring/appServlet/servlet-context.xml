@@ -33,4 +33,18 @@
     class="org.springframework.web.multipart.support.StandardServletMultipartResolver">
   </beans:bean>
 
+  <!-- 인터셉터 관련 설정 -->
+  <interceptors>
+    <interceptor>
+      <mapping path="/**/*.do" />
+      <exclude-mapping path="/home.do" />
+      <exclude-mapping path="/member_join.do" />
+      <exclude-mapping path="/join_process.do" />
+      <exclude-mapping path="/member_login.do" />
+      <exclude-mapping path="/login_process.do" />
+      <beans:bean id="LoginInterceptor"
+        class="ezen.dev.spring.interceptor.LoginInterceptor" />
+    </interceptor>
+  </interceptors>
+
 </beans:beans>
