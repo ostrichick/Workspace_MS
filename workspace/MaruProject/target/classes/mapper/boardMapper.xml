@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ezen.maru.pjt.board">
+  <insert id="board_insert" parameterType="boardVo">
+    insert into board_tbl(
+    writer, title, content, price, address,
+    origin_filename1,origin_filename2,origin_filename3,
+    system_filename1,system_filename2,system_filename3
+    )
+    values(
+    #{writer},#{title},#{content},#{price},#{address},
+    #{origin_filename1},#{origin_filename2},#{origin_filename3},
+    #{system_filename1},#{system_filename2},#{system_filename3}
+    )
+  </insert>
+  <select id="getBoardList" resultType="boardVo">
+    select * from board_tbl
+  </select>
+</mapper>	

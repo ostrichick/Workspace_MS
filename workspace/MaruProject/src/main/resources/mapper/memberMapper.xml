@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="ezen.maru.pjt.member">
+
+  <insert id="join" parameterType="memberVo">
+    <!-- parameterType: SQL문 실행을 위해 필요한 입력값에 대한 데이터형. memberVo는 mybatis-config.xml파일에 별칭으로 정의되어져 있기 때문에 사용 가능. SQL문에서 사용되는 #{속성/멤버변수}는 입력값에서 가져오는 것임 -->
+    insert into member_tbl(member_id,member_pw,member_name,
+    member_handphone,member_gender) values(#{member_id},
+    #{member_pw},#{member_name},#{member_handphone},#{member_gender})
+
+  </insert>
+
+  <select id="login" parameterType="map" resultType="memberVo">
+    select * from member_tbl
+    where member_id =#{member_id}
+    and member_pw = #{member_pw}
+    and del_yn = 'N'
+
+  </select>
+
+  <select id="getMember" parameterType="string" resultType="memberVo">
+    select * from member_tbl where member_id = #{member_id}
+  </select>
+
+  <update id="updateMember" parameterType="memberVo">
+    update member_tbl set member_pw = #{member_pw},
+    member_name = #{member_name},
+    member_handphone = #{member_handphone}
+    where member_id = #{member_id}
+  </update>
+
+  <select id="getMemberList" resultType="memberVo">
+    select * from member_tbl
+  </select>
+
+  <update id="updateGrade" parameterType="map">
+    update member_tbl set member_grade = #{member_grade}
+    where member_idx = #{member_idx}
+  </update>
+
+  <delete id="deleteMember" parameterType="list">
+    delete from member_tbl where member_idx in
+    <foreach collection="list" item="member_idx" open="(" separator="," close=")">
+      #{member_idx}
+    </foreach>
+  </delete>
+
+  <select id="getUpdateList" resultType="memberVo">
+    select * from member_tbl_bak where modify_type = '수정'
+  </select>
+
+  <select id="getDeleteList" resultType="memberVo">
+    select * from member_tbl_bak where modify_type = '삭제'
+  </select>
+
+
+</mapper>	
