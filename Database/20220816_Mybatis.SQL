@@ -232,3 +232,21 @@ insert into board_tbl(
     6);
 
 select * from board_tbl order by board_idx desc;
+
+drop table board_tbl;
+create table board_tbl(
+board_idx int unsigned not null primary key auto_increment,
+writer varchar(50) not null, title varchar(50) not null,
+content varchar(1000) not null,
+price int not null, address varchar(100) not null,
+reg_date datetime default now(),
+origin_filename1 varchar(50),
+origin_filename2 varchar(50),
+origin_filename3 varchar(50),
+system_filename1 varchar(100),
+system_filename2 varchar(100),
+system_filename3 varchar(100),
+member_idx int unsigned not null,
+constraint fk_member foreign
+key(member_idx) references member_tbl(member_idx)
+);

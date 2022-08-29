@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Mon Aug 29 10:50:42 KST 2022
+https\://repo.maven.apache.org/maven2/.lastUpdated=1661737842239
+http\://0.0.0.0/.error=Could not transfer artifact com.google.protobuf\:protobuf-java\:jar\:3.19.4 from/to maven-default-http-blocker (http\://0.0.0.0/)\: Blocked mirror for repositories\: [oracle (http\://maven.jahia.org/maven2, default, releases+snapshots)]
+@default-maven-default-http-blocker-http\://0.0.0.0/.lastUpdated=1661737840369

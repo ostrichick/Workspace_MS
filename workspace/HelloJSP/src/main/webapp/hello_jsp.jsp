@@ -12,7 +12,7 @@
 int sum = 0;
 for (int i = 0; i < 101; i++) {
 	sum += i;
-	out.print(sum + "<br>");
+// 	out.print(sum + "<br>");
 }
 %>
 </body>
