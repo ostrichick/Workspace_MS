@@ -7,9 +7,13 @@ import java.util.Map;
 import ezen.maru.pjt.vo.MemberVo;
 
 public interface MemberService {
-	
-	//디폴트 메소드와 정적 메소드는 JDK8부터 적용 가능
-	//강제성이 없음
+
+	//////////////
+	// MARU end //
+	//////////////
+
+	// 디폴트 메소드와 정적 메소드는 JDK8부터 적용 가능
+	// 강제성이 없음
 	default int join(MemberVo memberVo) {
 		return 0;
 	}
@@ -26,10 +30,10 @@ public interface MemberService {
 		return 0;
 	}
 
-	default List<MemberVo> getMemberList(){
+	default List<MemberVo> getMemberList() {
 		return null;
 	}
-	
+
 	default int updateGrade(HashMap<String, Integer> map) {
 		return 0;
 	}
@@ -38,13 +42,12 @@ public interface MemberService {
 		return 0;
 	}
 
-	default List<MemberVo> getUpdateList(){
+	default List<MemberVo> getUpdateList() {
 		return null;
 	}
 
-	default List<MemberVo> getDeleteList(){
+	default List<MemberVo> getDeleteList() {
 		return null;
 	}
-	
 
 }

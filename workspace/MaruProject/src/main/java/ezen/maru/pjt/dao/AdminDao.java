@@ -11,6 +11,10 @@ import ezen.maru.pjt.vo.FileVo;
 @Repository
 public class AdminDao {
 
+	//////////////
+	// MARU end //
+	//////////////
+
 	// MyBatis를 이용해서 DB작업을 할 수 있도록 지원하는 SqlSession객체를 멤버변수로
 	// 정의하고 생성자를 통한 의존 자동주입이 이루어지도록 정의하시오.
 	private SqlSession sqlSession;

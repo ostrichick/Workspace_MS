@@ -18,18 +18,13 @@
 <!--===============================================================================================-->
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/vendor/select2/select2.min.css">
 <!--===============================================================================================-->
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/vendor/daterangepicker/daterangepicker.css">
-<!--===============================================================================================-->
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/vendor/slick/slick.css">
-<!--===============================================================================================-->
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/vendor/MagnificPopup/magnific-popup.css">
-<!--===============================================================================================-->
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/vendor/perfect-scrollbar/perfect-scrollbar.css">
 <!--===============================================================================================-->
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/util.css">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/main.css">
 <!--===============================================================================================-->
-<header>
+<!-- Header -->
+<header class="header-v4">
   <!-- Header desktop -->
   <div class="container-menu-desktop">
     <!-- Topbar -->
@@ -43,17 +38,17 @@
       </div>
     </div>
 
-    <div class="wrap-menu-desktop">
+    <div class="wrap-menu-desktop how-shadow1">
       <nav class="limiter-menu-desktop container">
 
         <!-- Logo desktop -->
-        <a href="#" class="logo"> <img src="${pageContext.request.contextPath}/resources/images/maru.png" alt="IMG-LOGO">
+        <a href="#" class="logo"> <img src="images/icons/logo-01.png" alt="IMG-LOGO">
         </a>
 
         <!-- Menu desktop -->
         <div class="menu-desktop">
           <ul class="main-menu">
-            <li class="active-menu"><a href="index.html">Home</a>
+            <li><a href="index.html">Home</a>
               <ul class="sub-menu">
                 <li><a href="index.html">Homepage 1</a></li>
                 <li><a href="home-02.html">Homepage 2</a></li>
@@ -66,7 +61,7 @@
 
             <li><a href="blog.html">Blog</a></li>
 
-            <li><a href="about.html">About</a></li>
+            <li class="active-menu"><a href="about.html">About</a></li>
 
             <li><a href="contact.html">Contact</a></li>
           </ul>
@@ -82,7 +77,7 @@
             <i class="zmdi zmdi-shopping-cart"></i>
           </div>
 
-          <a href="#" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti" data-notify="0"> <i class="zmdi zmdi-favorite-outline"></i>
+          <a href="#" class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti" data-notify="0"> <i class="zmdi zmdi-favorite-outline"></i>
           </a>
         </div>
       </nav>
@@ -93,7 +88,7 @@
   <div class="wrap-header-mobile">
     <!-- Logo moblie -->
     <div class="logo-mobile">
-      <a href="index.html"><img src="${pageContext.request.contextPath}/resources/images/maru.png" alt="IMG-LOGO"></a>
+      <a href="index.html"><img src="images/icons/logo-01.png" alt="IMG-LOGO"></a>
     </div>
 
     <!-- Icon header -->
@@ -157,7 +152,7 @@
   <div class="modal-search-header flex-c-m trans-04 js-hide-modal-search">
     <div class="container-search-header">
       <button class="flex-c-m btn-hide-modal-search trans-04 js-hide-modal-search">
-        <img src="${pageContext.request.contextPath}/resources/images/icons/icon-close2.png" alt="CLOSE">
+        <img src="images/icons/icon-close2.png" alt="CLOSE">
       </button>
 
       <form class="wrap-search-header flex-w p-l-15">
@@ -187,7 +182,7 @@
       <ul class="header-cart-wrapitem w-full">
         <li class="header-cart-item flex-w flex-t m-b-12">
           <div class="header-cart-item-img">
-            <img src="${pageContext.request.contextPath}/resources/images/item-cart-01.jpg" alt="IMG">
+            <img src="images/item-cart-01.jpg" alt="IMG">
           </div>
 
           <div class="header-cart-item-txt p-t-8">
@@ -197,7 +192,7 @@
 
         <li class="header-cart-item flex-w flex-t m-b-12">
           <div class="header-cart-item-img">
-            <img src="${pageContext.request.contextPath}/resources/images/item-cart-02.jpg" alt="IMG">
+            <img src="images/item-cart-02.jpg" alt="IMG">
           </div>
 
           <div class="header-cart-item-txt p-t-8">
@@ -207,11 +202,11 @@
 
         <li class="header-cart-item flex-w flex-t m-b-12">
           <div class="header-cart-item-img">
-            <img src="${pageContext.request.contextPath}/resources/images/item-cart-03.jpg" alt="IMG">
+            <img src="images/item-cart-03.jpg" alt="IMG">
           </div>
 
           <div class="header-cart-item-txt p-t-8">
-            <a href="#" class="header-cart-<item></item>-name m-b-18 hov-cl1 trans-04"> Nixon Porter Leather </a> <span class="header-cart-item-info"> 1 x $17.00 </span>
+            <a href="#" class="header-cart-item-name m-b-18 hov-cl1 trans-04"> Nixon Porter Leather </a> <span class="header-cart-item-info"> 1 x $17.00 </span>
           </div>
         </li>
       </ul>

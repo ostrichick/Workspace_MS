@@ -11,6 +11,10 @@ import ezen.maru.pjt.vo.BoardVo;
 @Repository
 public class BoardDao {
 
+	//////////////
+	// MARU end //
+	//////////////
+
 	private SqlSession sqlSession;
 	private final String MAPPER = "ezen.maru.pjt.board";
 

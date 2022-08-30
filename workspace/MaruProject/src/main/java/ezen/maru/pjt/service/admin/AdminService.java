@@ -10,11 +10,15 @@ import ezen.maru.pjt.vo.FileVo;
 
 public interface AdminService {
 
+	//////////////
+	// MARU end //
+	//////////////
+
 	default int upload(MultipartRequest uploadFile, HttpServletRequest request) {
 		return 0;
 	}
 
-	default List<FileVo> getFileList(){
+	default List<FileVo> getFileList() {
 		return null;
 	}
 

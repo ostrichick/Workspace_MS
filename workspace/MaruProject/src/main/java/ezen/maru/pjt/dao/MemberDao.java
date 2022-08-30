@@ -13,6 +13,11 @@ import ezen.maru.pjt.vo.MemberVo;
 @Repository // DAO클래스에 대한 표시, 스프링 컨테이너가 컴포넌트 스캔으로 빈 등록시
 //MemberDao클래스를 빈으로 등록시켜줌
 public class MemberDao {
+
+	//////////////
+	// MARU end //
+	//////////////
+
 	private SqlSession sqlSession;
 
 	private final String MAPPER = "ezen.maru.pjt.member";

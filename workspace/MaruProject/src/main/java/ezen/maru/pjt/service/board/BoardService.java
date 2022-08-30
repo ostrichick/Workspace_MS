@@ -10,12 +10,15 @@ import ezen.maru.pjt.vo.BoardVo;
 
 public interface BoardService {
 
-	default int board_insert(BoardVo boardVo, 
-			MultipartRequest uploadFile, HttpServletRequest request) {
+	//////////////
+	// MARU end //
+	//////////////
+
+	default int board_insert(BoardVo boardVo, MultipartRequest uploadFile, HttpServletRequest request) {
 		return 0;
 	}
 
-	default List<BoardVo> getBoardList(){
+	default List<BoardVo> getBoardList() {
 		return null;
 	}
 

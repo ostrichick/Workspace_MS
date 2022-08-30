@@ -20,6 +20,10 @@ import ezen.maru.pjt.vo.BoardVo;
 @RequestMapping("/board")
 public class BoardController {
 
+	//////////////
+	// MARU end // 주석 아래부분 참고하여 작성 후 아래 부분은 삭제
+	//////////////
+
 	BoardService insertService, listService;
 
 	@Autowired(required = false)

@@ -10,10 +10,14 @@ import ezen.maru.pjt.vo.MemberVo;
 
 @Service("login")
 public class MemberLoginService implements MemberService {
-	
+
+	//////////////
+	// MARU end //
+	//////////////
+
 	private MemberDao memberDao;
-	
-	@Autowired(required=false)//생성자를 통한 자동 의존 주입
+
+	@Autowired(required = false) // 생성자를 통한 자동 의존 주입
 	public MemberLoginService(MemberDao memberDao) {
 		this.memberDao = memberDao;
 	}

@@ -20,6 +20,10 @@ import ezen.maru.pjt.vo.BoardVo;
 @Service("b_insert")
 public class BoardInsertService implements BoardService {
 
+	//////////////
+	// MARU end //
+	//////////////
+
 	private BoardDao boardDao;
 
 	@Autowired(required = false)

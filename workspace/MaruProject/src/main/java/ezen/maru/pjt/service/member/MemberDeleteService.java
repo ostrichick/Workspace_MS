@@ -9,10 +9,14 @@ import ezen.maru.pjt.dao.MemberDao;
 
 @Service("m_delete")
 public class MemberDeleteService implements MemberService {
-	
+
+	//////////////
+	// MARU end //
+	//////////////
+
 	private MemberDao memberDao;
-	
-	@Autowired(required=false)
+
+	@Autowired(required = false)
 	public MemberDeleteService(MemberDao memberDao) {
 		this.memberDao = memberDao;
 	}
