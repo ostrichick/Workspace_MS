@@ -272,7 +272,7 @@ CREATE TABLE product_qna
 	-- 질문답변 내용
 	product_qna_content varchar2(1500) NOT NULL,
 	-- 게시일
-	product_qna_date date NOT NULL,
+	product_qna_date date DEFAULT sysdate NOT NULL,
 	-- 답변이 있음
 	product_qna_isanswered varchar2(3) DEFAULT 'N' NOT NULL,
 	-- 원본글 번호

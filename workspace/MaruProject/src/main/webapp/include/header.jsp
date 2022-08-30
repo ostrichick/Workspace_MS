@@ -23,6 +23,13 @@
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/util.css">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/main.css">
 <!--===============================================================================================-->
+
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/vendor/slick/slick.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/vendor/MagnificPopup/magnific-popup.css">
 <!-- Header -->
 <header class="header-v4">
   <!-- Header desktop -->
@@ -42,28 +49,28 @@
       <nav class="limiter-menu-desktop container">
 
         <!-- Logo desktop -->
-        <a href="#" class="logo"> <img src="images/icons/logo-01.png" alt="IMG-LOGO">
+        <a href="#" class="logo"> <img src="${pageContext.request.contextPath}/resources/images/icons/logo-01.png" alt="IMG-LOGO">
         </a>
 
         <!-- Menu desktop -->
         <div class="menu-desktop">
           <ul class="main-menu">
-            <li><a href="index.html">Home</a>
+            <li><a href="index.do">Home</a>
               <ul class="sub-menu">
-                <li><a href="index.html">Homepage 1</a></li>
-                <li><a href="home-02.html">Homepage 2</a></li>
-                <li><a href="home-03.html">Homepage 3</a></li>
+                <li><a href="index.do">Homepage 1</a></li>
+                <li><a href="home-02.do">Homepage 2</a></li>
+                <li><a href="home-03.do">Homepage 3</a></li>
               </ul></li>
 
-            <li><a href="product.html">Shop</a></li>
+            <li><a href="product.do">Shop</a></li>
 
-            <li class="label1" data-label1="hot"><a href="shoping-cart.html">Features</a></li>
+            <li class="label1" data-label1="hot"><a href="shopping-cart.do">Features</a></li>
 
-            <li><a href="blog.html">Blog</a></li>
+            <li><a href="blog.do">Blog</a></li>
 
-            <li class="active-menu"><a href="about.html">About</a></li>
+            <li class="active-menu"><a href="about.do">About</a></li>
 
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.do">Contact</a></li>
           </ul>
         </div>
 
@@ -88,7 +95,7 @@
   <div class="wrap-header-mobile">
     <!-- Logo moblie -->
     <div class="logo-mobile">
-      <a href="index.html"><img src="images/icons/logo-01.png" alt="IMG-LOGO"></a>
+      <a href="index.do"><img src="${pageContext.request.contextPath}/resources/images/icons/logo-01.png" alt="IMG-LOGO"></a>
     </div>
 
     <!-- Icon header -->
@@ -128,23 +135,23 @@
     </ul>
 
     <ul class="main-menu-m">
-      <li><a href="index.html">Home</a>
+      <li><a href="index.do">Home</a>
         <ul class="sub-menu-m">
-          <li><a href="index.html">Homepage 1</a></li>
-          <li><a href="home-02.html">Homepage 2</a></li>
-          <li><a href="home-03.html">Homepage 3</a></li>
+          <li><a href="index.do">Homepage 1</a></li>
+          <li><a href="home-02.do">Homepage 2</a></li>
+          <li><a href="home-03.do">Homepage 3</a></li>
         </ul> <span class="arrow-main-menu-m"> <i class="fa fa-angle-right" aria-hidden="true"></i>
       </span></li>
 
-      <li><a href="product.html">Shop</a></li>
+      <li><a href="product.do">Shop</a></li>
 
-      <li><a href="shoping-cart.html" class="label1 rs1" data-label1="hot">Features</a></li>
+      <li><a href="shoping-cart.do" class="label1 rs1" data-label1="hot">Features</a></li>
 
-      <li><a href="blog.html">Blog</a></li>
+      <li><a href="blog.do">Blog</a></li>
 
-      <li><a href="about.html">About</a></li>
+      <li><a href="about.do">About</a></li>
 
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.do">Contact</a></li>
     </ul>
   </div>
 
@@ -152,7 +159,7 @@
   <div class="modal-search-header flex-c-m trans-04 js-hide-modal-search">
     <div class="container-search-header">
       <button class="flex-c-m btn-hide-modal-search trans-04 js-hide-modal-search">
-        <img src="images/icons/icon-close2.png" alt="CLOSE">
+        <img src="${pageContext.request.contextPath}/resources/images/icons/icon-close2.png" alt="CLOSE">
       </button>
 
       <form class="wrap-search-header flex-w p-l-15">
@@ -182,7 +189,7 @@
       <ul class="header-cart-wrapitem w-full">
         <li class="header-cart-item flex-w flex-t m-b-12">
           <div class="header-cart-item-img">
-            <img src="images/item-cart-01.jpg" alt="IMG">
+            <img src="${pageContext.request.contextPath}/resources/images/item-cart-01.jpg" alt="IMG">
           </div>
 
           <div class="header-cart-item-txt p-t-8">
@@ -192,7 +199,7 @@
 
         <li class="header-cart-item flex-w flex-t m-b-12">
           <div class="header-cart-item-img">
-            <img src="images/item-cart-02.jpg" alt="IMG">
+            <img src="${pageContext.request.contextPath}/resources/images/item-cart-02.jpg" alt="IMG">
           </div>
 
           <div class="header-cart-item-txt p-t-8">
@@ -202,7 +209,7 @@
 
         <li class="header-cart-item flex-w flex-t m-b-12">
           <div class="header-cart-item-img">
-            <img src="images/item-cart-03.jpg" alt="IMG">
+            <img src="${pageContext.request.contextPath}/resources/images/item-cart-03.jpg" alt="IMG">
           </div>
 
           <div class="header-cart-item-txt p-t-8">
@@ -215,7 +222,7 @@
         <div class="header-cart-total w-full p-tb-40">Total: $75.00</div>
 
         <div class="header-cart-buttons flex-w w-full">
-          <a href="shoping-cart.html" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10"> View Cart </a> <a href="shoping-cart.html" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10"> Check Out </a>
+          <a href="shoping-cart.do" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10"> View Cart </a> <a href="shoping-cart.do" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10"> Check Out </a>
         </div>
       </div>
     </div>

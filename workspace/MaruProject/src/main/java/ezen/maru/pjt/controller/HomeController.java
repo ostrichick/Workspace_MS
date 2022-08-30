@@ -50,6 +50,11 @@ public class HomeController {
 		return "product";
 	}
 
+	@GetMapping("/product2.do")
+	public String product2() {
+		return "product2";
+	}
+
 	@GetMapping("/product-detail.do")
 	public String product_detail() {
 		return "product-detail";
@@ -57,7 +62,7 @@ public class HomeController {
 
 	@GetMapping("/shopping-cart.do")
 	public String shopping_cart() {
-		return " shopping-cart";
+		return "shopping-cart";
 	}
 
 	/////////////////////////
