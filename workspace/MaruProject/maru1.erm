@@ -11,8 +11,8 @@
 	</page_setting>
 	<category_index>0</category_index>
 	<zoom>0.8</zoom>
-	<x>-114</x>
-	<y>147</y>
+	<x>-121</x>
+	<y>232</y>
 	<default_color>
 		<r>255</r>
 		<g>255</g>
@@ -89,7 +89,7 @@
 				<is_open_after_saved>true</is_open_after_saved>
 			</export_html_setting>
 			<export_image_setting>
-				<output_file_path>C:\Users\MYCOM\Desktop\MaruProject\3.DB설계\maru0826.png</output_file_path>
+				<output_file_path>C:\Users\MYCOM\Desktop\MaruProject\3.DB설계\maru0830.png</output_file_path>
 				<category_dir_path></category_dir_path>
 				<with_category_image>true</with_category_image>
 				<is_open_after_saved>true</is_open_after_saved>
@@ -135,7 +135,7 @@
 			</connections>
 			<display>false</display>
 			<creation_date>2022-08-19 17:03:38</creation_date>
-			<updated_date>2022-08-29 17:44:06</updated_date>
+			<updated_date>2022-08-30 10:48:24</updated_date>
 			<model_property>
 				<name>프로젝트명</name>
 				<value></value>
@@ -2490,7 +2490,7 @@
 			<connections>
 				<relation>
 					<id>6</id>
-					<source>11</source>
+					<source>7</source>
 					<target>4</target>
 						<source_xp>-1</source_xp>
 						<source_yp>-1</source_yp>
@@ -2512,7 +2512,7 @@
 				</relation>
 				<relation>
 					<id>7</id>
-					<source>7</source>
+					<source>11</source>
 					<target>4</target>
 						<source_xp>-1</source_xp>
 						<source_yp>-1</source_yp>
@@ -2576,7 +2576,7 @@
 				<normal_column>
 					<id>25</id>
 					<referenced_column>79</referenced_column>
-					<relation>6</relation>
+					<relation>7</relation>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
@@ -2610,7 +2610,7 @@
 				<normal_column>
 					<id>26</id>
 					<referenced_column>42</referenced_column>
-					<relation>7</relation>
+					<relation>6</relation>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>

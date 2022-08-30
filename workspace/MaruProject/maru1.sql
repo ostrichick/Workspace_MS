@@ -75,8 +75,6 @@ CREATE TABLE announce
 	announce_content varchar2(1500) NOT NULL,
 	-- 공지 게시일
 	announce_date date DEFAULT sysdate NOT NULL,
-	-- 공지사항 기간
-	announce_duration varchar2(9),
 	-- 파일 원본 이름
 	announce_file_originalname varchar2(90),
 	-- 파일 시스템이름
@@ -124,17 +122,17 @@ CREATE TABLE member_info
 	-- 상세주소
 	member_addr2 varchar2(255) NOT NULL,
 	-- 우편번호
-	member_postcode number(5,0),
+	member_postcode number(5,0) NOT NULL,
 	-- 가입일
 	member_date date DEFAULT sysdate,
 	-- 마지막 방문일
-	mamber_last_visit date DEFAULT sysdate NOT NULL,
+	mamber_last_visit date DEFAULT sysdate,
 	-- 회원 등급
-	member_grade varchar2(3) NOT NULL,
+	member_grade varchar2(3) DEFAULT '0' NOT NULL,
 	-- 관리자여부
-	member_admin varchar2(3) NOT NULL,
+	member_admin varchar2(3) DEFAULT 'N' NOT NULL,
 	-- 탈퇴여부
-	deleted_yn varchar2(3) DEFAULT '''N''' NOT NULL,
+	deleted_yn varchar2(3) DEFAULT 'N' NOT NULL,
 	PRIMARY KEY (member_idx)
 );
 
@@ -180,9 +178,9 @@ CREATE TABLE order_log
 	-- 30는 배송완료
 	order_state number NOT NULL,
 	-- 주문 취소 여부
-	order_cancel varchar2(3) DEFAULT '''N''' NOT NULL,
+	order_cancel varchar2(3) DEFAULT 'N' NOT NULL,
 	-- 주문 환불 여부
-	order_refund varchar2(3) DEFAULT '''N''' NOT NULL,
+	order_refund varchar2(3) DEFAULT 'N' NOT NULL,
 	PRIMARY KEY (order_idx)
 );
 
@@ -209,7 +207,7 @@ CREATE TABLE product
 	-- 상품가격
 	product_price number NOT NULL,
 	-- 할인 여부
-	product_sale varchar2(3) DEFAULT '''N''' NOT NULL,
+	product_sale varchar2(3) DEFAULT 'N' NOT NULL,
 	-- 상품 할인율
 	product_sale_percent number DEFAULT 0,
 	-- 상품 규격 (100x200)
@@ -217,15 +215,15 @@ CREATE TABLE product
 	-- 배송 특이사항
 	product_delivery_info varchar2(150),
 	-- 상품 재고
-	product_inventory number NOT NULL,
+	product_inventory number,
 	-- 상품 대분류
 	product_major_category varchar2(30),
 	-- 상품 소분류
 	product_minor_category varchar2(30),
 	-- 신제품 여부
-	product_isnew varchar2(3) DEFAULT '''N''' NOT NULL,
+	product_isnew varchar2(3) DEFAULT 'N' NOT NULL,
 	-- 리뷰 평점
-	product_avgstar float NOT NULL,
+	product_avgstar float DEFAULT 0 NOT NULL,
 	PRIMARY KEY (product_idx)
 );
 
@@ -527,7 +525,6 @@ COMMENT ON COLUMN announce.announce_idx IS '공지사항 번호';
 COMMENT ON COLUMN announce.announce_title IS '공지사항 제목';
 COMMENT ON COLUMN announce.announce_content IS '공지사항 내용';
 COMMENT ON COLUMN announce.announce_date IS '공지 게시일';
-COMMENT ON COLUMN announce.announce_duration IS '공지사항 기간';
 COMMENT ON COLUMN announce.announce_file_originalname IS '파일 원본 이름';
 COMMENT ON COLUMN announce.announce_file_systemname IS '파일 시스템이름';
 COMMENT ON COLUMN announce.announce_file_extension IS '파일 확장자';
