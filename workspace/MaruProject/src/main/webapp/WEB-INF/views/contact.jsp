@@ -73,7 +73,7 @@
 </section>
 <!-- Map -->
 <div class="map">
-  <div class="size-303" id="google_map" data-map-x="35.8402932" data-map-y="127.1325622" data-pin="${pageContext.request.contextPath}/resources/images/icons/pin.png" data-scrollwhell="0" data-draggable="1" data-zoom="16"></div>
+  <div class="size-303" id="google_map" data-map-x="35.8402932" data-map-y="127.1325622" data-pin="${pageContext.request.contextPath}/resources/images/icons/pin.png" data-scrollwhell="0" data-draggable="1" data-zoom="18"></div>
 </div>
 <!-- Footer -->
 <%@include file="/include/footer.jsp"%>
