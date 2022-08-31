@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-
 <mapper namespace="ezen.maru.pjt.memberInfo">
-
   <insert id="signup" parameterType="memberInfoVo">
-    <!-- parameterType: SQL문 실행을 위해 필요한 입력값에 대한 데이터형. memberVo는 mybatis-config.xml파일에 별칭으로 정의되어져 있기 때문에 사용 가능. SQL문에서 사용되는 #{속성/멤버변수}는 입력값에서 가져오는 것임 -->
     INSERT INTO MEMBER_INFO(
     member_id, member_pw, member_name, member_email, member_phone, member_addr,
     member_addr2, member_postcode
@@ -14,23 +11,28 @@
     #{member_addr2}, #{member_postcode})
   </insert>
 
-  <select id="login" parameterType="map" resultType="memberVo">
-    select * from member_tbl
-    where member_id =#{member_id}
-    and member_pw = #{member_pw}
-    and del_yn = 'N'
-
-  </select>
-
-  <select id="getMember" parameterType="string" resultType="memberVo">
-    select * from member_tbl where member_id = #{member_id}
-  </select>
-
-  <update id="updateMember" parameterType="memberVo">
-    update member_tbl set member_pw = #{member_pw},
-    member_name = #{member_name},
-    member_handphone = #{member_handphone}
+  <select id="signin" parameterType="memberInfoVo" resultType="memberInfoVo">
+    select * from member_info
     where member_id = #{member_id}
+    and member_pw = #{member_pw}
+    and deleted_yn = 'N'
+  </select>
+
+  <select id="getMember" parameterType="string" resultType="memberInfoVo">
+    select * from member_info where member_id = #{member_id}
+  </select>
+
+  <update id="updateMember" parameterType="memberInfoVo">
+    UPDATE MEMBER_INFO
+    SET
+    member_pw = #{member_pw},
+    member_email = #{member_email},
+    member_phone = #{member_phone},
+    member_addr = #{member_addr},
+    member_addr2 = #{member_addr2},
+    member_postcode = #{member_postcode}
+    WHERE
+    member_idx = #{member_idx}
   </update>
 
   <select id="getMemberList" resultType="memberVo">

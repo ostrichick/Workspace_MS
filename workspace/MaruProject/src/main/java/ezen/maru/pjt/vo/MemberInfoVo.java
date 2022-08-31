@@ -18,6 +18,16 @@ public class MemberInfoVo {
 	private String member_admin;
 	private String deleted_yn;
 
+	@Override
+	public String toString() {
+		return "MemberInfoVo [member_idx=" + member_idx + ", member_id=" + member_id + ", member_pw=" + member_pw
+				+ ", member_name=" + member_name + ", member_email=" + member_email + ", member_phone=" + member_phone
+				+ ", member_addr=" + member_addr + ", member_addr2=" + member_addr2 + ", member_postcode="
+				+ member_postcode + ", member_date=" + member_date + ", mamber_last_visit=" + mamber_last_visit
+				+ ", member_grade=" + member_grade + ", member_admin=" + member_admin + ", deleted_yn=" + deleted_yn
+				+ "]";
+	}
+
 	public int getMember_idx() {
 		return member_idx;
 	}
@@ -129,5 +139,4 @@ public class MemberInfoVo {
 	public void setDeleted_yn(String deleted_yn) {
 		this.deleted_yn = deleted_yn;
 	}
-
 }

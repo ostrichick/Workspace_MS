@@ -36,7 +36,7 @@ public class MemberController {
 	}
 
 	@Autowired(required = false)
-	public void setUpdateService(@Qualifier("m_update") MemberService updateService) {
+	public void setUpdateService(@Qualifier("member_update") MemberService updateService) {
 		this.updateService = updateService;
 	}
 

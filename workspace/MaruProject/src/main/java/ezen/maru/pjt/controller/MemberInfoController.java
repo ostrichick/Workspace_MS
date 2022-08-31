@@ -1,5 +1,7 @@
 package ezen.maru.pjt.controller;
 
+import java.util.Optional;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -10,6 +12,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import ezen.maru.pjt.service.memberinfo.MemberInfoService;
 import ezen.maru.pjt.vo.MemberInfoVo;
@@ -18,11 +21,21 @@ import ezen.maru.pjt.vo.MemberInfoVo;
 @RequestMapping("/member")
 public class MemberInfoController {
 
-	MemberInfoService signupService;
+	MemberInfoService signupService, signinService, updateService;
 
 	@Autowired(required = false)
 	public void setSignupService(@Qualifier("signup") MemberInfoService signupService) {
 		this.signupService = signupService;
+	}
+
+	@Autowired(required = false)
+	public void setSigninService(@Qualifier("signin") MemberInfoService signinService) {
+		this.signinService = signinService;
+	}
+
+	@Autowired(required = false)
+	public void setUpdateService(@Qualifier("member_update") MemberInfoService updateService) {
+		this.updateService = updateService;
 	}
 
 	@GetMapping("/signup.do") // 회원가입 페이지 요청
@@ -36,6 +49,60 @@ public class MemberInfoController {
 		int result = signupService.signup(memberInfoVo);
 		String viewPage = "member/signup.do";
 		if (result == 1) {// 회원가입 성공
+			viewPage = "redirect:/";
+			userSessionUpdate(memberInfoVo, req);
+		}
+		return viewPage;
+	}
+
+	@GetMapping("/signin.do")
+	public String member_signin() {
+		return "member/signin";
+	}
+
+	@PostMapping("/signin_process.do")
+	public String signin_process(String member_id, String member_pw, HttpServletRequest req) {
+
+		MemberInfoVo memberInfoVoParam = new MemberInfoVo();
+		memberInfoVoParam.setMember_id(member_id);
+		memberInfoVoParam.setMember_pw(member_pw);
+		String viewPage = "member/signin";
+
+		MemberInfoVo memberInfoVo = signinService.signin(memberInfoVoParam);
+
+		if (memberInfoVo != null) {// 로그인 성공
+			userSessionUpdate(memberInfoVo, req);
+			viewPage = "redirect:/";
+		}
+		return viewPage;
+	}
+
+	@GetMapping("/signout.do")
+	public String signout(HttpServletRequest request) {
+		HttpSession session = request.getSession();
+		session.invalidate();
+		return "redirect:/";
+	}
+
+	@GetMapping("/myinfo.do")
+	public String myinfo(HttpServletRequest req, Model model) {
+		HttpSession session = req.getSession();
+		String member_id = (String) session.getAttribute("member_id");
+		MemberInfoVo memberInfoVo = updateService.getMember(member_id);
+		model.addAttribute("memberInfoVo", memberInfoVo);
+		return "member/myinfo";
+	}
+
+	@PostMapping("/updateinfo.do")
+	public String update(MemberInfoVo memberInfoVo, HttpServletRequest req, RedirectAttributes redirect) {
+		HttpSession session = req.getSession();
+		Optional<Object> optional_member_idx = Optional.ofNullable(session.getAttribute("member_idx"));
+		int member_idx = (int) optional_member_idx.get();
+		memberInfoVo.setMember_idx(member_idx);
+		int result = updateService.update(memberInfoVo);
+		String viewPage = "redirect:/member/myinfo";
+		if (result == 1) {
+			redirect.addFlashAttribute("updateResult", "회원정보 수정 성공");
 			viewPage = "redirect:/";
 			userSessionUpdate(memberInfoVo, req);
 		}

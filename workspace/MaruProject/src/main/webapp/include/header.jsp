@@ -1,50 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!--===============================================================================================-->
-<link rel="icon" type="image/png" href="${pageContext.request.contextPath}/resources/images/icons/favicon.png" />
-<!--===============================================================================================-->
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/vendor/bootstrap/css/bootstrap.min.css">
-<!--===============================================================================================-->
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-<!--===============================================================================================-->
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/fonts/iconic/css/material-design-iconic-font.min.css">
-<!--===============================================================================================-->
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/fonts/linearicons-v1.0.0/icon-font.min.css">
-<!--===============================================================================================-->
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/vendor/animate/animate.css">
-<!--===============================================================================================-->
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/vendor/css-hamburgers/hamburgers.min.css">
-<!--===============================================================================================-->
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/vendor/animsition/css/animsition.min.css">
-<!--===============================================================================================-->
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/vendor/select2/select2.min.css">
-<!--===============================================================================================-->
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/vendor/perfect-scrollbar/perfect-scrollbar.css">
-<!--===============================================================================================-->
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/util.css">
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/main.css">
-<!--===============================================================================================-->
-
-<!--===============================================================================================-->
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/vendor/daterangepicker/daterangepicker.css">
-<!--===============================================================================================-->
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/vendor/slick/slick.css">
-<!--===============================================================================================-->
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/vendor/MagnificPopup/magnific-popup.css">
+<%@include file="/include/style.jsp"%>
 <!-- Header -->
 <header class="header-v4">
   <!-- Header desktop -->
   <div class="container-menu-desktop">
     <!-- Topbar -->
-    <div class="top-bar">
-      <div class="content-topbar flex-sb-m h-full container">
-        <div class="left-top-bar">Free shipping for standard order over $100</div>
-
-        <div class="right-top-bar flex-w h-full">
-          <a href="${pageContext.request.contextPath}/#" class="flex-c-m trans-04 p-lr-25"> Help & FAQs </a> <a href="${pageContext.request.contextPath}/#" class="flex-c-m trans-04 p-lr-25"> My Account </a> <a href="${pageContext.request.contextPath}/#" class="flex-c-m trans-04 p-lr-25"> EN </a> <a href="${pageContext.request.contextPath}/member/signup.do" class="flex-c-m trans-04 p-lr-25"> 회원가입 </a>
-        </div>
-      </div>
-    </div>
-
+    <%@include file="/include/topbar.jsp"%>
     <div class="wrap-menu-desktop how-shadow1">
       <nav class="limiter-menu-desktop container">
 
@@ -67,8 +28,9 @@
             <li class="label1" data-label1="hot"><a href="${pageContext.request.contextPath}/shopping-cart.do">Features</a></li>
 
             <li><a href="${pageContext.request.contextPath}/blog.do">Blog</a></li>
-
-            <li class="active-menu"><a href="${pageContext.request.contextPath}/about.do">About</a></li>
+            <!-- jstl 조건문 이용한 현재 액티브메뉴 구현? -->
+            <!--             <li class="active-menu"> -->
+            <li><a href="${pageContext.request.contextPath}/about.do">About</a></li>
 
             <li><a href="${pageContext.request.contextPath}/contact.do">Contact</a></li>
           </ul>

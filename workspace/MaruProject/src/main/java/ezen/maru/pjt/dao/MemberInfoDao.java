@@ -28,4 +28,16 @@ public class MemberInfoDao {
 		// SqlSession객체의 insert, update, delete 메소드는 SQL문의 실행 결과로 처리된 행의 수를 반환함
 	}
 
+	public MemberInfoVo signin(MemberInfoVo memberInfoVo) {
+		return sqlSession.selectOne(MAPPER + ".signin", memberInfoVo);
+	}
+
+	public MemberInfoVo getMember(String member_id) {
+		return sqlSession.selectOne(MAPPER + ".getMember", member_id);
+	}
+
+	public int update(MemberInfoVo memberInfoVo) {
+		return sqlSession.update(MAPPER + ".updateMember", memberInfoVo);
+	}
+
 }
