@@ -11,6 +11,9 @@
     <typeAlias alias="memberVo" type="ezen.maru.pjt.vo.MemberVo" />
     <typeAlias alias="fileVo" type="ezen.maru.pjt.vo.FileVo" />
     <typeAlias alias="boardVo" type="ezen.maru.pjt.vo.BoardVo" />
+    <!-- -->
+    <typeAlias alias="memberInfoVo" type="ezen.maru.pjt.vo.MemberInfoVo" />
+
   </typeAliases>
 
 </configuration>	

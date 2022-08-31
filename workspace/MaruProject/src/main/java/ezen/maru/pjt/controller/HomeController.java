@@ -15,6 +15,11 @@ public class HomeController {
 		return "index";
 	}
 
+	@GetMapping("/index2.do")
+	public String index2do() {
+		return "index2";
+	}
+
 	@GetMapping("/about.do")
 	public String about() {
 		return "about";
