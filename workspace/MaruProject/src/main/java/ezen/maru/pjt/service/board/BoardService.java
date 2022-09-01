@@ -17,6 +17,14 @@ public interface BoardService {
 	default int noticeWriteProcess(BoardVo boardVo, MultipartRequest uploadFile, HttpServletRequest req) {
 		return 0;
 	}
+
+	default int noticeEditProcess(BoardVo boardVo, MultipartRequest uploadFile, HttpServletRequest req) {
+		return 0;
+	}
+
+	default int deleteNotice(int idx) {
+		return 0;
+	}
 	//////////////
 	// MARU end //
 	//////////////
@@ -32,4 +40,5 @@ public interface BoardService {
 	default BoardVo getNotice(int idx) {
 		return null;
 	}
+
 }

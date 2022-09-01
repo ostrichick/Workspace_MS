@@ -56,22 +56,22 @@
           <!-- Menu desktop -->
           <div class="menu-desktop">
             <ul class="main-menu">
-              <li class="active-menu"><a href="${MaruContextPath}/index.do">Home</a>
+              <li class="active-menu"><a href="${MaruContextPath}/index">Home</a>
                 <ul class="sub-menu">
-                  <li><a href="${MaruContextPath}/index.do">Homepage 1</a></li>
-                  <li><a href="${MaruContextPath}/home-02.do">Homepage 2</a></li>
-                  <li><a href="${MaruContextPath}/home-03.do">Homepage 3</a></li>
+                  <li><a href="${MaruContextPath}/index">Homepage 1</a></li>
+                  <li><a href="${MaruContextPath}/home-02">Homepage 2</a></li>
+                  <li><a href="${MaruContextPath}/home-03">Homepage 3</a></li>
                 </ul></li>
 
-              <li><a href="${MaruContextPath}/product.do">Shop</a></li>
+              <li><a href="${MaruContextPath}/product">Shop</a></li>
 
-              <li class="label1" data-label1="hot"><a href="${MaruContextPath}/shopping-cart.do">Features</a></li>
+              <li class="label1" data-label1="hot"><a href="${MaruContextPath}/shopping-cart">Features</a></li>
 
-              <li><a href="${MaruContextPath}/blog.do">Blog</a></li>
+              <li><a href="${MaruContextPath}/blog">Blog</a></li>
 
-              <li><a href="${MaruContextPath}/about.do">About</a></li>
+              <li><a href="${MaruContextPath}/about">About</a></li>
 
-              <li><a href="${MaruContextPath}/contact.do">Contact</a></li>
+              <li><a href="${MaruContextPath}/contact">Contact</a></li>
             </ul>
           </div>
 
@@ -96,7 +96,7 @@
     <div class="wrap-header-mobile">
       <!-- Logo moblie -->
       <div class="logo-mobile">
-        <a href="${MaruContextPath}/index.do"><img src="${MaruContextPath}/resources/images/icons/logo-01.png" alt="IMG-LOGO"></a>
+        <a href="${MaruContextPath}/index"><img src="${MaruContextPath}/resources/images/icons/logo-01.png" alt="IMG-LOGO"></a>
       </div>
 
       <!-- Icon header -->
@@ -136,23 +136,23 @@
       </ul>
 
       <ul class="main-menu-m">
-        <li><a href="${MaruContextPath}/index.do">Home</a>
+        <li><a href="${MaruContextPath}/index">Home</a>
           <ul class="sub-menu-m">
-            <li><a href="${MaruContextPath}/index.do">Homepage 1</a></li>
-            <li><a href="${MaruContextPath}/home-02.do">Homepage 2</a></li>
-            <li><a href="${MaruContextPath}/home-03.do">Homepage 3</a></li>
+            <li><a href="${MaruContextPath}/index">Homepage 1</a></li>
+            <li><a href="${MaruContextPath}/home-02">Homepage 2</a></li>
+            <li><a href="${MaruContextPath}/home-03">Homepage 3</a></li>
           </ul> <span class="arrow-main-menu-m"> <i class="fa fa-angle-right" aria-hidden="true"></i>
         </span></li>
 
-        <li><a href="${MaruContextPath}/product.do">Shop</a></li>
+        <li><a href="${MaruContextPath}/product">Shop</a></li>
 
-        <li><a href="${MaruContextPath}/shopping-cart.do" class="label1 rs1" data-label1="hot">Features</a></li>
+        <li><a href="${MaruContextPath}/shopping-cart" class="label1 rs1" data-label1="hot">Features</a></li>
 
-        <li><a href="${MaruContextPath}/blog.do">Blog</a></li>
+        <li><a href="${MaruContextPath}/blog">Blog</a></li>
 
-        <li><a href="${MaruContextPath}/about.do">About</a></li>
+        <li><a href="${MaruContextPath}/about">About</a></li>
 
-        <li><a href="${MaruContextPath}/contact.do">Contact</a></li>
+        <li><a href="${MaruContextPath}/contact">Contact</a></li>
       </ul>
     </div>
 
@@ -223,7 +223,7 @@
           <div class="header-cart-total w-full p-tb-40">Total: $75.00</div>
 
           <div class="header-cart-buttons flex-w w-full">
-            <a href="${MaruContextPath}/shopping-cart.do" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10"> View Cart </a> <a href="${MaruContextPath}/shopping-cart.do" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10"> Check Out </a>
+            <a href="${MaruContextPath}/shopping-cart" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10"> View Cart </a> <a href="${MaruContextPath}/shopping-cart" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10"> Check Out </a>
           </div>
         </div>
       </div>
@@ -248,7 +248,7 @@
               </div>
 
               <div class="layer-slick1 animated visible-false" data-appear="zoomIn" data-delay="1600">
-                <a href="${MaruContextPath}/product.do" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04"> 지금 구매 </a>
+                <a href="${MaruContextPath}/product" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04"> 지금 구매 </a>
               </div>
             </div>
           </div>
@@ -266,7 +266,7 @@
               </div>
 
               <div class="layer-slick1 animated visible-false" data-appear="slideInUp" data-delay="1600">
-                <a href="${MaruContextPath}/product.do" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04"> 지금 구매 </a>
+                <a href="${MaruContextPath}/product" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04"> 지금 구매 </a>
               </div>
             </div>
           </div>
@@ -284,7 +284,7 @@
               </div>
 
               <div class="layer-slick1 animated visible-false" data-appear="rotateIn" data-delay="1600">
-                <a href="${MaruContextPath}/product.do" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04"> 지금구매 </a>
+                <a href="${MaruContextPath}/product" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04"> 지금구매 </a>
               </div>
             </div>
           </div>
@@ -304,7 +304,7 @@
         <div class="col-md-6 col-xl-4 p-b-30 m-lr-auto">
           <!-- Block1 -->
           <div class="block1 wrap-pic-w">
-            <img src="${MaruContextPath}/resources/images/banner-01.jpg" alt="IMG-BANNER"> <a href="${MaruContextPath}/product.do" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
+            <img src="${MaruContextPath}/resources/images/banner-01.jpg" alt="IMG-BANNER"> <a href="${MaruContextPath}/product" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
               <div class="block1-txt-child1 flex-col-l">
                 <span class="block1-name ltext-102 trans-04 p-b-8"> 부엌장 </span> <span class="block1-info stext-102 trans-04"> 2022년 가을 </span>
               </div>
@@ -319,7 +319,7 @@
         <div class="col-md-6 col-xl-4 p-b-30 m-lr-auto">
           <!-- Block1 -->
           <div class="block1 wrap-pic-w">
-            <img src="${MaruContextPath}/resources/images/banner-02.jpg" alt="IMG-BANNER"> <a href="${MaruContextPath}/product.do" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
+            <img src="${MaruContextPath}/resources/images/banner-02.jpg" alt="IMG-BANNER"> <a href="${MaruContextPath}/product" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
               <div class="block1-txt-child1 flex-col-l">
                 <span class="block1-name ltext-102 trans-04 p-b-8"> 세면대 </span> <span class="block1-info stext-102 trans-04"> 2022년 여름 </span>
               </div>
@@ -334,7 +334,7 @@
         <div class="col-md-6 col-xl-4 p-b-30 m-lr-auto">
           <!-- Block1 -->
           <div class="block1 wrap-pic-w">
-            <img src="${MaruContextPath}/resources/images/banner-03.jpg" alt="IMG-BANNER"> <a href="${MaruContextPath}/product.do" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
+            <img src="${MaruContextPath}/resources/images/banner-03.jpg" alt="IMG-BANNER"> <a href="${MaruContextPath}/product" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
               <div class="block1-txt-child1 flex-col-l">
                 <span class="block1-name ltext-102 trans-04 p-b-8"> 식탁 의자 세트 </span> <span class="block1-info stext-102 trans-04"> 2022년 여름 </span>
               </div>
@@ -477,7 +477,7 @@
 
             <div class="block2-txt flex-w flex-t p-t-14">
               <div class="block2-txt-child1 flex-col-l ">
-                <a href="${MaruContextPath}/product-detail.do" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"> Esprit Ruffle Shirt </a> <span class="stext-105 cl3"> $16.64 </span>
+                <a href="${MaruContextPath}/product-detail" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"> Esprit Ruffle Shirt </a> <span class="stext-105 cl3"> $16.64 </span>
               </div>
 
               <div class="block2-txt-child2 flex-r p-t-3">
@@ -497,7 +497,7 @@
 
             <div class="block2-txt flex-w flex-t p-t-14">
               <div class="block2-txt-child1 flex-col-l ">
-                <a href="${MaruContextPath}/product-detail.do" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"> Herschel supply </a> <span class="stext-105 cl3"> $35.31 </span>
+                <a href="${MaruContextPath}/product-detail" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"> Herschel supply </a> <span class="stext-105 cl3"> $35.31 </span>
               </div>
 
               <div class="block2-txt-child2 flex-r p-t-3">
@@ -517,7 +517,7 @@
 
             <div class="block2-txt flex-w flex-t p-t-14">
               <div class="block2-txt-child1 flex-col-l ">
-                <a href="${MaruContextPath}/product-detail.do" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"> Only Check Trouser </a> <span class="stext-105 cl3"> $25.50 </span>
+                <a href="${MaruContextPath}/product-detail" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"> Only Check Trouser </a> <span class="stext-105 cl3"> $25.50 </span>
               </div>
 
               <div class="block2-txt-child2 flex-r p-t-3">
@@ -537,7 +537,7 @@
 
             <div class="block2-txt flex-w flex-t p-t-14">
               <div class="block2-txt-child1 flex-col-l ">
-                <a href="${MaruContextPath}/product-detail.do" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"> Classic Trench Coat </a> <span class="stext-105 cl3"> $75.00 </span>
+                <a href="${MaruContextPath}/product-detail" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"> Classic Trench Coat </a> <span class="stext-105 cl3"> $75.00 </span>
               </div>
 
               <div class="block2-txt-child2 flex-r p-t-3">
@@ -557,7 +557,7 @@
 
             <div class="block2-txt flex-w flex-t p-t-14">
               <div class="block2-txt-child1 flex-col-l ">
-                <a href="${MaruContextPath}/product-detail.do" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"> Front Pocket Jumper </a> <span class="stext-105 cl3"> $34.75 </span>
+                <a href="${MaruContextPath}/product-detail" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"> Front Pocket Jumper </a> <span class="stext-105 cl3"> $34.75 </span>
               </div>
 
               <div class="block2-txt-child2 flex-r p-t-3">
@@ -577,7 +577,7 @@
 
             <div class="block2-txt flex-w flex-t p-t-14">
               <div class="block2-txt-child1 flex-col-l ">
-                <a href="${MaruContextPath}/product-detail.do" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"> Vintage Inspired Classic </a> <span class="stext-105 cl3"> $93.20 </span>
+                <a href="${MaruContextPath}/product-detail" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"> Vintage Inspired Classic </a> <span class="stext-105 cl3"> $93.20 </span>
               </div>
 
               <div class="block2-txt-child2 flex-r p-t-3">
@@ -597,7 +597,7 @@
 
             <div class="block2-txt flex-w flex-t p-t-14">
               <div class="block2-txt-child1 flex-col-l ">
-                <a href="${MaruContextPath}/product-detail.do" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"> Shirt in Stretch Cotton </a> <span class="stext-105 cl3"> $52.66 </span>
+                <a href="${MaruContextPath}/product-detail" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"> Shirt in Stretch Cotton </a> <span class="stext-105 cl3"> $52.66 </span>
               </div>
 
               <div class="block2-txt-child2 flex-r p-t-3">
@@ -617,7 +617,7 @@
 
             <div class="block2-txt flex-w flex-t p-t-14">
               <div class="block2-txt-child1 flex-col-l ">
-                <a href="${MaruContextPath}/product-detail.do" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"> Pieces Metallic Printed </a> <span class="stext-105 cl3"> $18.96 </span>
+                <a href="${MaruContextPath}/product-detail" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"> Pieces Metallic Printed </a> <span class="stext-105 cl3"> $18.96 </span>
               </div>
 
               <div class="block2-txt-child2 flex-r p-t-3">
@@ -637,7 +637,7 @@
 
             <div class="block2-txt flex-w flex-t p-t-14">
               <div class="block2-txt-child1 flex-col-l ">
-                <a href="${MaruContextPath}/product-detail.do" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"> Converse All Star Hi Plimsolls </a> <span class="stext-105 cl3"> $75.00 </span>
+                <a href="${MaruContextPath}/product-detail" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"> Converse All Star Hi Plimsolls </a> <span class="stext-105 cl3"> $75.00 </span>
               </div>
 
               <div class="block2-txt-child2 flex-r p-t-3">
@@ -657,7 +657,7 @@
 
             <div class="block2-txt flex-w flex-t p-t-14">
               <div class="block2-txt-child1 flex-col-l ">
-                <a href="${MaruContextPath}/product-detail.do" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"> Femme T-Shirt In Stripe </a> <span class="stext-105 cl3"> $25.85 </span>
+                <a href="${MaruContextPath}/product-detail" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"> Femme T-Shirt In Stripe </a> <span class="stext-105 cl3"> $25.85 </span>
               </div>
 
               <div class="block2-txt-child2 flex-r p-t-3">
@@ -677,7 +677,7 @@
 
             <div class="block2-txt flex-w flex-t p-t-14">
               <div class="block2-txt-child1 flex-col-l ">
-                <a href="${MaruContextPath}/product-detail.do" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"> Herschel supply </a> <span class="stext-105 cl3"> $63.16 </span>
+                <a href="${MaruContextPath}/product-detail" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"> Herschel supply </a> <span class="stext-105 cl3"> $63.16 </span>
               </div>
 
               <div class="block2-txt-child2 flex-r p-t-3">
@@ -697,7 +697,7 @@
 
             <div class="block2-txt flex-w flex-t p-t-14">
               <div class="block2-txt-child1 flex-col-l ">
-                <a href="${MaruContextPath}/product-detail.do" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"> Herschel supply </a> <span class="stext-105 cl3"> $63.15 </span>
+                <a href="${MaruContextPath}/product-detail" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"> Herschel supply </a> <span class="stext-105 cl3"> $63.15 </span>
               </div>
 
               <div class="block2-txt-child2 flex-r p-t-3">
@@ -717,7 +717,7 @@
 
             <div class="block2-txt flex-w flex-t p-t-14">
               <div class="block2-txt-child1 flex-col-l ">
-                <a href="${MaruContextPath}/product-detail.do" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"> T-Shirt with Sleeve </a> <span class="stext-105 cl3"> $18.49 </span>
+                <a href="${MaruContextPath}/product-detail" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"> T-Shirt with Sleeve </a> <span class="stext-105 cl3"> $18.49 </span>
               </div>
 
               <div class="block2-txt-child2 flex-r p-t-3">
@@ -737,7 +737,7 @@
 
             <div class="block2-txt flex-w flex-t p-t-14">
               <div class="block2-txt-child1 flex-col-l ">
-                <a href="${MaruContextPath}/product-detail.do" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"> Pretty Little Thing </a> <span class="stext-105 cl3"> $54.79 </span>
+                <a href="${MaruContextPath}/product-detail" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"> Pretty Little Thing </a> <span class="stext-105 cl3"> $54.79 </span>
               </div>
 
               <div class="block2-txt-child2 flex-r p-t-3">
@@ -757,7 +757,7 @@
 
             <div class="block2-txt flex-w flex-t p-t-14">
               <div class="block2-txt-child1 flex-col-l ">
-                <a href="${MaruContextPath}/product-detail.do" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"> Mini Silver Mesh Watch </a> <span class="stext-105 cl3"> $86.85 </span>
+                <a href="${MaruContextPath}/product-detail" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"> Mini Silver Mesh Watch </a> <span class="stext-105 cl3"> $86.85 </span>
               </div>
 
               <div class="block2-txt-child2 flex-r p-t-3">
@@ -777,7 +777,7 @@
 
             <div class="block2-txt flex-w flex-t p-t-14">
               <div class="block2-txt-child1 flex-col-l ">
-                <a href="${MaruContextPath}/product-detail.do" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"> Square Neck Back </a> <span class="stext-105 cl3"> $29.64 </span>
+                <a href="${MaruContextPath}/product-detail" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"> Square Neck Back </a> <span class="stext-105 cl3"> $29.64 </span>
               </div>
 
               <div class="block2-txt-child2 flex-r p-t-3">

@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>공지사항</title>
+<title>공지사항 수정</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type="image/png" href="${pageContext.request.contextPath}/resources/images/icons/favicon.png" />
@@ -13,14 +13,14 @@
 <body class="animsition">
   <%@include file="/include/header.jsp"%>
   <div class="container" style="margin: 30px auto;">
-    <form action="write_process" method="post" enctype="multipart/form-data">
-      <input type="text" name="title" class="form-control mt-4 mb-2" placeholder="제목을 입력해주세요." required>
+    <form action="edit_process" method="post" enctype="multipart/form-data">
+      <input type="text" name="title" class="form-control mt-4 mb-2" value="${boardVo.title}" required>
       <div class="form-group">
-        <textarea class="form-control" rows="10" name="content" placeholder="내용을 입력해주세요" required></textarea>
+        <textarea class="form-control" rows="10" name="content" required>${boardVo.content}</textarea>
       </div>
       <input type="file" name="uploadFile" class="btn btn-secondary mb-3" />
-
-      <button type="submit" class="btn btn-secondary mb-3">제출하기</button>
+      <input type="hidden" name="idx" class="form-control mt-4 mb-2" value="${boardVo.idx}">
+      <button type="submit" class="btn btn-secondary mb-3">수정하기</button>
     </form>
   </div>
   <!-- Footer -->

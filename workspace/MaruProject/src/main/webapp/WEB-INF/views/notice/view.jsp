@@ -30,6 +30,8 @@
                 <br>
                 <c:if test="${not empty boardVo.file_original}">
                   <img src="${pageContext.request.contextPath}/resources/upload/s_${boardVo.file_original}" style="width: 300px; height: 200px;" />
+                  <img src="${pageContext.request.contextPath}/resources/upload/${boardVo.file_original}" />
+                  <img src="${pageContext.request.contextPath}/resources/upload/${boardVo.file_system}" />
                 </c:if>
               </td>
             </tr>
@@ -38,10 +40,34 @@
       </div>
     </div>
 
-    <button type="submit" class="btn btn-secondary mb-3">목록으로</button>
-    <button type="submit" class="btn btn-secondary mb-3">수정</button>
-    <button type="submit" class="btn btn-secondary mb-3">삭제</button>
+    <button onClick='toList()' class="toList btn btn-secondary mb-3">목록으로</button>
+    <button onClick='toEdit()' class="toEdit btn btn-secondary mb-3">수정</button>
+    <button onClick='toDelete()' class="toDelete btn btn-secondary mb-3">삭제</button>
   </div>
+  <script>
+      function toList() {
+        location.href = "${MaruContextPath}/notice/list";
+      }
+      function toEdit() {
+        let url = "${MaruContextPath}/notice/edit?idx=";
+        let idx = "${boardVo.idx}"
+        url += idx;
+
+        console.log(idx);
+        console.log(url);
+        location.href = url;
+      }
+      function toDelete() {
+        let url = "${MaruContextPath}/notice/delete?idx=";
+        let idx = "${boardVo.idx}"
+        url += idx;
+
+        console.log(idx);
+        console.log(url);
+        location.href = url;
+      }
+    </script>
+
   <!-- Footer -->
   <%@include file="/include/footer.jsp"%>
   <%@include file="/include/detail.jsp"%>

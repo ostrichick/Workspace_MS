@@ -17,23 +17,23 @@
         <!-- Menu desktop -->
         <div class="menu-desktop">
           <ul class="main-menu">
-            <li><a href="${pageContext.request.contextPath}/index.do">Home</a>
+            <li><a href="${pageContext.request.contextPath}/index">Home</a>
               <ul class="sub-menu">
-                <li><a href="${pageContext.request.contextPath}/index.do">Homepage 1</a></li>
-                <li><a href="${pageContext.request.contextPath}/home-02.do">Homepage 2</a></li>
-                <li><a href="${pageContext.request.contextPath}/home-03.do">Homepage 3</a></li>
+                <li><a href="${pageContext.request.contextPath}/index">Homepage 1</a></li>
+                <li><a href="${pageContext.request.contextPath}/home-02">Homepage 2</a></li>
+                <li><a href="${pageContext.request.contextPath}/home-03">Homepage 3</a></li>
               </ul></li>
 
-            <li><a href="${pageContext.request.contextPath}/product.do">Shop</a></li>
+            <li><a href="${pageContext.request.contextPath}/product">Shop</a></li>
 
-            <li class="label1" data-label1="hot"><a href="${pageContext.request.contextPath}/shopping-cart.do">Features</a></li>
+            <li class="label1" data-label1="hot"><a href="${pageContext.request.contextPath}/shopping-cart">Features</a></li>
 
-            <li><a href="${pageContext.request.contextPath}/blog.do">Blog</a></li>
+            <li><a href="${pageContext.request.contextPath}/blog">Blog</a></li>
             <!-- jstl 조건문 이용한 현재 액티브메뉴 구현? -->
             <!--             <li class="active-menu"> -->
-            <li><a href="${pageContext.request.contextPath}/about.do">About</a></li>
+            <li><a href="${pageContext.request.contextPath}/about">About</a></li>
 
-            <li><a href="${pageContext.request.contextPath}/contact.do">Contact</a></li>
+            <li><a href="${pageContext.request.contextPath}/contact">Contact</a></li>
           </ul>
         </div>
 
@@ -58,7 +58,7 @@
   <div class="wrap-header-mobile">
     <!-- Logo moblie -->
     <div class="logo-mobile">
-      <a href="${pageContext.request.contextPath}/index.do"><img src="${pageContext.request.contextPath}/resources/images/icons/logo-01.png" alt="IMG-LOGO"></a>
+      <a href="${pageContext.request.contextPath}/index"><img src="${pageContext.request.contextPath}/resources/images/icons/logo-01.png" alt="IMG-LOGO"></a>
     </div>
 
     <!-- Icon header -->
@@ -98,23 +98,23 @@
     </ul>
 
     <ul class="main-menu-m">
-      <li><a href="${pageContext.request.contextPath}/index.do">Home</a>
+      <li><a href="${pageContext.request.contextPath}/index">Home</a>
         <ul class="sub-menu-m">
-          <li><a href="${pageContext.request.contextPath}/index.do">Homepage 1</a></li>
-          <li><a href="${pageContext.request.contextPath}/home-02.do">Homepage 2</a></li>
-          <li><a href="${pageContext.request.contextPath}/home-03.do">Homepage 3</a></li>
+          <li><a href="${pageContext.request.contextPath}/index">Homepage 1</a></li>
+          <li><a href="${pageContext.request.contextPath}/home-02">Homepage 2</a></li>
+          <li><a href="${pageContext.request.contextPath}/home-03">Homepage 3</a></li>
         </ul> <span class="arrow-main-menu-m"> <i class="fa fa-angle-right" aria-hidden="true"></i>
       </span></li>
 
-      <li><a href="${pageContext.request.contextPath}/product.do">Shop</a></li>
+      <li><a href="${pageContext.request.contextPath}/product">Shop</a></li>
 
-      <li><a href="${pageContext.request.contextPath}/shoping-cart.do" class="label1 rs1" data-label1="hot">Features</a></li>
+      <li><a href="${pageContext.request.contextPath}/shoping-cart" class="label1 rs1" data-label1="hot">Features</a></li>
 
-      <li><a href="${pageContext.request.contextPath}/blog.do">Blog</a></li>
+      <li><a href="${pageContext.request.contextPath}/blog">Blog</a></li>
 
-      <li><a href="${pageContext.request.contextPath}/about.do">About</a></li>
+      <li><a href="${pageContext.request.contextPath}/about">About</a></li>
 
-      <li><a href="${pageContext.request.contextPath}/contact.do">Contact</a></li>
+      <li><a href="${pageContext.request.contextPath}/contact">Contact</a></li>
     </ul>
   </div>
 
@@ -185,7 +185,7 @@
         <div class="header-cart-total w-full p-tb-40">Total: $75.00</div>
 
         <div class="header-cart-buttons flex-w w-full">
-          <a href="${pageContext.request.contextPath}/shoping-cart.do" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10"> View Cart </a> <a href="${pageContext.request.contextPath}/shoping-cart.do" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10"> Check Out </a>
+          <a href="${pageContext.request.contextPath}/shoping-cart" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10"> View Cart </a> <a href="${pageContext.request.contextPath}/shoping-cart" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10"> Check Out </a>
         </div>
       </div>
     </div>

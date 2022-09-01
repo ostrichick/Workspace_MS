@@ -24,6 +24,24 @@
     WHERE
     idx = #{idx}
   </update>
+
+  <update id="noticeEditProcess" parameterType="boardVo">
+    UPDATE announce
+    SET
+    title = #{title},
+    content = #{content},
+    file_original = #{file_original},
+    file_system = #{file_system},
+    file_extension = #{file_extension}
+    WHERE
+    idx = #{idx}
+  </update>
+  <delete id="noticeDeleteProcess" parameterType="int">
+    delete from announce
+    where idx = #{idx}
+  </delete>
+
+
   <!-- =====================MARU END=========================== -->
   <insert id="board_insert" parameterType="boardVo">
     insert into board_tbl(

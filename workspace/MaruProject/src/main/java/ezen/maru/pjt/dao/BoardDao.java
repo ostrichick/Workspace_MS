@@ -31,6 +31,13 @@ public class BoardDao {
 		return sqlSession.selectOne(MAPPER + ".getNotice", idx);
 	}
 
+	public int noticeEditProcess(BoardVo boardVo) {
+		return sqlSession.update(MAPPER + ".noticeEditProcess", boardVo);
+	}
+
+	public int deleteNotice(int idx) {
+		return sqlSession.update(MAPPER + ".noticeDeleteProcess", idx);
+	}
 	/////////////////////////////////////
 	/////// 이 아래는 옛날 코드 /////////
 	/////////////////////////////////////

@@ -21,7 +21,7 @@ import ezen.maru.pjt.vo.BoardVo;
 @RequestMapping("/notice")
 public class NoticeController {
 
-	BoardService insertService, listService;
+	BoardService insertService, listService, updateService, deleteService;
 
 	@Autowired(required = false)
 	public void setInsertService(@Qualifier("b_insert") BoardService insertService) {
@@ -33,42 +33,83 @@ public class NoticeController {
 		this.listService = listService;
 	}
 
-	@GetMapping("/list.do")
+	@Autowired(required = false)
+	public void setUpdateService(@Qualifier("b_update") BoardService updateService) {
+		this.updateService = updateService;
+	}
+
+	@Autowired(required = false)
+	public void setDeleteService(@Qualifier("b_delete") BoardService deleteService) {
+		this.deleteService = deleteService;
+	}
+
+	@GetMapping("/list")
 	public String notice(Model model) {
 		List<BoardVo> noticeList = listService.getNoticeList();
 		model.addAttribute("noticeList", noticeList);
 		return "notice/list";
 	}
 
-	@GetMapping("/write.do")
+	@GetMapping("/write")
 	public String write() {
 		return "notice/write";
 	}
 
-	@PostMapping("/write_process.do")
+	@PostMapping("/write_process")
 	public String write_process(BoardVo boardVo, MultipartRequest uploadFile, HttpServletRequest req,
 			RedirectAttributes redirect) {
 		int result = insertService.noticeWriteProcess(boardVo, uploadFile, req);
-		String viewPage = "redirect:/notice/write.do";
+		String viewPage = "redirect:/notice/write";
 		if (result == 1) {
 			List<BoardVo> noticeList = listService.getNoticeList();
 			redirect.addFlashAttribute("noticeList", noticeList);
-			viewPage = "redirect:/notice/list.do";
+			viewPage = "redirect:/notice/list";
 		}
 		return viewPage;
 	}
 
 	@GetMapping("/view")
 	public String view(Model model, int idx) {
-//		Optional<Object> optional_idx = Optional.ofNullable(idx);
-//		System.out.println(idx);
-//		int announce_idx = (Integer) optional_idx.get();
-//		System.out.println(announce_idx);
-//		BoardVo boardVo = listService.getNotice(announce_idx);
-		System.out.println(idx + 10000);
-
 		BoardVo boardVo = listService.getNotice(idx);
 		model.addAttribute("boardVo", boardVo);
 		return "notice/view";
+	}
+
+	@GetMapping("/edit")
+	public String edit(Model model, int idx) {
+		BoardVo boardVo = listService.getNotice(idx);
+		model.addAttribute("boardVo", boardVo);
+		return "notice/edit";
+	}
+
+	@PostMapping("/edit_process")
+	public String edit_process(BoardVo boardVo, MultipartRequest uploadFile, HttpServletRequest req,
+			RedirectAttributes redirect) {
+		System.out.println(boardVo.getIdx());
+		System.out.println(boardVo.getTitle());
+		System.out.println(boardVo.getContent());
+		int result = updateService.noticeEditProcess(boardVo, uploadFile, req);
+		int idx = boardVo.getIdx();
+		String viewPage = "redirect:/notice/list";
+		System.out.println("result: " + result);
+		if (result == 1) {
+			List<BoardVo> noticeList = listService.getNoticeList();
+			redirect.addFlashAttribute("noticeList", noticeList);
+			viewPage = "redirect:/notice/view?idx=" + idx;
+		}
+		return viewPage;
+	}
+
+	@GetMapping("/delete")
+	public String delete(Model model, int idx, RedirectAttributes redirect) {
+		int result = deleteService.deleteNotice(idx);
+		String viewPage = "/notice/list?idx=" + idx;
+		if (result == 1) {
+			redirect.addFlashAttribute("deleteResult", "성공적으로 삭제되었습니다");
+			List<BoardVo> noticeList = listService.getNoticeList();
+			redirect.addFlashAttribute("noticeList", noticeList);
+			viewPage = "redirect:/notice/list";
+		}
+		return viewPage;
 	}
 }

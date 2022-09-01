@@ -29,7 +29,9 @@
             <td>
               <a href='#' onClick='fn_view(${notice.idx})'>${notice.title}</a>
             </td>
-            <td>${notice.wdate}</td>
+            <td>
+              <fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss" value="${notice.wdate}" />
+            </td>
             <td>${notice.hit}</td>
           </tr>
         </c:forEach>
@@ -41,18 +43,18 @@
   </div>
   <script>
 /**글쓰기*/
-function fn_write(){
-  location.href = "${MaruContextPath}/notice/write.do";
-    }
- /**글조회*/
-function fn_view(idx){
-    let url = "${MaruContextPath}/notice/view?idx=";
+      function fn_write() {
+        location.href = "${MaruContextPath}/notice/write";
+      }
+      /**글조회*/
+      function fn_view(idx) {
+        let url = "${MaruContextPath}/notice/view?idx=";
         url += idx;
-            
+
         console.log(idx);
         console.log(url);
         location.href = url;
-}
+      }
 </script>
   <!-- Footer -->
   <%@include file="/include/footer.jsp"%>

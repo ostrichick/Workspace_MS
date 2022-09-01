@@ -10,62 +10,62 @@ public class HomeController {
 		return "index";
 	}
 
-	@GetMapping("/index.do")
+	@GetMapping("/index")
 	public String indexdo() {
 		return "index";
 	}
 
-	@GetMapping("/index2.do")
+	@GetMapping("/index2")
 	public String index2do() {
 		return "index2";
 	}
 
-	@GetMapping("/about.do")
+	@GetMapping("/about")
 	public String about() {
 		return "about";
 	}
 
-	@GetMapping("/blog.do")
+	@GetMapping("/blog")
 	public String blog() {
 		return "blog";
 	}
 
-	@GetMapping("/blog-detail.do")
+	@GetMapping("/blog-detail")
 	public String blog_detail() {
 		return "blog-detail";
 	}
 
-	@GetMapping("/contact.do")
+	@GetMapping("/contact")
 	public String contact() {
 		return "contact";
 	}
 
-	@GetMapping("/home-02.do")
+	@GetMapping("/home-02")
 	public String home_02() {
 		return "home-02";
 	}
 
-	@GetMapping("/home-03.do")
+	@GetMapping("/home-03")
 	public String home_03() {
 		return "home-03";
 	}
 
-	@GetMapping("/product.do")
+	@GetMapping("/product")
 	public String product() {
 		return "product";
 	}
 
-	@GetMapping("/product2.do")
+	@GetMapping("/product2")
 	public String product2() {
 		return "product2";
 	}
 
-	@GetMapping("/product-detail.do")
+	@GetMapping("/product-detail")
 	public String product_detail() {
 		return "product-detail";
 	}
 
-	@GetMapping("/shopping-cart.do")
+	@GetMapping("/shopping-cart")
 	public String shopping_cart() {
 		return "shopping-cart";
 	}
@@ -74,7 +74,7 @@ public class HomeController {
 	// cozamall controller // 주석 아래부분 참고하여 작성 후 아래 부분은 삭제
 	/////////////////////////
 
-	@GetMapping("/home.do")
+	@GetMapping("/home")
 	public String home() {
 		return "home";
 	}
