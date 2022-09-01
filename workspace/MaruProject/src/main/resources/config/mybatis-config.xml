@@ -13,6 +13,7 @@
     <typeAlias alias="boardVo" type="ezen.maru.pjt.vo.BoardVo" />
     <!-- -->
     <typeAlias alias="memberInfoVo" type="ezen.maru.pjt.vo.MemberInfoVo" />
+    <typeAlias alias="productVo" type="ezen.maru.pjt.vo.ProductVo" />
 
   </typeAliases>
 

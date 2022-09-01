@@ -19,7 +19,7 @@
     </c:choose>
 
     <div class="right-top-bar flex-w h-full">
-      <a href="${pageContext.request.contextPath}/#" class="flex-c-m trans-04 p-lr-25"> Help & FAQs </a>
+      <a href="${pageContext.request.contextPath}/notice/list.do" class="flex-c-m trans-04 p-lr-25"> 공지사항 </a> <a href="${pageContext.request.contextPath}/#" class="flex-c-m trans-04 p-lr-25"> Help & FAQs </a>
       <c:choose>
         <c:when test="${not empty sessionScope.member_id }">
           <a href="${MaruContextPath}/member/signout.do" class="flex-c-m trans-04 p-lr-25"> 로그아웃 </a>
@@ -30,6 +30,9 @@
           <a href="${MaruContextPath}/member/signup.do" class="flex-c-m trans-04 p-lr-25"> 회원가입</a>
         </c:otherwise>
       </c:choose>
+      <c:if test="${sessionScope.member_admin eq 'Y' }">
+        <a href="${MaruContextPath}/admin/dashboard.do" class="flex-c-m trans-04 p-lr-25"> 관리자페이지</a>
+      </c:if>
     </div>
   </div>
 </div>

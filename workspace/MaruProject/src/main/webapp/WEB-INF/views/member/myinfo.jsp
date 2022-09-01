@@ -84,8 +84,9 @@
         <div style="margin: 15px;">
           <button type="submit" class="btn btn-primary">수정하기</button>
           &nbsp;&nbsp;
+          <input type="button" id="deleteAccount" class="btn btn-primary" value="회원탈퇴">
+          &nbsp;&nbsp;
           <input type="button" id="main_btn" class="btn btn-primary" value="메인화면">
-
         </div>
       </div>
     </form>
@@ -108,6 +109,10 @@
       $("#main_btn").on('click', function(event) {
         event.preventDefault();
         $(location).attr('href', "${pageContext.request.contextPath}/");
+      });
+      $("#deleteAccount").on('click', function(event) {
+        event.preventDefault();
+        $(location).attr('href', "${pageContext.request.contextPath}/member/deleteprocess.do");
       });
       //                         document.getElementById("main_btn").addEventListener("click", function() {
       //                           event.preventDefault();

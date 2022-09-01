@@ -3,10 +3,83 @@ package ezen.maru.pjt.vo;
 import java.util.Date;
 
 public class BoardVo {
+	private int idx;
+//private String content; 
+	private Date wdate;
+	private String isanswered;
+	private int parent_idx;
+	private String file_original;
+	private String file_system;
+	private String file_extension;
+	private int hit;
 
-	//////////////
-	// MARU end // 주석 아래부분 참고하여 작성 후 아래 부분은 삭제
-	//////////////
+	public int getHit() {
+		return hit;
+	}
+
+	public void setHit(int hit) {
+		this.hit = hit;
+	}
+
+	public int getIdx() {
+		return idx;
+	}
+
+	public void setIdx(int idx) {
+		this.idx = idx;
+	}
+
+	public Date getWdate() {
+		return wdate;
+	}
+
+	public void setWdate(Date wdate) {
+		this.wdate = wdate;
+	}
+
+	public String getIsanswered() {
+		return isanswered;
+	}
+
+	public void setIsanswered(String isanswered) {
+		this.isanswered = isanswered;
+	}
+
+	public int getParent_idx() {
+		return parent_idx;
+	}
+
+	public void setParent_idx(int parent_idx) {
+		this.parent_idx = parent_idx;
+	}
+
+	public String getFile_original() {
+		return file_original;
+	}
+
+	public void setFile_original(String file_original) {
+		this.file_original = file_original;
+	}
+
+	public String getFile_system() {
+		return file_system;
+	}
+
+	public void setFile_system(String file_system) {
+		this.file_system = file_system;
+	}
+
+	public String getFile_extension() {
+		return file_extension;
+	}
+
+	public void setFile_extension(String file_extension) {
+		this.file_extension = file_extension;
+	}
+
+//////////////
+// MARU end // 주석 아래부분 참고하여 작성 후 아래 부분은 삭제
+//////////////
 
 	private int board_idx;
 	private String writer;

@@ -40,51 +40,47 @@ public class MemberInfoController {
 
 	@GetMapping("/signup.do") // 회원가입 페이지 요청
 	public String member_signup() {
-		// Controller의 요청처리 메소드에서 반환하는 문자열은 view 이름
-		return "member/signup";// views아래 member폴더 내에 있는 join JSP페이지
+		return "member/signup";
 	}
 
 	@PostMapping("/signup_process.do") // 회원가입 처리 요청
 	public String signup_process(MemberInfoVo memberInfoVo, Model model, HttpServletRequest req) {
 		int result = signupService.signup(memberInfoVo);
 		String viewPage = "member/signup.do";
-		if (result == 1) {// 회원가입 성공
+		if (result == 1) {
 			viewPage = "redirect:/";
 			userSessionUpdate(memberInfoVo, req);
 		}
 		return viewPage;
 	}
 
-	@GetMapping("/signin.do")
+	@GetMapping("/signin.do") // 로그인 페이지
 	public String member_signin() {
 		return "member/signin";
 	}
 
-	@PostMapping("/signin_process.do")
+	@PostMapping("/signin_process.do") // 로그인 요청
 	public String signin_process(String member_id, String member_pw, HttpServletRequest req) {
-
 		MemberInfoVo memberInfoVoParam = new MemberInfoVo();
 		memberInfoVoParam.setMember_id(member_id);
 		memberInfoVoParam.setMember_pw(member_pw);
 		String viewPage = "member/signin";
-
 		MemberInfoVo memberInfoVo = signinService.signin(memberInfoVoParam);
-
-		if (memberInfoVo != null) {// 로그인 성공
+		if (memberInfoVo != null) {
 			userSessionUpdate(memberInfoVo, req);
 			viewPage = "redirect:/";
 		}
 		return viewPage;
 	}
 
-	@GetMapping("/signout.do")
-	public String signout(HttpServletRequest request) {
-		HttpSession session = request.getSession();
+	@GetMapping("/signout.do") // 로그아웃
+	public String signout(HttpServletRequest req) {
+		HttpSession session = req.getSession();
 		session.invalidate();
 		return "redirect:/";
 	}
 
-	@GetMapping("/myinfo.do")
+	@GetMapping("/myinfo.do") // 내 회원정보 페이지
 	public String myinfo(HttpServletRequest req, Model model) {
 		HttpSession session = req.getSession();
 		String member_id = (String) session.getAttribute("member_id");
@@ -93,18 +89,34 @@ public class MemberInfoController {
 		return "member/myinfo";
 	}
 
-	@PostMapping("/updateinfo.do")
+	@PostMapping("/updateinfo.do") // 회원정보 수정
 	public String update(MemberInfoVo memberInfoVo, HttpServletRequest req, RedirectAttributes redirect) {
 		HttpSession session = req.getSession();
 		Optional<Object> optional_member_idx = Optional.ofNullable(session.getAttribute("member_idx"));
 		int member_idx = (int) optional_member_idx.get();
 		memberInfoVo.setMember_idx(member_idx);
 		int result = updateService.update(memberInfoVo);
-		String viewPage = "redirect:/member/myinfo";
+		String viewPage = "redirect:/member/myinfo.do";
 		if (result == 1) {
 			redirect.addFlashAttribute("updateResult", "회원정보 수정 성공");
 			viewPage = "redirect:/";
 			userSessionUpdate(memberInfoVo, req);
+		}
+		return viewPage;
+	}
+
+	@GetMapping("/deleteprocess.do") // 회원 탈퇴 요청
+	public String delete(MemberInfoVo memberInfoVo, HttpServletRequest req, RedirectAttributes redirect) {
+		HttpSession session = req.getSession();
+		Optional<Object> optional_member_idx = Optional.ofNullable(session.getAttribute("member_idx"));
+		int member_idx = (int) optional_member_idx.get();
+		memberInfoVo.setMember_idx(member_idx);
+		int result = updateService.delete(memberInfoVo);
+		String viewPage = "redirect:/member/myinfo";
+		if (result == 1) {
+			redirect.addFlashAttribute("updateResult", "성공적으로 탈퇴되었습니다");
+			viewPage = "redirect:/";
+			session.invalidate();
 		}
 		return viewPage;
 	}

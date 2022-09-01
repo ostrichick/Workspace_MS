@@ -1,16 +1,16 @@
 
 /* Drop Triggers */
 
-DROP TRIGGER TRI_announce_announce_idx;
+DROP TRIGGER TRI_announce_idx;
 DROP TRIGGER TRI_delivery_info_delivery_idx;
 DROP TRIGGER TRI_member_info_member_idx;
 DROP TRIGGER TRI_order_log_order_idx;
 DROP TRIGGER TRI_product_cart_cart_idx;
-DROP TRIGGER TRI_product_photo_product_photo_idx;
+DROP TRIGGER TRI_product_photo_idx;
 DROP TRIGGER TRI_product_product_idx;
-DROP TRIGGER TRI_product_qna_product_qna_idx;
-DROP TRIGGER TRI_qnaservice_qnaservice_idx;
-DROP TRIGGER TRI_review_tbl_review_idx;
+DROP TRIGGER TRI_product_qna_idx;
+DROP TRIGGER TRI_qnaservice_idx;
+DROP TRIGGER TRI_review_tbl_idx;
 
 
 
@@ -33,32 +33,32 @@ DROP TABLE product CASCADE CONSTRAINTS;
 
 /* Drop Sequences */
 
-DROP SEQUENCE SEQ_announce_announce_idx;
+DROP SEQUENCE SEQ_announce_idx;
 DROP SEQUENCE SEQ_delivery_info_delivery_idx;
 DROP SEQUENCE SEQ_member_info_member_idx;
 DROP SEQUENCE SEQ_order_log_order_idx;
 DROP SEQUENCE SEQ_product_cart_cart_idx;
-DROP SEQUENCE SEQ_product_photo_product_photo_idx;
+DROP SEQUENCE SEQ_product_photo_idx;
 DROP SEQUENCE SEQ_product_product_idx;
-DROP SEQUENCE SEQ_product_qna_product_qna_idx;
-DROP SEQUENCE SEQ_qnaservice_qnaservice_idx;
-DROP SEQUENCE SEQ_review_tbl_review_idx;
+DROP SEQUENCE SEQ_product_qna_idx;
+DROP SEQUENCE SEQ_qnaservice_idx;
+DROP SEQUENCE SEQ_review_tbl_idx;
 
 
 
 
 /* Create Sequences */
 
-CREATE SEQUENCE SEQ_announce_announce_idx INCREMENT BY 1 START WITH 1;
+CREATE SEQUENCE SEQ_announce_idx INCREMENT BY 1 START WITH 1;
 CREATE SEQUENCE SEQ_delivery_info_delivery_idx INCREMENT BY 1 START WITH 1;
 CREATE SEQUENCE SEQ_member_info_member_idx INCREMENT BY 1 START WITH 1;
 CREATE SEQUENCE SEQ_order_log_order_idx INCREMENT BY 1 START WITH 1;
 CREATE SEQUENCE SEQ_product_cart_cart_idx INCREMENT BY 1 START WITH 1;
-CREATE SEQUENCE SEQ_product_photo_product_photo_idx INCREMENT BY 1 START WITH 1;
+CREATE SEQUENCE SEQ_product_photo_idx INCREMENT BY 1 START WITH 1;
 CREATE SEQUENCE SEQ_product_product_idx INCREMENT BY 1 START WITH 1;
-CREATE SEQUENCE SEQ_product_qna_product_qna_idx INCREMENT BY 1 START WITH 1;
-CREATE SEQUENCE SEQ_qnaservice_qnaservice_idx INCREMENT BY 1 START WITH 1;
-CREATE SEQUENCE SEQ_review_tbl_review_idx INCREMENT BY 1 START WITH 1;
+CREATE SEQUENCE SEQ_product_qna_idx INCREMENT BY 1 START WITH 1;
+CREATE SEQUENCE SEQ_qnaservice_idx INCREMENT BY 1 START WITH 1;
+CREATE SEQUENCE SEQ_review_tbl_idx INCREMENT BY 1 START WITH 1;
 
 
 
@@ -68,20 +68,22 @@ CREATE SEQUENCE SEQ_review_tbl_review_idx INCREMENT BY 1 START WITH 1;
 CREATE TABLE announce
 (
 	-- 공지사항 번호
-	announce_idx number NOT NULL,
+	idx number NOT NULL,
 	-- 공지사항 제목
-	announce_title varchar2(90) NOT NULL,
+	title varchar2(90) NOT NULL,
 	-- 공지사항 내용
-	announce_content varchar2(1500) NOT NULL,
+	content varchar2(1500) NOT NULL,
 	-- 공지 게시일
-	announce_date date DEFAULT sysdate NOT NULL,
+	wdate date DEFAULT sysdate NOT NULL,
 	-- 파일 원본 이름
-	announce_file_originalname varchar2(90),
+	file_original varchar2(90),
 	-- 파일 시스템이름
-	announce_file_systemname varchar2(90),
+	file_system varchar2(90),
 	-- 파일 확장자
-	announce_file_extension varchar2(10),
-	PRIMARY KEY (announce_idx)
+	file_extension varchar2(10),
+	-- 조회수
+	hit number DEFAULT 0,
+	PRIMARY KEY (idx)
 );
 
 
@@ -249,14 +251,14 @@ CREATE TABLE product_photo
 	-- 상품번호
 	product_idx number NOT NULL,
 	-- 사진 번호
-	product_photo_idx number NOT NULL,
+	idx number NOT NULL,
 	-- 파일 원본이름
-	product_file_originalname varchar2(90),
+	file_original varchar2(90),
 	-- 파일 시스템이름
-	product_file_systemname varchar2(90),
+	file_system varchar2(90),
 	-- 파일 확장자
-	product_file_extension varchar2(9),
-	PRIMARY KEY (product_photo_idx)
+	file_extension varchar2(9),
+	PRIMARY KEY (idx)
 );
 
 
@@ -264,20 +266,20 @@ CREATE TABLE product_photo
 CREATE TABLE product_qna
 (
 	-- 상품문의 번호
-	product_qna_idx number NOT NULL,
+	idx number NOT NULL,
 	-- 상품번호
 	product_idx number NOT NULL,
 	-- 회원번호
 	member_idx number NOT NULL,
 	-- 질문답변 내용
-	product_qna_content varchar2(1500) NOT NULL,
+	content varchar2(1500) NOT NULL,
 	-- 게시일
-	product_qna_date date DEFAULT sysdate NOT NULL,
+	wdate date DEFAULT sysdate NOT NULL,
 	-- 답변이 있음
-	product_qna_isanswered varchar2(3) DEFAULT 'N' NOT NULL,
+	isanswered varchar2(3) DEFAULT 'N' NOT NULL,
 	-- 원본글 번호
-	product_qna_parent_idx number,
-	PRIMARY KEY (product_qna_idx)
+	parent_idx number,
+	PRIMARY KEY (idx)
 );
 
 
@@ -285,24 +287,24 @@ CREATE TABLE product_qna
 CREATE TABLE qnaservice
 (
 	-- 일대일 문의번호
-	qnaservice_idx number NOT NULL,
+	idx number NOT NULL,
 	-- 회원번호
 	member_idx number NOT NULL,
 	-- 문의답변 내용
-	qnaservice_content varchar2(1500) NOT NULL,
+	content varchar2(1500) NOT NULL,
 	-- 게시일
-	qnaservice_date date DEFAULT sysdate NOT NULL,
+	wdate date DEFAULT sysdate NOT NULL,
 	-- 답변이 있음
-	qnaservice_isanswered varchar2(3) DEFAULT 'N' NOT NULL,
+	isanswered varchar2(3) DEFAULT 'N' NOT NULL,
 	-- 원본글 번호
-	qnaservice_file_originalnameqnaserqna number,
+	parent_idx number,
 	-- 파일 원본이름
-	qnaservice_file_originalname varchar2(90),
+	file_original varchar2(90),
 	-- 파일 시스템이름
-	qnaservice_file_systemname varchar2(90),
+	file_system varchar2(90),
 	-- 파일 확장자
-	qnaservice_file_extension varchar2(20),
-	PRIMARY KEY (qnaservice_idx)
+	file_extension varchar2(20),
+	PRIMARY KEY (idx)
 );
 
 
@@ -310,24 +312,24 @@ CREATE TABLE qnaservice
 CREATE TABLE review_tbl
 (
 	-- 리뷰 번호
-	review_idx number NOT NULL,
+	idx number NOT NULL,
 	-- 상품번호
 	product_idx number NOT NULL UNIQUE,
 	-- 회원번호
 	member_idx number NOT NULL,
 	-- 리뷰 내용
-	review_content varchar2(999) NOT NULL,
+	content varchar2(999) NOT NULL,
 	-- 리뷰 별점
-	review_star number NOT NULL,
+	star number NOT NULL,
 	-- 리뷰 작성일
-	review_date date DEFAULT sysdate,
+	wdate date DEFAULT sysdate,
 	-- 리뷰 사진 원본이름
-	review_file_originalname varchar2(90),
+	file_original varchar2(90),
 	-- 리뷰 사진 시스템 이름
-	review_file_systemname varchar2(90),
+	file_system varchar2(90),
 	-- 리뷰 사진 확장자
-	review_file_extension varchar2(10),
-	PRIMARY KEY (review_idx)
+	file_extension varchar2(10),
+	PRIMARY KEY (idx)
 );
 
 
@@ -415,11 +417,11 @@ ALTER TABLE review_tbl
 
 /* Create Triggers */
 
-CREATE OR REPLACE TRIGGER TRI_announce_announce_idx BEFORE INSERT ON announce
+CREATE OR REPLACE TRIGGER TRI_announce_idx BEFORE INSERT ON announce
 FOR EACH ROW
 BEGIN
-	SELECT SEQ_announce_announce_idx.nextval
-	INTO :new.announce_idx
+	SELECT SEQ_announce_idx.nextval
+	INTO :new.idx
 	FROM dual;
 END;
 
@@ -465,11 +467,11 @@ END;
 
 /
 
-CREATE OR REPLACE TRIGGER TRI_product_photo_product_photo_idx BEFORE INSERT ON product_photo
+CREATE OR REPLACE TRIGGER TRI_product_photo_idx BEFORE INSERT ON product_photo
 FOR EACH ROW
 BEGIN
-	SELECT SEQ_product_photo_product_photo_idx.nextval
-	INTO :new.product_photo_idx
+	SELECT SEQ_product_photo_idx.nextval
+	INTO :new.idx
 	FROM dual;
 END;
 
@@ -485,31 +487,31 @@ END;
 
 /
 
-CREATE OR REPLACE TRIGGER TRI_product_qna_product_qna_idx BEFORE INSERT ON product_qna
+CREATE OR REPLACE TRIGGER TRI_product_qna_idx BEFORE INSERT ON product_qna
 FOR EACH ROW
 BEGIN
-	SELECT SEQ_product_qna_product_qna_idx.nextval
-	INTO :new.product_qna_idx
+	SELECT SEQ_product_qna_idx.nextval
+	INTO :new.idx
 	FROM dual;
 END;
 
 /
 
-CREATE OR REPLACE TRIGGER TRI_qnaservice_qnaservice_idx BEFORE INSERT ON qnaservice
+CREATE OR REPLACE TRIGGER TRI_qnaservice_idx BEFORE INSERT ON qnaservice
 FOR EACH ROW
 BEGIN
-	SELECT SEQ_qnaservice_qnaservice_idx.nextval
-	INTO :new.qnaservice_idx
+	SELECT SEQ_qnaservice_idx.nextval
+	INTO :new.idx
 	FROM dual;
 END;
 
 /
 
-CREATE OR REPLACE TRIGGER TRI_review_tbl_review_idx BEFORE INSERT ON review_tbl
+CREATE OR REPLACE TRIGGER TRI_review_tbl_idx BEFORE INSERT ON review_tbl
 FOR EACH ROW
 BEGIN
-	SELECT SEQ_review_tbl_review_idx.nextval
-	INTO :new.review_idx
+	SELECT SEQ_review_tbl_idx.nextval
+	INTO :new.idx
 	FROM dual;
 END;
 
@@ -521,13 +523,14 @@ END;
 /* Comments */
 
 COMMENT ON TABLE announce IS '공지사항 게시판';
-COMMENT ON COLUMN announce.announce_idx IS '공지사항 번호';
-COMMENT ON COLUMN announce.announce_title IS '공지사항 제목';
-COMMENT ON COLUMN announce.announce_content IS '공지사항 내용';
-COMMENT ON COLUMN announce.announce_date IS '공지 게시일';
-COMMENT ON COLUMN announce.announce_file_originalname IS '파일 원본 이름';
-COMMENT ON COLUMN announce.announce_file_systemname IS '파일 시스템이름';
-COMMENT ON COLUMN announce.announce_file_extension IS '파일 확장자';
+COMMENT ON COLUMN announce.idx IS '공지사항 번호';
+COMMENT ON COLUMN announce.title IS '공지사항 제목';
+COMMENT ON COLUMN announce.content IS '공지사항 내용';
+COMMENT ON COLUMN announce.wdate IS '공지 게시일';
+COMMENT ON COLUMN announce.file_original IS '파일 원본 이름';
+COMMENT ON COLUMN announce.file_system IS '파일 시스템이름';
+COMMENT ON COLUMN announce.file_extension IS '파일 확장자';
+COMMENT ON COLUMN announce.hit IS '조회수';
 COMMENT ON TABLE delivery_info IS '배송 정보';
 COMMENT ON COLUMN delivery_info.delivery_idx IS '시스템 배송 번호';
 COMMENT ON COLUMN delivery_info.delivery_code IS '택배사 송장 번호';
@@ -593,38 +596,38 @@ COMMENT ON COLUMN product_cart.product_idx IS '상품번호';
 COMMENT ON COLUMN product_cart.cart_product_number IS '상품 수량';
 COMMENT ON TABLE product_photo IS '제품용 사진';
 COMMENT ON COLUMN product_photo.product_idx IS '상품번호';
-COMMENT ON COLUMN product_photo.product_photo_idx IS '사진 번호';
-COMMENT ON COLUMN product_photo.product_file_originalname IS '파일 원본이름';
-COMMENT ON COLUMN product_photo.product_file_systemname IS '파일 시스템이름';
-COMMENT ON COLUMN product_photo.product_file_extension IS '파일 확장자';
+COMMENT ON COLUMN product_photo.idx IS '사진 번호';
+COMMENT ON COLUMN product_photo.file_original IS '파일 원본이름';
+COMMENT ON COLUMN product_photo.file_system IS '파일 시스템이름';
+COMMENT ON COLUMN product_photo.file_extension IS '파일 확장자';
 COMMENT ON TABLE product_qna IS '상품문의';
-COMMENT ON COLUMN product_qna.product_qna_idx IS '상품문의 번호';
+COMMENT ON COLUMN product_qna.idx IS '상품문의 번호';
 COMMENT ON COLUMN product_qna.product_idx IS '상품번호';
 COMMENT ON COLUMN product_qna.member_idx IS '회원번호';
-COMMENT ON COLUMN product_qna.product_qna_content IS '질문답변 내용';
-COMMENT ON COLUMN product_qna.product_qna_date IS '게시일';
-COMMENT ON COLUMN product_qna.product_qna_isanswered IS '답변이 있음';
-COMMENT ON COLUMN product_qna.product_qna_parent_idx IS '원본글 번호';
+COMMENT ON COLUMN product_qna.content IS '질문답변 내용';
+COMMENT ON COLUMN product_qna.wdate IS '게시일';
+COMMENT ON COLUMN product_qna.isanswered IS '답변이 있음';
+COMMENT ON COLUMN product_qna.parent_idx IS '원본글 번호';
 COMMENT ON TABLE qnaservice IS '일대일문의';
-COMMENT ON COLUMN qnaservice.qnaservice_idx IS '일대일 문의번호';
+COMMENT ON COLUMN qnaservice.idx IS '일대일 문의번호';
 COMMENT ON COLUMN qnaservice.member_idx IS '회원번호';
-COMMENT ON COLUMN qnaservice.qnaservice_content IS '문의답변 내용';
-COMMENT ON COLUMN qnaservice.qnaservice_date IS '게시일';
-COMMENT ON COLUMN qnaservice.qnaservice_isanswered IS '답변이 있음';
-COMMENT ON COLUMN qnaservice.qnaservice_file_originalnameqnaserqna IS '원본글 번호';
-COMMENT ON COLUMN qnaservice.qnaservice_file_originalname IS '파일 원본이름';
-COMMENT ON COLUMN qnaservice.qnaservice_file_systemname IS '파일 시스템이름';
-COMMENT ON COLUMN qnaservice.qnaservice_file_extension IS '파일 확장자';
+COMMENT ON COLUMN qnaservice.content IS '문의답변 내용';
+COMMENT ON COLUMN qnaservice.wdate IS '게시일';
+COMMENT ON COLUMN qnaservice.isanswered IS '답변이 있음';
+COMMENT ON COLUMN qnaservice.parent_idx IS '원본글 번호';
+COMMENT ON COLUMN qnaservice.file_original IS '파일 원본이름';
+COMMENT ON COLUMN qnaservice.file_system IS '파일 시스템이름';
+COMMENT ON COLUMN qnaservice.file_extension IS '파일 확장자';
 COMMENT ON TABLE review_tbl IS '리뷰';
-COMMENT ON COLUMN review_tbl.review_idx IS '리뷰 번호';
+COMMENT ON COLUMN review_tbl.idx IS '리뷰 번호';
 COMMENT ON COLUMN review_tbl.product_idx IS '상품번호';
 COMMENT ON COLUMN review_tbl.member_idx IS '회원번호';
-COMMENT ON COLUMN review_tbl.review_content IS '리뷰 내용';
-COMMENT ON COLUMN review_tbl.review_star IS '리뷰 별점';
-COMMENT ON COLUMN review_tbl.review_date IS '리뷰 작성일';
-COMMENT ON COLUMN review_tbl.review_file_originalname IS '리뷰 사진 원본이름';
-COMMENT ON COLUMN review_tbl.review_file_systemname IS '리뷰 사진 시스템 이름';
-COMMENT ON COLUMN review_tbl.review_file_extension IS '리뷰 사진 확장자';
+COMMENT ON COLUMN review_tbl.content IS '리뷰 내용';
+COMMENT ON COLUMN review_tbl.star IS '리뷰 별점';
+COMMENT ON COLUMN review_tbl.wdate IS '리뷰 작성일';
+COMMENT ON COLUMN review_tbl.file_original IS '리뷰 사진 원본이름';
+COMMENT ON COLUMN review_tbl.file_system IS '리뷰 사진 시스템 이름';
+COMMENT ON COLUMN review_tbl.file_extension IS '리뷰 사진 확장자';
 
 
 

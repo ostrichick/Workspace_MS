@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="ezen.maru.pjt.board">
+
+  <insert id="noticeWriteProcess" parameterType="boardVo">
+    INSERT INTO announce (
+    title, content,
+    file_original, file_system, file_extension
+    ) VALUES (
+    #{title}, #{content},
+    #{file_original}, #{file_system}, #{file_extension}
+    )
+  </insert>
+  <select id="getNoticeList" resultType="boardVo">
+    select * from announce order by idx desc
+  </select>
+  <select id="getNotice" parameterType="int" resultType="boardVo">
+    select * from announce where idx = #{idx}
+  </select>
+  <update id="upHit" parameterType="int">
+    UPDATE announce
+    SET
+    hit = hit + 1
+    WHERE
+    idx = #{idx}
+  </update>
+  <!-- =====================MARU END=========================== -->
   <insert id="board_insert" parameterType="boardVo">
     insert into board_tbl(
     writer, title, content, price, address,

@@ -35,9 +35,23 @@
     member_idx = #{member_idx}
   </update>
 
+  <update id="deactiveMember" parameterType="memberInfoVo">
+    UPDATE MEMBER_INFO
+    SET
+    deleted_yn = 'Y'
+    WHERE
+    member_idx = #{member_idx}
+  </update>
+
+
+
+  <!-- --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- -->
+
+
   <select id="getMemberList" resultType="memberVo">
     select * from member_tbl
   </select>
+
 
   <update id="updateGrade" parameterType="map">
     update member_tbl set member_grade = #{member_grade}

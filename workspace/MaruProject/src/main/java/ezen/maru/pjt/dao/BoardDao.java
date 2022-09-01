@@ -10,11 +10,6 @@ import ezen.maru.pjt.vo.BoardVo;
 
 @Repository
 public class BoardDao {
-
-	//////////////
-	// MARU end //
-	//////////////
-
 	private SqlSession sqlSession;
 	private final String MAPPER = "ezen.maru.pjt.board";
 
@@ -22,6 +17,23 @@ public class BoardDao {
 	public BoardDao(SqlSession sqlSession) {
 		this.sqlSession = sqlSession;
 	}
+
+	public List<BoardVo> getNoticeList() {
+		return sqlSession.selectList(MAPPER + ".getNoticeList");
+	}
+
+	public int noticeWriteProcess(BoardVo boardVo) {
+		return sqlSession.insert(MAPPER + ".noticeWriteProcess", boardVo);
+	}
+
+	public BoardVo getNotice(int idx) {
+		sqlSession.update(MAPPER + ".upHit", idx);
+		return sqlSession.selectOne(MAPPER + ".getNotice", idx);
+	}
+
+	/////////////////////////////////////
+	/////// 이 아래는 옛날 코드 /////////
+	/////////////////////////////////////
 
 	public int board_insert(BoardVo boardVo) {
 		return sqlSession.insert(MAPPER + ".board_insert", boardVo);

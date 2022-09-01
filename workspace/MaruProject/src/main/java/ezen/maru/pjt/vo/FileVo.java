@@ -1,6 +1,34 @@
 package ezen.maru.pjt.vo;
 
-public class FileVo {
+public class FileVo extends BoardVo {
+
+	private String file_original;
+	private String file_system;
+	private String file_extension;
+
+	public String getFile_original() {
+		return file_original;
+	}
+
+	public void setFile_original(String file_original) {
+		this.file_original = file_original;
+	}
+
+	public String getFile_system() {
+		return file_system;
+	}
+
+	public void setFile_system(String file_system) {
+		this.file_system = file_system;
+	}
+
+	public String getFile_extension() {
+		return file_extension;
+	}
+
+	public void setFile_extension(String file_extension) {
+		this.file_extension = file_extension;
+	}
 
 	//////////////
 	// MARU end //

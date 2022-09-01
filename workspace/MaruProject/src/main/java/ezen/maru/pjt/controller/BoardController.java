@@ -46,10 +46,8 @@ public class BoardController {
 		if (result == 1) {// 정상적으로 입력된 경우
 			List<BoardVo> boardList = listService.getBoardList();
 			model.addAttribute("boardList", boardList);
-
 			viewPage = "board/board_list";
 		}
-
 		return viewPage;
 	}
 

@@ -25,4 +25,9 @@ public class MemberInfoUpdateService implements MemberInfoService {
 		return memberInfoDao.update(memberInfoVo);
 	}
 
+	@Override
+	public int delete(MemberInfoVo memberInfoVo) {
+		return memberInfoDao.delete(memberInfoVo);
+	}
+
 }

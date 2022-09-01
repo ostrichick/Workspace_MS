@@ -19,4 +19,8 @@ public interface MemberInfoService {
 	default int update(MemberInfoVo memberInfoVo) {
 		return 0;
 	}
+
+	default int delete(MemberInfoVo memberInfoVo) {
+		return 0;
+	}
 }

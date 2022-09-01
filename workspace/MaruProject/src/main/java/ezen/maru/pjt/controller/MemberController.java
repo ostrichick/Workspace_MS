@@ -85,10 +85,8 @@ public class MemberController {
 			session.setAttribute("member_id", memberVo.getMember_id());
 			session.setAttribute("member_grade", memberVo.getMember_grade());
 			session.setAttribute("member_idx", memberVo.getMember_idx());
-
 			viewPage = "redirect:/";
 		}
-
 		return viewPage;
 	}
 

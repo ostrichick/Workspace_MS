@@ -11,6 +11,16 @@ import ezen.maru.pjt.vo.BoardVo;
 @Service("b_list")
 public class BoardListService implements BoardService {
 
+	@Override
+	public List<BoardVo> getNoticeList() {
+		return boardDao.getNoticeList();
+	}
+
+	@Override
+	public BoardVo getNotice(int idx) {
+		return boardDao.getNotice(idx);
+	}
+
 	//////////////
 	// MARU end //
 	//////////////

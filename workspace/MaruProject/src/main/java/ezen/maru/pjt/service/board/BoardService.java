@@ -10,6 +10,13 @@ import ezen.maru.pjt.vo.BoardVo;
 
 public interface BoardService {
 
+	default List<BoardVo> getNoticeList() {
+		return null;
+	}
+
+	default int noticeWriteProcess(BoardVo boardVo, MultipartRequest uploadFile, HttpServletRequest req) {
+		return 0;
+	}
 	//////////////
 	// MARU end //
 	//////////////
@@ -22,4 +29,7 @@ public interface BoardService {
 		return null;
 	}
 
+	default BoardVo getNotice(int idx) {
+		return null;
+	}
 }

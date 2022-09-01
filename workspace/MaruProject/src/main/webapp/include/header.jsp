@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@include file="/include/style.jsp"%>
-<!-- Header -->
+<!-- Header 
+상단 메뉴바와 css를 담은 style.jsp, 최상단 topbar.jsp를 include함 -->
 <header class="header-v4">
   <!-- Header desktop -->
   <div class="container-menu-desktop">

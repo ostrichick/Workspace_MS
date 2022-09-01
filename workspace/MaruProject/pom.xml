@@ -133,7 +133,7 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.7</version>
+      <version>4.12</version>
       <scope>test</scope>
     </dependency>
 
@@ -181,13 +181,13 @@
 
   </dependencies>
 
-  <repositories>
+  <!-- <repositories>
     <repository>
       <id>oracle</id>
       <name>ORACLE JDBC Repository</name>
       <url>http://maven.jahia.org/maven2</url>
     </repository>
-  </repositories>
+  </repositories> -->
 
 
   <build>
