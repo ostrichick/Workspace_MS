@@ -70,7 +70,6 @@ public class MemberInfoController {
 		MemberInfoVo memberInfoVo = signinService.signin(memberInfoVoParam);
 		if (memberInfoVo != null) {
 			userSessionUpdate(memberInfoVo, req);
-			String referrer = (String) req.getSession().getAttribute("prevPage");
 			viewPage = "redirect:/";
 		}
 		return viewPage;

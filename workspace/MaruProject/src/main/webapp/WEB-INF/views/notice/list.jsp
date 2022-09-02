@@ -52,9 +52,6 @@
       function fn_view(idx) {
         let url = "${MaruContextPath}/notice/view?idx=";
         url += idx;
-
-        console.log(idx);
-        console.log(url);
         location.href = url;
       }
 </script>
