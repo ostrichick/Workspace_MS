@@ -41,8 +41,10 @@
     </div>
 
     <button onClick='toList()' class="toList btn btn-secondary mb-3">목록으로</button>
-    <button onClick='toEdit()' class="toEdit btn btn-secondary mb-3">수정</button>
-    <button onClick='toDelete()' class="toDelete btn btn-secondary mb-3">삭제</button>
+    <c:if test="${member_admin eq 'Y' }">
+      <button onClick='toEdit()' class="toEdit btn btn-secondary mb-3">수정</button>
+      <button onClick='toDelete()' class="toDelete btn btn-secondary mb-3">삭제</button>
+    </c:if>
   </div>
   <script>
       function toList() {

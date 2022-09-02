@@ -38,7 +38,9 @@
       </tbody>
     </table>
     <div>
-      <a href='#' onClick='fn_write()' class="btn btn-success">글쓰기</a>
+      <c:if test="${member_admin eq 'Y' }">
+        <a href='#' onClick='fn_write()' class="btn btn-success">글쓰기</a>
+      </c:if>
     </div>
   </div>
   <script>

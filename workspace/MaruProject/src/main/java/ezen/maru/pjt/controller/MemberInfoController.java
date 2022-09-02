@@ -55,7 +55,9 @@ public class MemberInfoController {
 	}
 
 	@GetMapping("/signin") // 로그인 페이지
-	public String member_signin() {
+	public String member_signin(HttpServletRequest req) {
+		String referrer = req.getHeader("Referer");
+		req.getSession().setAttribute("prevPage", referrer);
 		return "member/signin";
 	}
 
@@ -68,6 +70,7 @@ public class MemberInfoController {
 		MemberInfoVo memberInfoVo = signinService.signin(memberInfoVoParam);
 		if (memberInfoVo != null) {
 			userSessionUpdate(memberInfoVo, req);
+			String referrer = (String) req.getSession().getAttribute("prevPage");
 			viewPage = "redirect:/";
 		}
 		return viewPage;

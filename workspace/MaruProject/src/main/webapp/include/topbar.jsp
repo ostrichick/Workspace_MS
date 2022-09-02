@@ -8,6 +8,7 @@
   <div class="content-topbar flex-sb-m h-full container">
     <c:choose>
       <c:when test="${not empty updateResult }">${updateResult }</c:when>
+      <c:when test="${member_admin eq 'Y' }">관리자 권한으로 접속 중</c:when>
       <c:when test="${not empty sessionScope.member_id }">
         <div class="left-top-bar">${member_name }님
           환영합니다!!!... ${updateResult }${empty updateResult }
