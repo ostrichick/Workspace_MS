@@ -63,7 +63,7 @@
                   <li><a href="${MaruContextPath}/home-03">Homepage 3</a></li>
                 </ul></li>
 
-              <li><a href="${MaruContextPath}/product">Shop</a></li>
+              <li><a href="${MaruContextPath}/product">제품</a></li>
 
               <li class="label1" data-label1="hot"><a href="${MaruContextPath}/shopping-cart">Features</a></li>
 

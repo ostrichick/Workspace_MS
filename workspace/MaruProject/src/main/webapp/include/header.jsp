@@ -24,7 +24,7 @@
                 <li><a href="${pageContext.request.contextPath}/home-03">Homepage 3</a></li>
               </ul></li>
 
-            <li><a href="${pageContext.request.contextPath}/product">Shop</a></li>
+            <li><a href="${pageContext.request.contextPath}/product">제품</a></li>
 
             <li class="label1" data-label1="hot"><a href="${pageContext.request.contextPath}/shopping-cart">Features</a></li>
 
@@ -105,10 +105,9 @@
           <li><a href="${pageContext.request.contextPath}/home-03">Homepage 3</a></li>
         </ul> <span class="arrow-main-menu-m"> <i class="fa fa-angle-right" aria-hidden="true"></i>
       </span></li>
+      <li><a href="${pageContext.request.contextPath}/product">제품</a></li>
 
-      <li><a href="${pageContext.request.contextPath}/product">Shop</a></li>
-
-      <li><a href="${pageContext.request.contextPath}/shoping-cart" class="label1 rs1" data-label1="hot">Features</a></li>
+      <li><a href="${pageContext.request.contextPath}/shoping-cart" class="label1 rs1" data-label1="hot">장바구니</a></li>
 
       <li><a href="${pageContext.request.contextPath}/blog">Blog</a></li>
 
