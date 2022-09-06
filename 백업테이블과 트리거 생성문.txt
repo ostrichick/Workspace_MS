@@ -1,6 +1,6 @@
 회원정보 수정이나 회원정보 삭제시 해당 데이터를 member_tbl_bak에 저장하는 트리거를 생성하고
 이 백업 테이블에서 회원정보 변경 목록과 회원정보 삭제목록을 가져오도록 구현함
-
+.
 --member_tbl에 
 --변경된 타입(modify_type, char(6)),변경된 날짜(modify_date, date),
 --변경한 사용자계정(modify_user, varchar2(20))을 추가해서 member_tbl_bak을 생성함
