@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>asd</title>
+    <link rel="stylesheet" href="" />
+    <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style></style>
+  </head>
+  <body>
+    <form action="${pageContext.request.contextPath}/product/add_process" method="post" enctype="multipart/form-data">
+      제품명
+      <input type="text" name="product_name" placeholder="제품명" />
+      <br />가격
+      <input type="number" name="price" placeholder="가격" />
+      <br />할인 여부
+      <input type="checkbox" name="product_sale" value="Y" />
+      <br />할인율
+      <input type="number" name="product_sale_percent" placeholder="할인율" />
+      % <br />규격
+      <input type="text" name="product_size" placeholder="예시: '800x1500'" />
+      <br />배송 정보
+      <input type="text" name="product_delivery_info" placeholder="" />
+      <br />대분류
+      <select id="product_major_category" name="product_major_category">
+        <option value="">대분류 선택</option>
+        <option value="거실">거실</option>
+        <option value="침실">침실</option>
+        <option value="드레스룸">드레스룸</option>
+        <option value="서재">서재</option>
+        <option value="주방">주방</option>
+        <option value="욕실">욕실</option>
+      </select>
+      <br />소분류
+      <select id="product_minor_category" name="product_minor_category">
+        <option value="">소분류 선택</option>
+      </select>
+      <br />재고
+      <input type="number" name="product_inventory" placeholder="" />
+      상품사진
+      <input type="file" name="uploadFile" />
+      <input type="submit" value="상품 추가" />
+    </form>
+    <script>
+      $("#product_major_category").change(function () {
+        let major_category = $("#product_major_category option:selected").val();
+        let print_minor_option = null;
+        switch (major_category) {
+          case "거실":
+            $("#product_minor_category").empty();
+            print_minor_option = "<option value=''>소분류 선택</option>";
+            print_minor_option += "<option value=''>거실 하위분류 추가</option>";
+            break;
+          case "침실":
+            $("#product_minor_category").empty();
+            print_minor_option = "<option value=''>소분류 선택</option>";
+            print_minor_option += "<option value=''>침실 하위분류 추가</option>";
+            break;
+        }
+        $("#product_minor_category").append(print_minor_option);
+      });
+    </script>
+
+    <script></script>
+  </body>
+</html>
