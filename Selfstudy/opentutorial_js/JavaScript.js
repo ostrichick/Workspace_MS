@@ -5,7 +5,6 @@ function calculateDaysBetweenDates(begin, end) {
   var days = diff / (1000 * 60 * 60 * 24);
   return days;
 }
-
 //시계를 출력할 수 있는 함수
 function printClock() {
   var clock = document.getElementById("clock");
