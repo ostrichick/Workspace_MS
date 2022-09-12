@@ -2,13 +2,16 @@ package com.example.helloSpring.service;
 
 import com.example.helloSpring.domain.Member;
 import com.example.helloSpring.repository.MemberRepository;
-import com.example.helloSpring.repository.MemoryMemberRepository;
 
 import java.util.List;
 import java.util.Optional;
 
 public class MemberService {
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    private final MemberRepository memberRepository;
+
+    public MemberService(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
 
     public Long join(Member member) {
         //
