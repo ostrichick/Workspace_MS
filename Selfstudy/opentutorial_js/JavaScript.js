@@ -31,3 +31,13 @@ function rspGame(yourChoice) {
   message = finalMessage(results);
   rspFrontEnd(yourChoice.id, botChoice, message);
 }
+
+//method for node js server
+function serverRspGame(yourChoice) {
+  var humanChoice, botChoice;
+  humanChoice = yourChoice;
+  botChoice = numberToChoice(randToRspInt());
+  results = decideWinner(humanChoice, botChoice);
+  message = finalMessage(results);
+  return [yourChoice, botChoice, message];
+}
