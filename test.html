@@ -12,62 +12,142 @@
     <style></style>
   </head>
   <body>
-    <div class="wrap-header-cart js-panel-cart">
-      <div class="s-full js-hide-cart"></div>
+    <form class="needs-validation" novalidate>
+      <div class="input-group">
+        <input type="number" class="form-control txt-right" name="product_price" id="product_price" placeholder="가격" />
+        <div class="input-group-text">₩</div>
+      </div>
 
-      <div id="cart-opacity-body" class="header-cart flex-col-l p-l-65 p-r-25">
-        <div class="header-cart-title flex-w flex-sb-m p-b-8">
-          <span class="mtext-103 cl2"> 메뉴 </span>
-
-          <div class="fs-35 lh-10 cl2 p-lr-5 pointer hov-cl1 trans-04 js-hide-cart">
-            <i class="zmdi zmdi-close"></i>
-          </div>
+      <div class="input-group m-tb-10">
+        <div class="input-group-text">
+          <input type="checkbox" class="" name="product_sale" id="product_sale" value="Y" />
         </div>
-        <ul>
-          <li><a href="${MaruContextPath}/shopping-cart">장바구니</a></li>
-        </ul>
-        <div class="header-cart-content flex-w js-pscroll">
-          <ul class="header-cart-wrapitem w-full">
-            <li class="header-cart-item flex-w flex-t m-b-12">
-              <div class="header-cart-item-img">
-                <img src="${MaruContextPath}/resources/images/item-cart-01.jpg" alt="IMG" />
-              </div>
+        <input type="number" class="form-control txt-right" name="product_sale_percent" min="1" max="98" id="product_sale_percent" placeholder="왼쪽 할인여부 체크 후 여기에 할인율 입력" />
+        <div class="input-group-text">%</div>
+      </div>
+      <div class="input-group">
+        <input type="number" class="form-control txt-right" id="sale_price" placeholder="할인율이 적용 된 가격" readonly />
+        <div class="input-group-text">₩</div>
+      </div>
+      <button>전송</button>
+    </form>
 
-              <div class="header-cart-item-txt p-t-8">
-                <a href="${MaruContextPath}/#" class="header-cart-item-name m-b-18 hov-cl1 trans-04"> White Shirt Pleat </a> <span class="header-cart-item-info"> 1 x $19.00 </span>
-              </div>
-            </li>
+    <script>
+      let product_price = document.querySelector("#product_price");
+      let product_sale = document.querySelector("#product_sale");
+      let product_sale_percent = document.querySelector("#product_sale_percent");
+      let sale_price = document.querySelector("#sale_price");
 
-            <li class="header-cart-item flex-w flex-t m-b-12">
-              <div class="header-cart-item-img">
-                <img src="${MaruContextPath}/resources/images/item-cart-02.jpg" alt="IMG" />
-              </div>
+      // product_price.oninput = calcSalePrice();
 
-              <div class="header-cart-item-txt p-t-8">
-                <a href="${MaruContextPath}/#" class="header-cart-item-name m-b-18 hov-cl1 trans-04"> Converse All Star </a> <span class="header-cart-item-info"> 1 x $39.00 </span>
-              </div>
-            </li>
+      $("#product_sale_percent").on("propertychange change keyup paste input", function () {
+        var val = $(this).val();
+        numberOnly(val);
+        if (val < 0 || val > 100) {
+          $(this).val().substr(0, 2);
+        }
+      });
 
-            <li class="header-cart-item flex-w flex-t m-b-12">
-              <div class="header-cart-item-img">
-                <img src="${MaruContextPath}/resources/images/item-cart-03.jpg" alt="IMG" />
-              </div>
+      function numberOnly(val) {
+        val = val.replace(/[^0-9.]/g, "").replace(/(\..*)\./g, "$1");
+        console.log("val", val);
+      }
 
-              <div class="header-cart-item-txt p-t-8">
-                <a href="${MaruContextPath}/#" class="header-cart-item-name m-b-18 hov-cl1 trans-04"> Nixon Porter Leather </a> <span class="header-cart-item-info"> 1 x $17.00 </span>
-              </div>
-            </li>
-          </ul>
+      function handleOnInput(el, maxlength) {
+        if (el.value.length > maxlength) {
+          el.value = el.value.substr(0, maxlength);
+        }
+      }
 
-          <div class="w-full">
-            <div class="header-cart-total w-full p-tb-40">Total: $75.00</div>
-            <div class="header-cart-buttons flex-w w-full">
-              <a href="${MaruContextPath}/shoping-cart" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10"> View Cart </a>
-              <a href="${MaruContextPath}/shoping-cart" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10"> Check Out </a>
+      function calcSalePrice() {
+        if (product_sale.checked && product_sale_percent != "") {
+          sale_price.value = product_price.value - (product_price.value * product_sale_percent.value) / 100;
+        }
+      }
+    </script>
+
+    <hr />
+
+    <form class="needs-validation" novalidate>
+      <div class="form-row">
+        <div class="col-md-4 mb-3">
+          <label for="validationCustom01">First name</label>
+          <input type="text" class="form-control" id="validationCustom01" value="Mark" required />
+          <div class="valid-feedback">Looks good!</div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <label for="validationCustom02">Last name</label>
+          <input type="text" class="form-control" id="validationCustom02" value="Otto" required />
+          <div class="valid-feedback">Looks good!</div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <label for="validationCustomUsername">Username</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroupPrepend">@</span>
             </div>
+            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required />
+            <div class="invalid-feedback">Please choose a username.</div>
           </div>
         </div>
       </div>
-    </div>
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label for="validationCustom03">City</label>
+          <input type="text" class="form-control" id="validationCustom03" required />
+          <div class="invalid-feedback">Please provide a valid city.</div>
+        </div>
+        <div class="col-md-3 mb-3">
+          <label for="validationCustom04">State</label>
+          <select class="custom-select" id="validationCustom04" required>
+            <option selected disabled value="">Choose...</option>
+            <option>...</option>
+          </select>
+          <div class="invalid-feedback">Please select a valid state.</div>
+        </div>
+        <div class="col-md-3 mb-3">
+          <label for="validationCustom05">Zip</label>
+          <input type="text" class="form-control" id="validationCustom05" required />
+          <div class="invalid-feedback">Please provide a valid zip.</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required />
+          <label class="form-check-label" for="invalidCheck"> Agree to terms and conditions </label>
+          <div class="invalid-feedback">You must agree before submitting.</div>
+        </div>
+      </div>
+      <button class="btn btn-primary" type="submit">Submit form</button>
+    </form>
+
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function () {
+        "use strict";
+        window.addEventListener(
+          "load",
+          function () {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName("needs-validation");
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function (form) {
+              form.addEventListener(
+                "submit",
+                function (event) {
+                  if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                  }
+                  form.classList.add("was-validated");
+                },
+                false
+              );
+            });
+          },
+          false
+        );
+      })();
+    </script>
   </body>
 </html>
