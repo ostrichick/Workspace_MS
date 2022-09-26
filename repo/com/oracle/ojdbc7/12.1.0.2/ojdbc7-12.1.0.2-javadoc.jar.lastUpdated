@@ -1,6 +1,8 @@
 #NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
-#Tue Aug 23 14:01:15 KST 2022
+#Mon Sep 26 16:13:16 KST 2022
 https\://repo.maven.apache.org/maven2/.lastUpdated=1661230875057
 http\://0.0.0.0/.error=Could not transfer artifact com.oracle\:ojdbc7\:jar\:javadoc\:12.1.0.2 from/to maven-default-http-blocker (http\://0.0.0.0/)\: Blocked mirror for repositories\: [oracle (http\://maven.jahia.org/maven2, default, releases+snapshots)]
 @default-maven-default-http-blocker-http\://0.0.0.0/.lastUpdated=1661230873986
+https\://jitpack.io/.error=
 https\://repo.maven.apache.org/maven2/.error=
+https\://jitpack.io/.lastUpdated=1664176396595

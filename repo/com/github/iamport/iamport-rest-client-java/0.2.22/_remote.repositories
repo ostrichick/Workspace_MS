@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Mon Sep 26 16:13:17 KST 2022
+iamport-rest-client-java-0.2.22-sources.jar>jitpack.io=
+iamport-rest-client-java-0.2.22.pom>jitpack.io=
+iamport-rest-client-java-0.2.22.jar>jitpack.io=
