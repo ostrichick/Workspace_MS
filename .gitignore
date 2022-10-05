@@ -101,5 +101,6 @@ replay_pid*
 ### Sonar ###
 #Sonar generated dir
 /.sonar/
+/.sonarlint/
 
 # End of https://www.toptal.com/developers/gitignore/api/eclipse,sonar,java
