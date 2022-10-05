@@ -1,2 +1,4 @@
 workspace/dev_erd/bin/module-info.class
 *.class
+/workspace/.sonarlint/default/
+/repo/
