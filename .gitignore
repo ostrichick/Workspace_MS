@@ -104,3 +104,5 @@ replay_pid*
 /.sonarlint/
 
 # End of https://www.toptal.com/developers/gitignore/api/eclipse,sonar,java
+
+/repo/org/apache/maven/plugins/maven-clean-plugin/2.5/*.properties

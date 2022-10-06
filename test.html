@@ -1,62 +1,27 @@
-<!DOCTYPE html>
-<html lang="ko">
-  <head>
-    <title>장바구니</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!--===============================================================================================-->
-    <link rel="icon" type="image/png" href="${pageContext.request.contextPath}/resources/images/icons/favicon.png" />
-  </head>
-  <body>
-    <script>
-      /** 
-  장바구니 페이지에서는 수량 변경, 삭제, 구매를 할 수 있음
-  
-  수량 변경시 : 오른쪽 금액합계 부분과 아래쪽 주문내역 총금액합계 부분을 변경
-  삭제시 : 해당 <tr>행을 삭제하고 주문내역 총금액합계부분을 변경
-  */
+<script>
+  document.getElementById("member_addr_btn").addEventListener("click", function () {
+    //주소입력칸을 클릭하면
+    //카카오 지도 발생
+    new daum.Postcode({
+      oncomplete: function (data) {
+        //선택시 입력값 세팅
+        document.getElementById("member_addr").value = data.address; // 주소 넣기
+        document.getElementById("member_postcode").value = data.zonecode; // 우편번호 넣기
+        document.querySelector("input[name=member_addr2]").focus(); //상세입력 포커싱
+      },
+    }).open();
+  });
 
-      //   document.querySelector("#linkToOrder").addEventListener("click", fn_linkToOrder);
-      //   function fn_linkToOrder() {
-      //     let url = "${MaruContextPath}/order/order?cart_idx=";
-      //     //         url += idx; // fn_linkToOrder() 인자를 cart_idx 로 받아서 url에 더할 것
-      //     location.href = url;
-      //   }
-      /* 우측에 할인된금액x갯수 결과를 갱신하는 함수 */
-      function saledXNumberUpdate() {
-        $("input[name=product_idx_list]").each(function (index, obj) {
-          if (obj.checked) {
-            let saledPrice = $(obj).parent().parent().next().next().next().children("input[type=hidden]").val();
-            let cart_product_number = $(obj).parent().parent().next().next().next().next().children().children("input[type=number]").val();
-            let saledXNumber = saledPrice * cart_product_number;
-            $(obj)
-              .parent()
-              .parent()
-              .next()
-              .next()
-              .next()
-              .next()
-              .next()
-              .html("₩" + saledXNumber.toLocaleString() + "<input class='saledXNumber' type='hidden' value='" + saledXNumber + "'>");
-            $(obj).prev().prop("checked", true);
-            $(obj).parent().parent().next().next().next().next().children().children("input[type=number]").attr("disabled", false);
-          } else {
-            $(obj)
-              .parent()
-              .parent()
-              .next()
-              .next()
-              .next()
-              .next()
-              .next()
-              .html("₩" + "0".toLocaleString() + "<input class='saledXNumber' type='hidden' value='" + 0 + "'>");
-            $(obj).prev().prop("checked", false);
-            $(obj).parent().parent().next().next().next().next().children().children("input[type=number]").attr("disabled", true);
-          }
-        });
-      }
-    </script>
-    <!-- Footer -->
-    <%@include file="/include/footer.jsp"%> <%@include file="/include/script.jsp"%>
-  </body>
-</html>
+  document.getElementById("member_addr").addEventListener("click", function () {
+    //주소입력칸을 클릭하면
+    //카카오 지도 발생
+    new daum.Postcode({
+      oncomplete: function (data) {
+        //선택시 입력값 세팅
+        document.getElementById("member_addr").value = data.address; // 주소 넣기
+        document.getElementById("member_postcode").value = data.zonecode; // 우편번호 넣기
+        document.querySelector("input[name=member_addr2]").focus(); //상세입력 포커싱
+      },
+    }).open();
+  });
+</script>
