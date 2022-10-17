@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD config 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+  <settings>
+    <setting name="jdbcTypeForNull" value="NULL" />
+  </settings>
+  <!-- VO객체에 대한 별칭 설정 -->
+  <typeAliases>
+
+    <typeAlias alias="boardVo" type="ezen.maru.pjt.vo.BoardVo" />
+    <typeAlias alias="cartVo" type="ezen.maru.pjt.vo.CartVo" />
+    <typeAlias alias="fileVo" type="ezen.maru.pjt.vo.FileVo" />
+    <typeAlias alias="memberInfoVo" type="ezen.maru.pjt.vo.MemberInfoVo" />
+    <typeAlias alias="orderProductVo" type="ezen.maru.pjt.vo.OrderProductVo" />
+    <typeAlias alias="orderVo" type="ezen.maru.pjt.vo.OrderVo" />
+    <typeAlias alias="productVo" type="ezen.maru.pjt.vo.ProductVo" />
+    <typeAlias alias="qnaVo" type="ezen.maru.pjt.vo.QnaVo" />
+    <typeAlias alias="replyVo" type="ezen.maru.pjt.vo.ReplyVo" />
+    <typeAlias alias="reviewVo" type="ezen.maru.pjt.vo.ReviewVo" />
+
+  </typeAliases>
+</configuration>	

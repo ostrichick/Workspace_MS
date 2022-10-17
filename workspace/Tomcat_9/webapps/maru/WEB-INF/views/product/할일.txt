@@ -1,0 +1,17 @@
+pjt/product/
+
+카테고리별 상품 목록 페이지 list.jsp
+ ㄴ 검색기능
+ ㄴ 정렬기능
+ ㄴ sweetalert 기능 수정할 것 0926
+
+상품 상세 페이지 detail.jsp
+ ㄴ상품 리뷰
+ ㄴ상품 문의
+ ㄴ 장바구니 담기
+ ㄴ 구매하기
+
+(관리자 전용)
+
+상품 등록 add.jsp
+상품 수정 edit.jsp

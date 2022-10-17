@@ -1,0 +1,139 @@
+회원정보 수정이나 회원정보 삭제시 해당 데이터를 member_tbl_bak에 저장하는 트리거를 생성하고
+이 백업 테이블에서 회원정보 변경 목록과 회원정보 삭제목록을 가져오도록 구현함
+
+--member_tbl에 
+--변경된 타입(modify_type, char(6)),변경된 날짜(modify_date, date),
+--변경한 사용자계정(modify_user, varchar2(20))을 추가해서 member_tbl_bak을 생성함
+
+#### MySQL에서는 mysql db에 트리거 생성하는 것을 막고 있으므로 새로 생성한 DB에 트리거를 
+생성해서 사용해야 함 ###
+create database ezen_db default character set utf8; -- mysql db에서 root계정으로 새로운 DB 생성
+create user spring IDENTIFIED by '1234'; -- ezen_db에서 root계정으로 새로운 계정 생성
+grant all PRIVILEGES on ezen_db.* to spring; --계정에 권한 부여
+flush PRIVILEGES; --디스크에 권한 적용
+
+
+create table member_tbl(
+	member_idx int unsigned not null primary key auto_increment, 
+	member_id varchar(50) not null unique,
+	member_pw varchar(20) not null,
+	member_name varchar(30) not null,
+	member_handphone varchar(20),
+	member_gender char(2),
+	member_grade tinyint(1) default 0,
+	reg_date datetime default now(),
+	del_yn char(2) default 'N'
+);
+
+
+create table member_tbl_bak(
+	member_bak_idx int unsigned not null primary key auto_increment,
+	member_idx int unsigned not null, 
+	member_id varchar(50) not null,
+	member_pw varchar(20) not null,
+	member_name varchar(30) not null,
+	member_handphone varchar(20),
+	member_gender char(2),
+	member_grade tinyint(1) default 0,
+	reg_date datetime default now(),
+	del_yn char(2) default 'N',
+	MODIFY_TYPE CHAR(6),
+	MODIFY_DATE datetime,
+	MODIFY_USER VARCHAR(20)
+);
+
+drop TRIGGER t_backup_memberTBL;
+drop TRIGGER t2_backup_memberTBL;
+
+### root계정에서 트리거 생성 전에 실행 ###
+set global log_bin_trust_function_creators=on;
+
+### MySQL에서는 수정작업과 삭제작업에 대해 별도의 트리거를 생성해주어야 함 ###
+### member_tbl에 수정작업 발생시 작동하는 트리거 생성 ###
+
+delimiter |
+CREATE TRIGGER t_backup_memberTBL
+	AFTER UPDATE
+	ON member_tbl
+	FOR EACH ROW
+
+BEGIN
+	DECLARE	v_modifyType CHAR(6);
+	SET v_modifyType = '수정';
+	
+	INSERT INTO member_tbl_bak (
+			member_idx, 
+			member_id,
+			member_pw,
+			member_name,
+			member_handphone,
+			member_gender,
+			member_grade,
+			reg_date,
+			del_yn,
+			MODIFY_TYPE,
+			MODIFY_DATE,
+			MODIFY_USER
+	) VALUES(
+		OLD.member_idx,
+		OLD.member_id,
+		OLD.member_pw,
+		OLD.member_name,
+		OLD.member_handphone,
+		OLD.member_gender,
+		OLD.member_grade,
+		OLD.reg_date,
+		OLD.del_yn,
+		v_modifyType,
+		now(),
+		USER()
+	);
+
+END;
+|
+delimiter;
+
+
+### member_tbl에 삭제작업 발생시 작동하는 트리거 생성 ###
+
+delimiter |
+CREATE TRIGGER t2_backup_memberTBL
+	AFTER DELETE
+	ON member_tbl
+	FOR EACH ROW
+
+BEGIN
+	DECLARE	v_modifyType CHAR(6);
+	SET v_modifyType = '삭제';	
+
+	INSERT INTO member_tbl_bak (
+			member_idx, 
+			member_id,
+			member_pw,
+			member_name,
+			member_handphone,
+			member_gender,
+			member_grade,
+			reg_date,
+			del_yn,
+			MODIFY_TYPE,
+			MODIFY_DATE,
+			MODIFY_USER
+	) VALUES(
+		OLD.member_idx,
+		OLD.member_id,
+		OLD.member_pw,
+		OLD.member_name,
+		OLD.member_handphone,
+		OLD.member_gender,
+		OLD.member_grade,
+		OLD.reg_date,
+		OLD.del_yn,
+		v_modifyType,
+		now(),
+		USER()
+	);
+
+END;
+|
+delimiter;

@@ -1,0 +1,8 @@
+자주묻는질문 페이지 faq.jsp
+
+관리자가 faq를 작성 있는 페이지 faq_write.jsp
+
+관리자가 faq를 수정할수 있는 페이지 faq_edit.jsp
+
+작성요청, 수정요청, 삭제는 controller에서 처리
+

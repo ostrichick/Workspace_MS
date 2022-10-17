@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ezen.maru.pjt.board">
+  <!-- notice -->
+  <insert id="noticeWriteProcess" parameterType="boardVo">
+    INSERT INTO announce (
+    title, content,
+    file_original, file_system, file_extension
+    ) VALUES (
+    #{title}, #{content},
+    #{file_original}, #{file_system}, #{file_extension}
+    )
+    <!-- 방금 작성한 글의 idx를 셀렉트키로 받아서 boardVo객체의 속성으로 반환 -->
+    <selectKey resultType="int" keyProperty="idx" order="AFTER">
+      SELECT LAST_INSERT_ID() 
+    </selectKey>
+  </insert>
+
+  <select id="countBoard" resultType="int">
+    SELECT COUNT(*) FROM announce
+  </select>
+
+  <select id="getNoticeList" resultType="boardVo">
+    SELECT a.*
+    from (
+    select * from announce b
+    ORDER BY b.idx DESC
+    ) a
+    limit 0, #{end}
+  </select>
+
+  <select id="getNotice" parameterType="int" resultType="boardVo">
+    select * from announce where idx = #{idx}
+  </select>
+
+  <update id="upHit" parameterType="int">
+    UPDATE announce
+    SET
+    hit = hit + 1
+    WHERE
+    idx = #{idx}
+  </update>
+
+  <update id="noticeEditProcess" parameterType="boardVo">
+    UPDATE announce
+    SET
+    title = #{title},
+    content = #{content},
+    file_original = #{file_original},
+    file_system = #{file_system},
+    file_extension = #{file_extension}
+    WHERE
+    idx = #{idx}
+  </update>
+
+  <delete id="noticeDeleteProcess" parameterType="int">
+    delete from announce
+    where idx = #{idx}
+  </delete>
+
+</mapper>	

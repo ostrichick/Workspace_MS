@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ezen.maru.pjt.reply">
+
+  <insert id="writeReply" parameterType="replyVo">
+    INSERT INTO announce_reply (
+    idx, member_idx, reply_content
+    ) VALUES (
+    #{idx}, #{member_idx}, #{reply_content}
+    )
+  </insert>
+
+  <!-- SELECT DATE_FORMAT(reply_date,'%Y%m%d%H%i') as reply_date, -->
+  <select id="getReplyList" resultType="replyVo">
+    SELECT reply_date,
+    reply_idx, r.member_idx, reply_content, m.member_name
+    FROM announce_reply r
+    INNER JOIN member_info m
+    ON r.member_idx = m.member_idx
+    WHERE r.idx = #{idx} and r.deleted_yn = 'N'
+    order by r.reply_idx desc
+  </select>
+
+  <update id="editReply" parameterType="replyVo">
+    UPDATE announce_reply
+    SET
+    reply_content = #{reply_content}
+    WHERE
+    reply_idx = #{reply_idx} and member_idx = #{member_idx}
+  </update>
+
+  <delete id="removeReply" parameterType="replyVo">
+    UPDATE announce_reply
+    SET
+    deleted_yn = 'Y'
+    WHERE
+    reply_idx = #{reply_idx}
+  </delete>
+
+  <update id="countReply" parameterType="replyVo">
+    UPDATE ANNOUNCE a
+    SET
+    a.reply_count = (SELECT COUNT(*) FROM announce_reply r WHERE idx = #{idx})
+    WHERE
+    idx = #{idx}
+  </update>
+
+</mapper>	

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ezen.maru.pjt.cart">
+  <!-- 카트테이블과 멤버, 상품테이블 조인해서 멤버아이디 일치하는 카트 목록, 상품 이름, 가격 등 필요한것 가져오기 -->
+  <select id="getCartList" parameterType="int" resultType="cartVo">
+    select * from product_cart ct
+    INNER join product p ON ct.product_idx = p.product_idx
+    where member_idx = #{member_idx}
+    order by ct.cart_idx DESC
+  </select>
+
+  <!-- merge문 : 해당 값이 있으면 update 없으면 insert -->
+  <!-- 오라클 용 <update id="addCart" parameterType="cartVo"> MERGE INTO product_cart USING DUAL ON ( member_idx = #{member_idx} and product_idx = #{product_idx} ) WHEN MATCHED THEN UPDATE SET cart_product_number = cart_product_number + #{cart_product_number} WHEN NOT MATCHED THEN INSERT ( member_idx, product_idx, cart_product_number) VALUES ( #{member_idx}, #{product_idx}, #{cart_product_number} ) </update> -->
+  <update id="addCart" parameterType="cartVo">
+    INSERT INTO product_cart (
+    member_idx, product_idx, cart_product_number
+    ) VALUES (
+    #{member_idx}, #{product_idx}, #{cart_product_number}
+    ) ON DUPLICATE KEY
+    UPDATE cart_product_number = cart_product_number + #{cart_product_number}
+  </update>
+  
+  <update id="updateCart" parameterType="cartVo">
+    UPDATE product_cart
+    SET
+    cart_product_number = #{cart_product_number}
+    WHERE
+    member_idx = #{member_idx} and product_idx = #{product_idx}
+  </update>
+
+  <delete id="deleteCart" parameterType="int">
+    delete from product_cart
+    where
+    member_idx = #{member_idx} and product_idx = #{product_idx}
+  </delete>
+
+
+  <!-- 구매 완료시 장바구니 목록에서 구매완료 상품을 지우는 쿼리 -->
+  <delete id="deleteItems" parameterType="list">
+    delete from product_cart
+    where
+    <foreach collection="array" item="arr" separator="or" index="index">
+      cart_idx = #{arr}
+    </foreach>
+  </delete>
+</mapper>	

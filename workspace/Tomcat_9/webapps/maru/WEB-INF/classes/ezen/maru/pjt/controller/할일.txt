@@ -1,0 +1,10 @@
+목록 list.jsp
+
+글쓰기 write.jsp
+
+상세보기 view.jsp (관리자만 답변 버튼 있음)
+ ㄴ 관리자 답변작성 write_answer.jsp
+ 
+수정 edit.jsp
+
+삭제 

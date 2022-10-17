@@ -1,0 +1,16 @@
+장바구니에서 list 받아서 order.jsp로 이동
+  
+
+order.jsp에서 결제 완료되면 order_complete.jsp로 이동
+  - member_idx와 장바구니에서 받은 order_total_price 를 사용하여 order_log 테이블에 행 생성
+  - 새로만든 order로부터 selectKey를 이용하여 order_idx 값 추출
+  - 위에서 추출한 order_idx, 장바구니의 product_idx와 cart_product_number를 사용하여 order_product 테이블의 product_idx, order_quantity 행 생성 
+
+
+
+
+member/myinfo 에서 주문 상세보기 누르면 order_detail로 이동
+
+order_detail에서 환불 신청하면 order_refund로 이동
+
+order_refund 에서 환불 완료하면 order_refund_complete로 이동

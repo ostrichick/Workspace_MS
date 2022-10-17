@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="ezen.maru.pjt.admin">
+
+  <insert id="upload" parameterType="fileVo">
+    insert into file_tbl (origin_filename1,origin_filename2,origin_filename3,
+    system_filename1,system_filename2,system_filename3) values(
+    #{origin_filename1},#{origin_filename2},#{origin_filename3},
+    #{system_filename1},#{system_filename2},#{system_filename3})
+
+  </insert>
+
+  <select id="getFileList" resultType="fileVo">
+    select * from file_tbl
+  </select>
+
+  <select id="memberInfoCount" resultType="string">
+    select count(*) from member_info
+  </select>
+
+  <select id="productCount" resultType="string">
+    select count(*) from product
+  </select>
+
+  <select id="unansweredQuestionCount" resultType="string">
+    SELECT count(*)
+    FROM product_qna
+    WHERE deleted_yn = 'N' and parent_idx is null and isAnswered = 'N'
+  </select>
+
+  <select id="allQuestoinCount" resultType="string">
+    SELECT count(*)
+    FROM product_qna
+    WHERE deleted_yn = 'N' and parent_idx is null
+  </select>
+
+
+</mapper>	
