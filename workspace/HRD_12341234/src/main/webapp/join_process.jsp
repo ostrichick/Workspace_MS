@@ -1,4 +1,5 @@
-
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@page import="java.sql.DriverManager"%>
 <%@page import="java.util.Date"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.PreparedStatement"%>
@@ -6,6 +7,7 @@
 <%@page import="connector.DBConnector"%>
 <%
 request.setCharacterEncoding("UTF-8");
+response.setContentType("text/html;charset=UTF-8");
 
 String custno_String = request.getParameter("custno");
 String custname = request.getParameter("custname");
@@ -35,7 +37,10 @@ try (Connection conn = DBConnector.getConnection(); PreparedStatement psmt = con
 	int result = psmt.executeUpdate();
 
 	if (result != 0) {
-		response.sendRedirect("home.jsp");
+		out.println("<script> alert('회원가입 성공!!!');location.href='home.jsp'</script>");
+		//response.sendRedirect("home.jsp");
+	} else {
+		out.println("<script> alert('회원가입 실패!!!');location.href='join.jsp'</script>");
 	}
 } catch (Exception e) {
 	e.printStackTrace();

@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <style>
 header {
-  min-height: 15vh;
+  min-height: 20vh;
   background: blue;
   position: relative;
 }
@@ -26,7 +26,7 @@ nav li {
 section {
   height: 50vh;
   min-height: 600px;
-  backgroud: lightgrey;
+  background: lightgrey;
 }
 
 footer {
@@ -34,10 +34,12 @@ footer {
   text-align: center;
 }
 </style>
+<link rel="stylesheet" href="https://classless.de/classless.css">
+
 </head>
 <body>
   <header>
-    쇼핑몰 회원관리
+    <h1>쇼핑몰 회원관리</h1>
     <nav>
       <ul>
         <li><a href="join.jsp">회원등록</a></li>

@@ -14,7 +14,10 @@
 // sql += "GROUP BY s.custno, m.custname, m.grade";
 // sql += "ORDER BY SUM(s.price) desc";
 
-String sql = "SELECT s.custno, m.custname, m.grade, SUM(s.price) as sale FROM money_tbl_02 s INNER JOIN member_tbl_02 m ON s.custno = m.custno GROUP BY s.custno, m.custname, m.grade ORDER BY SUM(s.price) DESC ";
+String sql = "SELECT s.custno, m.custname, m.grade, SUM(s.price) as sale FROM money_tbl_02 s ";
+sql += " INNER JOIN member_tbl_02 m ON s.custno = m.custno ";
+sql += " GROUP BY s.custno, m.custname, m.grade ";
+sql += " ORDER BY SUM(s.price) DESC ";
 
 ArrayList<HashMap<String, String>> salelist = new ArrayList<HashMap<String, String>>();
 try (Connection conn = DBConnector.getConnection(); PreparedStatement psmt = conn.prepareStatement(sql);) {
@@ -70,6 +73,8 @@ try (Connection conn = DBConnector.getConnection(); PreparedStatement psmt = con
             case "C":
             	grade = "직원";
             	break;
+            default:
+            	grade = "등급 지정 오류";
             }
             %>
             <%=grade%>

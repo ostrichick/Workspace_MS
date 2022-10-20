@@ -7,6 +7,6 @@
 <body>
   <%@include file="/include/header.jsp"%>
   <section>쇼핑몰 회원관리 시스템에 오신 것을 환영합니다</section>
-  <footer>HRDKOREA Copyright &copy; 2022 All rights reserved Human Resources Development Service of Korea</footer>
+  <%@include file="include/footer.jsp"%>
 </body>
 </html>

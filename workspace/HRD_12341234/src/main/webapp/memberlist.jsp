@@ -54,7 +54,7 @@ try (Connection conn = DBConnector.getConnection(); PreparedStatement psmt = con
         %>
         <tr>
           <td>
-            <a href="edit.jsp?custno=<%=member.get("custno")%>>"><%=member.get("custno")%></a>
+            <a href="edit.jsp?custno=<%=member.get("custno")%>"><%=member.get("custno")%></a>
           </td>
           <td><%=member.get("custname")%></td>
           <td><%=member.get("phone")%></td>

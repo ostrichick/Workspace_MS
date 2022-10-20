@@ -121,7 +121,7 @@
           alert("도시를 입력해주세요")
           city.focus();
         } else {
-          alert("회원등록이 완료되었습니다!");
+          //alert("회원등록이 완료되었습니다!");
           document.querySelector("#joinForm").submit();
         }
       }
