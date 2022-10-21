@@ -18,10 +18,14 @@
     //Connection conn = null;
     //PreparedStatement psmt = null;
     //    ResultSet rs = null;
-    String sql = "SELECT custno, custname, phone, address, joindate, grade, city FROM member_tbl_02";
+    String custnoStr = request.getParameter("custno");
+    int custno = Integer.parseInt(custnoStr);
+    String sql = "SELECT custno, custname, phone, address, joindate, grade, city FROM member_tbl_02 ";
+    sql += " where custno = ? ";
+    System.out.println(custno);
     Map<String, String> member = new HashMap<String, String>();
     try (Connection conn = DBConnector.getConnection(); PreparedStatement psmt = conn.prepareStatement(sql);) {
-
+    	psmt.setInt(1, custno);
     	try (ResultSet rs = psmt.executeQuery();) {
     		while (rs.next()) {
     	member.put("custno", rs.getString("custno"));
@@ -67,7 +71,7 @@
         <tr>
           <td>가입일자</td>
           <td>
-            <input type="text" placeholder="" name="joindate" id="joindate" value="<%=member.get("joindate")%>" readonly />
+            <input type="text" placeholder="" name="joindate" id="joindate" value="<%=member.get("joindate").substring(0, 10)%>" readonly />
           </td>
         </tr>
         <tr>
@@ -93,18 +97,6 @@
   </section>
   <%@include file="include/footer.jsp"%>
   <script>
-      function fillDate() {
-        let joindate = document.querySelector("#joindate");
-        let date = new Date();
-        let today = date.getFullYear();
-        today += "";
-        today += date.getMonth() + 1;
-        today += date.getDate();
-        console.log(today);
-        joindate.value = today;
-      }
-      fillDate();
-
       function check() {
         event.preventDefault();
         let custname = document.querySelector("#custname");

@@ -8,12 +8,6 @@
 <%@page import="connector.DBConnector"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%
-// String sql = "SELECT s.custno, m.custname, m.grade, SUM(s.price) as sale FROM money_tbl_02 s";
-// sql += "INNER JOIN member_tbl_02 m";
-// sql += "ON s.custno = m.custno";
-// sql += "GROUP BY s.custno, m.custname, m.grade";
-// sql += "ORDER BY SUM(s.price) desc";
-
 String sql = "SELECT s.custno, m.custname, m.grade, SUM(s.price) as sale FROM money_tbl_02 s ";
 sql += " INNER JOIN member_tbl_02 m ON s.custno = m.custno ";
 sql += " GROUP BY s.custno, m.custname, m.grade ";

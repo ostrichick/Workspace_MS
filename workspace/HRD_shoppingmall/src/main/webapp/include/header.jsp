@@ -34,7 +34,7 @@ footer {
   text-align: center;
 }
 </style>
-<link rel="stylesheet" href="https://classless.de/classless.css">
+
 
 </head>
 <body>
