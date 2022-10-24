@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Config 3.0/EN" 
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="edu.board.mapper.memberMapper">
+
+	<insert id="regmember" parameterType="memberVO">
+		INSERT INTO member(
+			 midx
+			,mid
+			,password
+			,addr
+			,phone
+			,regdate  
+		)VALUES(
+			 midx_seq.nextval
+			,#{mid}
+			,#{password}
+			,#{addr}
+			,#{phone}
+			,sysdate
+		)
+	</insert>
+	
+
+	<select id="selectOne" parameterType="memberVO" resultType="memberVO">
+		SELECT  midx
+			  , mid
+			  , password
+			  , addr
+			  , phone
+			  , to_char(regdate,'YYYY-MM-DD') as regdate
+		  FROM member
+	<if test="midx == 0">
+		 WHERE mid= #{mid}
+		   AND password= #{password}
+		   AND delYN = 'N'
+	</if>
+	<if test="midx != 0">
+		   WHERE midx = #{midx}
+	</if>
+	</select>
+	
+	<select id="adminInfo" resultType="memberVO">
+		SELECT  midx
+			  , mid
+			  , password
+			  , addr
+			  , phone
+			  , to_char(regdate,'YYYY-MM-DD') as regdate
+		  FROM member
+		 WHERE mid = 'admin'
+	</select>
+	
+	
+	<select id="list" resultType="memberVO">
+		SELECT  midx
+			  , mid
+			  , password
+			  , addr
+			  , phone
+			  , to_char(regdate,'YYYY-MM-DD') as regdate
+		  FROM member
+	</select>
+	
+	<update id="update" parameterType="memberVO">
+		UPDATE member 
+		   SET addr = #{addr}
+		     , phone = #{phone}
+	<if test="password != null and password neq ''">
+		     , password = #{password}
+	</if>
+		 WHERE midx = #{midx}
+	</update>
+	
+	<update id="delYN" parameterType="int">
+		UPDATE member 
+		   SET delYN = 'Y'
+		 WHERE midx = #{midx}
+	</update>
+	
+	<select id="countId" parameterType="String" resultType="int">
+		SELECT count(*)
+		  FROM member
+		 WHERE mid= #{mid}
+	</select>
+</mapper>
+
+
+
+
+
+
+
+
+
+
