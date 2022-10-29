@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author MYCOM
+ *
+ */
+module test {
+}
