@@ -5,6 +5,8 @@ class test {
   }
 }
 
+@Getter
+@Setter
 class weather {
 
   int 기온;
