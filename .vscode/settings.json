@@ -1,5 +1,6 @@
 {
   "liveSassCompile.settings.showOutputWindowOn": "None",
   "liveServer.settings.port": 5501,
-  "materialTheme.accent": "Acid Lime"
+  "materialTheme.accent": "Acid Lime",
+  "java.compile.nullAnalysis.mode": "automatic"
 }
