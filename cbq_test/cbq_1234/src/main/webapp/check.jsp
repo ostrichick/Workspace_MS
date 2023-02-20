@@ -34,7 +34,6 @@ try (Connection con = DBConnector.getConnection();
 		vote.put("age", Integer.toString(age) + "세");
 
 		String gender = "";
-		System.out.println(rs.getString("v_jumin").substring(6, 7));
 		switch (rs.getString("v_jumin").substring(6, 7)) {
 		case "1":
 		case "3":
