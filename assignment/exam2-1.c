@@ -1,8 +1,7 @@
 // c언어의 자료형에 대한 크기를 나타내는 프로그램
-// Path: assignment\ex2-2.c
 #include <stdio.h> // 표준 입출력 헤더파일 추가
 void main() // 메인 함수 시작
-{
+{ // 메인 함수 여는 중괄호
     printf("char 자료형 크기 : %d byte byte\n", sizeof(char)); // char 자료형의 크기 출력
     printf("signed char 자료형 크기 : %d byte\n", sizeof(signed char)); // signed char 자료형의 크기 출력
     printf("unsigned char 자료형 크기 : %d byte\n", sizeof(unsigned char)); // unsigned char 자료형의 크기 출력
@@ -32,4 +31,3 @@ void main() // 메인 함수 시작
     printf("double 자료형 크기 : %d byte\n", sizeof(double)); // double 자료형의 크기 출력
     printf("long double 자료형 크기 : %d byte\n", sizeof(long double)); // long double 자료형의 크기 출력
 } // 메인 함수 끝
-
