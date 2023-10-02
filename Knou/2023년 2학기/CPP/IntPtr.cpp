@@ -7,7 +7,7 @@ int main()
   int *ptr = &a;
 
   cout << "ptr이 가리키는 곳의 값: " << *ptr << endl;
-  *ptr = 20;  
+  *ptr = 20;
   cout << "변수 a의 값: " << a << endl;
   ptr = &b;
   cout << "변수 b의 값: " << *ptr << endl;

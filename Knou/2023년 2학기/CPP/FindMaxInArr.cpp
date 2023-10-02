@@ -1,5 +1,5 @@
 #include <iostream>
-using namespace std;
+using namespace std; 
 int main()
 {
   int data[10] = {10, 23, 5, 9, 22, 48, 12, 10, 55, 31};

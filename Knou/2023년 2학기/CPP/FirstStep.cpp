@@ -1,6 +1,6 @@
-#include <iostream>
-int main()
+#include <iostream> //
+int main() //메인 함수
 {
-  std::cout << "나의 첫 번째 C++ 프로그램" << std::endl;
-  return 0;
+  std::cout << "나의 첫 번째 C++ 프로그램" << std::endl; //
+  return 0; //
 }
