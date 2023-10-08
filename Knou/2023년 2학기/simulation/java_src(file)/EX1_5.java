@@ -1,68 +1,70 @@
 /**
- * ÁÖ»çÀ§ ½Ã¹Ä·¹ÀÌ¼Ç
- * seed   : ³­¼öÀÇ ÃÊ±â°ªÀ¸·Î 9965
- * COUNT  : °¢ ¼ıÀÚµéÀÇ ÃâÇöÈ½¼ö¸¦ °è»êÇÏ±â À§ÇÑ ¹è¿­
- * side   : ÁÖ»çÀ§ÀÇ ¼ıÀÚ, Áï 1..6
- * U      : [0,1)¹üÀ§ÀÇ ÀÏ¾çºĞÆ÷ÀÇ ³­¼ö
- * nrolls : ½ÃÇàÈ½¼ö
+ * ì£¼ì‚¬ìœ„ ì‹œë®¬ë ˆì´ì…˜
+ * seed   : ë‚œìˆ˜ì˜ ì´ˆê¸°ê°’ìœ¼ë¡œ 9965
+ * COUNT  : ê° ìˆ«ìë“¤ì˜ ì¶œí˜„íšŸìˆ˜ë¥¼ ê³„ì‚°í•˜ê¸° ìœ„í•œ ë°°ì—´
+ * side   : ì£¼ì‚¬ìœ„ì˜ ìˆ«ì, ì¦‰ 1..6
+ * U      : [0,1)ë²”ìœ„ì˜ ì¼ì–‘ë¶„í¬ì˜ ë‚œìˆ˜
+ * nrolls : ì‹œí–‰íšŸìˆ˜
  */
-import java.lang.*;
 import java.io.*;
+import java.lang.*;
 
 class Rolling {
-       final static int nrolls=3000;
-       final static int SEED=9965;
-       public float up;
-       public int count[] = new int[6];
 
-       public Rolling() {
-               int i;
-               for(i=0; i<5; ++i) count[i]=0;
-       }
+  static final int nrolls = 3000;
+  static final int SEED = 9965;
+  public float up;
+  public int count[] = new int[6];
 
-       public int random(int np, float u){
-               np = np * 843314861 + 453816693;
-               if(np < 0){
-                       np = np + 2147483647;
-                       np = np + 1;
-               }
-               up = (float)(np * 0.4656612e-9);
-               return np;
-       }
+  public Rolling() {
+    int i;
+    for (i = 0; i < 5; ++i) count[i] = 0;
+  }
 
-       public void ComputeRolling(){
-               int i, side, n=SEED;
-               PrintWriter out=null;
+  public int random(int np, float u) {
+    np = np * 843314861 + 453816693;
+    if (np < 0) {
+      np = np + 2147483647;
+      np = np + 1;
+    }
+    up = (float) (np * 0.4656612e-9);
+    return np;
+  }
 
-               i = 0;
-               while (i < nrolls) {
-                      n = random(n, up);
-                      side = (int) Math.floor(up * 6);
-                      count[side] = count[side] + 1;
-                      i++;
-               }
+  public void ComputeRolling() {
+    int i, side, n = SEED;
+    PrintWriter out = null;
 
-               try {
-                   File f = new File("C:\\WORK\\EX1_5.OUT");
-                   FileWriter fw = new FileWriter(f);
-                   BufferedWriter bw = new BufferedWriter(fw);
-                   out = new PrintWriter(bw);
+    i = 0;
+    while (i < nrolls) {
+      n = random(n, up);
+      side = (int) Math.floor(up * 6);
+      count[side] = count[side] + 1;
+      i++;
+    }
 
-                   out.println("==========================");
-                   out.println("      THE STATISTICS");
-                   out.println("==========================");
-                   for (i = 0; i < 6; ++i)
-                        out.println(" SIDE " + (i + 1) + " OCCURED " + count[i] + " TIMES");
-               } catch(IOException ioe) { }
-                 finally {
-                       if (out != null) out.close();
-                 }
-       }
+    try {
+      File f = new File("C:\\WORK\\EX1_5.OUT");
+      FileWriter fw = new FileWriter(f);
+      BufferedWriter bw = new BufferedWriter(fw);
+      out = new PrintWriter(bw);
+
+      out.println("==========================");
+      out.println("      THE STATISTICS");
+      out.println("==========================");
+      for (i = 0; i < 6; ++i) out.println(
+        " SIDE " + (i + 1) + " OCCURED " + count[i] + " TIMES"
+      );
+    } catch (IOException ioe) {} finally {
+      if (out != null) out.close();
+    }
+  }
 }
 
 public class EX1_5 {
-       public static void main(String[] args) {
-                   Rolling r = new Rolling();
-                   r.ComputeRolling();
+
+  public static void main(String[] args) {
+    Rolling r = new Rolling();
+    r.ComputeRolling();
   }
 }

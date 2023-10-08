@@ -1,109 +1,107 @@
 /**
- * ³­¼ö ¹ß»ı±â(Á¤¼öÇü º¯¼ö´Â 4¹ÙÀÌÆ®¸¦ »ç¿ëÇØ¾ß ÇÔ)
- * seed   : ³­¼öÀÇ ÃÊ±â°ªÀ¸·Î 9965
- * COUNT  : °¢ ¼ıÀÚµéÀÇ ÃâÇöÈ½¼ö¸¦ °è»êÇÏ±â À§ÇÑ ¹è¿­
- * u      : 0.0 ~ 1.0 »çÀÌÀÇ ³­¼ö
- * limit : ½ÃÇàÈ½¼ö
+ * ë‚œìˆ˜ ë°œìƒê¸°(ì •ìˆ˜í˜• ë³€ìˆ˜ëŠ” 4ë°”ì´íŠ¸ë¥¼ ì‚¬ìš©í•´ì•¼ í•¨)
+ * seed   : ë‚œìˆ˜ì˜ ì´ˆê¸°ê°’ìœ¼ë¡œ 9965
+ * COUNT  : ê° ìˆ«ìë“¤ì˜ ì¶œí˜„íšŸìˆ˜ë¥¼ ê³„ì‚°í•˜ê¸° ìœ„í•œ ë°°ì—´
+ * u      : 0.0 ~ 1.0 ì‚¬ì´ì˜ ë‚œìˆ˜
+ * limit : ì‹œí–‰íšŸìˆ˜
  */
 
-import java.lang.*;
 import java.io.*;
+import java.lang.*;
 
 class RandomGen {
-        final int LIMIT=5000;
-        final int SEED=9965;
-        public float up;
-        public int[] COUNT = new int[5];
-        public float[] OUT_P = new float[5];
-        public PrintWriter out = null;
 
-        public RandomGen() {
-                int i;
-                for(i=0; i<5; ++i) COUNT[i]=0;
-                try {
-                     File f = new File("C:\\WORK\\EX1_3.OUT");
-                     FileWriter fw = new FileWriter(f);
-                     BufferedWriter bw = new BufferedWriter(fw);
-                     out = new PrintWriter(bw);
-                 } catch(IOException ioe) {}
-              }
+  final int LIMIT = 5000;
+  final int SEED = 9965;
+  public float up;
+  public int[] COUNT = new int[5];
+  public float[] OUT_P = new float[5];
+  public PrintWriter out = null;
 
-        public int random(int np, float u){
-                np = np * 843314861 + 453816693;
-                if(np < 0){
-                        np = np + 2147483647;
-                        np = np + 1;
-                }
-                up = (float)(np * 0.4656612e-9);
-                return np;
-        }
+  public RandomGen() {
+    int i;
+    for (i = 0; i < 5; ++i) COUNT[i] = 0;
+    try {
+      File f = new File("C:\\WORK\\EX1_3.OUT");
+      FileWriter fw = new FileWriter(f);
+      BufferedWriter bw = new BufferedWriter(fw);
+      out = new PrintWriter(bw);
+    } catch (IOException ioe) {}
+  }
 
-        public void print_p(int i, float u) {
-                int j;
-                int k;
+  public int random(int np, float u) {
+    np = np * 843314861 + 453816693;
+    if (np < 0) {
+      np = np + 2147483647;
+      np = np + 1;
+    }
+    up = (float) (np * 0.4656612e-9);
+    return np;
+  }
 
-                k = (i % 5);
-                if (k == 4) {
-                    OUT_P[k] = u;
-                    for (j = 0; j <= 4; ++j)
-                         out.print(OUT_P[j] + "   ");
-                    out.println();
-                }
-                else
-                  OUT_P[k] = u;
-        }
+  public void print_p(int i, float u) {
+    int j;
+    int k;
 
-        // THE FREQUENCE TABLE //
-        public void freq(float u) {
-                float r1 = 0.0f;
-                float r2 = 0.2f;
-                int i;
+    k = (i % 5);
+    if (k == 4) {
+      OUT_P[k] = u;
+      for (j = 0; j <= 4; ++j) out.print(OUT_P[j] + "   ");
+      out.println();
+    } else OUT_P[k] = u;
+  }
 
-                for (i = 0; i < 5; ++i) {
-                     if (r1 <= u && u < r2)
-                         COUNT[i] = COUNT[i] + 1;
-                     r1 = r1 + 0.2f;
-                     r2 = r2 + 0.2f;
-                }
-        }
+  // THE FREQUENCE TABLE //
+  public void freq(float u) {
+    float r1 = 0.0f;
+    float r2 = 0.2f;
+    int i;
 
-        // OUTPUT FORMAT //
-        public void report() {
-                float r1 = 0.0f;
-                float r2 = 0.2f;
-                int i;
+    for (i = 0; i < 5; ++i) {
+      if (r1 <= u && u < r2) COUNT[i] = COUNT[i] + 1;
+      r1 = r1 + 0.2f;
+      r2 = r2 + 0.2f;
+    }
+  }
 
-                 out.println("===================");
-                 out.println("THE FREQUENCE TABLE");
-                 out.println("-------------------");
-                 for (i = 0; i < 5; ++i) {
-                      out.println(r1 + " - " + r2 + " = " + COUNT[i]);
-                      r1 = r1 + 0.2f;
-                      r2 = r2 + 0.2f;
-                  }
-        }
+  // OUTPUT FORMAT //
+  public void report() {
+    float r1 = 0.0f;
+    float r2 = 0.2f;
+    int i;
 
-        public void ComputeRandomGen(){
-                int i, n = SEED;
+    out.println("===================");
+    out.println("THE FREQUENCE TABLE");
+    out.println("-------------------");
+    for (i = 0; i < 5; ++i) {
+      out.println(r1 + " - " + r2 + " = " + COUNT[i]);
+      r1 = r1 + 0.2f;
+      r2 = r2 + 0.2f;
+    }
+  }
 
-                out.println("THE RANDOM NUMBER TEST OUTPUT");
-                out.println("=============================");
+  public void ComputeRandomGen() {
+    int i, n = SEED;
 
-                i=0;
-                while(i < LIMIT) {
-                     n = random(n, up);
-                     print_p(i, up);
-                     freq(up);
-                     ++i;
-                }
-                report();
-                if(out != null) out.close();
-        }
+    out.println("THE RANDOM NUMBER TEST OUTPUT");
+    out.println("=============================");
+
+    i = 0;
+    while (i < LIMIT) {
+      n = random(n, up);
+      print_p(i, up);
+      freq(up);
+      ++i;
+    }
+    report();
+    if (out != null) out.close();
+  }
 }
 
 public class EX1_3 {
-        public static void main(String[] args) {
-                RandomGen r = new RandomGen();
-                r.ComputeRandomGen();
-        }
+
+  public static void main(String[] args) {
+    RandomGen r = new RandomGen();
+    r.ComputeRandomGen();
+  }
 }

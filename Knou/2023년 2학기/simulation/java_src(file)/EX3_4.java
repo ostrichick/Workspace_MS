@@ -1,165 +1,160 @@
 /*--------------------------------------------------------------
- * ÀÌ»ê»ç°Ç ½Ã¹Ä·¹ÀÌ¼Ç
- * ºÀ»çÃ¢±¸ : 1´ë
- * µµÂøÇüÅÂ : °í°´ÀÇ µµÂø½Ã°£ °£°İÀº Æò±Õ 1ÀÎ Áö¼öºĞÆ÷ÀÌ´Ù.
- * ºÀ»çÇüÅÂ : ºÀ»ç½Ã°£Àº Æò±Õ 0.5ºĞÀÎ Áö¼öºĞÆ÷ÀÌ´Ù.
- * Á¾·áÁ¶°Ç : ½Ã¹Ä·¹ÀÌ¼ÇÀÇ ÃÖÁ¾½Ã°£Àº ¾Õ¿¡¼­Ã³·³ ½Ã°£À¸·Î ÁÖÁö ¾Ê°í
- *           Ãâ¹ß»ç°ÇÀÇ È½¼öÀÎ 1,000¹øÀ¸·Î ÇÑ´Ù.
- * SEED    : µµÂø°£°İÀ» À§ÇÑ È®·üº¯¼ö ÃÊ±â°ª
- * NSEED   : ºÀ»ç½Ã°£À» À§ÇÑ È®·üº¯¼ö ÃÊ±â°ª
- * MARRVT  : Æò±Õ µµÂø°£°İ ½Ã°£(5.0)
- * MSERVT  : Æò±Õ ºÀ»ç½Ã°£(2.5)
- * NUMCUS  : ºÀ»ç¸¦ ³¡³½ °í°´ÀÇ ¼ö
- * TOTQUE  : ÀüÃ¼ °í°´µéÀÇ ÃÑ ´ë±â½Ã°£
- * TOTARR  : ÃÑ °í°´¼ö
- * AVGWT   : °í°´ÀÇ Æò±Õ ´ë±â½Ã°£
+ * ì´ì‚°ì‚¬ê±´ ì‹œë®¬ë ˆì´ì…˜
+ * ë´‰ì‚¬ì°½êµ¬ : 1ëŒ€
+ * ë„ì°©í˜•íƒœ : ê³ ê°ì˜ ë„ì°©ì‹œê°„ ê°„ê²©ì€ í‰ê·  1ì¸ ì§€ìˆ˜ë¶„í¬ì´ë‹¤.
+ * ë´‰ì‚¬í˜•íƒœ : ë´‰ì‚¬ì‹œê°„ì€ í‰ê·  0.5ë¶„ì¸ ì§€ìˆ˜ë¶„í¬ì´ë‹¤.
+ * ì¢…ë£Œì¡°ê±´ : ì‹œë®¬ë ˆì´ì…˜ì˜ ìµœì¢…ì‹œê°„ì€ ì•ì—ì„œì²˜ëŸ¼ ì‹œê°„ìœ¼ë¡œ ì£¼ì§€ ì•Šê³ 
+ *           ì¶œë°œì‚¬ê±´ì˜ íšŸìˆ˜ì¸ 1,000ë²ˆìœ¼ë¡œ í•œë‹¤.
+ * SEED    : ë„ì°©ê°„ê²©ì„ ìœ„í•œ í™•ë¥ ë³€ìˆ˜ ì´ˆê¸°ê°’
+ * NSEED   : ë´‰ì‚¬ì‹œê°„ì„ ìœ„í•œ í™•ë¥ ë³€ìˆ˜ ì´ˆê¸°ê°’
+ * MARRVT  : í‰ê·  ë„ì°©ê°„ê²© ì‹œê°„(5.0)
+ * MSERVT  : í‰ê·  ë´‰ì‚¬ì‹œê°„(2.5)
+ * NUMCUS  : ë´‰ì‚¬ë¥¼ ëë‚¸ ê³ ê°ì˜ ìˆ˜
+ * TOTQUE  : ì „ì²´ ê³ ê°ë“¤ì˜ ì´ ëŒ€ê¸°ì‹œê°„
+ * TOTARR  : ì´ ê³ ê°ìˆ˜
+ * AVGWT   : ê³ ê°ì˜ í‰ê·  ëŒ€ê¸°ì‹œê°„
  *-------------------------------------------------------------*/
-import java.lang.*;
 import java.io.*;
+import java.lang.*;
 
 class DiscreteQueueing {
-        public int status, totarr, next, queue, numcus, seed, nseed;
-        public float marrvt, mservt, totque, time, tlevnt, e_arr, e_dep, up;
-        public float tne[] = new float[3];
-        public PrintWriter out=null;
 
-        public DiscreteQueueing(){
-                time = 0.0f;
-                status = 0;
-                queue = 0;
-                tlevnt = 0;
-                numcus = 0;
-                totque = 0;
-                seed = 35213;
-                nseed = seed;
+  public int status, totarr, next, queue, numcus, seed, nseed;
+  public float marrvt, mservt, totque, time, tlevnt, e_arr, e_dep, up;
+  public float tne[] = new float[3];
+  public PrintWriter out = null;
 
-                try {
-                    File f = new File("C:\\WORK\\EX3_4.OUT");
-                    FileWriter fw = new FileWriter(f);
-                    BufferedWriter bw = new BufferedWriter(fw);
-                    out = new PrintWriter(bw);
-                } catch(IOException ioe) {}
-        }
+  public DiscreteQueueing() {
+    time = 0.0f;
+    status = 0;
+    queue = 0;
+    tlevnt = 0;
+    numcus = 0;
+    totque = 0;
+    seed = 35213;
+    nseed = seed;
 
-        public float expon(int type, int np, float rmean, float ep){
-                np = np * 843314861 + 453816693;
-                if (np < 0) {
-                        np = np + 2147483647;
-                        np = np + 1;
-                }
+    try {
+      File f = new File("C:\\WORK\\EX3_4.OUT");
+      FileWriter fw = new FileWriter(f);
+      BufferedWriter bw = new BufferedWriter(fw);
+      out = new PrintWriter(bw);
+    } catch (IOException ioe) {}
+  }
 
-                if(type == 1) seed = np;
-                else nseed = np;
+  public float expon(int type, int np, float rmean, float ep) {
+    np = np * 843314861 + 453816693;
+    if (np < 0) {
+      np = np + 2147483647;
+      np = np + 1;
+    }
 
-                up = (float) (np * 0.4656612e-9);
-                ep = -(rmean) * (float)Math.log(up);
-                return ep;
-        }
+    if (type == 1) seed = np; else nseed = np;
 
-        public void init(){
-                e_arr = expon(1, seed, marrvt, e_arr);
-                tne[1] = time * e_arr;
-                tne[2] = 1.0e+30f;
-        }
+    up = (float) (np * 0.4656612e-9);
+    ep = -(rmean) * (float) Math.log(up);
+    return ep;
+  }
 
-        //DETERMINE TIME & NEXT EVENT
-        // IF NEXT=1, ARRIVE
-        // IF NEXT=2, DEPART
-        public void timing(){
-                float rmin;
+  public void init() {
+    e_arr = expon(1, seed, marrvt, e_arr);
+    tne[1] = time * e_arr;
+    tne[2] = 1.0e+30f;
+  }
 
-                if(tne[1] <= tne[2]) {
-                      rmin = tne[1];
-                      next = 1;
-                }
-                else {
-                      rmin = tne[2];
-                      next = 2;
-                }
+  //DETERMINE TIME & NEXT EVENT
+  // IF NEXT=1, ARRIVE
+  // IF NEXT=2, DEPART
+  public void timing() {
+    float rmin;
 
-                if(rmin >= 1.e+29)
-                      out.println("EVENT LIST EMPTY");
-                time = tne[next];
-        }
+    if (tne[1] <= tne[2]) {
+      rmin = tne[1];
+      next = 1;
+    } else {
+      rmin = tne[2];
+      next = 2;
+    }
 
-        //ARRIVE EVENT ROUTINE
-        public void arrive(){
-                e_arr = expon(1, seed, marrvt, e_arr);
-                tne[1] = time + e_arr;
-                if(status == 0) {
-                       numcus = numcus + 1;
-                       status = 1;
-                       e_dep = expon(2, nseed, mservt, e_dep);
-                       tne[2] = time + e_dep;
-                }
-                else {
-                       totque = totque + queue * (time - tlevnt);
-                       tlevnt = time;
-                       queue = queue + 1;
-                       if(queue > 100)
-                               out.println("OVERFLOW OF THE QUEUE");
-                }
-        }
+    if (rmin >= 1.e+29) out.println("EVENT LIST EMPTY");
+    time = tne[next];
+  }
 
-        //DEPART EVENT ROUTINE
-        //STATUS = 0 : SERVER IDLE
-        //STATUS = 1 : SERVER BUSY
-        public void depart() {
-                if(queue <= 0) {
-                        status = 0;
-                        tne[2] = 1.3e+30f;
-                }
-                else {
-                        totque = totque + queue * (time - tlevnt);
-                        tlevnt = time;
-                        queue = queue - 1;
-                        numcus = numcus + 1;
-                        e_dep = expon(2, nseed, mservt, e_dep);
-                        tne[2] = time + e_dep;
-                }
-        }
+  //ARRIVE EVENT ROUTINE
+  public void arrive() {
+    e_arr = expon(1, seed, marrvt, e_arr);
+    tne[1] = time + e_arr;
+    if (status == 0) {
+      numcus = numcus + 1;
+      status = 1;
+      e_dep = expon(2, nseed, mservt, e_dep);
+      tne[2] = time + e_dep;
+    } else {
+      totque = totque + queue * (time - tlevnt);
+      tlevnt = time;
+      queue = queue + 1;
+      if (queue > 100) out.println("OVERFLOW OF THE QUEUE");
+    }
+  }
 
-        //OUTPUT FORMAT
-        public void report() {
-                float avgwt, avgque;
+  //DEPART EVENT ROUTINE
+  //STATUS = 0 : SERVER IDLE
+  //STATUS = 1 : SERVER BUSY
+  public void depart() {
+    if (queue <= 0) {
+      status = 0;
+      tne[2] = 1.3e+30f;
+    } else {
+      totque = totque + queue * (time - tlevnt);
+      tlevnt = time;
+      queue = queue - 1;
+      numcus = numcus + 1;
+      e_dep = expon(2, nseed, mservt, e_dep);
+      tne[2] = time + e_dep;
+    }
+  }
 
-                out.println("=================================================");
-                out.println("         SIMULATION FOR A QUEUEING SYSTEM");
-                out.println("          SINGLE-SERVER QUEUEING SYSTEM");
-                out.println("=================================================");
-                out.println(" TIME LIMIT : NUMBER OF CUSTOMERS   = " + totarr);
-                out.println(" EXPONENTIAL MEAN INTERARRIVAL TIME = " + marrvt + " MINUTES");
-                out.println(" EXPONENTIAL MEAN SERVICE TIME      = " + mservt + " MINUTES");
+  //OUTPUT FORMAT
+  public void report() {
+    float avgwt, avgque;
 
-                avgwt = totque / totarr;
-                avgque = totque / time;
+    out.println("=================================================");
+    out.println("         SIMULATION FOR A QUEUEING SYSTEM");
+    out.println("          SINGLE-SERVER QUEUEING SYSTEM");
+    out.println("=================================================");
+    out.println(" TIME LIMIT : NUMBER OF CUSTOMERS   = " + totarr);
+    out.println(" EXPONENTIAL MEAN INTERARRIVAL TIME = " + marrvt + " MINUTES");
+    out.println(" EXPONENTIAL MEAN SERVICE TIME      = " + mservt + " MINUTES");
 
-                out.println("-------------------------------------------------");
-                out.println(" MEAN WAITING TIME = " + avgwt + " MINUTES");
-                out.println(" MEAN QUEUE LENGTH = " + avgque);
-                out.println(" TOTQUE = " + totque);
-                out.println(" TIME   = " + time);
-        }
+    avgwt = totque / totarr;
+    avgque = totque / time;
 
-        public void ComputeDiscreteQueueing(){
-                marrvt = 5.0f;
-                mservt = 2.5f;
-                totarr = 1000;
+    out.println("-------------------------------------------------");
+    out.println(" MEAN WAITING TIME = " + avgwt + " MINUTES");
+    out.println(" MEAN QUEUE LENGTH = " + avgque);
+    out.println(" TOTQUE = " + totque);
+    out.println(" TIME   = " + time);
+  }
 
-                init();
-                while(numcus < totarr) {
-                       timing();
-                       if(next == 1) arrive();
-                       else depart();
-                }
-                report();
-                if(out != null) out.close();
-        }
+  public void ComputeDiscreteQueueing() {
+    marrvt = 5.0f;
+    mservt = 2.5f;
+    totarr = 1000;
+
+    init();
+    while (numcus < totarr) {
+      timing();
+      if (next == 1) arrive(); else depart();
+    }
+    report();
+    if (out != null) out.close();
+  }
 }
 
 public class EX3_4 {
-        public static void main(String[] args){
-                DiscreteQueueing g = new DiscreteQueueing();
-                g.ComputeDiscreteQueueing();
-        }
+
+  public static void main(String[] args) {
+    DiscreteQueueing g = new DiscreteQueueing();
+    g.ComputeDiscreteQueueing();
+  }
 }

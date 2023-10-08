@@ -1,133 +1,141 @@
 /**
- * ´ÜÀÏÃ¢±¸ ´ë±âÇà·Ä ½Ã¹Ä·¹ÀÌ¼Ç
- * tpump : °í°´¿¡ ´ëÇÑ ºÀ»ç½Ã°£(´ÜÀ§ : ºĞ)
- * queue : ÁÙ¿¡¼­ ±â´Ù¸®°í ÀÖ´Â »ç¶÷(Â÷·®) ¼ö, ´ë±âÇà·ÄÀÇ ±æÀÌ
- * prarr : °í°´ÀÌ 1ºĞ³»¿¡ µµÂøÇÒ È®·ü
- * arrive : 0 = °í°´ÀÌ µµÂøÇÏÁö ¾ÊÀº °æ¿ì
- *          1 = °í°´ÀÌ µµÂøÇÑ °æ¿ì
- * time : ½Ã¹Ä·¹ÀÌ¼ÇÀÇ ÇöÀç½Ã°£(´ÜÀ§ : ºĞ)
- * tstep : ½Ã¹Ä·¹ÀÌ¼Ç ÁøÇà ´ÜÀ§½Ã°£
- * tlimit : ÃÑ ½Ã¹Ä·¹ÀÌ¼Ç ¼öÇà½Ã°£
- * toarr : µµÂøÇÑ ÃÑ °í°´¼ö
- * totque : ´ë±âÇà·Ä queueÀÇ ÀüÃ¼ ÇÕ(=ÀüÃ¼ °í°´ÀÇ ÃÑ ´ë±â½Ã°£0
- * aveque : ´ë±âÇà·Ä queueÀÇ Æò±Õ±æÀÌ
- * seed : ³­¼öÀÇ ÃÊ±â°ª
+ * ë‹¨ì¼ì°½êµ¬ ëŒ€ê¸°í–‰ë ¬ ì‹œë®¬ë ˆì´ì…˜
+ * tpump : ê³ ê°ì— ëŒ€í•œ ë´‰ì‚¬ì‹œê°„(ë‹¨ìœ„ : ë¶„)
+ * queue : ì¤„ì—ì„œ ê¸°ë‹¤ë¦¬ê³  ìˆëŠ” ì‚¬ëŒ(ì°¨ëŸ‰) ìˆ˜, ëŒ€ê¸°í–‰ë ¬ì˜ ê¸¸ì´
+ * prarr : ê³ ê°ì´ 1ë¶„ë‚´ì— ë„ì°©í•  í™•ë¥ 
+ * arrive : 0 = ê³ ê°ì´ ë„ì°©í•˜ì§€ ì•Šì€ ê²½ìš°
+ *          1 = ê³ ê°ì´ ë„ì°©í•œ ê²½ìš°
+ * time : ì‹œë®¬ë ˆì´ì…˜ì˜ í˜„ì¬ì‹œê°„(ë‹¨ìœ„ : ë¶„)
+ * tstep : ì‹œë®¬ë ˆì´ì…˜ ì§„í–‰ ë‹¨ìœ„ì‹œê°„
+ * tlimit : ì´ ì‹œë®¬ë ˆì´ì…˜ ìˆ˜í–‰ì‹œê°„
+ * toarr : ë„ì°©í•œ ì´ ê³ ê°ìˆ˜
+ * totque : ëŒ€ê¸°í–‰ë ¬ queueì˜ ì „ì²´ í•©(=ì „ì²´ ê³ ê°ì˜ ì´ ëŒ€ê¸°ì‹œê°„0
+ * aveque : ëŒ€ê¸°í–‰ë ¬ queueì˜ í‰ê· ê¸¸ì´
+ * seed : ë‚œìˆ˜ì˜ ì´ˆê¸°ê°’
  */
-import java.lang.*;
 import java.io.*;
+import java.lang.*;
 
 class SingleQueueing {
-        final static int SEED=35213;
-        public int n, seed, p;
-        public float up, mean;
-        public String StrTime = new String();
 
-        public SingleQueueing(){
-                mean = 4;
-                seed = SEED;
-                n = SEED;
+  static final int SEED = 35213;
+  public int n, seed, p;
+  public float up, mean;
+  public String StrTime = new String();
+
+  public SingleQueueing() {
+    mean = 4;
+    seed = SEED;
+    n = SEED;
+  }
+
+  public int random(int np, float u) {
+    np = np * 843314861 + 453816693;
+    if (np < 0) {
+      np = np + 2147483647;
+      np = np + 1;
+    }
+    up = (float) (np * 0.4656612e-9);
+    return np;
+  }
+
+  public int poissn(int np, int pp) {
+    float b, prod;
+
+    pp = 0;
+    b = (float) (Math.exp(-mean));
+
+    prod = 1;
+    n = random(np, up);
+    prod = prod * up;
+
+    while (prod >= b) {
+      n = random(n, up);
+      prod = prod * up;
+      ++pp;
+    }
+    return pp;
+  }
+
+  public void ConvDataToString(int time) {
+    int i, len;
+
+    StrTime = "";
+    StrTime = StrTime.valueOf(time);
+    len = StrTime.length();
+    if (len < 3) for (i = 0; i < (3 - len); i++) StrTime = "0" + StrTime;
+  }
+
+  public void ComputeQueueing() {
+    int queue = 0, totque = 0, time = 0, totarr = 0, arrive, tstep = 1;
+    double prarr = 1.0 / 4.0, tpump = 0.0, tlimit = 100, aveque = 0, avetime =
+      0;
+    PrintWriter out = null;
+
+    try {
+      File f = new File("C:\\WORK\\EX1_6.OUT");
+      FileWriter fw = new FileWriter(f);
+      BufferedWriter bw = new BufferedWriter(fw);
+      out = new PrintWriter(bw);
+
+      out.println("SIMULATION FOR A QUEUEING SYSTEM");
+      out.println("=================================");
+      out.println("THE TIME STEP           = " + tstep);
+      out.println("THE TIME LIMIT          = " + tlimit);
+      out.println("THE ARRIVAL PROBABILITY = " + prarr);
+      out.println("THE POISSON MEAN        = " + (int) mean);
+      out.println("THE SEED                = " + seed);
+      out.println("=================================");
+      out.println("TIME    ARRIVAL    QUEUE    TPUMP");
+      out.println("---------------------------------");
+
+      while (time < tlimit) {
+        time = time + tstep;
+        arrive = 0;
+        seed = random(seed, up);
+
+        if (up < prarr * tstep) {
+          arrive = 1;
+          queue = queue + arrive;
+          totarr = totarr + 1;
         }
-
-        public int random(int np, float u){
-                np = np * 843314861 + 453816693;
-                if(np < 0){
-                        np = np + 2147483647;
-                        np = np + 1;
-                }
-                up = (float)(np * 0.4656612e-9);
-                return np;
+        if (tpump > 0.0) {
+          tpump = tpump - tstep;
+          if (tpump < 0) tpump = 0;
         }
-
-        public int poissn(int np, int pp){
-                float b, prod;
-
-                pp = 0;
-                b = (float)(Math.exp(-mean));
-
-                prod = 1;
-                n = random(np, up);
-                prod = prod * up;
-
-                while(prod >= b){
-                        n = random(n, up);
-                        prod = prod * up;
-                        ++pp;
-                }
-                return pp;
+        if (tpump == 0 && queue != 0) {
+          queue = queue - 1;
+          p = poissn(n, p);
+          tpump = p;
         }
+        totque = totque + queue;
+        ConvDataToString(time);
+        out.println(
+          " " +
+          StrTime +
+          "      " +
+          arrive +
+          "          " +
+          queue +
+          "        " +
+          (int) tpump
+        );
+      }
+      aveque = totque / (tlimit * tstep);
 
-        public void ConvDataToString(int time){
-               int i, len;
-
-               StrTime = "";
-               StrTime = StrTime.valueOf(time);
-               len = StrTime.length();
-               if(len < 3)
-                    for(i = 0; i < (3-len); i++)
-                         StrTime = "0" + StrTime;
-        }
-
-        public void ComputeQueueing(){
-                int queue = 0, totque = 0, time=0, totarr=0, arrive, tstep = 1;
-                double prarr=1.0/4.0, tpump=0.0, tlimit=100, aveque=0, avetime=0;
-                PrintWriter out=null;
-
-                try {
-                    File f=new File("C:\\WORK\\EX1_6.OUT");
-                    FileWriter fw=new FileWriter(f) ;
-                    BufferedWriter bw=new BufferedWriter(fw);
-                    out=new PrintWriter(bw);
-
-                    out.println("SIMULATION FOR A QUEUEING SYSTEM");
-                    out.println("=================================");
-                    out.println("THE TIME STEP           = " + tstep);
-                    out.println("THE TIME LIMIT          = " + tlimit);
-                    out.println("THE ARRIVAL PROBABILITY = " + prarr);
-                    out.println("THE POISSON MEAN        = " + (int)mean);
-                    out.println("THE SEED                = " + seed);
-                    out.println("=================================");
-                    out.println("TIME    ARRIVAL    QUEUE    TPUMP");
-                    out.println("---------------------------------");
-
-                    while(time < tlimit) {
-                        time = time + tstep;
-                        arrive = 0;
-                        seed = random(seed, up);
-
-                        if(up < prarr*tstep) {
-                                arrive = 1;
-                                queue = queue + arrive;
-                                totarr = totarr + 1;
-                        }
-                        if(tpump > 0.0) {
-                                tpump = tpump-tstep;
-                                if(tpump < 0)
-                                         tpump = 0;
-                        }
-                        if(tpump==0 && queue!=0) {
-                                queue = queue - 1;
-                                p = poissn(n, p);
-                                tpump = p;
-                        }
-                        totque = totque + queue;
-                        ConvDataToString(time);
-                        out.println(" " + StrTime + "      " + arrive + "          " + queue + "        " + (int)tpump);
-                    }
-                    aveque = totque / (tlimit*tstep);
-
-                    out.println("---------------------------------");
-                    out.println("MEAN QUEUE LENGTH  = " + aveque);
-                    out.println("THE TOTAL ARRIVALS = " + totarr);
-                } catch(IOException ioe) { }
-                  finally {
-                     if (out != null) out.close();
-                  }
-        }
+      out.println("---------------------------------");
+      out.println("MEAN QUEUE LENGTH  = " + aveque);
+      out.println("THE TOTAL ARRIVALS = " + totarr);
+    } catch (IOException ioe) {} finally {
+      if (out != null) out.close();
+    }
+  }
 }
 
 public class EX1_6 {
-        public static void main(String[] args){
-                SingleQueueing g = new SingleQueueing();
-                g.ComputeQueueing();
-        }
+
+  public static void main(String[] args) {
+    SingleQueueing g = new SingleQueueing();
+    g.ComputeQueueing();
+  }
 }

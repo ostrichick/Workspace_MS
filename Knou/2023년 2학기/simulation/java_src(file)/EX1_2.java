@@ -1,114 +1,110 @@
 /**
- * °øÀÇ Åº¼º ½Ã¹Ä·¹ÀÌ¼Ç
- * t       : ½Ã°£
- * t step  : ½Ã°£ Áõ°¡Ä¡
- * bounce  : °øÀÌ Æ¢¾î¿À¸¥ ¼ö
- * nbounce : ½Ã¹Ä·¹ÀÌ¼ÇÀ» À§ÇÑ bounce ¼ıÀÚ
- * x,y     : °øÀÇ x,y ÁÂÇ¥
- * Vx      : xÁÂÇ¥ÀÇ ¼Óµµ
- * Vyold   : ÃÊ±â yÁÂÇ¥ÀÇ ¼Óµµ
- * Vynew   : tstep°æ°ú ÈÄÀÇ yÁÂÇ¥ ¼Óµµ
- * ay      : yÁÂÇ¥ÀÇ °¡¼Óµµ
- * angle   : °øÀÌ ¶³¾îÁø °¢µµ, 80¢ª·Î ÇÑ´Ù.
+ * ê³µì˜ íƒ„ì„± ì‹œë®¬ë ˆì´ì…˜
+ * t       : ì‹œê°„
+ * t step  : ì‹œê°„ ì¦ê°€ì¹˜
+ * bounce  : ê³µì´ íŠ€ì–´ì˜¤ë¥¸ ìˆ˜
+ * nbounce : ì‹œë®¬ë ˆì´ì…˜ì„ ìœ„í•œ bounce ìˆ«ì
+ * x,y     : ê³µì˜ x,y ì¢Œí‘œ
+ * Vx      : xì¢Œí‘œì˜ ì†ë„
+ * Vyold   : ì´ˆê¸° yì¢Œí‘œì˜ ì†ë„
+ * Vynew   : tstepê²½ê³¼ í›„ì˜ yì¢Œí‘œ ì†ë„
+ * ay      : yì¢Œí‘œì˜ ê°€ì†ë„
+ * angle   : ê³µì´ ë–¨ì–´ì§„ ê°ë„, 80Ëšë¡œ í•œë‹¤.
  */
 
-import java.lang.*;
 import java.io.*;
+import java.lang.*;
 
-/* °øÀÇ Åº¼º Àü¿ªº¯¼ö Å¬·¡½º ÀüÃ¼Àû ÇÏ³ª¸¸ ¼±¾ğ */
+/* ê³µì˜ íƒ„ì„± ì „ì—­ë³€ìˆ˜ í´ë˜ìŠ¤ ì „ì²´ì  í•˜ë‚˜ë§Œ ì„ ì–¸ */
 class BouncingBall {
-        final static float pi=3.1415926f;
-        final static float ay=-9.8f;
-        public int bounce, nbounc;
-        public float v, angle, tstep, x, y, theta, vx, vyold, vynew, t;
-        public String StrX = new String();
-        public String StrY = new String();
 
-        public BouncingBall() {
-               v = 10.0f;
-               angle = 80.0f;
-               nbounc = 3;
-               tstep = 0.10f;
-               x = 0.0f;
-               y = 0.0f;
-               theta = angle * pi / 180;
-               vx = v * (float) Math.cos(theta);
-               vyold = v * (float) Math.sin(theta);
+  static final float pi = 3.1415926f;
+  static final float ay = -9.8f;
+  public int bounce, nbounc;
+  public float v, angle, tstep, x, y, theta, vx, vyold, vynew, t;
+  public String StrX = new String();
+  public String StrY = new String();
 
-               bounce = 0;
-               t = 0.0f;
+  public BouncingBall() {
+    v = 10.0f;
+    angle = 80.0f;
+    nbounc = 3;
+    tstep = 0.10f;
+    x = 0.0f;
+    y = 0.0f;
+    theta = angle * pi / 180;
+    vx = v * (float) Math.cos(theta);
+    vyold = v * (float) Math.sin(theta);
+
+    bounce = 0;
+    t = 0.0f;
+  }
+
+  public void ConvDataToString() {
+    int i, len;
+
+    StrX = "";
+    StrX = StrX.valueOf(x);
+    len = StrX.length();
+    if (len < 8) for (i = 0; i < (8 - len); i++) StrX = StrX + "0"; else if (
+      len > 8
+    ) StrX = StrX.substring(0, 8);
+
+    StrY = "";
+    StrY = StrY.valueOf(y);
+    len = StrY.length();
+    if (len < 8) for (i = 0; i < (8 - len); i++) StrY = StrY + "0"; else if (
+      len > 8
+    ) StrY = StrY.substring(0, 8);
+  }
+
+  public void ComputeBouncingBall() {
+    int b;
+
+    PrintWriter out = null;
+
+    try {
+      File f = new File("C:\\WORK\\EX1_2.OUT");
+      FileWriter fw = new FileWriter(f);
+      BufferedWriter bw = new BufferedWriter(fw);
+      out = new PrintWriter(bw);
+
+      out.println("  BOUNCING BALL SIMULATION");
+      out.println("=============================");
+      out.println(" X-CORDINATE	 Y-CORDINATE");
+
+      while (bounce < nbounc) {
+        t = t + tstep;
+        x = x + vx * tstep;
+        vynew = vyold + ay * tstep;
+        y = y + (vyold + vynew) * tstep / 2.0f;
+        vyold = vynew;
+
+        ConvDataToString();
+        out.print(" " + StrX + "        " + StrY);
+
+        /* ê³µì˜ íƒ„ì„± ìƒíƒœ ê·¸ë˜í”„ ìƒì„± */
+        for (b = 0; b < Math.round(y * 3); b++) {/* bounding 3íšŒ ì ìš© */
+          out.print("  ");
         }
+        out.println("â—");
 
-        public void ConvDataToString(){
-               int i, len;
-
-               StrX = "";
-               StrX = StrX.valueOf(x);
-               len = StrX.length();
-               if(len < 8)
-                    for(i = 0; i < (8-len); i++)
-                         StrX = StrX + "0";
-               else if(len > 8)
-                    StrX = StrX.substring(0,8);
-
-               StrY = "";
-               StrY = StrY.valueOf(y);
-               len = StrY.length();
-               if(len < 8)
-                    for(i = 0; i < (8-len); i++)
-                         StrY = StrY + "0";
-               else if(len > 8)
-                         StrY = StrY.substring(0,8);
-
+        if (y < 0.0) {/* ê³µì˜ ìœ„ì¹˜ê°€ ê±°ì˜ ë°”ë‹¥ì— ë‹¿ì•˜ì„ ë•Œì˜ ê²½ìš° ê³„ì‚° */
+          vyold = Math.abs(0.75f * vyold);
+          y = 0.0f;
+          ++bounce;
         }
-
-        public void ComputeBouncingBall() {
-               int b;
-
-               PrintWriter out=null;
-
-               try {
-                 File f = new File("C:\\WORK\\EX1_2.OUT");
-                 FileWriter fw = new FileWriter(f);
-                 BufferedWriter bw = new BufferedWriter(fw);
-                 out = new PrintWriter(bw);
-
-                 out.println("  BOUNCING BALL SIMULATION");
-                 out.println("=============================");
-                 out.println(" X-CORDINATE	 Y-CORDINATE");
-
-                 while (bounce < nbounc) {
-                   t = t + tstep;
-                   x = x + vx * tstep;
-                   vynew = vyold + ay * tstep;
-                   y = y + (vyold + vynew) * tstep / 2.0f;
-                   vyold = vynew;
-
-                   ConvDataToString();
-                   out.print(" " + StrX + "        " + StrY);
-
-                   /* °øÀÇ Åº¼º »óÅÂ ±×·¡ÇÁ »ı¼º */
-                   for (b = 0; b < Math.round(y * 3); b++) { /* bounding 3È¸ Àû¿ë */
-                     out.print("  ");
-                   }
-                   out.println("¡Ü");
-
-                   if (y < 0.0) { /* °øÀÇ À§Ä¡°¡ °ÅÀÇ ¹Ù´Ú¿¡ ´ê¾ÒÀ» ¶§ÀÇ °æ¿ì °è»ê */
-                     vyold = Math.abs(0.75f * vyold);
-                     y = 0.0f;
-                     ++bounce;
-                   }
-                 }
-               } catch(IOException ioe) { }
-                 finally {
-                      if (out != null) out.close();
-                 }
       }
+    } catch (IOException ioe) {} finally {
+      if (out != null) out.close();
+    }
+  }
 }
 
 public class EX1_2 {
-    public static void main(String[] args) {
-            BouncingBall b = new BouncingBall();
-            b.ComputeBouncingBall();
-    }
+
+  public static void main(String[] args) {
+    BouncingBall b = new BouncingBall();
+    b.ComputeBouncingBall();
+  }
 }

@@ -1,68 +1,69 @@
 /**
- * ¸óÅ×Ä®·Î ½Ã¹Ä·¹ÀÌ¼Ç
- * limit : ¼öÇàÈ½¼ö(50000)
- * seed  : ³­¼öÀÇ ÃÊ±â°ª(9965)
+ * ëª¬í…Œì¹¼ë¡œ ì‹œë®¬ë ˆì´ì…˜
+ * limit : ìˆ˜í–‰íšŸìˆ˜(50000)
+ * seed  : ë‚œìˆ˜ì˜ ì´ˆê¸°ê°’(9965)
  */
-import java.lang.*;
 import java.io.*;
+import java.lang.*;
 
 class Montecarlo {
-       public int seed, limit;
-       float up;
 
-       public Montecarlo() {
-               seed = 9965;
-               limit = 50000;
-       }
+  public int seed, limit;
+  float up;
 
-       public int random(int np, float u) {
-               np = np * 843314861 + 453816693;
-               if (np < 0) {
-                      np = np + 2147483647;
-                      np = np + 1;
-               }
-               up = (float) (np * 0.4656612e-9);
-               return np;
-       }
+  public Montecarlo() {
+    seed = 9965;
+    limit = 50000;
+  }
 
-       public void ComputeMontecarlo() {
-               int i = 1, count = 0;
-               float s, x, y;
-               PrintWriter out=null;
+  public int random(int np, float u) {
+    np = np * 843314861 + 453816693;
+    if (np < 0) {
+      np = np + 2147483647;
+      np = np + 1;
+    }
+    up = (float) (np * 0.4656612e-9);
+    return np;
+  }
 
-               try {
-                    File f=new File("C:\\WORK\\EX2_1.OUT");
-                    FileWriter fw=new FileWriter(f) ;
-                    BufferedWriter bw=new BufferedWriter(fw);
-                    out=new PrintWriter(bw);
+  public void ComputeMontecarlo() {
+    int i = 1, count = 0;
+    float s, x, y;
+    PrintWriter out = null;
 
-                    out.println(" MONTE CARLO SIMULATION");
-                    out.println("========================");
-                    out.println(" SEED   = " + seed);
-                    while (i <= limit) {
-                         seed = random(seed, up);
-                         x = up;
-                         seed = random(seed, up);
-                         y = up;
-                         if (x * x + y * y <= 1.0) count++;
-                         i++;
-                    }
+    try {
+      File f = new File("C:\\WORK\\EX2_1.OUT");
+      FileWriter fw = new FileWriter(f);
+      BufferedWriter bw = new BufferedWriter(fw);
+      out = new PrintWriter(bw);
 
-                    s = (float)count / (float)limit;
-                    s = s * 4;
-                    out.println(" LIMIT  = " + limit);
-                    out.println(" COUNT  = " + count);
-                    out.println(" RESULT = " + s);
-               } catch(IOException ioe) { }
-                    finally {
-                        if (out != null) out.close();
-                    }
+      out.println(" MONTE CARLO SIMULATION");
+      out.println("========================");
+      out.println(" SEED   = " + seed);
+      while (i <= limit) {
+        seed = random(seed, up);
+        x = up;
+        seed = random(seed, up);
+        y = up;
+        if (x * x + y * y <= 1.0) count++;
+        i++;
       }
+
+      s = (float) count / (float) limit;
+      s = s * 4;
+      out.println(" LIMIT  = " + limit);
+      out.println(" COUNT  = " + count);
+      out.println(" RESULT = " + s);
+    } catch (IOException ioe) {} finally {
+      if (out != null) out.close();
+    }
+  }
 }
 
 public class EX2_1 {
-      public static void main(String[] args){
-             Montecarlo m = new Montecarlo();
-             m.ComputeMontecarlo();
-     }
+
+  public static void main(String[] args) {
+    Montecarlo m = new Montecarlo();
+    m.ComputeMontecarlo();
+  }
 }
