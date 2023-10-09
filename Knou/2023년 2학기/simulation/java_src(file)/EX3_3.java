@@ -67,7 +67,7 @@ class MeanQueueing {
 
   public void ComputeQueueing() {
     int queue = 0, totque = 0, totarr = 0, arrive, tstep = 1;
-    float prarr = 24.0f / 60.0f; // 도착 형태
+    float prarr = 22.0f / 60.0f; // 도착 형태
     float tlimit = 50.0f; // 시뮬레이션 시간
     float tpump = 0.0f, time = 0.0f, aveque = 0.0f, avgwt = 0.0f;
     PrintWriter out = null;
