@@ -16,12 +16,12 @@
 import java.io.*;
 import java.lang.*;
 
-class SingleQueueing {
+class SingleQueueing { // 단일창구 대기행렬 시뮬레이션
 
-  static final int SEED = 35213;
-  public int n, seed, p;
-  public float up, mean;
-  public String StrTime = new String();
+  static final int SEED = 366307; // 난수의 초기값
+  public int n, seed, p; // 난수의 초기값, 난수, 포아송분포
+  public float up, mean; // 난수, 포아송분포의 평균
+  public String StrTime = new String(); // 시간을 문자열로 변환
 
   public SingleQueueing() {
     mean = 4;

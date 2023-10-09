@@ -19,37 +19,35 @@ import java.lang.*;
 
 class MeanQueueing {
 
-  static final int SEED = 35213;
-  public int n, p, seed;
-  public float up, mean;
+  static final int SEED = 366307; // 난수의 초기값
+  public int n, p, seed; // 난수의 초기값, 포아송분포
+  public float up, mean; // 난수, 포아송분포의 평균
   public String StrTime = new String();
 
   // Queueing 생성자
   public MeanQueueing() {
-    mean = 4;
-    n = SEED;
+    mean = 5; // 봉사 형태
+    n = SEED; //
     seed = SEED;
   }
 
-  public int random(int np, float u) {
-    np = np * 843314861 + 453816693;
-    if (np < 0) {
-      np = np + 2147483647;
-      np = np + 1;
+  public int random(int np, float u) { // 난수 생성
+    np = np * 843314861 + 453816693; // 난수 생성
+    if (np < 0) { // 난수가 음수이면
+      np = np + 2147483647; // 양수로 변환
+      np = np + 1; // 양수로 변환
     }
-    up = (float) (np * 0.4656612e-9);
-    return np;
+    up = (float) (np * 0.4656612e-9); // 난수 생성
+    return np; // 난수 반환
   }
 
-  public int poissn(int np, int pp) {
+  public int poissn(int np, int pp) { // 포아송분포 생성
     float b, prod;
     pp = 0;
     b = (float) (Math.exp(-mean));
-
     prod = 1;
     n = random(np, up);
     prod = prod * up;
-
     while (prod >= b) {
       n = random(n, up);
       prod = prod * up;
@@ -58,7 +56,7 @@ class MeanQueueing {
     return pp;
   }
 
-  public void ConvDataToString(int time) {
+  public void ConvDataToString(int time) { // 시간을 문자열로 변환
     int i, len;
 
     StrTime = "";
@@ -69,12 +67,13 @@ class MeanQueueing {
 
   public void ComputeQueueing() {
     int queue = 0, totque = 0, totarr = 0, arrive, tstep = 1;
-    float prarr = 1.0f / 4.0f, tpump = 0.0f, time = 0.0f, tlimit =
-      100.0f, aveque = 0.0f, avgwt = 0.0f;
+    float prarr = 24.0f / 60.0f; // 도착 형태
+    float tlimit = 50.0f; // 시뮬레이션 시간
+    float tpump = 0.0f, time = 0.0f, aveque = 0.0f, avgwt = 0.0f;
     PrintWriter out = null;
 
     try {
-      File f = new File("C:\\WORK\\EX3_3.OUT");
+      File f = new File("C:\\WORK\\EX3_3.txt");
       FileWriter fw = new FileWriter(f);
       BufferedWriter bw = new BufferedWriter(fw);
       out = new PrintWriter(bw);
