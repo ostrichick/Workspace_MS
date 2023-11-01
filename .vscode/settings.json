@@ -6,5 +6,9 @@
   "files.associations": {
     "ostream": "cpp"
   },
-  "java": "cd $dir && javac $fileName -encoding utf-8 && java $fileNameWithoutExt"
+  "java": "cd $dir && javac $fileName -encoding utf-8 && java $fileNameWithoutExt",
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.autopep8"
+  },
+  "python.formatting.provider": "none"
 }
