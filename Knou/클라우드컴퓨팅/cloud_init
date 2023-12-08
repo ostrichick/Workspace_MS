@@ -1,0 +1,22 @@
+#cloud-config
+package_upgrade: true
+packages:
+  - git
+  - python3
+  - python3-pip
+  - libpq-dev
+  - build-essential
+write_files:
+  - path: "/opt/shop2.yml"
+    append: true
+    content: |
+      DB_HOST: knou-mall-db6307.postgres.database.azure.com
+      DB_USER: azureuser
+      DB_PASSWD: qweqwe123!
+      DB_NAME: knou-mall
+runcmd:
+  - python3 -m pip install https://github.com/jaehwachung/cloud_computing/releases/download/latest/knou_cloud_computing_shop2-latest-py3-none-any.whl
+  - create-db
+  - shop_manage user-create
+  - shop_manage goods-insert
+  - waitress-serve --port 80 knou_shop2.shop_main:app
